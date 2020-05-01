@@ -1,0 +1,177 @@
+<container id="main" name="Main Window" default_visible="1" default_x="0" default_y="0">
+	
+<groupdef id="player.normal.group.main">
+	<layer id="player.background.main.left" x="0" y="0" image="player.normal.bg.left" sysregion="1" cursor="cur.normal"/>
+	<layer id="player.background.main.mid" x="267" y="0" h="242" w="-538" relatw="1" image="player.normal.bg.center" sysregion="1" cursor="cur.normal"/>
+	<layer id="player.background.main.right" x="-271" y="0" relatx="1" image="player.normal.bg.right" sysregion="1" cursor="cur.normal"/>
+	
+	<layer id="player.region.top.left" x="0" y="0" image="window.shade.region.top.left" ghost="1" sysregion="-2" />
+	<layer id="player.region.top.right" x="-3" y="0" relatx="1" image="window.shade.region.top.right" ghost="1" sysregion="-2" />
+	<layer id="player.region.bottom.left" x="0" y="-3" relaty="1" image="window.shade.region.bottom.left" ghost="1" sysregion="-2" />
+	<layer id="player.region.bottom.right" x="-3" y="-3" relatx="1" relaty="1" image="window.shade.region.bottom.right" ghost="1" sysregion="-2" />
+
+  <grid id="player.songticker.bg" x="221" y="50" h="21" w="-247" relatw="1" left="player.songticker.bg.left" middle="player.songticker.bg.middle" right="player.songticker.bg.right" move="1" cursor="cur.normal"/>
+
+	<layer id="player.bg.volume" x="209" y="113" image="player.bg.vol" tooltip="Volume Bar"/>
+
+  <Animatedlayer id="main.volume.anim" x="213" y="116" w="120" h="8" image="player.animation.volume" ghost="1" alpha="253"/>
+	<slider id="player.slider.volume.shadow" action="VOLUME" x="208" y="110" w="130" h="26" orientation="horizontal" thumb="thumb.volpan.slider.shadow" hoverthumb="thumb.volpan.slider.shadow" downthumb="thumb.volpan.slider.shadow"/>
+	<slider id="player.slider.volume" action="VOLUME" x="208" y="110" w="130" h="26" orientation="horizontal" thumb="thumb.volpan.slider.n" hoverthumb="thumb.volpan.slider.h" downthumb="thumb.volpan.slider.d" cursor="cur.posbar" tooltip="Volume Bar"/>
+
+
+	<layer id="eq.bg.pan" x="346" y="113" image="player.bg.balance" tooltip="Panning Bar"/>
+  <Animatedlayer id="main.balance.anim" x="360" y="116" w="71" h="8" image="player.animation.balance" ghost="1" alpha="253"/>
+	<slider id="eq.slider.pan.shadow" action="PAN" x="346" y="110" w="81" h="26" thumb="thumb.volpan.slider.shadow" hoverthumb="thumb.volpan.slider.shadow" downthumb="thumb.volpan.slider.shadow"/>
+	<slider id="eq.slider.pan" action="PAN" x="346" y="110" w="81" h="26" thumb="thumb.volpan.slider.n" hoverthumb="thumb.volpan.slider.h" downthumb="thumb.volpan.slider.d" cursor="cur.posbar" tooltip="Panning Bar"/>
+	
+  <!--script file="scripts\color_themes_patch_fix.maki"/--> <!-- This script makes the switch between the safe layer and the multicolor-bar (only seen on default theme) -->
+
+  
+	<layer id="player.button.eq.shadow" x="-111" y="107" relatx="1" image="player.normal.button.eqplshadow" alpha="253" ghost="1"/>
+	<layer id="player.button.eq" x="-111" y="107" relatx="1" image="player.normal.button.eq" alpha="253" cursor="cur.normal"/>
+  <NStatesButton id="player.button.eq.light" x="-113" y="104" relatx="1" image="button.eqpl.light.1." hoverimage="button.eqpl.light.2." downimage="button.eqpl.light.3." rectrgn="1" action="TOGGLE" param="equalizer" nstates="2" cfgvals="0;1" tooltip="Toggle Graphical Equalizer" cursor="cur.normal"/>
+
+  <layer id="player.button.pl.shadow" x="-64" y="107" relatx="1" image="player.normal.button.eqplshadow" alpha="253" ghost="1"/>
+  <layer id="player.button.pl" x="-64" y="107" relatx="1" image="player.normal.button.pl" alpha="253" cursor="cur.normal"/>
+  <NStatesButton id="player.button.pl.light" x="-67" y="104" relatx="1" image="button.eqpl.light.1." hoverimage="button.eqpl.light.2." downimage="button.eqpl.light.3." rectrgn="1" action="TOGGLE" param="GUID:PL" nstates="2" cfgvals="0;1" tooltip="Toggle Playlist Editor" cursor="cur.normal"/>
+
+	<slider id="player.slider.seek.shadow" action="SEEK" x="19" y="139" w="-36" h="34" relatw="1" orientation="horizontal" thumb="player.seeker.slider.shadow" hoverthumb="player.seeker.slider.shadow" downthumb="player.seeker.slider.shadow" rectrgn="1"/>
+  <layer id="player.seek.cursor" x="19" y="139" w="-36" h="34" relatw="1" image="none" rectrgn="1" cursor="cur.posbar" tooltip="Seeking Bar"/>
+	<slider id="player.slider.seek" action="SEEK" x="19" y="139" w="-36" h="34" relatw="1" orientation="horizontal" thumb="player.seeker.slider.n" hoverthumb="player.seeker.slider.h" downthumb="player.seeker.slider.d" rectrgn="1" cursor="cur.posbar" tooltip="Seeking Bar"/>
+	<slider id="player.slider.seek.ghost" action="SEEK" x="19" y="139" w="-36" h="34" relatw="1" orientation="horizontal" thumb="player.seeker.slider.n" hoverthumb="player.seeker.slider.h" downthumb="player.seeker.slider.d" rectrgn="1" cursor="cur.posbar"/>
+
+	<layer id="player.button.open.bg" x="242" y="175" image="player.button.eject.bg" ghost="1" alpha="253"/>
+
+	<button id="button.previous" action="PREV" x="17" y="180" image="player.button.previous.n" hoverimage="player.button.previous.h" downimage="player.button.previous.d" alpha="253" cursor="cur.normal" tooltip="Previous Track"/>
+	<button id="button.play" action="PLAY" x="62" y="180" image="player.button.play.n" hoverimage="player.button.play.h" downimage="player.button.play.d" alpha="253" cursor="cur.normal" tooltip="Play"/>
+	<button id="button.pause" action="PAUSE" x="103" y="180" image="player.button.pause.n" hoverimage="player.button.pause.h" downimage="player.button.pause.d" alpha="253" cursor="cur.normal" tooltip="Pause"/>
+	<button id="button.stop" action="STOP" x="144" y="180" image="button.stop.n" hoverimage="button.stop.h" downimage="button.stop.d" alpha="253" cursor="cur.normal" tooltip="Stop"/>
+	<button id="button.next" action="NEXT" x="185" y="180" image="player.button.next.n" hoverimage="player.button.next.h" downimage="player.button.next.d" alpha="253" cursor="cur.normal" tooltip="Next Track"/>
+
+	<button id="player.button.open" action="EJECT" x="241" y="180" image="player.button.eject.n" hoverimage="player.button.eject.h" downimage="player.button.eject.d" alpha="253" cursor="cur.normal" tooltip="Open File(s)"/>
+
+  <!-- Shuffle and Repeat buttons gfx and light indicators handled by script -->
+
+  <NStatesButton id="button.shuffle" x="-253" y="180" w="119" h="48" relatx="1" cfgattrib="{45F3F7C1-A6F3-4EE6-A15E-125E92FC3F8D};Shuffle" cfgvals="0;1" nstates="2" image="shuffle.n." hoverimage="shuffle.h." downimage="shuffle.d." tooltip="Toggle Shuffle" alpha="253" cursor="cur.normal"/>
+	<togglebutton id="shuffle.light" x="-204" y="201" w="7" h="7" relatx="1" image="repeat.light.off" activeImage="repeat.light.on" ghost="1" alpha="253" cfgattrib="{45F3F7C1-A6F3-4EE6-A15E-125E92FC3F8D};Shuffle"/>
+
+	<NStatesButton id="button.repeat" x="-134" y="180" relatx="1" image="repeat.n." hoverimage="repeat.h." downimage="repeat.d."
+		rectrgn="1" nstates="3" cfgattrib="{45F3F7C1-A6F3-4EE6-A15E-125E92FC3F8D};Repeat" cfgvals="0;1;-1" tooltip="Toggle Repeat" alpha="253" cursor="cur.normal"/>
+	<togglebutton id="repeat.light" x="-130" y="201" relatx="1" image="repeat.light.off" activeImage="repeat.light.on" ghost="1" alpha="253" cfgattrib="{45F3F7C1-A6F3-4EE6-A15E-125E92FC3F8D};Repeat"/>
+
+	<layer id="about.bg" x="-71" y="175" relatx="1" image="about.bg" alpha="253" ghost="1"/>
+	<togglebutton id="player.button.about" x="-63" y="180" relatx="1" image="button.about.n" hoverimage="button.about.h" downimage="button.about.d" rectrgn="1" action="TOGGLE" param="guid:{D6201408-476A-4308-BF1B-7BACA1124B12}" alpha="253" tooltip="About Winamp / Toggle Library" cursor="cur.normal"/>
+
+	<grid id="titlebar.stripes" x="32" y="3" w="-120" h="28" relatw="1" left="titlebar.stripes.left" middle="titlebar.stripes.center" right="titlebar.stripes.right" move="1" activealpha="253" inactivealpha="100" />
+	<group id="titlebar.winamptxt.group" x="0" y="0" h="30" w="124"/> <!-- Centered by mainplayer.maki -->
+	<layer id="titlebar.switch" x="30" y="0" w="-83" h="30" relatw="1" dblclickaction="SWITCH;shade" move="1" ghost="0" cursor="cur.move"/>
+	
+	<button id="player.button.mainmenu" action="SYSMENU" x="4" y="0" image="player.button.mainmenu" hoverimage="player.button.mainmenu.h" downimage="player.button.mainmenu.d" activealpha="253" inactivealpha="253" tooltip="Winamp Menu" cursor="cur.normal"/>
+	<button id="player.button.minimize" action="MINIMIZE" x="-75" y="2" relatx="1" image="player.button.minimize" hoverimage="player.button.minimize.h" downimage="player.button.minimize.d" tooltip="Minimize" activealpha="253" inactivealpha="100" cursor="cur.normal"/>
+	<button id="player.button.switch" action="SWITCH" param="SHADE" x="-52" y="2" relatx="1" image="player.button.switch" hoverimage="player.button.switch.h" downimage="player.button.switch.d" tooltip="Toggle Windowshade Mode" activealpha="253" inactivealpha="100" cursor="cur.normal"/>
+	<button id="player.button.close" action="CLOSE" x="-29" y="2" relatx="1" image="player.button.close" hoverimage="player.button.close.h" downimage="player.button.close.d" tooltip="Close" activealpha="253" inactivealpha="100" cursor="cur.close"/>
+	
+	<!--group id="songticker.options" x="0" y="43" h="0" w="295" alpha="0" sysregion="1"/>
+  <script file="scripts\centerobject.maki" param="songticker.options,1,0"/-->
+	
+	<group id="player.normal.group.display" x="21" y="49" h="82" w="183" alpha="253"/>
+	<group id="player.normal.group.songticker" x="210" y="43" h="31" w="-2" relatw="1" alpha="253"/>
+	<group id="player.normal.group.songinfo" x="205" y="78" h="26" w="-235" relatw="1" alpha="253"/>
+	<group id="player.timedisplay.songtitle" x="31" y="28" h="82" w="583" alpha="253"/>
+</groupdef>
+
+<!--groupdef id="songticker.options" >
+  <layer id="songticker.bg" x="0" y="0" h="30" w="295" image="frame.color"/>
+  <layer id="songticker.bg" x="1" y="1" h="29" w="293" image="base.color"/>
+  <text id="songticker.title" x="6" y="0" w="260" h="30" fontsize="20" font="sarpanch" text="Autoscroll:" color="wasabi.popupmenu.text" ghost="1"/>
+  <text id="songticker.classic" x="101" y="0" w="260" h="30" fontsize="20" font="sarpanch" text="Classic" color="wasabi.popupmenu.text" rectrgn="1"/>
+  <text id="songticker.modern" x="167" y="0" w="260" h="30" fontsize="20" font="sarpanch" text="Modern" color="wasabi.popupmenu.text" rectrgn="1"/>
+  <text id="songticker.none" x="236" y="0" w="260" h="30" fontsize="20" font="sarpanch" text="None" color="wasabi.popupmenu.text" rectrgn="1"/>
+</groupdef-->
+
+<groupdef id="titlebar.winamptxt.group" >
+	<layer id="titlebar.winamptxt.bg" x="0" y="0" w="124" tile="1" image="player.normal.bg.center" move="1" alpha="255"/>
+	<!--<layer id="titlebar.stripes.tips.left" x="115" y="3" w="29" image="titlebar.stripes.left" ghost="1" activealpha="253" inactivealpha="100"/>
+	<layer id="titlebar.stripes.tips.right" x="-20" y="3" w="29" image="titlebar.stripes.right" ghost="1" activealpha="253" inactivealpha="100"/>-->
+	<layer id="titlebar.winamptxt" x="14" y="3" image="titlebar.winamp.txt" ghost="1" activealpha="253" inactivealpha="100"/>
+</groupdef>
+
+
+<groupdef id="player.normal.group.songticker">
+
+	<grid id="songtitle.bg" x="0" y="3" w="-232" h="25" relatw="1" left="songtitle.l" middle="songtitle.m" right="songtitle.r" ghost="1" alpha="255"/>
+	<SongTicker id="player.display.songname" x="8" y="8" w="-248" relatw="1" h="20" font="tahoma" fontsize="14" color="black" dblclickaction="trackinfo" 
+	rightclickaction="trackmenu" align="left" ghost="0" cursor="cur.posbar" tooltip="Song Title (right-click for options)"/>
+	<text id="player.display.actioninfo" x="6" y="-1" w="-248" relatw="1" h="33" font="tahoma" fontsize="14" color="black" align="left" ghost="1" /> 
+  <!--script file="scripts\songticker.maki"/-->
+</groupdef>
+
+<groupdef id="player.normal.group.songinfo">
+	<!--rect id="filler.visual.helper" x="0" y="0" fitparent="1" filled="1" color="53,53,0" alpha="255"/-->
+
+	<grid id="songinfo.bitrate.bg" x="0" y="3" w="39" h="25" left="songinfo.bg.left" middle="songinfo.bg.middle" right="songinfo.bg.right" ghost="1" alpha="253"/>
+	<grid id="songinfo.bitrate.display" x="0" y="3" w="39" h="25" left="songinfo.display.left" middle="songinfo.display.middle" right="songinfo.display.right" ghost="1" alpha="253"/>
+	<layer id="songinfo.bitrate.label" x="40" y="3" image="songinfo.bitrate.label" ghost="1" alpha="253"/>
+  <text id="songinfo.bitrate"  x="6" y="7" w="26" h="14" font="tahoma" fontsize="14" color="black" align="right" ghost="1" antialias="1"/>
+	
+	
+	<grid id="songinfo.frequency.bg" x="90" y="3" w="34" h="25" left="songinfo.bg.left" middle="songinfo.bg.middle" right="songinfo.bg.right" ghost="1" alpha="253"/>
+	<grid id="songinfo.frequency.display" x="90" y="3" w="34" h="25" left="songinfo.display.left" middle="songinfo.display.middle" right="songinfo.display.right" ghost="1" alpha="253"/>
+	<layer id="songinfo.frequency.label" x="128" y="3" image="songinfo.frequency.label" ghost="1" alpha="253"/>
+	<text id="songinfo.frequency" textrefreshrate="500" x="96" y="7" w="23" h="14" font="tahoma" fontsize="14" color="black" align="right" ghost="1" antialias="1"/>
+	
+	<layer id="songinfo.mono" x="-92" y="3" relatx="1" image="songinfo.mono.off" ghost="1" alpha="253"/>
+	<layer id="songinfo.stereo.srrnd" x="-38" y="3" relatx="1" image="songinfo.stereo.off" ghost="1" alpha="253"/>
+</groupdef>
+
+<groupdef id="player.normal.group.display"  cursor="cur.normal">
+	<!--rect id="player.background.display.vis.scale" x="0" y="0" filled="1" color="53,53,0" alpha="255"/-->
+	<layer id="player.normal.display.bg" x="5" y="1" image="player.normal.display.bg" cursor="cur.normal"/>
+
+
+	<layer id="oaidu.button.o.n" x="7" y="5" image="OAIDU.buttons.O.n" cursor="cur.normal"/>
+	<layer id="oaidu.button.o.h" x="7" y="5" image="OAIDU.buttons.O.h"/>
+	<layer id="oaidu.button.o.d" x="7" y="5" image="OAIDU.buttons.O.d"/>
+	
+  <Menu id="OAIDU.buttons.O.m" menu="WA5:Options" x="7" y="0" h="17" w="14" normal="oaidu.button.o.n" hover="oaidu.button.o.h" down="oaidu.button.o.d" tooltip="Options Menu" rectrgn="1" cursor="cur.normal"/>
+  <NStatesButton id="OAIDU.buttons.A" x="7" y="19" image="OAIDU.buttons.A.1." hoverimage="OAIDU.buttons.A.2." downimage="OAIDU.buttons.A.3." rectrgn="1" cfgattrib="{280876CF-48C0-40BC-8E86-73CE6BB462E5};Always on top" nstates="2" cfgvals="0;1" tooltip="Toggle Always on top" cursor="cur.normal"/>
+	<button id="OAIDU.buttons.I" action="trackinfo" x="7" y="33" image="OAIDU.buttons.I.n" hoverimage="OAIDU.buttons.I.h" downimage="OAIDU.buttons.I.n" alpha="253" tooltip="File Info Box" rectrgn="1" cursor="cur.normal"/>
+
+	<!--  D and U buttons handled by script -->
+	<button id="OAIDU.menu.D" x="7" y="47" image="none" action="CONTROLMENU" cursor="cur.normal"/>
+	<button id="OAIDU.buttons.D" x="7" y="47" image="OAIDU.buttons.D.n" hoverimage="OAIDU.buttons.D.h" downimage="OAIDU.buttons.D.n" alpha="253" tooltip="Toggle Doublesize Mode" rectrgn="1" cursor="cur.normal"/>
+
+	<button id="OAIDU.buttons.U.menuentry1" x="7" y="61" h="0" w="0" action="TOGGLE" param="guid:avs" image="none" cursor="cur.normal"/>
+	<button id="OAIDU.buttons.U.menuentry2" x="7" y="61" h="0" w="0" action="Vis_Cfg" image="none"/>
+	<button id="OAIDU.buttons.U.menuentry3" x="7" y="61" h="0" w="0" action="WA5:Prefs" param="33" image="none"/>
+	<button id="OAIDU.buttons.U" x="7" y="61" image="OAIDU.buttons.U.n" hoverimage="OAIDU.buttons.U.h" downimage="OAIDU.buttons.U.n" tooltip="Visualization Menu" rectrgn="1" cursor="cur.normal"/>
+
+  <status id="status" x="21" y="8" stopBitmap="status.icon.stop" playBitmap="status.icon.play" pauseBitmap="status.icon.pause" ghost="1"/>
+  
+	<layer id="player.background.display.vis.scale" x="19" y="0" image="display.vis.bg" alpha="253" ghost="1"/>
+
+	<text id="display.time" display="TIME" x="51" y="0" w="122" h="36" ticker="0" font="numbers" fontsize="38" forcefixed="1" color="black" 
+	timeroffstyle="0" valign="top" align="right" cursor="cur.normal" bold="0" tooltip="Time Display (click to toggle elapsed/remaining)"/>
+
+	<!--rect id="plssayer.vis" x="27" y="41" w="143" h="31" color="0,0,250" filled="0"/-->
+	<vis id="player.vis" x="27" y="40" w="143" h="32" cursor="cur.normal" gammagroup="visualizers"/>
+	<layer id="hide.for.gordon" x="169" y="39" image="hide.for.gordon" ghost="1"/>
+	<layer id="hide.for.vic" x="27" y="71" image="show.for.gordon" ghost="1"/>
+	<layer id="player.vis.trigger" x="27" y="41" w="143" h="30" image="none" cursor="cur.normal"/>
+  <script file="scripts\pauseblink.maki"/>
+
+</groupdef>
+<groupdef id="player.timedisplay.songtitle" cursor="cur.normal">
+
+	<text text="Time Display" x="2" y="0" w="122" h="36" font="tahoma" fontsize="15" color="0,70,213"/>
+	<text text="Song Title" x="189" y="0" w="122" h="36" font="tahoma" fontsize="15" color="0,70,213"/>
+
+</groupdef>
+<layout id="normal" minimum_h="242" minimum_w="550" maximum_w="10000" w="550" h="242" desktopalpha="1" droptarget="pldr" linkwidth="shade" appbar="top|bottom" >
+	<group id="player.normal.group.main" x="0" y="0" h="242" w="0" relatw="1" ghost="1"/>
+
+  <layer id="resizer.right" x="-10" relatx="1" y="37" w="10" h="-32" relath="1" image="none" resize="right" regionop="1" rectrgn="1" cursor="cur.posbar"/>
+</layout>
+
+	<include file="main-player-shade.xml" />
+</container>

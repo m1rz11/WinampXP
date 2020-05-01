@@ -1,0 +1,21 @@
+<!--
+**************************************************************
+	tooltips
+
+*************************************************************
+-->
+
+<groupdef id="wasabi.tooltip.group" h="33" noactivation="1">
+
+	<rect id="tooltip.grid" x="0" y="0" w="0" h="33" sysregion="1" relatw="1" filled="1" color="wasabi.tooltip.frame"/>
+
+	<rect id="tooltip.grid.frame" x="1" y="1" w="-2" h="31" sysregion="1" relatw="1" filled="1" color="wasabi.tooltip.background"/>
+     	     
+	<text id="tooltip.text"
+     x="0" y="0" w="0" h="33"
+     relatw="1" relath="0" align="center" default="Tooltip Sample" 
+     fontsize="22" color="wasabi.tooltip.text"/>
+	
+	<script id="tip" file="scripts\tooltips.maki"/>
+
+</groupdef>

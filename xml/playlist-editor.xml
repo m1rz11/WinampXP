@@ -1,0 +1,121 @@
+<container id="PLEdit" name="Playlist Editor" component="guid:{45F3F7C1-A6F3-4ee6-A15E-125E92FC3F8D}" default_visible="1" default_x="0" default_y="484" default_w="550" default_h="242">
+
+<groupdef id="pledit.content.group" cursor="cur.normal">
+	<component id="pl.wdh" x="-2" y="0" w="2" relatw="1" h="-39" relath="1" noshowcmdbar="1" autoopen="1" autoclose="0" param="guid:{45F3F7C1-A6F3-4ee6-A15E-125E92FC3F8D}" />
+</groupdef>
+
+<groupdef id="pledit.shade.group.main" w="0" h="35" ghost="1" relatw="1">
+	<layer id="pledit.background.main.left" x="0" y="0" h="35" image="window.shade.background.main.left" dblclickaction="SWITCH;normal" move="1" ghost="0" sysregion="1" cursor="cur.normal"/>
+	<layer id="pledit.background.main.center" x="267" y="0" w="-366" relatw="1" h="35" image="window.shade.background.main.center" tile="1" dblclickaction="SWITCH;normal" move="1" ghost="0" sysregion="1" cursor="cur.normal"/>
+	<layer id="pledit.background.main.right" x="-271" y="0" relatx="1" h="35" image="window.shade.background.main.right" dblclickaction="SWITCH;normal" move="1" ghost="0" sysregion="1" cursor="cur.normal"/>
+	
+	<layer id="pledit.region.top.left" x="0" y="0" image="window.shade.region.top.left" ghost="1" sysregion="-2"/>
+	<layer id="pledit.region.top.right" x="-3" y="0" relatx="1" image="window.shade.region.top.right" ghost="1" sysregion="-2"/>
+	<layer id="pledit.region.bottom.left" x="0" y="-3" relaty="1" image="window.shade.region.bottom.left" ghost="1" sysregion="-2"/>
+	<layer id="pledit.region.bottom.right" x="-3" y="-3" RELATX="1" RELATY="1" image="window.shade.region.bottom.right" ghost="1" sysregion="-2"/>
+	
+	<layer id="pledit.background.grip.mid" x="-56" y="0" w="4" h="35" image="shade.resizer" relatx="1" dblclickaction="SWITCH;normal" move="0" tooltip="Adjust Horizontal Size" resize="right" alpha="253" cursor="cur.posbar"/>
+
+	<group id="pledit.shade.group.display" x="4" y="3" cursor="cur.normal"/>
+
+	<button id="pledit.button.switch" action="SWITCH" param="normalpl" x="-49" y="4" relatx="1" image="window.shade.button.switch" hoverimage="window.shade.button.switch.h" downimage="window.shade.button.switch.d" tooltip="Toggle Windowshade Mode" activealpha="253" inactivealpha="110" cursor="cur.normal"/>
+	<button id="pledit.button.close" action="CLOSE" x="-26" y="4" relatx="1" image="window.shade.button.close" hoverimage="window.shade.button.close.h" downimage="window.shade.button.close.d" tooltip="Close" activealpha="253" inactivealpha="110" cursor="cur.close"/>
+</groupdef>
+
+<groupdef id="pledit.shade.group.display" w="-65" h="29" relatw="1">
+	<layer id="pledit.background.display.left" x="0" y="0" image="pl.shade.display.left" ghost="1" />
+	<layer id="pledit.background.display.center" x="81" y="0" w="-100" relatw="1" image="pl.shade.display.middle" tile="1" ghost="1" />
+	<layer id="pledit.background.display.right" x="-19" y="0" relatx="1" image="pl.shade.display.right" ghost="1" />
+	
+  <playlistPlus id="main.pl" x="5" y="7" w="-8" h="19" relatw="1" font="sarpanch" fontsize="18" linespacing="1" color="greentxttime" antialias="1" playcolor="greentxttime" sysregion="1"/>
+</groupdef>
+
+
+<groupdef id="xui.playlistplus.selector">
+	<rect id="selector" fitparent="1" filled="1" color="wasabi.list.background" alpha="255"/>
+</groupdef>
+
+<!--groupdef id="elipsis">
+	<rect id="plslider" fitparent="1" filled="1" color="21,19,29" gammagroup="display" alpha="255"/>
+	<text id="elipsis" text="..." x="0" y="0" w="10" h="20" ghost="1"/>
+</groupdef-->
+
+<groupdef id="xui.playlistplus" xuitag="PlaylistPlus">
+	<layer id="playlist.plus.lines" image="none" x="4" y="0" w="-8" h="20" relatw="1" ghost="1" alpha="185" />
+	<group id="xui.playlistplus.selector" x="0" y="0" w="0" relatw="1" h="10" alpha="255" visible="0"/>
+	
+	<rect id="plslider" x="-8" y="0" w="1" relatx="1" h="5" filled="1" color="0,0,0" alpha="0" visible="1" ghost="0" move="1"/>
+		
+	<text id="dummy" text="10:00" x="0" y="0" w="0" h="20" relatw="1" visible="0" ghost="1"/>
+	
+	<!--group id="elipsis" x="-53" y="0" w="10" h="18" relatx="1" ghost="1"/-->
+	
+	<layer id="mousetrap" x="0" y="0" w="0" relatw="1" h="0" relath="1" rectrgn="1" move="1" dblclickaction="SWITCH;normal" cursor="cur.normal"/>
+	  
+  <script id="xui.playlistplus.script" file="scripts\playlist_editor.maki"/>
+</groupdef>
+
+
+<groupdef id="pledit.miniplayback.buttons">
+	<button id="player.button.previous" action="PREV" x="0" y="0" image="pl.button.previous.n" hoverimage="pl.button.previous.h" downimage="pl.button.previous.d" rectrgn="1" cursor="cur.normal"/>
+	<button id="player.button.pause" action="PAUSE" x="20" y="0" image="pl.button.pause.n" hoverimage="pl.button.pause.h" downimage="pl.button.pause.d" rectrgn="1" cursor="cur.normal"/>
+	<button id="player.button.play" action="PLAY" x="20" y="0" image="pl.button.play.n" hoverimage="pl.button.play.h" downimage="pl.button.play.d" rectrgn="1" cursor="cur.normal"/>
+	<button id="player.button.stop" action="STOP" x="40" y="0" image="pl.button.stop.n" hoverimage="pl.button.stop.h" downimage="pl.button.stop.d" rectrgn="1" cursor="cur.normal"/>
+	<button id="player.button.next" action="NEXT" x="60" y="0" image="pl.button.next.n" hoverimage="pl.button.next.h" downimage="pl.button.next.d" rectrgn="1" cursor="cur.normal"/>
+  <button id="player.button.eject" action="EJECT" x="80" y="0" image="pl.button.eject.n" hoverimage="pl.button.eject.h" downimage="pl.button.eject.d" rectrgn="1" cursor="cur.normal"/>
+
+  <script file="scripts\play_pause.maki" param="player.button.play;player.button.pause"/>
+</groupdef>
+
+<groupdef id="pledit.switch.button">
+  <layer id="window.top.middle" x="0" y="0" w="0" relatw="1" image="window.normal.titlebar.middle" resize="top" stretch="1" ghost="1" cursor="cur.restop"/>
+  <layer id="window.grip.top.right" x="-7" y="4" image="titlebar.stripes.right" activealpha="253" inactivealpha="110" ghost="1"/>
+	<button id="pledit.button.switch" action="SWITCH" param="SHADE" x="28" y="4" image="window.shade.button.switch" hoverimage="window.shade.button.switch.h" downimage="window.shade.button.switch.d" tooltip="Toggle Windowshade Mode" activealpha="253" inactivealpha="110" cursor="cur.normal"/>
+</groupdef>
+
+
+<layout id="normalpl" background="component.basetexture" desktopalpha="0" minimum_h="242" minimum_w="550" linkwidth="shade" appbar="top|bottom|left|right" >
+	<Wasabi:StandardFrame:NoStatus x="0" y="0" w="0" h="0" relatw="1" relath="1" content="pledit.content.group" />
+	<sendparams target="window.button.switch" visible="1"/>
+	<sendparams target="wasabi.frame.layout.windowcontrol" x="-62" w="51"/>
+	<sendparams target="wasabi.frame.layout.titlebar" w="0"/>
+	<sendparams target="wasabi.frame.layout.grip" x="10" w="-78"/>
+  <sendparams target="componentname" w="-81"/>
+
+	<sendparams target="wasabi.frame.layout.base.bg" h="0"/> <!-- PL window specific -->
+	<sendparams target="mousetrap" dblClickAction="SWITCH;shade"/>
+
+	<button id="pledit.buttons.bg" x="9" y="-49" relaty="1" image="window.buttons.bg"/>
+	<button id="pledit.button.add" action="PE_ADD" x="9" y="-48" relaty="1" image="window.pl.button.add.n" hoverimage="window.pl.button.add.h" downimage="window.pl.button.add.d" tooltip="Add Files to Playlist" cursor="cur.normal"/>
+	<button id="pledit.button.rem" action="PE_REM" x="55" y="-48" relaty="1" image="window.pl.button.rem.n" hoverimage="window.pl.button.rem.h" downimage="window.pl.button.rem.d" tooltip="Remove Files from Playlist" cursor="cur.normal"/>
+	<button id="pledit.button.sel" action="PE_SEL" x="97" y="-48" relaty="1" image="window.pl.button.sel.n" hoverimage="window.pl.button.sel.h" downimage="window.pl.button.sel.d" tooltip="Select Files in Playlist" cursor="cur.normal"/>
+	<button id="pledit.button.misc" action="PE_MISC" x="139" y="-48" relaty="1" image="window.pl.button.misc.n" hoverimage="window.pl.button.misc.h" downimage="window.pl.button.misc.d" tooltip="Misc Actions" cursor="cur.normal"/>
+
+	<button id="pledit.button.bg" x="-59" y="-49" relatx="1" relaty="1" image="window.button.bg"/>
+	<button id="pledit.button.list" action="PE_LIST" x="-58" y="-48" relatx="1" relaty="1" image="window.pl.button.ploptns.n" hoverimage="window.pl.button.ploptns.h" downimage="window.pl.button.ploptns.d" tooltip="Manage Playlist" cursor="cur.normal"/>
+
+  <grid id="pl.display.bg" x="-362" y="-43" h="29" w="301" relatx="1" relaty="1" left="window.pl.display.bg.left" middle="window.pl.display.bg.middle" right="window.pl.display.bg.right" ghost="1" alpha="253"/>
+  <grid id="pl.display" x="-362" y="-43" h="29" w="301" relatx="1" relaty="1" left="window.pl.display.left" middle="window.pl.display.middle" right="window.pl.display.right" ghost="1" alpha="253"/>
+	
+	<!--rect id="plssayer.vis" x="-354" y="-36" w="72" h="15" alpha="253" relatx="1" relaty="1"  color="0,0,250" filled="0"/-->
+	<vis id="shade.vis" x="-354" y="-36" w="72" h="15" relatx="1" relaty="1" cursor="cur.normal" gammagroup="visualizers"/>
+	<rect id="hide.for.gordon" x="-283" y="-36" w="2" h="17" relatx="1" relaty="1" color="28,22,50" filled="1" gammagroup="display"/>
+  <!--layer id="hide.for.vic" x="27" y="71" image="none" ghost="1" alpha="0"/-->
+	<layer id="player.vis.blocker" x="-354" y="-36" w="72" h="15" relatx="1" relaty="1" image="none" cursor="cur.normal" alpha="0"/>
+	
+	<text id="pledit.info" x="-181" y="-37" h="19" w="116" relatx="1" relaty="1" display="PE_Info" font="sarpanch" fontsize="14" valign="middle" align="center" 
+	rightclickaction="trackmenu" color="greentxttime" alpha="253" cursor="cur.normal"/>
+
+	<group id="pledit.miniplayback.buttons" x="-278" y="-38" relatx="1" relaty="1" cursor="cur.normal" alpha="253"/>
+	<group id="pledit.switch.button" x="-90" y="0" h="30" w="55" relatx="1"/>
+
+  <!--script file="scripts\visualizer.maki" param="shade.vis;player.vis.trigger;hide.for.vic"/-->
+	
+</layout> 
+
+
+<layout id="shade" w="550" h="35" minimum_w="550" minimum_h="35" maximum_w="10000" droptarget="pldr" desktopalpha="0" linkwidth="normalpl">
+	<group id="pledit.shade.group.main" x="0" y="0" h="35" ghost="1" cursor="cur.normal"/>
+</layout>	
+	
+</container>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<WinampAbstractionLayer version="1.35">
+	<skininfo>
+		<version>1.05</version>
+		<name>Winamp Classic Modern</name>
+		<comment>Modernizing the good old Winamp Classic skin</comment>
+		<author>Graphics by Zsolt Vajda // Coding by Victor Brocaz</author>
+		<email>victorbrocaz@gmail.com</email>
+		<homepage>www.deviantart.com/victhor // www.trn.hu</homepage>
+		<screenshot>screenshot.png</screenshot>
+		<wacupscreenshot>wacupscreenshot.png</wacupscreenshot>
+	</skininfo>
+
+	<accelerators section="general">
+		<accelerator bind="Ctrl+W" action="HOTKEY_SHADETOGGLE"/>
+		<accelerator bind="Ctrl+Q" action="HOTKEY_CONTS"/>
+		<accelerator bind="Ctrl+W" action="HOTKEY_SHADETOGGLEPL"/>
+	</accelerators>
+	
+	<accelerators section="shade">
+		<accelerator bind="Ctrl+W" action="HOTKEY_SHADETOGGLE"/>
+	</accelerators>
+	
+	<accelerators section="normaleq">
+		<accelerator bind="Ctrl+W" action="HOTKEY_SHADETOGGLEEQ"/>
+	</accelerators>
+	
+	<include file="xml/elements.xml"/>
+	<include file="xml/system.xml"/>
+  <include file="xml/standardframe.xml"/>
+  <include file="xml/titlebar.xml"/>
+	<include file="xml/main-player.xml"/>
+	<include file="xml/albumart.xml"/>
+	<include file="xml/equalizer.xml"/>
+	<include file="xml/playlist-editor.xml"/>
+	<include file="xml/media-library.xml"/>
+	<include file="xml/video.xml"/>
+	<include file="xml/visualization.xml"/>
+	<include file="xml/about.xml"/>
+	<include file="xml/color-themes.xml"/>
+	<include file="xml/window-overrides.xml"/>
+	
+	<scripts>
+		<script id="script.system" file="scripts/system.maki"></script>
+    <script file="scripts\visualizer.maki"/>
+	</scripts>
+
+	
+</WinampAbstractionLayer>

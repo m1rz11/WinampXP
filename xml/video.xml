@@ -1,0 +1,36 @@
+<container id="Video" name="Video" component="guid:{F0816D7B-FFFC-4343-80F2-E8199AA15CC3}" default_visible="0">
+
+<groupdef id="vid.bottom.group">
+
+  <grid id="vid.display.bg" x="0" y="0" h="29" w="0" relatw="1" left="window.vid.display.bg.left" middle="window.vid.display.bg.middle" right="window.vid.display.bg.right" ghost="1" />
+  <grid id="vid.display" x="0" y="0" h="29" w="0" relatw="1" left="window.vid.display.left" middle="window.vid.display.middle" right="window.vid.display.right" ghost="1" />
+
+	<Button action="VID_FS" x="4" y="4" rectrgn="1" image="vid.button.fullsc.n" hoverImage="vid.button.fullsc.h" 
+	downImage="vid.button.fullsc.d" tooltip="Fullscreen" alpha="253" cursor="cur.normal"/>
+
+	<Button action="VID_1X" x="29" y="4" rectrgn="1" image="vid.button.1x.n" hoverImage="vid.button.1x.h"
+		downImage="vid.button.1x.d" tooltip="Normal Size" alpha="253" cursor="cur.normal"/>
+
+	<Button action="VID_2X" x="54" y="4" rectrgn="1" image="vid.button.2x.n" hoverImage="vid.button.2x.h"
+		downImage="vid.button.2x.d" tooltip="Double Size" alpha="253" cursor="cur.normal"/>
+
+	<Button action="VID_Misc" x="79" y="4" rectrgn="1" image="vid.button.misc.n" hoverImage="vid.button.misc.h"
+		downImage="vid.button.misc.d" tooltip="Options" alpha="253" cursor="cur.normal"/>
+
+	<text id="info" display="VID_Info" ticker="1" x="104" y="4" h="19" w="-108" relatw="1" 
+	align="left" color="greentxttime" dblclickaction="trackinfo" font="sarpanch" move="1" fontsize="14" cursor="cur.normal"/>
+</groupdef>
+
+
+	
+<layout id="normal" background="component.basetexture" desktopalpha="0" minimum_h="242" minimum_w="550" appbar="top|bottom|left|right">
+	<Wasabi:StandardFrame:NoStatus x="0" y="0" w="0" h="0" relatw="1" relath="1" />
+		<sendparams target="wasabi.frame.layout.base.bg" h="0" /> <!-- PL window specific -->
+	<component x="14" y="43" w="-28" h="-97" relatw="1" relath="1" noshowcmdbar="1" autoopen="1" autoclose="1" param="guid:{F0816D7B-FFFC-4343-80F2-E8199AA15CC3}"/>
+
+	<group id="vid.bottom.group" x="10" y="-43" h="29" w="-20" relaty="1" relatw="1" cursor="cur.normal"/>
+  
+</layout> 
+
+
+</container>

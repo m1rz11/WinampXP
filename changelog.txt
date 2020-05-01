@@ -1,0 +1,17 @@
+Lite v1.05:
+. Fixed (by DrO) playlist_editor.maki crash on load on some setups.
+
+Lite v1.04:
+. Re-engineered some files so it doesn't use centerobject.maki (potentially crashy)
+. [WACUP] Screenshot used on Skin select windows now reflects if it's being used on WACUP instead of Winamp
+
+Lite v1.03:
+
+. Added Gordon Freeman's color themes
+. Added "Stop after current" signal on ctrl+v
+. Fixed cursor on EQ "+12db" / "0" / "-12db" buttons
+. Fixed wasabi.list.background.alternate color gammagroup
+. Fixed ctrl+w bug on Playlist
+. Improved timer font (edited minus sign)
+. Enabled inactive state for Main shade mode to better match classic skin behaviour
+. Put some order on EQ resizers

@@ -1,0 +1,35 @@
+<groupdef id="wasabi.statusbar" default_h="18">
+	<grid id="buttonbar.background" x="0" y="0" w="0" h="0" relatw="1" relath="1" topleft="wasabi.label.top.left" top="wasabi.label.top" topright="wasabi.label.top.right" left="wasabi.label.left" middle="wasabi.label.middle" right="wasabi.label.right" bottomleft="wasabi.label.bottom.left" bottom="wasabi.label.bottom" bottomright="wasabi.label.bottom.right" />
+	<rect id="wasabi.statusbar.progress.outline" x="4" y="-5" w="-8" h="3" relatw="1" relaty="1" filled="0" color="0,0,0" visible="0" />
+	<rect id="wasabi.statusbar.progress.inside" x="4" y="-5" w="-8" h="3" relaty="1" filled="1" color="0,0,0" visible="0" />
+	<text id="wasabi.statusbar.text" x="2" y="0" w="-4" relatw="1" h="-1" relath="1" font="Tahoma" fontsize="13" color="0,0,0," />
+</groupdef>
+ 
+<groupdef id="wasabi.buttonbar.stack" default_h="18">
+	<grid id="buttonbar.background" x="0" y="0" w="0" h="0" relatw="1" relath="1" topleft="wasabi.label.top.left" top="wasabi.label.top" topright="wasabi.label.top.right" left="wasabi.label.left" middle="wasabi.label.middle" right="wasabi.label.right" bottomleft="wasabi.label.bottom.left" bottom="wasabi.label.bottom" bottomright="wasabi.label.bottom.right" />
+	<text id="buttonbar.text" x="4" y="0" w="-12" h="0" relatw="1" relath="1" default="Error" font="Tahoma" fontsize="13" color="0,0,0" />
+	<layer id="buttonbar.arrow" x="-15" y="8" relatx="1" image="wasabi.button.label.arrow.down" />
+	<button id="mousetrap" x="0" y="0" w="0" h="0" relatw="1" relath="1" rectrgn="1" />
+</groupdef>
+ 
+ <!-- Tabsheet -->
+<groupdef id="wasabi.tabsheet.button.selected.group" h="25" autowidthsource="text">
+	<layer x="0" y="-25" relaty="1" image="wasabi.tabsheet.button.left" />
+	<layer x="3" y="-25" w="-9" relaty="1" relatw="1" image="wasabi.tabsheet.button.middle" tile="1" />
+	<layer x="-6" y="-25" relatx="1" relaty="1" image="wasabi.tabsheet.button.right" />
+	<text id="text" ticker="1" default="Active Tab" x="3" y="5" w="-9" relatw="1" h="14" font="Arial" fontsize="14" color="255,255,255" antialias="0" align="center" forceupcase="0" ghost="1" />
+	<Layer id="mousetrap" x="0" y="0" w="0" h="0" relatw="1" relath="1" />
+</groupdef>
+
+<groupdef id="wasabi.tabsheet.button.unselected.group" h="25" autowidthsource="text">
+	<layer x="0" y="-22" relaty="1" image="wasabi.tabsheet.button.shade.left" />
+	<layer x="3" y="-22" w="-6" relaty="1" relatw="1" image="wasabi.tabsheet.button.shade.middle" tile="1" />
+	<layer x="-3" y="-22" relatx="1" relaty="1" image="wasabi.tabsheet.button.shade.right" />
+	<layer x="0" y="-2" w="-3" relaty="1" relatw="1" image="wasabi.tabsheet.button.bottom" tile="1" />
+	<text id="text" ticker="1" default="Inactive Tab"  x="3" y="8" w="-9" relatw="1" h="14" font="Arial" fontsize="14" color="216,216,216" antialias="0" align="center" forceupcase="0" ghost="1" />
+	<layer id="mousetrap" x="0" y="0" w="0" h="0" relatw="1" relath="1" />
+</groupdef>
+
+<groupdef id="wasabi.tabsheet.nobutton.group" h="25">
+	<layer x="0" y="-2" w="0" relaty="1" relatw="1" image="wasabi.tabsheet.button.bottom" tile="1" />
+</groupdef>
