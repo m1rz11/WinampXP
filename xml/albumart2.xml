@@ -1,0 +1,9 @@
+<container id="testwindow" name="StandardFrame Fuckery" default_visible="1">
+
+<layout id="normal" minimum_w="212" minimum_h="242" h="242" w="212" appbar="top|bottom|left|right">
+	<Wasabi:Standardframe:NoStatus x="0" y="0" w="0" h="0" relatw="1" relath="1" content="testwindow" />
+  <sendparams target="titlebar.title.bg.group" w="170"/>
+	
+</layout>
+
+</container>

@@ -4,7 +4,7 @@
 	<Wasabi:StandardFrame:NoStatus x="0" y="0" w="0" h="0" relatw="1" relath="1" />
     <sendparams target="componentname" default="VISUALIZER"/>
 		<sendparams target="wasabi.frame.layout.base.bg" h="40" /> <!-- VIS window specific -->
-	<component x="14" y="43" w="-28" h="-57" relatw="1" relath="1" noshowcmdbar="1" autoopen="1" autoclose="1" param="guid:{0000000A-000C-0010-FF7B-01014263450C}" />
+	<component x="4" y="29" w="-8" h="-33" relatw="1" relath="1" noshowcmdbar="1" autoopen="1" autoclose="1" param="guid:{0000000A-000C-0010-FF7B-01014263450C}" />
 </layout>
 
 </container>

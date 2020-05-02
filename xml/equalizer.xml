@@ -103,15 +103,12 @@
 
 <groupdef id="eq.shade.titlebar.center">
 	<layer id="eq.background.main.center" x="0" y="-3" w="260" h="35" image="window.shade.background.main.center" tile="1" ghost="1" alpha="253"/>
-	<layer id="titlebar.stripes.tips.left" x="-19" y="0" w="29" image="titlebar.stripes.left" ghost="1" activealpha="253" inactivealpha="110"/>
-	<layer id="titlebar.stripes.tips.right" x="250" y="0" w="29" image="titlebar.stripes.right" ghost="1" activealpha="253" inactivealpha="110"/>
 </groupdef>
 
 
 <groupdef id="pledit.switch.button">
-  <layer id="window.top.middle" x="0" y="0" w="0" relatw="1" image="window.normal.titlebar.middle" resize="top" stretch="1" ghost="1" cursor="cur.restop"/>
-  <layer id="window.grip.top.right" x="-7" y="4" image="titlebar.stripes.right" activealpha="253" inactivealpha="110" ghost="1"/>
-	<button id="pledit.button.switch" action="SWITCH" param="SHADE" x="28" y="4" image="window.shade.button.switch" hoverimage="window.shade.button.switch.h" 
+  <!--layer id="window.top.middle" x="0" y="0" w="0" relatw="1" image="window.normal.titlebar.middle" resize="top" stretch="1" ghost="1" cursor="cur.restop"/-->
+	<button id="pledit.button.switch" action="SWITCH" param="SHADE" x="29" y="2" image="window.shade.button.switch" hoverimage="window.shade.button.switch.h" 
 	downimage="window.shade.button.switch.d" tooltip="Toggle Windowshade Mode" activealpha="253" inactivealpha="110" cursor="cur.normal"/>
 </groupdef>
 
@@ -127,7 +124,7 @@
   <sendparams target="componentname" w="-81"/>
 
 	<group id="equalizer.normal.group.main.content" x="1" y="30" h="207" w="550"/>
-  <group id="pledit.switch.button" x="-90" y="0" h="30" w="55" relatx="1"/>
+  <group id="pledit.switch.button" x="-80" y="0" h="30" w="55" relatx="1"/>
 
   <layer id="resize.disabler.top" x="10" y="0" w="-20" h="10" relatw="1" image="none" move="1" cursor="cur.move"/>
   <layer id="resize.disabler.top.left" x="0" y="0" w="12" h="53" image="none" resize="left" regionop="1" rectrgn="1" cursor="cur.posbar"/>

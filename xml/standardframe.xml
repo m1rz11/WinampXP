@@ -14,7 +14,7 @@
 ======================================================================================================== -->
 
 
-<groupdef id="wasabi.frame.layout.base.bg">
+<groupdef id="wasabi.frame.layout.base.bg" alpha="0">
 	<layer id="window.inner.top.left" x="9" y="38" image="window.normal.inner.top.left" move="0"/>
 	<layer id="window.inner.top.middle" x="94" y="38" w="-188" relatw="1" image="window.normal.inner.top.middle" stretch="1" move="0"/>
   <layer id="window.inner.top.right" x="-94" y="38" relatx="1" image="window.normal.inner.top.right" move="0"/>
@@ -29,16 +29,6 @@
 </groupdef>
 
 
-<groupdef id="wasabi.frame.layout.region">
-
-	<layer id="window.region.top.left" x="-1" y="-1" image="window.normal.region.top.left" ghost="1" move="0" sysregion="-2" />
-  <layer id="window.region.top.right" x="-7" y="-1" relatx="1" image="window.normal.region.top.right" ghost="1" move="0" sysregion="-2" />
-	<layer id="window.region.bottom.left" x="-1" y="-8" relaty="1" image="window.normal.region.bottom.left" ghost="1" move="0" sysregion="-2" />
-	<layer id="window.region.bottom.right" x="-7" y="-8" relatx="1" relaty="1" image="window.normal.region.bottom.right" ghost="1" move="0" sysregion="-2" />
-	
-</groupdef>
-
-
 
 <!-- =======================================================================================================
 
@@ -47,21 +37,33 @@
 ======================================================================================================== -->
 
 <groupdef id="wasabi.frame.layout">
-	<layer id="window.titlebar.left" x="0" y="0" image="window.normal.titlebar.left" ghost="1" move="0"/>
-	<layer id="window.titlebar.middle" x="267" y="0" w="-538" relatw="1" image="window.normal.titlebar.middle" stretch="1" ghost="1" move="0"/>
-	<layer id="window.titlebar.right" x="-271" y="0" relatx="1" image="window.normal.titlebar.right" ghost="1" move="0"/>
+	<layer id="window.titlebar.left" x="0" y="0" activealpha="255" inactiveAlpha="0" image="window.normal.titlebar.left" ghost="1" move="0"/>
+	<layer id="window.titlebar.middle" x="28" y="0" activealpha="255" inactiveAlpha="0" w="-63" relatw="1" image="window.normal.titlebar.middle" stretch="1" ghost="1" move="0"/>
+	<layer id="window.titlebar.right" x="-35" y="0" activealpha="255" inactiveAlpha="0" relatx="1" image="window.normal.titlebar.right" ghost="1" move="0"/>
+	
+	<layer id="window.titlebar.left.inactive" x="0" y="0" activealpha="0" inactiveAlpha="255" image="window.normal.titlebar.left.inactive" ghost="1" move="0"/>
+	<layer id="window.titlebar.middle.inactive" x="28" y="0" activealpha="0" inactiveAlpha="255" w="-63" relatw="1" image="window.normal.titlebar.middle.inactive" stretch="1" ghost="1" move="0"/>
+	<layer id="window.titlebar.right.inactive" x="-35" y="0" activealpha="0" inactiveAlpha="255" relatx="1" image="window.normal.titlebar.right.inactive" ghost="1" move="0"/>
 
 	<layer id="window.top.left" x="0" y="34" image="window.normal.top.left" resize="left" move="0" cursor="cur.posbar"/>
 	<layer id="window.top.middle" x="267" y="34" w="-538" relatw="1" image="window.normal.top.middle" stretch="1" move="0"/>
   <layer id="window.top.right" x="-271" y="34" relatx="1" image="window.normal.top.right" resize="right" move="0" cursor="cur.posbar"/>
 	
-	<layer id="window.left" x="0" y="48" h="-51" relath="1" image="window.normal.left" stretch="1" resize="left" move="0" cursor="cur.posbar"/>
-	<layer id="window.middle" x="267" y="48" w="-538" h="-51" relatw="1" relath="1" image="window.normal.middle" stretch="1" move="0"/>
-	<layer id="window.right" x="-271" y="48" h="-51" relatx="1" relath="1" image="window.normal.right" stretch="1" resize="right" move="0" cursor="cur.posbar"/>
+	<layer id="window.left" x="0" y="29" h="-32" activealpha="255" inactiveAlpha="0" relath="1" image="window.normal.left" stretch="1" resize="left" move="0" cursor="cur.posbar"/>
+	<layer id="window.middle" x="4" y="29" w="-0" h="-31" relatw="1" relath="1" image="window.normal.middle" stretch="1" move="0"/>
+	<layer id="window.right" x="-4" y="29" h="-32" activealpha="255" inactiveAlpha="0" relatx="1" relath="1" image="window.normal.right" stretch="1" resize="right" move="0" cursor="cur.posbar"/>
 	
-	<layer id="window.bottom.left" x="0" y="-51" relaty="1" image="window.normal.bottom.left" move="1" cursor="cur.normal"/>
-	<layer id="window.bottom.middle" x="267" y="-51" w="-538" relaty="1" relatw="1" image="window.normal.bottom.middle" stretch="1" move="1"/>
-	<layer id="window.bottom.right" x="-271" y="-51" relatx="1" relaty="1" image="window.normal.bottom.right" move="1" cursor="cur.normal"/>
+	<layer id="window.left.inactive" x="0" y="29" h="-32" activealpha="0" inactiveAlpha="255" relath="1" image="window.normal.left.inactive" stretch="1" resize="left" move="0" cursor="cur.posbar"/>
+
+	<layer id="window.right.inactive" x="-4" y="29" h="-32" activealpha="0" inactiveAlpha="255" relatx="1" relath="1" image="window.normal.right.inactive" stretch="1" resize="right" move="0" cursor="cur.posbar"/>
+	
+	<layer id="window.bottom.left" x="0" y="-4" relaty="1" activealpha="255" inactiveAlpha="0" image="window.normal.bottom.left" move="1" cursor="cur.normal"/>
+	<layer id="window.bottom.middle" x="5" y="-4" w="-10" relaty="1" activealpha="255" inactiveAlpha="0" relatw="1" image="window.normal.bottom.middle" stretch="1" move="1"/>
+	<layer id="window.bottom.right" x="-5" y="-4" relatx="1" relaty="1" activealpha="255" inactiveAlpha="0" image="window.normal.bottom.right" move="1" cursor="cur.normal"/>
+	
+	<layer id="window.bottom.left.inactive" x="0" y="-4" relaty="1" activealpha="0" inactiveAlpha="255" image="window.normal.bottom.left.inactive" move="1" cursor="cur.normal"/>
+	<layer id="window.bottom.middle.inactive" x="5" y="-4" w="-10" relaty="1" relatw="1" activealpha="0" inactiveAlpha="255" image="window.normal.bottom.middle.inactive" stretch="1" move="1"/>
+	<layer id="window.bottom.right.inactive" x="-5" y="-4" relatx="1" relaty="1" activealpha="0" inactiveAlpha="255" image="window.normal.bottom.right.inactive" move="1" cursor="cur.normal"/>
 		
   <group id="wasabi.frame.layout.base.bg" x="0" y="0" w="0" h="40" relatw="1" relath="1" cursor="cur.normal"/>
 
@@ -72,9 +74,9 @@
 
   <Wasabi:TitleBar id="wasabi.titlebar" x="12" y="0" w="-47" h="34" relatw="1"/>
 
-	<button id="window.button.close" action="CLOSE" x="-36" y="3" relatx="1" image="window.normal.button.close" hoverimage="window.normal.button.close.h" 
-	downimage="window.normal.button.close.down" activealpha="253" inactivealpha="110" tooltip="Close" cursor="cur.close"/>
-
+	<button id="window.button.close" action="CLOSE" x="-28" y="2" relatx="1" image="window.normal.button.close" hoverimage="window.normal.button.close.h" 
+	downimage="window.normal.button.close.down" activealpha="253" inactivealpha="100" tooltip="Close" cursor="cur.close"/>
+	<button id="player.button.mainmenu" action="SYSMENU" x="0" y="1" image="player.button.mainmenu" hoverimage="player.button.mainmenu.h" downimage="player.button.mainmenu.d" activealpha="253" inactivealpha="253" tooltip="Winamp Menu" cursor="cur.normal"/>
  </groupdef>
 
 
@@ -100,7 +102,7 @@
   <layer x="-20" y="-20" w="20" h="20" relatx="1" relaty="1" image="none" resize="bottomright" cursor="cur.resbottomright" alpha="0"/>
 
   <layoutstatus id="frame.layoutstatus" x="13" y="-48" w="-47" h="0" relaty="1" relatw="1" exclude="{system}" />
-  <script id="standardframe.script" file="scripts/standardframe.maki" param="13,32,-26,-38,0,0,1,1" />
+  <script id="standardframe.script" file="scripts/standardframe.maki" param="15,44,-30,-60,0,0,1,1" />
 
 </groupdef>
 
@@ -126,7 +128,7 @@
   <layer x="-15" y="-15" relatx="1" relaty="1" image="normal.resizer.bottomright" ghost="1" alpha="253"/>
   <layer x="-20" y="-20" w="20" h="20" relatx="1" relaty="1" image="none" resize="bottomright" cursor="cur.resbottomright" alpha="0"/>
 
-  <script id="standardframe.script" file="scripts/standardframe.maki" param="15,44,-30,-60,0,0,1,1" />
+  <script id="standardframe.script" file="scripts/standardframe.maki" param="4,29,-8,-33,0,0,1,1" />
 
 </groupdef>
 
