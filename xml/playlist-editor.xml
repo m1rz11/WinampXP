@@ -79,8 +79,9 @@
 	<sendparams target="wasabi.frame.layout.titlebar" w="0"/>
 	<sendparams target="wasabi.frame.layout.grip" x="10" w="-78"/>
   <sendparams target="componentname" w="-81"/>
+  <sendparams target="disabled.switch" alpha="0"/>
 
-	<sendparams target="wasabi.frame.layout.base.bg" h="0" /> <!-- PL window specific -->
+	<sendparams target="wasabi.frame.layout.base.bg" h="0" alpha="253"/> <!-- PL window specific -->
 	<sendparams target="mousetrap" dblClickAction="SWITCH;shade"/>
 
 	<button id="pledit.buttons.bg" x="9" y="-49" relaty="1" image="window.buttons.bg"/>

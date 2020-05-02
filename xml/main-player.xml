@@ -25,13 +25,13 @@
 
   <Animatedlayer id="main.volume.anim" x="213" y="116" w="120" h="8" image="player.animation.volume" ghost="1" alpha="253"/>
 	<slider id="player.slider.volume.shadow" action="VOLUME" x="208" y="110" w="130" h="26" orientation="horizontal" thumb="thumb.volpan.slider.shadow" hoverthumb="thumb.volpan.slider.shadow" downthumb="thumb.volpan.slider.shadow"/>
-	<slider id="player.slider.volume" action="VOLUME" x="208" y="110" w="130" h="26" orientation="horizontal" thumb="thumb.volpan.slider.n" hoverthumb="thumb.volpan.slider.h" downthumb="thumb.volpan.slider.d" cursor="cur.posbar" tooltip="Volume Bar"/>
+	<slider id="player.slider.volume" action="VOLUME" x="208" y="110" w="130" h="26" orientation="horizontal" thumb="thumb.volpan.slider.n" hoverthumb="thumb.volpan.slider.h" downthumb="thumb.volpan.slider.d" cursor="cur.normal" tooltip="Volume Bar"/>
 
 
 	<layer id="eq.bg.pan" x="346" y="113" image="player.bg.balance" tooltip="Panning Bar"/>
   <Animatedlayer id="main.balance.anim" x="360" y="116" w="71" h="8" image="player.animation.balance" ghost="1" alpha="253"/>
 	<slider id="eq.slider.pan.shadow" action="PAN" x="346" y="110" w="81" h="26" thumb="thumb.volpan.slider.shadow" hoverthumb="thumb.volpan.slider.shadow" downthumb="thumb.volpan.slider.shadow"/>
-	<slider id="eq.slider.pan" action="PAN" x="346" y="110" w="81" h="26" thumb="thumb.volpan.slider.n" hoverthumb="thumb.volpan.slider.h" downthumb="thumb.volpan.slider.d" cursor="cur.posbar" tooltip="Panning Bar"/>
+	<slider id="eq.slider.pan" action="PAN" x="346" y="110" w="81" h="26" thumb="thumb.volpan.slider.n" hoverthumb="thumb.volpan.slider.h" downthumb="thumb.volpan.slider.d" cursor="cur.normal" tooltip="Panning Bar"/>
 	
   <!--script file="scripts\color_themes_patch_fix.maki"/--> <!-- This script makes the switch between the safe layer and the multicolor-bar (only seen on default theme) -->
 
@@ -45,9 +45,9 @@
   <NStatesButton id="player.button.pl.light" x="-67" y="104" relatx="1" image="button.eqpl.light.1." hoverimage="button.eqpl.light.2." downimage="button.eqpl.light.3." rectrgn="1" action="TOGGLE" param="GUID:PL" nstates="2" cfgvals="0;1" tooltip="Toggle Playlist Editor" cursor="cur.normal"/>
 
 	<slider id="player.slider.seek.shadow" action="SEEK" x="19" y="139" w="-36" h="34" relatw="1" orientation="horizontal" thumb="player.seeker.slider.shadow" hoverthumb="player.seeker.slider.shadow" downthumb="player.seeker.slider.shadow" rectrgn="1"/>
-  <layer id="player.seek.cursor" x="19" y="139" w="-36" h="34" relatw="1" image="none" rectrgn="1" cursor="cur.posbar" tooltip="Seeking Bar"/>
-	<slider id="player.slider.seek" action="SEEK" x="19" y="139" w="-36" h="34" relatw="1" orientation="horizontal" thumb="player.seeker.slider.n" hoverthumb="player.seeker.slider.h" downthumb="player.seeker.slider.d" rectrgn="1" cursor="cur.posbar" tooltip="Seeking Bar"/>
-	<slider id="player.slider.seek.ghost" action="SEEK" x="19" y="139" w="-36" h="34" relatw="1" orientation="horizontal" thumb="player.seeker.slider.n" hoverthumb="player.seeker.slider.h" downthumb="player.seeker.slider.d" rectrgn="1" cursor="cur.posbar"/>
+  <layer id="player.seek.cursor" x="19" y="139" w="-36" h="34" relatw="1" image="none" rectrgn="1" cursor="cur.normal" tooltip="Seeking Bar"/>
+	<slider id="player.slider.seek" action="SEEK" x="19" y="139" w="-36" h="34" relatw="1" orientation="horizontal" thumb="player.seeker.slider.n" hoverthumb="player.seeker.slider.h" downthumb="player.seeker.slider.d" rectrgn="1" cursor="cur.normal" tooltip="Seeking Bar"/>
+	<slider id="player.slider.seek.ghost" action="SEEK" x="19" y="139" w="-36" h="34" relatw="1" orientation="horizontal" thumb="player.seeker.slider.n" hoverthumb="player.seeker.slider.h" downthumb="player.seeker.slider.d" rectrgn="1" cursor="cur.normal"/>
 
 	<layer id="player.button.open.bg" x="242" y="175" image="player.button.eject.bg" ghost="1" alpha="253"/>
 
@@ -172,7 +172,7 @@
 </groupdef>
 <groupdef id="player.timedisplay.songtitle" cursor="cur.normal">
 
-	<text text="Time Display" x="2" y="0" w="122" h="36" font="tahoma" fontsize="15" color="0,70,213"/>
+	<text text="Time Display" x="-2" y="0" w="122" h="36" font="tahoma" fontsize="15" color="0,70,213"/>
 	<text text="Song Title" x="189" y="0" w="122" h="36" font="tahoma" fontsize="15" color="0,70,213"/>
 
 </groupdef>

@@ -1,5 +1,7 @@
   <color id="greentxtsui" value="138,196,64" gammagroup="display-sui-text"/>
   <color id="greentxttime" value="138,196,64" gammagroup="display-text"/>
+  
+  	<color id="wasabi.text.color" value="0,0,0"/>
 
 	<!-- Generic Lists -->
 	<color id="wasabi.list.text" value="0,0,0" gammagroup="display-sui-text"/> <!--lists/trees item foreground (also edit text) -->
@@ -8,14 +10,14 @@
 	<color id="wasabi.list.background.alternate" value="255,255,255" gammagroup="display"/>	
 
   <color id="wasabi.list.text.selected" value="255,255,255" gammagroup="current-active"/> <!--listview/treeview selection bar text color -->
-	<color id="wasabi.list.text.selected.background" value="37,37,108" gammagroup="selection-bg"/> <!--listview/treeview selection bar background color -->
-	<color id="studio.list.item.selected" value="37,37,108" gammagroup="current-active"/>
-	<color id="studio.list.item.focused" value="47,47,118" gammagroup="selection-bg"/>
-  <color id="studio.list.item.selected.fg" value="greentxtsui" gammagroup="display-sui-text"/>
+	<color id="wasabi.list.text.selected.background" value="49,106,197" gammagroup="selection-bg"/> <!--listview/treeview selection bar background color -->
+	<color id="studio.list.item.selected" value="49,106,197" gammagroup="current-active"/>
+	<color id="studio.list.item.focused" value="49,106,197" gammagroup="selection-bg"/>
+  <color id="studio.list.item.selected.fg" value="128,128,128" gammagroup="display-sui-text"/>
 
 	<color id="wasabi.list.text.current" value="255,255,255" gammagroup="current-active"/> <!-- currently playing item in lists -->
-	<color id="wasabi.list.text.selected.inactive" value="240,240,240" gammagroup="selection-bg"/> <!-- listview/treeview selection bar textcolor (inactive) -->
-	<color id="wasabi.list.text.selected.background.inactive" value="47,47,118" gammagroup="selection-bg"/> <!-- listview/treeview selectionbar back color (inactive) -->
+	<color id="wasabi.list.text.selected.inactive" value="0,0,0" gammagroup="selection-bg"/> <!-- listview/treeview selection bar textcolor (inactive) -->
+	<color id="wasabi.list.text.selected.background.inactive" value="236,233,216" gammagroup="selection-bg"/> <!-- listview/treeview selectionbar back color (inactive) -->
 
 	<!-- edit wnds -->
 	<color id="wasabi.window.background" value="236,233,216" gammagroup="display-sui"/> <!-- window background. -	If this color is not defined, a whole container is created in memory to 
@@ -30,21 +32,21 @@
 	<color id="wasabi.list.column.empty" value="238,234,216" gammagroup="display-sui"/>  <!-- listview header empty color (beyond the columns -->
 
 
-	<color id="wasabi.window.text" value="150,150,170" gammagroup="window-text"/> <!--text color within windows -->
+	<color id="wasabi.window.text" value="0,0,0" gammagroup="window-text"/> <!--text color within windows -->
 	<color id="wasabi.border.sunken" value="172,168,153" gammagroup="display-sui"/> <!-- color of dividers and sunken borders (also affects playlist scrollbar outline at the sides) -->
 
 
   <!-- Generic Trees -->
-  <color id="studio.tree.text" value="greentxtsui" gammagroup="display-sui-text"/>
+  <color id="studio.tree.text" value="0,0,0" gammagroup="display-sui-text"/>
   <color id="studio.tree.selected" value="0,0,0" gammagroup="selection-bg"/>
   <color id="studio.tree.hilited" value="greentxtsui" gammagroup="display-sui-text"/>
   <color id="studio.tree.hiliteddrop" value="greentxtsui" gammagroup="display-sui-text"/>
 
   <!-- Generic Lists -->
-  <color id="studio.list.text" value="greentxtsui" gammagroup="display-sui-text"/>
+  <color id="studio.list.text" value="0,0,0" gammagroup="display-sui-text"/>
 
   <!-- Item Lists -->
-  <color id="common.itemlist.outline.current" value="greentxtsui" gammagroup="display-sui-text"/>
+  <color id="common.itemlist.outline.current" value="49,106,197" gammagroup="display-sui-text"/>
   <color id="common.itemlist.outline.focus" value="240,240,240" gammagroup="display-sui-text"/>
 
   <!-- playlist editor -->
@@ -52,7 +54,7 @@
   <color id="pledit.text.current" value="248,248,248" gammagroup="current-active"/>
   <color id="pledit.currentoutline" value="49,106,197" gammagroup="current-active"/>
   <color id="pledit.dir.plitem.currect" value="255,255,255" gammagroup="current-active"/>
-  <color id="pledit.dir.plitem" value="greentxtsui" gammagroup="display-sui-text"/>
+  <color id="pledit.dir.plitem" value="0,0,0" gammagroup="display-sui-text"/>
   <color id="pledit.dir.working" value="175,175,175" gammagroup="display-sui-text"/>
   <color id="pledit.dir.workingbg" value="124,124,124" gammagroup="display-sui-text"/>
   <color id="pledit.text.readonly" value="200,200,200" gammagroup="display-sui-text"/>
@@ -63,7 +65,7 @@
   <color id="studio.textBar.background" value="32,32,32"/>
 
   <!-- Buttons -->
-  <color id="studio.button.text" value="72,84,100" gammagroup="button-text"/>
+  <color id="studio.button.text" value="0,0,0" gammagroup="button-text"/>
   <color id="studio.button.hiliteText" value="132,144,160" gammagroup="button-text"/>
   <color id="studio.button.dimmedText" value="122,134,150" gammagroup="button-text"/>
 

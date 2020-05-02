@@ -21,15 +21,15 @@
 	
 	<!-- cursors -->
 	
-  <cursor id="cur.close" bitmap="cursors\normal.png" hotspot_x="0" hotspot_y="0"/>
-  <cursor id="cur.move" bitmap="cursors\normal.png" hotspot_x="0" hotspot_y="0"/>
+  <cursor id="cur.close" bitmap="cursors\close.png" hotspot_x="0" hotspot_y="0"/>
+  <cursor id="cur.move" bitmap="cursors\move.png" hotspot_x="0" hotspot_y="0"/>
   <cursor id="cur.normal" bitmap="cursors\normal.png" hotspot_x="0" hotspot_y="0"/>
-  <cursor id="cur.posbar" bitmap="cursors\posbar.png" hotspot_x="0" hotspot_y="0"/>
-  <cursor id="cur.resbottomright" bitmap="cursors\resbottomright.png" hotspot_x="0" hotspot_y="0"/>
-  <cursor id="cur.resbottomleft" bitmap="cursors\resbottomleft.png" hotspot_x="0" hotspot_y="0"/>
-  <cursor id="cur.restopright" bitmap="cursors\restopright.png" hotspot_x="0" hotspot_y="0"/>
-  <cursor id="cur.restopleft" bitmap="cursors\restopleft.png" hotspot_x="0" hotspot_y="0"/>
-  <cursor id="cur.resvert" bitmap="cursors\resvert.png" hotspot_x="0" hotspot_y="0"/>
+  <cursor id="cur.posbar" bitmap="cursors\posbar.png" hotspot_x="10" hotspot_y="4"/>
+  <cursor id="cur.resbottomright" bitmap="cursors\resbottomright.png" hotspot_x="7" hotspot_y="7"/>
+  <cursor id="cur.resbottomleft" bitmap="cursors\resbottomleft.png" hotspot_x="7" hotspot_y="7"/>
+  <cursor id="cur.restopright" bitmap="cursors\restopright.png" hotspot_x="7" hotspot_y="7"/>
+  <cursor id="cur.restopleft" bitmap="cursors\restopleft.png" hotspot_x="7" hotspot_y="7"/>
+  <cursor id="cur.resvert" bitmap="cursors\resvert.png" hotspot_x="4" hotspot_y="10"/>
 
 	
 	<!-- fonts -->

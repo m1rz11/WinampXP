@@ -122,6 +122,7 @@
 	<sendparams target="wasabi.frame.layout.grip" x="10" w="-78" />
 	<sendparams target="mousetrap" h="35" relath="0" dblClickAction="SWITCH;shade"/>
   <sendparams target="componentname" w="-81"/>
+  <sendparams target="disabled.switch" alpha="0"/>
 
 	<group id="equalizer.normal.group.main.content" x="1" y="30" h="207" w="550"/>
   <group id="pledit.switch.button" x="-80" y="0" h="30" w="55" relatx="1"/>
