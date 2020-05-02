@@ -68,21 +68,19 @@
 </groupdef>
 
 <groupdef id="pledit.switch.button">
-  <layer id="window.top.middle" x="0" y="0" w="0" relatw="1" image="window.normal.titlebar.middle" resize="top" stretch="1" ghost="1" cursor="cur.restop"/>
-  <layer id="window.grip.top.right" x="-7" y="4" image="titlebar.stripes.right" activealpha="253" inactivealpha="110" ghost="1"/>
 	<button id="pledit.button.switch" action="SWITCH" param="SHADE" x="28" y="4" image="window.shade.button.switch" hoverimage="window.shade.button.switch.h" downimage="window.shade.button.switch.d" tooltip="Toggle Windowshade Mode" activealpha="253" inactivealpha="110" cursor="cur.normal"/>
 </groupdef>
 
 
 <layout id="normalpl" background="component.basetexture" desktopalpha="0" minimum_h="242" minimum_w="550" linkwidth="shade" appbar="top|bottom|left|right" >
-	<Wasabi:StandardFrame:NoStatus x="0" y="0" w="0" h="0" relatw="1" relath="1" content="pledit.content.group" />
+	<Wasabi:StandardFrame:Status x="0" y="0" w="0" h="0" relatw="1" relath="1" content="pledit.content.group" />
 	<sendparams target="window.button.switch" visible="1"/>
 	<sendparams target="wasabi.frame.layout.windowcontrol" x="-62" w="51"/>
 	<sendparams target="wasabi.frame.layout.titlebar" w="0"/>
 	<sendparams target="wasabi.frame.layout.grip" x="10" w="-78"/>
   <sendparams target="componentname" w="-81"/>
 
-	<sendparams target="wasabi.frame.layout.base.bg" h="0"/> <!-- PL window specific -->
+	<sendparams target="wasabi.frame.layout.base.bg" h="0" /> <!-- PL window specific -->
 	<sendparams target="mousetrap" dblClickAction="SWITCH;shade"/>
 
 	<button id="pledit.buttons.bg" x="9" y="-49" relaty="1" image="window.buttons.bg"/>
@@ -107,7 +105,7 @@
 	rightclickaction="trackmenu" color="greentxttime" alpha="253" cursor="cur.normal"/>
 
 	<group id="pledit.miniplayback.buttons" x="-278" y="-38" relatx="1" relaty="1" cursor="cur.normal" alpha="253"/>
-	<group id="pledit.switch.button" x="-90" y="0" h="30" w="55" relatx="1"/>
+	<group id="pledit.switch.button" x="-79" y="-2" h="30" w="55" relatx="1"/>
 
   <!--script file="scripts\visualizer.maki" param="shade.vis;player.vis.trigger;hide.for.vic"/-->
 	
