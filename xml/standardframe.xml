@@ -28,7 +28,14 @@
 	<layer id="window.inner.bottom.right" x="-94" y="-67" relatx="1" relaty="1" image="window.normal.inner.bottom.right" move="1"/>
 </groupdef>
 
+<groupdef id="wasabi.frame.layout.region">
 
+	<layer id="window.region.top.left" x="-1" y="-1" image="window.normal.region.top.left" ghost="1" move="0" sysregion="-2" />
+  <layer id="window.region.top.right" x="-7" y="-1" relatx="1" image="window.normal.region.top.right" ghost="1" move="0" sysregion="-2" />
+	<layer id="window.region.bottom.left" x="-1" y="-8" relaty="1" image="window.normal.region.bottom.left" ghost="1" move="0" sysregion="-2" />
+	<layer id="window.region.bottom.right" x="-7" y="-8" relatx="1" relaty="1" image="window.normal.region.bottom.right" ghost="1" move="0" sysregion="-2" />
+	
+</groupdef>
 
 <!-- =======================================================================================================
 
