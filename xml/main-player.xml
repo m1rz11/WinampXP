@@ -110,7 +110,7 @@
 
 	<grid id="songtitle.bg" x="0" y="3" w="-232" h="25" relatw="1" left="songtitle.l" middle="songtitle.m" right="songtitle.r" ghost="1" alpha="255"/>
 	<SongTicker id="player.display.songname" x="8" y="8" w="-248" relatw="1" h="20" font="tahoma" fontsize="14" color="black" dblclickaction="trackinfo" 
-	rightclickaction="trackmenu" align="left" ghost="0" cursor="cur.posbar" tooltip="Song Title (right-click for options)"/>
+	rightclickaction="trackmenu" align="left" ghost="0" cursor="cur.normal" tooltip="Song Title (right-click for options)"/>
 	<text id="player.display.actioninfo" x="6" y="-1" w="-248" relatw="1" h="33" font="tahoma" fontsize="14" color="black" align="left" ghost="1" /> 
   <!--script file="scripts\songticker.maki"/-->
 </groupdef>
@@ -172,8 +172,8 @@
 </groupdef>
 <groupdef id="player.timedisplay.songtitle" cursor="cur.normal">
 
-	<text text="Time Display" x="-2" y="0" w="122" h="36" font="tahoma" fontsize="15" color="0,70,213"/>
-	<text text="Song Title" x="189" y="0" w="122" h="36" font="tahoma" fontsize="15" color="0,70,213"/>
+	<text text="Time Display" x="-2" y="0" w="122" h="36" font="tahoma" fontsize="15" color="0,70,213" ghost="1"/>
+	<text text="Song Title" x="189" y="0" w="122" h="36" font="tahoma" fontsize="15" color="0,70,213" ghost="1"/>
 
 </groupdef>
 <layout id="normal" minimum_h="242" minimum_w="550" maximum_w="10000" w="550" h="242" desktopalpha="1" droptarget="pldr" linkwidth="shade" appbar="top|bottom" >
