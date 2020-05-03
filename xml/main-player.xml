@@ -167,7 +167,14 @@
 	<layer id="hide.for.gordon" x="169" y="39" image="hide.for.gordon" ghost="1"/>
 	<layer id="hide.for.vic" x="27" y="71" image="show.for.gordon" ghost="1"/>
 	<layer id="player.vis.trigger" x="27" y="41" w="143" h="30" image="none" cursor="cur.normal"/>
+	
+<!--
+
+	disabling pauseblink.maki to emulate WMP's behaviour when pausing a song
+	
   <script file="scripts\pauseblink.maki"/>
+  
+  -->
 
 </groupdef>
 <groupdef id="player.timedisplay.songtitle" cursor="cur.normal">
