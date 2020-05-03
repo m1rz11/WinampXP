@@ -455,7 +455,7 @@
   <bitmap id="pl.button.play.d" file="images/window/windows-background-main.png" x="262" y="344" w="20" h="20" gammagroup="display-text"/>
   <bitmap id="pl.button.pause.n" file="images/window/windows-background-main.png" x="282" y="302" w="20" h="20" gammagroup="display-text"/>
   <bitmap id="pl.button.pause.h" file="images/window/windows-background-main.png" x="282" y="323" w="20" h="20" gammagroup="display-text"/>
-  <bitmap id="pl.button.pause.d" file="images/window/windows-background-main.png" x="282" y="244" w="20" h="20" gammagroup="display-text"/>
+  <bitmap id="pl.button.pause.d" file="images/window/windows-background-main.png" x="282" y="344" w="20" h="20" gammagroup="display-text"/>
   <bitmap id="pl.button.stop.n" file="images/window/windows-background-main.png" x="302" y="302" w="20" h="20" gammagroup="display-text"/>
   <bitmap id="pl.button.stop.h" file="images/window/windows-background-main.png" x="302" y="323" w="20" h="20" gammagroup="display-text"/>
   <bitmap id="pl.button.stop.d" file="images/window/windows-background-main.png" x="302" y="344" w="20" h="20" gammagroup="display-text"/>
