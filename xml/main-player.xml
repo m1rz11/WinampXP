@@ -121,13 +121,13 @@
 	<grid id="songinfo.bitrate.bg" x="0" y="3" w="39" h="25" left="songinfo.bg.left" middle="songinfo.bg.middle" right="songinfo.bg.right" ghost="1" alpha="253"/>
 	<grid id="songinfo.bitrate.display" x="0" y="3" w="39" h="25" left="songinfo.display.left" middle="songinfo.display.middle" right="songinfo.display.right" ghost="1" alpha="253"/>
 	<layer id="songinfo.bitrate.label" x="40" y="3" image="songinfo.bitrate.label" ghost="1" alpha="253"/>
-  <text id="songinfo.bitrate"  x="6" y="7" w="26" h="14" font="tahoma" fontsize="14" color="black" align="right" ghost="1" antialias="1"/>
+  <text id="songinfo.bitrate"  x="6" y="7" w="26" h="14" font="tahoma" fontsize="14" color="black" align="left" ghost="1" antialias="1"/>
 	
 	
 	<grid id="songinfo.frequency.bg" x="90" y="3" w="34" h="25" left="songinfo.bg.left" middle="songinfo.bg.middle" right="songinfo.bg.right" ghost="1" alpha="253"/>
 	<grid id="songinfo.frequency.display" x="90" y="3" w="34" h="25" left="songinfo.display.left" middle="songinfo.display.middle" right="songinfo.display.right" ghost="1" alpha="253"/>
 	<layer id="songinfo.frequency.label" x="128" y="3" image="songinfo.frequency.label" ghost="1" alpha="253"/>
-	<text id="songinfo.frequency" textrefreshrate="500" x="96" y="7" w="23" h="14" font="tahoma" fontsize="14" color="black" align="right" ghost="1" antialias="1"/>
+	<text id="songinfo.frequency" textrefreshrate="500" x="96" y="7" w="23" h="14" font="tahoma" fontsize="14" color="black" align="left" ghost="1" antialias="1"/>
 	
 	<layer id="songinfo.mono" x="-92" y="3" relatx="1" image="songinfo.mono.off" ghost="1" alpha="253"/>
 	<layer id="songinfo.stereo.srrnd" x="-38" y="3" relatx="1" image="songinfo.stereo.off" ghost="1" alpha="253"/>
