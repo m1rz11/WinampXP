@@ -7,8 +7,8 @@
 	<ToggleButton id="eq.button.on" action="EQ_TOGGLE" x="9" y="7" w="52" h="48" image="eq.normal.button.power.on" hoverimage="eq.normal.button.power.on.h" downimage="eq.normal.button.power.on.d" cursor="cur.normal"/>
 	<ToggleButton id="eq.button.auto" action="EQ_AUTO" x="61" y="7" w="66" h="48" image="eq.normal.button.auto.on" hoverimage="eq.normal.button.auto.on.h" downimage="eq.normal.button.auto.on.d" cursor="cur.normal"/>
 	
-  <layer id="eq.light.on" x="1" y="0" w="48" h="48" image="onauto.light.on" ghost="1"/>
-  <layer id="eq.light.auto" x="48" y="0" w="48" h="48" image="onauto.light.on" ghost="1"/>
+  <layer id="eq.light.on" x="26" y="28" w="48" h="48" image="onauto.light.on" ghost="1"/>
+  <layer id="eq.light.auto" x="74" y="28" w="48" h="48" image="onauto.light.on" ghost="1"/>
   
   <layer id="eq.spline.bg" x="143" y="7" image="eq.normal.background.display" alpha="253" cursor="cur.normal"/>
   <eqvis x="153" y="15" w="239" h="31" colortop="211,34,27" colormiddle="239,220,49" colorbottom="42,154,22" colorpreamp="186,203,221" ghost="1" />
