@@ -11,7 +11,7 @@
   <layer id="eq.light.auto" x="74" y="28" w="48" h="48" image="onauto.light.on" ghost="1"/>
   
   <layer id="eq.spline.bg" x="143" y="7" image="eq.normal.background.display" alpha="253" cursor="cur.normal"/>
-  <eqvis x="153" y="15" w="239" h="31" colortop="211,34,27" colormiddle="239,220,49" colorbottom="42,154,22" colorpreamp="186,203,221" ghost="1" />
+  <eqvis x="153" y="15" w="239" h="31" colortop="0,0,0" colormiddle="0,0,0" colorbottom="0,0,0" colorpreamp="128,128,128" ghost="1" />
 
 	<togglebutton id="eq.button.presets.menu" action="MENU" param="PRESETS" x="474" y="45" w="1" h="1" image="none"/>
 	<button id="eq.button.presets.gfx" x="470" y="7" image="eq.normal.button.presets" hoverimage="eq.normal.button.presets.h" downimage="eq.normal.button.presets.d" cursor="cur.normal"/>

@@ -27,7 +27,7 @@
 	<layer id="pledit.background.display.center" x="81" y="0" w="-100" relatw="1" image="pl.shade.display.middle" tile="1" ghost="1" />
 	<layer id="pledit.background.display.right" x="-19" y="0" relatx="1" image="pl.shade.display.right" ghost="1" />
 	
-  <playlistPlus id="main.pl" x="5" y="7" w="-8" h="19" relatw="1" font="sarpanch" fontsize="18" linespacing="1" color="greentxttime" antialias="1" playcolor="greentxttime" sysregion="1"/>
+  <playlistPlus id="main.pl" x="5" y="7" w="-8" h="19" relatw="1" font="sarpanch" fontsize="18" linespacing="1" color="0,0,0" antialias="1" playcolor="60,60,60" sysregion="1"/>
 </groupdef>
 
 
@@ -103,7 +103,7 @@
 	<layer id="player.vis.blocker" x="-354" y="-36" w="72" h="15" relatx="1" relaty="1" image="none" cursor="cur.normal" alpha="0"/>
 	
 	<text id="pledit.info" x="-181" y="-37" h="19" w="116" relatx="1" relaty="1" display="PE_Info" font="sarpanch" fontsize="14" valign="middle" align="center" 
-	rightclickaction="trackmenu" color="greentxttime" alpha="253" cursor="cur.normal"/>
+	rightclickaction="trackmenu" color="0,0,0" alpha="253" cursor="cur.normal"/>
 
 	<group id="pledit.miniplayback.buttons" x="-278" y="-38" relatx="1" relaty="1" cursor="cur.normal" alpha="253"/>
 	<group id="pledit.switch.button" x="-79" y="-2" h="30" w="55" relatx="1"/>
