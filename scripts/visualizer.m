@@ -4,6 +4,15 @@ Function refreshVisSettings();
 Function setVis (int mode);
 Function ProcessMenuResult (int a);
 
+Function setColorBands (String rgb, int start, int end);									//set bands color in range (1-16)				rgb value("0,255,127"), start position(4), end position(12)
+Function setColorBandsOdd (String rgb);														//set odd bands color							rgb value("0,255,127")
+Function setColorBandsEven (String rgb);													//set even bands color							rgb value("0,255,127")
+Function setColorBandsGradient(int r, int g, int b, int stepr, int stepg, int stepb);		//set color bands to a gradient					red(0), green(255), blue(127), step red(10), step green(-5), step blue(+2)
+Function setColorosc (String rgb);															//set oscilloscope color						rgb value("0,255,127")
+Function setColoroscRange (String rgb, int start, int end);									//set oscilloscope color in range (1-5)			rgb value("0,255,127"), start position(1), end position(4)
+Function setColoroscOdd (String rgb);														//set odd oscilloscope color					rgb value("0,255,127")
+Function setColoroscEven (String rgb);														//set even oscilloscope color					rgb value("0,255,127")
+
 Global Container containerMain;
 Global Container containerPL;
 Global Layout layoutPL, layoutMainNormal, layoutMainShade;
@@ -17,8 +26,9 @@ Global PopUpMenu oscmenu;
 Global PopUpMenu pksmenu;
 Global PopUpMenu anamenu;
 Global PopUpMenu stylemenu;
+Global PopUpMenu colmenu;
 
-Global Int currentMode, a_falloffspeed, p_falloffspeed, a_coloring;
+Global Int currentMode, a_falloffspeed, p_falloffspeed, a_coloring, v_color;
 Global Boolean show_peaks;
 Global layer Trigger, HideForVic, TriggerBlocker, TriggerBlockerShade;
 
@@ -82,6 +92,7 @@ refreshVisSettings ()
 	a_falloffspeed = getPrivateInt(getSkinName(), "Visualizer analyzer falloff", 3);
 	p_falloffspeed = getPrivateInt(getSkinName(), "Visualizer peaks falloff", 2);
 	a_coloring = getPrivateInt(getSkinName(), "Visualizer analyzer coloring", 0);
+	v_color = getPrivateInt(getSkinName(), "Visualizer Color themes", 5);
 
 	visualizer.setXmlParam("peaks", integerToString(show_peaks));
 	visualizer.setXmlParam("peakfalloff", integerToString(p_falloffspeed));
@@ -119,7 +130,78 @@ refreshVisSettings ()
 		visualizershade.setXmlParam("coloring", "Line");
 		visualizerpl.setXmlParam("coloring", "Line");
 	}
+	
+	if (v_color == 0)
+		{
+			visualizer.setXmlParam("ColorBand1", "22,131,7");
+			visualizer.setXmlParam("ColorBand2", "39,147,0");
+			visualizer.setXmlParam("ColorBand3", "47,155,7");
+			visualizer.setXmlParam("ColorBand4", "55,180,15");
+			visualizer.setXmlParam("ColorBand5", "48,189,15");
+			visualizer.setXmlParam("ColorBand6", "39,205,15");
+			visualizer.setXmlParam("ColorBand7", "146,221,32");
+			visualizer.setXmlParam("ColorBand8", "187,221,40");
+			visualizer.setXmlParam("ColorBand9", "212,180,32");
+			visualizer.setXmlParam("ColorBand10", "220,164,23");
+			visualizer.setXmlParam("ColorBand11", "197,122,7");
+			visualizer.setXmlParam("ColorBand12", "213,114,0");
+			visualizer.setXmlParam("ColorBand13", "213,101,0");
+			visualizer.setXmlParam("ColorBand14", "213,89,0");
+			visualizer.setXmlParam("ColorBand15", "205,40,15");
+			visualizer.setXmlParam("ColorBand16", "238,48,15");
+			visualizer.setXmlParam("colorbandpeak", "150,150,150");
+			visualizer.setXmlParam("colorosc1", "255,255,255");
+			visualizer.setXmlParam("colorosc2", "214,214,222");
+			visualizer.setXmlParam("colorosc3", "181,189,189");
+			visualizer.setXmlParam("colorosc4", "160,170,175");
+			visualizer.setXmlParam("colorosc5", "148,156,165");
+		}
+		else if (v_color == 1)
+		{
+			visualizer.setXmlParam("ColorBand1", "22,131,7");
+			visualizer.setXmlParam("ColorBand2", "39,147,0");
+			visualizer.setXmlParam("ColorBand3", "47,155,7");
+			visualizer.setXmlParam("ColorBand4", "55,180,15");
+			visualizer.setXmlParam("ColorBand5", "48,189,15");
+			visualizer.setXmlParam("ColorBand6", "39,205,15");
+			visualizer.setXmlParam("ColorBand7", "146,221,32");
+			visualizer.setXmlParam("ColorBand8", "187,221,40");
+			visualizer.setXmlParam("ColorBand9", "212,180,32");
+			visualizer.setXmlParam("ColorBand10", "220,164,23");
+			visualizer.setXmlParam("ColorBand11", "197,122,7");
+			visualizer.setXmlParam("ColorBand12", "213,114,0");
+			visualizer.setXmlParam("ColorBand13", "213,101,0");
+			visualizer.setXmlParam("ColorBand14", "213,89,0");
+			visualizer.setXmlParam("ColorBand15", "205,40,15");
+			visualizer.setXmlParam("ColorBand16", "238,48,15");
+			visualizer.setXmlParam("colorbandpeak", "150,150,150");
+			visualizer.setXmlParam("colorosc1", "255,255,255");
+			visualizer.setXmlParam("colorosc2", "214,214,222");
+			visualizer.setXmlParam("colorosc3", "181,189,189");
+			visualizer.setXmlParam("colorosc4", "160,170,175");
+			visualizer.setXmlParam("colorosc5", "148,156,165");
+		}
+		else if (v_color == 2)
+		{
+			visualizer.setXmlParam("colorallbands", "0,176,32");
+			visualizer.setXmlParam("colorbandpeak", "32,32,255");
 
+			setColorosc("160,255,160");
+		}
+		else if (v_color == 3)
+		{
+			visualizer.setXmlParam("colorallbands", "0,0,255");
+			visualizer.setXmlParam("colorbandpeak", "255,255,255");
+
+			setColorosc("160,255,160");
+		}
+		else if (v_color == 4)
+		{
+			visualizer.setXmlParam("colorallbands", "255,165,0");
+			visualizer.setXmlParam("colorbandpeak", "255,0,0");
+
+			setColorosc("160,255,160");
+		}
 	setVis (currentMode);
 }
 
@@ -146,38 +228,52 @@ Trigger.onRightButtonUp (int x, int y)
 	pksmenu = new PopUpMenu;
 	anamenu = new PopUpMenu;
 	stylemenu = new PopUpMenu;
+	colmenu = new PopUpMenu;
 
 	visMenu.addCommand("Presets:", 999, 0, 1);
 	visMenu.addCommand("No Visualization", 100, currentMode == 0, 0);
+	
+	visMenu.addSubMenu(colmenu, "Visualizer Color Schemes");
+	colmenu.addCommand("Default", 500, v_color == 0, 0);
+	colmenu.addCommand("Bars and Scope", 502, v_color == 2, 0);
+	colmenu.addCommand("Ocean Mist and Scope", 503, v_color == 3, 0);
+	colmenu.addCommand("Fire Storm and Scope", 504, v_color == 4, 0);
+	
 	specmenu.addCommand("Thick Bands", 1, currentMode == 1, 0);
 	specmenu.addCommand("Thin Bands", 2, currentMode == 2, 0);
 	visMenu.addSubMenu(specmenu, "Spectrum Analyzer");
 
-	oscmenu.addCommand("Solid", 3, currentMode == 3, 0);
+	oscmenu.addCommand("Lines", 3, currentMode == 3, 0);
 	oscmenu.addCommand("Dots", 4, currentMode == 4, 0);
-	oscmenu.addCommand("Lines", 5, currentMode == 5, 0);
+	oscmenu.addCommand("Solid", 5, currentMode == 5, 0);
 	visMenu.addSubMenu(oscmenu, "Oscilloscope");
 
 	visMenu.addSeparator();
 	visMenu.addCommand("Options:", 102, 0, 1);
+
 	visMenu.addCommand("Show Peaks", 101, show_peaks == 1, 0);
 	pksmenu.addCommand("Slower", 200, p_falloffspeed == 0, 0);
 	pksmenu.addCommand("Slow", 201, p_falloffspeed == 1, 0);
 	pksmenu.addCommand("Moderate", 202, p_falloffspeed == 2, 0);
 	pksmenu.addCommand("Fast", 203, p_falloffspeed == 3, 0);
 	pksmenu.addCommand("Faster", 204, p_falloffspeed == 4, 0);
+	
 	visMenu.addSubMenu(pksmenu, "Peak Falloff Speed");
 	anamenu.addCommand("Slower", 300, a_falloffspeed == 0, 0);
 	anamenu.addCommand("Slow", 301, a_falloffspeed == 1, 0);
 	anamenu.addCommand("Moderate", 302, a_falloffspeed == 2, 0);
 	anamenu.addCommand("Fast", 303, a_falloffspeed == 3, 0);
 	anamenu.addCommand("Faster", 304, a_falloffspeed == 4, 0);
+	
 	visMenu.addSubMenu(anamenu, "Analyzer Falloff Speed");
 	stylemenu.addCommand("Normal", 400, a_coloring == 0, 0);
 	stylemenu.addCommand("Fire", 402, a_coloring == 2, 0);
 	stylemenu.addCommand("Line", 403, a_coloring == 3, 0);
+	
 	visMenu.addSubMenu(stylemenu, "Analyzer Coloring");
+	
 	visMenu.addSeparator();
+	
 	visMenu.addcommand(translate("Start/Stop plug-in")+"\tCtrl+Shift+K", 404, 0,0);
 	visMenu.addcommand(translate("Configure plug-in...")+"\tAlt+K", 405, 0,0);
 	visMenu.addcommand(translate("Select plug-in...")+"\tCtrl+K", 406, 0,0);
@@ -190,6 +286,7 @@ Trigger.onRightButtonUp (int x, int y)
 	delete pksmenu;
 	delete anamenu;
 	delete stylemenu;
+	delete colmenu;
 
 	complete;	
 }
@@ -274,8 +371,189 @@ ProcessMenuResult (int a)
     OAIDUBtnUE3.Leftclick ();
   }
 
+	else if (a >= 500 && a <= 504)
+	{
+		v_color = a - 500;
+		if (v_color == 0)
+		{
+			visualizer.setXmlParam("ColorBand1", "22,131,7");
+			visualizer.setXmlParam("ColorBand2", "39,147,0");
+			visualizer.setXmlParam("ColorBand3", "47,155,7");
+			visualizer.setXmlParam("ColorBand4", "55,180,15");
+			visualizer.setXmlParam("ColorBand5", "48,189,15");
+			visualizer.setXmlParam("ColorBand6", "39,205,15");
+			visualizer.setXmlParam("ColorBand7", "146,221,32");
+			visualizer.setXmlParam("ColorBand8", "187,221,40");
+			visualizer.setXmlParam("ColorBand9", "212,180,32");
+			visualizer.setXmlParam("ColorBand10", "220,164,23");
+			visualizer.setXmlParam("ColorBand11", "197,122,7");
+			visualizer.setXmlParam("ColorBand12", "213,114,0");
+			visualizer.setXmlParam("ColorBand13", "213,101,0");
+			visualizer.setXmlParam("ColorBand14", "213,89,0");
+			visualizer.setXmlParam("ColorBand15", "205,40,15");
+			visualizer.setXmlParam("ColorBand16", "238,48,15");
+			visualizer.setXmlParam("colorbandpeak", "150,150,150");
+			visualizer.setXmlParam("colorosc1", "255,255,255");
+			visualizer.setXmlParam("colorosc2", "214,214,222");
+			visualizer.setXmlParam("colorosc3", "181,189,189");
+			visualizer.setXmlParam("colorosc4", "160,170,175");
+			visualizer.setXmlParam("colorosc5", "148,156,165");
+		}
+		else if (v_color == 1)
+		{
+			visualizer.setXmlParam("ColorBand1", "22,131,7");
+			visualizer.setXmlParam("ColorBand2", "39,147,0");
+			visualizer.setXmlParam("ColorBand3", "47,155,7");
+			visualizer.setXmlParam("ColorBand4", "55,180,15");
+			visualizer.setXmlParam("ColorBand5", "48,189,15");
+			visualizer.setXmlParam("ColorBand6", "39,205,15");
+			visualizer.setXmlParam("ColorBand7", "146,221,32");
+			visualizer.setXmlParam("ColorBand8", "187,221,40");
+			visualizer.setXmlParam("ColorBand9", "212,180,32");
+			visualizer.setXmlParam("ColorBand10", "220,164,23");
+			visualizer.setXmlParam("ColorBand11", "197,122,7");
+			visualizer.setXmlParam("ColorBand12", "213,114,0");
+			visualizer.setXmlParam("ColorBand13", "213,101,0");
+			visualizer.setXmlParam("ColorBand14", "213,89,0");
+			visualizer.setXmlParam("ColorBand15", "205,40,15");
+			visualizer.setXmlParam("ColorBand16", "238,48,15");
+			visualizer.setXmlParam("colorbandpeak", "150,150,150");
+			visualizer.setXmlParam("colorosc1", "255,255,255");
+			visualizer.setXmlParam("colorosc2", "214,214,222");
+			visualizer.setXmlParam("colorosc3", "181,189,189");
+			visualizer.setXmlParam("colorosc4", "160,170,175");
+			visualizer.setXmlParam("colorosc5", "148,156,165");
+		}
+		else if (v_color == 2)
+		{
+			visualizer.setXmlParam("colorallbands", "0,176,32");
+			visualizer.setXmlParam("colorbandpeak", "32,32,255");
+
+			setColorosc("160,255,160");
+		}
+		else if (v_color == 3)
+		{
+			visualizer.setXmlParam("colorallbands", "0,0,255");
+			visualizer.setXmlParam("colorbandpeak", "255,255,255");
+
+			setColorosc("160,255,160");
+		}
+		else if (v_color == 4)
+		{
+			visualizer.setXmlParam("colorallbands", "255,165,0");
+			visualizer.setXmlParam("colorbandpeak", "255,0,0");
+
+			setColorosc("160,255,160");
+		}
+		setPrivateInt(getSkinName(), "Visualizer Color themes", v_color);
+	}
+
 }
 
+//sets every ColorBand in a range to a color
+setColorBands(String rgb, int start, int end)
+{
+	if(start==1 && start<end){visualizer.setXmlParam("ColorBand1", rgb);start++;}
+	if(start==2 && start<end){visualizer.setXmlParam("ColorBand2", rgb);start++;}
+	if(start==3 && start<end){visualizer.setXmlParam("ColorBand3", rgb);start++;}
+	if(start==4 && start<end){visualizer.setXmlParam("ColorBand4", rgb);start++;}
+	if(start==5 && start<end){visualizer.setXmlParam("ColorBand5", rgb);start++;}
+	if(start==6 && start<end){visualizer.setXmlParam("ColorBand6", rgb);start++;}
+	if(start==7 && start<end){visualizer.setXmlParam("ColorBand7", rgb);start++;}
+	if(start==8 && start<end){visualizer.setXmlParam("ColorBand8", rgb);start++;}
+	if(start==9 && start<end){visualizer.setXmlParam("ColorBand9", rgb);start++;}
+	if(start==10 && start<end){visualizer.setXmlParam("ColorBand10", rgb);start++;}
+	if(start==11 && start<end){visualizer.setXmlParam("ColorBand11", rgb);start++;}
+	if(start==12 && start<end){visualizer.setXmlParam("ColorBand12", rgb);start++;}
+	if(start==13 && start<end){visualizer.setXmlParam("ColorBand13", rgb);start++;}
+	if(start==14 && start<end){visualizer.setXmlParam("ColorBand14", rgb);start++;}
+	if(start==15 && start<end){visualizer.setXmlParam("ColorBand15", rgb);start++;}
+	if(start==16 && start<end){visualizer.setXmlParam("ColorBand16", rgb);start++;}
+}
+
+//sets every odd ColorBand to a color
+setColorBandsOdd(String rgb)
+{
+	visualizer.setXmlParam("ColorBand1", rgb);
+	visualizer.setXmlParam("ColorBand3", rgb);
+	visualizer.setXmlParam("ColorBand5", rgb);
+	visualizer.setXmlParam("ColorBand7", rgb);
+	visualizer.setXmlParam("ColorBand9", rgb);
+	visualizer.setXmlParam("ColorBand11", rgb);
+	visualizer.setXmlParam("ColorBand13", rgb);
+	visualizer.setXmlParam("ColorBand15", rgb);
+}
+
+//sets every even ColorBand to a color
+setColorBandsEven(String rgb)
+{
+	visualizer.setXmlParam("ColorBand2", rgb);
+	visualizer.setXmlParam("ColorBand4", rgb);
+	visualizer.setXmlParam("ColorBand6", rgb);
+	visualizer.setXmlParam("ColorBand8", rgb);
+	visualizer.setXmlParam("ColorBand10", rgb);
+	visualizer.setXmlParam("ColorBand12", rgb);
+	visualizer.setXmlParam("ColorBand14", rgb);
+	visualizer.setXmlParam("ColorBand16", rgb);
+}
+
+//makes a gradient using rgb values and steps for each color
+setColorBandsGradient(int r, int g, int b, int stepr, int stepg, int stepb)
+{
+	//duct tape edition
+	String grad = integerToString(r) +","+ integerToString(g) +","+ integerToString(b);
+	visualizer.setXmlParam("ColorBand1", grad); r=r+stepr; g=g+stepg; b=b+stepb; grad = integerToString(r) +","+ integerToString(g) +","+ integerToString(b);
+	visualizer.setXmlParam("ColorBand2", grad); r=r+stepr; g=g+stepg; b=b+stepb; grad = integerToString(r) +","+ integerToString(g) +","+ integerToString(b);
+	visualizer.setXmlParam("ColorBand3", grad); r=r+stepr; g=g+stepg; b=b+stepb; grad = integerToString(r) +","+ integerToString(g) +","+ integerToString(b);
+	visualizer.setXmlParam("ColorBand4", grad); r=r+stepr; g=g+stepg; b=b+stepb; grad = integerToString(r) +","+ integerToString(g) +","+ integerToString(b);
+	visualizer.setXmlParam("ColorBand5", grad); r=r+stepr; g=g+stepg; b=b+stepb; grad = integerToString(r) +","+ integerToString(g) +","+ integerToString(b);
+	visualizer.setXmlParam("ColorBand6", grad); r=r+stepr; g=g+stepg; b=b+stepb; grad = integerToString(r) +","+ integerToString(g) +","+ integerToString(b);
+	visualizer.setXmlParam("ColorBand7", grad); r=r+stepr; g=g+stepg; b=b+stepb; grad = integerToString(r) +","+ integerToString(g) +","+ integerToString(b);
+	visualizer.setXmlParam("ColorBand8", grad); r=r+stepr; g=g+stepg; b=b+stepb; grad = integerToString(r) +","+ integerToString(g) +","+ integerToString(b);
+	visualizer.setXmlParam("ColorBand9", grad); r=r+stepr; g=g+stepg; b=b+stepb; grad = integerToString(r) +","+ integerToString(g) +","+ integerToString(b);
+	visualizer.setXmlParam("ColorBand10", grad); r=r+stepr; g=g+stepg; b=b+stepb; grad = integerToString(r) +","+ integerToString(g) +","+ integerToString(b);
+	visualizer.setXmlParam("ColorBand11", grad); r=r+stepr; g=g+stepg; b=b+stepb; grad = integerToString(r) +","+ integerToString(g) +","+ integerToString(b);
+	visualizer.setXmlParam("ColorBand12", grad); r=r+stepr; g=g+stepg; b=b+stepb; grad = integerToString(r) +","+ integerToString(g) +","+ integerToString(b);
+	visualizer.setXmlParam("ColorBand13", grad); r=r+stepr; g=g+stepg; b=b+stepb; grad = integerToString(r) +","+ integerToString(g) +","+ integerToString(b);
+	visualizer.setXmlParam("ColorBand14", grad); r=r+stepr; g=g+stepg; b=b+stepb; grad = integerToString(r) +","+ integerToString(g) +","+ integerToString(b);
+	visualizer.setXmlParam("ColorBand15", grad); r=r+stepr; g=g+stepg; b=b+stepb; grad = integerToString(r) +","+ integerToString(g) +","+ integerToString(b);
+	visualizer.setXmlParam("ColorBand16", grad);
+}
+
+//sets every colorosc to a color
+setColorosc(String rgb)
+{
+	visualizer.setXmlParam("colorosc1", rgb);
+	visualizer.setXmlParam("colorosc2", rgb);
+	visualizer.setXmlParam("colorosc3", rgb);
+	visualizer.setXmlParam("colorosc4", rgb);
+	visualizer.setXmlParam("colorosc5", rgb);
+}
+
+//sets every colorosc in a range color
+setColoroscRange(String rgb, int start, int end)
+{
+	if(start==1 && start<end){visualizer.setXmlParam("colorosc1", rgb);start++;}
+	if(start==2 && start<end){visualizer.setXmlParam("colorosc2", rgb);start++;}
+	if(start==3 && start<end){visualizer.setXmlParam("colorosc3", rgb);start++;}
+	if(start==4 && start<end){visualizer.setXmlParam("colorosc4", rgb);start++;}
+	if(start==5 && start<end){visualizer.setXmlParam("colorosc5", rgb);start++;}
+}
+
+//sets every odd colorosc to a color
+setColoroscOdd(String rgb)
+{
+	visualizer.setXmlParam("colorosc1", rgb);
+	visualizer.setXmlParam("colorosc3", rgb);
+	visualizer.setXmlParam("colorosc5", rgb);
+}
+
+//sets every even colorosc to a color
+setColoroscEven(String rgb)
+{
+	visualizer.setXmlParam("colorosc2", rgb);
+	visualizer.setXmlParam("colorosc4", rgb);
+}
 
 
 setVis (int mode)
