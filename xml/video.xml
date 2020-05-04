@@ -25,7 +25,7 @@
 	
 <layout id="normal" background="component.basetexture" desktopalpha="0" minimum_h="242" minimum_w="550" appbar="top|bottom|left|right">
 	<Wasabi:StandardFrame:NoStatus x="0" y="0" w="0" h="0" relatw="1" relath="1" />
-		<sendparams target="wasabi.frame.layout.base.bg" h="0" /> <!-- PL window specific -->
+		<sendparams target="wasabi.frame.layout.base.bg" h="0" alpha="253"/> <!-- PL window specific -->
 	<component x="14" y="43" w="-28" h="-97" relatw="1" relath="1" noshowcmdbar="1" autoopen="1" autoclose="1" param="guid:{F0816D7B-FFFC-4343-80F2-E8199AA15CC3}"/>
 
 	<group id="vid.bottom.group" x="10" y="-43" h="29" w="-20" relaty="1" relatw="1" cursor="cur.normal"/>
