@@ -163,6 +163,7 @@
 	timeroffstyle="0" valign="top" align="right" cursor="cur.normal" bold="0" tooltip="Time Display (click to toggle elapsed/remaining)"/>
 
 	<!--rect id="plssayer.vis" x="27" y="41" w="143" h="31" color="0,0,250" filled="0"/-->
+	<layer id="WMP" x="25" y="38" w="148" h="36" ghost="1" image="wmpvoid"/>
 	<vis id="player.vis" x="27" y="40" w="144" h="32" cursor="cur.normal" gammagroup="visualizers"/>
 	<layer id="hide.for.gordon" x="169" y="39" image="hide.for.gordon" ghost="1"/>
 	<layer id="hide.for.vic" x="27" y="71" image="show.for.gordon" ghost="1"/>
