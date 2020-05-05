@@ -18,6 +18,7 @@ Global Container containerPL;
 Global Layout layoutPL, layoutMainNormal, layoutMainShade;
 Global Group NormalGroupMain, NormalGroupDisplay, ShadeGroupMain, ShadeGroupDisplay;
 Global Vis visualizer, visualizershade, visualizerpl;
+Global Layer wmpblackness;
 Global Button OAIDUBtnUE1, OAIDUBtnUE2, OAIDUBtnUE3;
 
 Global PopUpMenu visMenu;
@@ -45,6 +46,7 @@ System.onScriptLoaded()
   OAIDUBtnUE3 = NormalGroupDisplay.findObject("OAIDU.buttons.U.menuentry3");
 
 	visualizer = NormalGroupDisplay.findObject("player.vis");
+	wmpblackness = NormalGroupDisplay.findObject("WMP");
 
 	layoutMainShade = containerMain.getLayout("shade");
 	ShadeGroupMain = layoutMainShade.findObject("player.shade.group.main");
@@ -155,6 +157,8 @@ refreshVisSettings ()
 			visualizer.setXmlParam("colorosc3", "181,189,189");
 			visualizer.setXmlParam("colorosc4", "160,170,175");
 			visualizer.setXmlParam("colorosc5", "148,156,165");
+			wmpblackness.setXmlParam("alpha","0");
+			visualizer.setXmlParam("fps", "30");
 		}
 		else if (v_color == 1)
 		{
@@ -180,6 +184,8 @@ refreshVisSettings ()
 			visualizer.setXmlParam("colorosc3", "181,189,189");
 			visualizer.setXmlParam("colorosc4", "160,170,175");
 			visualizer.setXmlParam("colorosc5", "148,156,165");
+			wmpblackness.setXmlParam("alpha","0");
+			visualizer.setXmlParam("fps", "30");
 		}
 		else if (v_color == 2)
 		{
@@ -187,6 +193,8 @@ refreshVisSettings ()
 			visualizer.setXmlParam("colorbandpeak", "32,32,255");
 
 			setColorosc("160,255,160");
+			wmpblackness.setXmlParam("alpha","253");
+			visualizer.setXmlParam("fps", "24");
 		}
 		else if (v_color == 3)
 		{
@@ -194,6 +202,8 @@ refreshVisSettings ()
 			visualizer.setXmlParam("colorbandpeak", "255,255,255");
 
 			setColorosc("160,255,160");
+			wmpblackness.setXmlParam("alpha","253");
+			visualizer.setXmlParam("fps", "24");
 		}
 		else if (v_color == 4)
 		{
@@ -201,6 +211,8 @@ refreshVisSettings ()
 			visualizer.setXmlParam("colorbandpeak", "255,0,0");
 
 			setColorosc("160,255,160");
+			wmpblackness.setXmlParam("alpha","253");
+			visualizer.setXmlParam("fps", "24");
 		}
 	setVis (currentMode);
 }
@@ -233,11 +245,11 @@ Trigger.onRightButtonUp (int x, int y)
 	visMenu.addCommand("Presets:", 999, 0, 1);
 	visMenu.addCommand("No Visualization", 100, currentMode == 0, 0);
 	
-	visMenu.addSubMenu(colmenu, "Visualizer Color Schemes");
-	colmenu.addCommand("Default", 500, v_color == 0, 0);
-	colmenu.addCommand("Bars and Scope", 502, v_color == 2, 0);
-	colmenu.addCommand("Ocean Mist and Scope", 503, v_color == 3, 0);
-	colmenu.addCommand("Fire Storm and Scope", 504, v_color == 4, 0);
+	visMenu.addSubMenu(colmenu, "Visualizer Emulation Mode");
+	colmenu.addCommand("Winamp/WACUP", 500, v_color == 0, 0);
+	colmenu.addCommand("Windows Media Player (Bars and Scope)", 502, v_color == 2, 0);
+	colmenu.addCommand("Windows Media Player (Ocean Mist and Scope)", 503, v_color == 3, 0);
+	colmenu.addCommand("Windows Media Player (Fire Storm and Scope)", 504, v_color == 4, 0);
 	
 	specmenu.addCommand("Thick Bands", 1, currentMode == 1, 0);
 	specmenu.addCommand("Thin Bands", 2, currentMode == 2, 0);
@@ -398,6 +410,8 @@ ProcessMenuResult (int a)
 			visualizer.setXmlParam("colorosc3", "181,189,189");
 			visualizer.setXmlParam("colorosc4", "160,170,175");
 			visualizer.setXmlParam("colorosc5", "148,156,165");
+			wmpblackness.setXmlParam("alpha","0");
+			visualizer.setXmlParam("fps", "30");
 		}
 		else if (v_color == 1)
 		{
@@ -423,6 +437,8 @@ ProcessMenuResult (int a)
 			visualizer.setXmlParam("colorosc3", "181,189,189");
 			visualizer.setXmlParam("colorosc4", "160,170,175");
 			visualizer.setXmlParam("colorosc5", "148,156,165");
+			wmpblackness.setXmlParam("alpha","0");
+			visualizer.setXmlParam("fps", "30");
 		}
 		else if (v_color == 2)
 		{
@@ -430,6 +446,8 @@ ProcessMenuResult (int a)
 			visualizer.setXmlParam("colorbandpeak", "32,32,255");
 
 			setColorosc("160,255,160");
+			wmpblackness.setXmlParam("alpha","253");
+			visualizer.setXmlParam("fps", "24");
 		}
 		else if (v_color == 3)
 		{
@@ -437,6 +455,8 @@ ProcessMenuResult (int a)
 			visualizer.setXmlParam("colorbandpeak", "255,255,255");
 
 			setColorosc("160,255,160");
+			wmpblackness.setXmlParam("alpha","253");
+			visualizer.setXmlParam("fps", "24");
 		}
 		else if (v_color == 4)
 		{
@@ -444,6 +464,8 @@ ProcessMenuResult (int a)
 			visualizer.setXmlParam("colorbandpeak", "255,0,0");
 
 			setColorosc("160,255,160");
+			wmpblackness.setXmlParam("alpha","253");
+			visualizer.setXmlParam("fps", "24");
 		}
 		setPrivateInt(getSkinName(), "Visualizer Color themes", v_color);
 	}

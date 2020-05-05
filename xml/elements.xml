@@ -1,23 +1,8 @@
-<include file="xml/windowsxp_borders.xml"/>
-
 <elements>
 
 	<!-- NONE / NULL images -->
   <!--bitmap id="none" file="images/window/windows-background-main.png" x="0" y="0" h="10" w="10" gammagroup="none" /--> <!-- Pink (visual help) -->
   <bitmap id="none" file="images/window/windows-background-main.png" x="162" y="0" h="10" w="10" gammagroup="none"/> <!-- transparent -->
-
-	<!-- buttons
-	
-	<bitmap id="close.unfocused" file="images/window/close-button.png" x="0" y="0" w="21" h="21" gammagroup="titlebarstripes"/>
-	<bitmap id="close.focused.hover" file="images/window/close-button.png" x="22" y="0" w="21" h="21" gammagroup="titlebarstripes"/>
-	
-	<bitmap id="maximize.unfocused" file="images/window/maximize-button.png" x="0" y="0" w="21" h="21" gammagroup="titlebarstripes"/>
-	<bitmap id="maximize.focused.hover" file="images/window/maximize-button.png" x="22" y="0" w="21" h="21" gammagroup="titlebarstripes"/>
-	
-	<bitmap id="minimize.unfocused" file="images/window/minimize-button.png" x="0" y="0" w="21" h="21" gammagroup="titlebarstripes"/>
-	<bitmap id="minimize.focused.hover" file="images/window/minimize-button.png" x="22" y="0" w="21" h="21" gammagroup="titlebarstripes"/>
-	
-	-->
 	
 	<!-- cursors -->
 	
@@ -45,7 +30,7 @@
 	
 	<!-- player-normal -->
 	
-  
+  <bitmap id="wmpvoid" file="images/void.png" x="0" y="0" w="144" h="32"/>
 	
   <bitmap id="songtitle.l" file="images/songtitle.png" x="0" y="0" w="68" h="25" gammagroup="titlebarstripes"/>
   <bitmap id="songtitle.m" file="images/songtitle.png" x="69" y="0" w="3" h="25" gammagroup="titlebarstripes"/>
