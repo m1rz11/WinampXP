@@ -15,7 +15,7 @@
 	<color id="studio.list.item.focused" value="49,106,197" gammagroup="selection-bg"/>
   <color id="studio.list.item.selected.fg" value="128,128,128" gammagroup="display-sui-text"/>
 
-	<color id="wasabi.list.text.current" value="137,225,22" gammagroup="current-active"/> <!-- currently playing item in lists -->
+	<color id="wasabi.list.text.current" value="149,168,196" gammagroup="current-active"/> <!-- currently playing item in lists -->
 	<color id="wasabi.list.text.selected.inactive" value="0,0,0" gammagroup="selection-bg"/> <!-- listview/treeview selection bar textcolor (inactive) -->
 	<color id="wasabi.list.text.selected.background.inactive" value="236,233,216" gammagroup="selection-bg"/> <!-- listview/treeview selectionbar back color (inactive) -->
 
