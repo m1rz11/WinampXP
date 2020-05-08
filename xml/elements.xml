@@ -294,9 +294,9 @@
 
   <bitmap id="eq.normal.background.display" file="images/eq-background-main.png" x="224" y="246" w="260" h="47" gammagroup="display"/>
 
-  <bitmap id="eq.normal.button.slider.v.n" file="images/eq-background-main.png" x="200" y="246" w="22" h="28" gammagroup="greybuttons"/>
-  <bitmap id="eq.normal.button.slider.v.h" file="images/eq-background-main.png" x="200" y="275" w="22" h="28" gammagroup="greybuttons"/>
-  <bitmap id="eq.normal.button.slider.v.d" file="images/eq-background-main.png" x="200" y="304" w="22" h="28" gammagroup="greybuttons"/>
+  <bitmap id="eq.normal.button.slider.v.n" file="images/eq-background-main.png" x="200" y="246" w="22" h="11" gammagroup="greybuttons"/>
+  <bitmap id="eq.normal.button.slider.v.h" file="images/eq-background-main.png" x="200" y="275" w="22" h="11" gammagroup="greybuttons"/>
+  <bitmap id="eq.normal.button.slider.v.d" file="images/eq-background-main.png" x="200" y="304" w="22" h="11" gammagroup="greybuttons"/>
 
   <bitmap id="eq.normal.bar.left" file="images/eq-background-main.png" x="43" y="100" w="11" h="30" gammagroup="greybuttons"/>
   <bitmap id="eq.normal.bar.middle" file="images/eq-background-main.png" x="43" y="141" w="11" h="30" gammagroup="greybuttons"/>

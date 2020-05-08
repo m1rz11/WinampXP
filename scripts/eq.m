@@ -196,11 +196,11 @@ System.onEqFreqChanged (boolean isoonoff)
 		for(int i=0; i<10; i++) EqNormalGroup.findObject("eq"+integerToString(i+1)).setXmlParam("tooltip", getToken(WINAMPBANDS,",",i));
 	}
 }
-
+/*
 EqONBtn.onLeftButtonDown (int x, int y)
 {
   EqONLight.setXmlParam("image", "onauto.light.on.d");
-  /*if (EqState == 1)
+  if (EqState == 1)
   {
     EqONLight.setXmlParam("image", "onauto.light.on.d");
     EqState = 0;
@@ -209,13 +209,13 @@ EqONBtn.onLeftButtonDown (int x, int y)
   {
     EqONLight.setXmlParam("image", "onauto.light.on.d");
     EqState = 1;
-  }*/
+  }
 }
 
 AutoONBtn.onLeftButtonDown (int x, int y)
 {
   AutoONLight.setXmlParam("image", "onauto.light.on.d");
-  /*if (AutoState == 1)
+  if (AutoState == 1)
   {
     AutoONLight.setXmlParam("image", "onauto.light.on.d");
     AutoState = 0;
@@ -224,9 +224,9 @@ AutoONBtn.onLeftButtonDown (int x, int y)
   {
     AutoState = 1;
     AutoONLight.setXmlParam("image", "onauto.light.on.d");
-  }*/
+  }
 }
-    
+*/
     
 EqONBtn.onLeftButtonUp (int x, int y)
 {
