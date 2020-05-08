@@ -1,4 +1,4 @@
-#include "std.mi"
+#include "lib/std.mi"
 
 Global Group tipGroup;
 Global Text tipText;
@@ -7,7 +7,7 @@ System.onScriptLoaded() {
   tipGroup = getScriptGroup();
   tipText = tipGroup.getObject("tooltip.text");
 
-  tipGroup.setXmlParam("h", "33"); //Vic trick: Setting this via XML is ignored, but the script does the job! Yay!
+  tipGroup.setXmlParam("h", "25"); //Vic trick: Setting this via XML is ignored, but the script does the job! Yay!
 
 }
 
@@ -23,7 +23,7 @@ tipText.onTextChanged(String newtext) {
   int vpright = vpleft+getViewportWidthFromPoint(x, y);
   int vpbottom = vptop+getViewportHeightFromPoint(x, y);
 
-  int w = getTextWidth()*1.2+25; // 1.2 to compensate for bold="1"
+  int w = getTextWidth()+12; // 1.2 to compensate for bold="1"
   int h = tipGroup.getHeight();
 
   if (x + w > vpright) x = vpright - w;
