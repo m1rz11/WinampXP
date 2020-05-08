@@ -1,4 +1,4 @@
-#include "std.mi"
+#include "lib/std.mi"
 #include "lib/winampconfig.mi"
 
 #define ISOBANDS "31.5 Hz,63 Hz,125 Hz,250 Hz,500 Hz,1 KHz,2 KHz,4 KHz,8 KHz,16 KHz"
@@ -120,7 +120,7 @@ System.onEqChanged (boolean newstatus)
 {
 	if (!newstatus)
 	{
-    if (EqONBtn.isMouseOverRect()) { EqONLight.setXmlParam("image", "onauto.light.on.h");	}
+    if (EqONBtn.isMouseOverRect()) { EqONLight.setXmlParam("image", "onauto.light.off");	}
     else if (!EqONBtn.isMouseOverRect()) { EqONLight.setXmlParam("image", "onauto.light.off"); }
     EqState = 0;
 	}
@@ -147,7 +147,7 @@ System.onEqChanged (boolean newstatus)
 AutoONBtn.onToggle(boolean onoff)
 {
 	if (onoff) {
-    if (AutoONBtn.isMouseOverRect()) { AutoONLight.setXmlParam("image", "onauto.light.on.h"); }
+    if (AutoONBtn.isMouseOverRect()) { AutoONLight.setXmlParam("image", "onauto.light.off"); }
     else if (!AutoONBtn.isMouseOverRect()) { AutoONLight.setXmlParam("image", "onauto.light.off"); }
   AutoState = 1;
 	}
@@ -232,7 +232,7 @@ EqONBtn.onLeftButtonUp (int x, int y)
 {
   if (EqONBtn.isMouseOverRect()) {
     if (EqState == 1) { EqONLight.setXmlParam("image", "onauto.light.on.h"); EqState = 1; }
-    else if (EqState == 0) { EqONLight.setXmlParam("image", "onauto.light.on.h"); EqState = 0; }
+    else if (EqState == 0) { EqONLight.setXmlParam("image", "onauto.light.off"); EqState = 0; }
   }
   else
   {
@@ -246,7 +246,7 @@ AutoONBtn.onLeftButtonUp (int x, int y)
   if (AutoONBtn.isMouseOverRect())
   {
     if (AutoState == 1) { AutoONLight.setXmlParam("image", "onauto.light.on.h"); AutoState = 1; }
-    else if (AutoState == 0) { AutoONLight.setXmlParam("image", "onauto.light.on"); AutoState = 0; }
+    else if (AutoState == 0) { AutoONLight.setXmlParam("image", "onauto.light.off"); AutoState = 0; }
   }
   else
   {
@@ -254,7 +254,7 @@ AutoONBtn.onLeftButtonUp (int x, int y)
     else if (AutoState == 0) { AutoONLight.setXmlParam("image", "onauto.light.off"); AutoState = 0; }
   }
 }
-
+/*
 EqONBtn.onEnterArea()
 {
   EqONLight.setXmlParam("image", "onauto.light.on.h");
@@ -264,7 +264,7 @@ AutoONBtn.onEnterArea()
 {
   AutoONLight.setXmlParam("image", "onauto.light.on.h");
 }
-
+*/
 EqONBtn.onLeaveArea()
 {
   if (EqState == 1)
