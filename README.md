@@ -1,7 +1,7 @@
 # WinampXP
 Winamp modern skin based on the looks of Windows XP.
 
-![Screenshot](https://i.imgur.com/gIp4lMP.png)
+![Screenshot](https://i.imgur.com/mOaGCiL.png)
 
 Special thanks:
 
