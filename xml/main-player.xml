@@ -1,4 +1,4 @@
-<container id="main" name="Main Window" default_visible="1" default_x="0" default_y="0">
+<container id="main" name="WACUP" default_visible="1" default_x="0" default_y="0">
 	
 <groupdef id="player.normal.group.main">
 
@@ -72,9 +72,20 @@
 	<togglebutton id="player.button.about" x="-63" y="180" relatx="1" image="button.about.n" hoverimage="button.about.h" downimage="button.about.d" rectrgn="1" action="TOGGLE" param="guid:{D6201408-476A-4308-BF1B-7BACA1124B12}" alpha="253" tooltip="About Winamp / Toggle Library" cursor="cur.normal"/>
 
 	<grid id="titlebar.stripes" x="32" y="3" w="-120" h="28" relatw="1" left="titlebar.stripes.left" middle="titlebar.stripes.center" right="titlebar.stripes.right" move="1" activealpha="253" inactivealpha="100" />
-	<group id="titlebar.winamptxt.group" x="0" y="0" h="30" w="124"/> <!-- Centered by mainplayer.maki -->
-	<layer id="titlebar.switch" x="30" y="0" w="-83" h="30" relatw="1" dblclickaction="SWITCH;shade" move="1" ghost="0" cursor="cur.move"/>
+	<group id="titlebar.winamptxt.group" x="0" y="0" h="30" w="124"/>
+
+
+	<text id="window.titlebar.title.dropshadow" x="25" y="-3" w="600" h="42" default=":componentname" font="trebuc" fontsize="17"
+    align="left" color="10,24,131" bold="1" antialias="1" activealpha="253" inactiveAlpha="0" forceuppercase="0"/>
 	
+  	<text id="window.titlebar.title" x="24" y="-4" w="600" h="42" default=":componentname" font="trebuc" fontsize="17"
+    align="left" color="255,255,255" bold="1" antialias="1" activealpha="253" inactiveAlpha="0" forceuppercase="0"/>
+	
+  	<text id="window.titlebar.title.dim" x="24" y="-4" w="600" h="42" default=":componentname" font="trebuc" fontsize="17"
+    align="left" color="216,228,248" bold="1" antialias="1" activealpha="0" inactiveAlpha="253" forceuppercase="0"/>
+
+	<layer id="titlebar.switch" x="30" y="0" w="-83" h="30" relatw="1" dblclickaction="SWITCH;shade" move="1" ghost="0" cursor="cur.move"/>
+  
 	<button id="player.button.mainmenu" action="SYSMENU" x="0" y="1" image="player.button.mainmenu" hoverimage="player.button.mainmenu.h" downimage="player.button.mainmenu.d" activealpha="253" inactivealpha="253" tooltip="Winamp Menu" cursor="cur.normal"/>
 	<button id="player.button.minimize" action="MINIMIZE" x="-75" y="2" relatx="1" image="player.button.minimize" hoverimage="player.button.minimize.h" downimage="player.button.minimize.d" tooltip="Minimize" activealpha="253" inactivealpha="100" cursor="cur.normal"/>
 	<button id="player.button.switch" action="SWITCH" param="SHADE" x="-52" y="2" relatx="1" image="player.button.switch" hoverimage="player.button.switch.h" downimage="player.button.switch.d" tooltip="Toggle Windowshade Mode" activealpha="253" inactivealpha="100" cursor="cur.normal"/>

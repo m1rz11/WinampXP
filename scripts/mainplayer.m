@@ -18,7 +18,7 @@ Global Group EqShadeGroup, EqShadeVolbalance;
 Global Slider Balance;
 // ..it's here to avoid a strange bug (center throws -0.2dB)
 
-Global Button EqLight, PLLight, OAIDUMenuD, OAIDUBtnUE1, OAIDUBtnUE2, OAIDUBtnUE3, StopBtn;
+Global Button EqLight, PLLight, OAIDUMenuD, OAIDUBtnUE1, OAIDUBtnUE2, OAIDUBtnUE3, StopBtn, WinampIcon;
 Global ToggleButton OAIDUBtnA;
 Global AnimatedLayer VolumeAnim, MainVolumeAnim;
 Global AnimatedLayer anlBalance, MainanlBalance;
@@ -31,6 +31,7 @@ Global Layer WinampTxt, AboutBG, WinampTxtShade;
 Global Text SonginfoBitrate, SonginfoFrequency;
 Global Slider EqBalance;
 Global Layer Trigger;
+Global Container MainContainer;
 
 Global timer getchanneltimer; // this has delay, apparently needed to have some time to get the info
 Global int timemodestring;
@@ -56,6 +57,8 @@ Global File myCheckerDoc;
 
 
 initMainPlayer() {
+  MainContainer = getContainer("main");
+
 	MainGroup = layoutMainNormal.getObject("player.normal.group.main");
 	SongInfoGroup = MainGroup.getObject("player.normal.group.songinfo");
 
@@ -125,7 +128,7 @@ initMainPlayer() {
 
 	WinampTxtGroup = MainGroup.getObject("titlebar.winamptxt.group");
 	WinampTxt = WinampTxtGroup.getObject("titlebar.winamptxt");
-
+  WinampIcon = MainGroup.getObject("player.button.mainmenu");
 
   // EQ shade mode stuff, it's here to avoid strange bugs
 	EqShadeGroup = layoutEqShade.getObject("equalizer.shade.group");
@@ -221,6 +224,10 @@ initMainPlayer() {
     AboutBtn.setXmlParam("image", "button.about.n");
     AboutBtn.setXmlParam("hoverimage", "button.about.h");
     AboutBtn.setXmlParam("downimage", "button.about.d");
+    MainContainer.setXmlParam("name","Winamp");
+    WinampIcon.setXmlParam("image", "player.button.mainmenu.winamp");
+    WinampIcon.setXmlParam("hoverimage", "player.button.mainmenu.winamp.h");
+    WinampIcon.setXmlParam("downimage", "player.button.mainmenu.winamp.d");
     //setPrivateInt(getSkinName(), "iswacup", iswacup);
     //iswacup = 0;
   }

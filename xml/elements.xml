@@ -83,6 +83,10 @@
   <bitmap id="player.button.mainmenu.h" file="images/player-main.png" x="2" y="29" w="26" h="28" gammagroup="goldbuttons"/>
   <bitmap id="player.button.mainmenu.d" file="images/player-main.png" x="2" y="58" w="26" h="28" gammagroup="goldbuttons"/>
 
+  <bitmap id="player.button.mainmenu.winamp" file="images/player-main.png" x="29" y="29" w="26" h="28" gammagroup="goldbuttons"/>
+  <bitmap id="player.button.mainmenu.winamp.h" file="images/player-main.png" x="56" y="29" w="26" h="28" gammagroup="goldbuttons"/>
+  <bitmap id="player.button.mainmenu.winamp.d" file="images/player-main.png" x="83" y="29" w="26" h="28" gammagroup="goldbuttons"/>
+
   <bitmap id="player.button.minimize" file="images/player-main.png" x="467" y="0" w="26" h="28" gammagroup="goldbuttons"/>
   <bitmap id="player.button.minimize.h" file="images/player-main.png" x="467" y="29" w="26" h="28" gammagroup="goldbuttons"/>
   <bitmap id="player.button.minimize.d" file="images/player-main.png" x="467" y="58" w="26" h="28" gammagroup="goldbuttons"/>
