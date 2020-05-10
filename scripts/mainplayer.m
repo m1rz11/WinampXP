@@ -884,7 +884,7 @@ SonginfoBitrate.onTextChanged (String newtxt)
 
 System.onVolumeChanged(Int intVolume) {
   setVolumeAnim(intVolume);
-  showActionInfo("VOLUME:" + System.integerToString(intVolume / 255 * 100) + "%");
+  showActionInfo("Volume: " + System.integerToString(intVolume / 255 * 100) + "%");
 }
 
 
