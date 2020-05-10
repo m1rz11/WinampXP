@@ -18,6 +18,8 @@
 	<layer id="player.region.top.right" x="-3" y="0" relatx="1" image="window.shade.region.top.right" ghost="1" sysregion="-2" />
 	<layer id="player.region.bottom.left" x="0" y="-3" relaty="1" image="window.shade.region.bottom.left" ghost="1" sysregion="-2" />
 	<layer id="player.region.bottom.right" x="-3" y="-3" relatx="1" relaty="1" image="window.shade.region.bottom.right" ghost="1" sysregion="-2" />
+	
+	<layer id="WMP" x="22" y="46" w="178" h="86" ghost="1" alpha="0" image="wmpvoid"/>
 
   <grid id="player.songticker.bg" x="221" y="50" h="21" w="-247" relatw="1" left="player.songticker.bg.left" middle="player.songticker.bg.middle" right="player.songticker.bg.right" move="1" cursor="cur.normal"/>
 
@@ -145,6 +147,7 @@
 </groupdef>
 
 <groupdef id="player.normal.group.display"  cursor="cur.normal">
+	
 	<!--rect id="player.background.display.vis.scale" x="0" y="0" filled="1" color="53,53,0" alpha="255"/-->
 	<layer id="player.normal.display.bg" x="5" y="1" image="player.normal.display.bg" cursor="cur.normal"/>
 
@@ -166,15 +169,14 @@
 	<button id="OAIDU.buttons.U.menuentry3" x="7" y="61" h="0" w="0" action="WA5:Prefs" param="33" image="none"/>
 	<button id="OAIDU.buttons.U" x="7" y="61" image="OAIDU.buttons.U.n" hoverimage="OAIDU.buttons.U.h" downimage="OAIDU.buttons.U.n" tooltip="Visualization Menu" rectrgn="1" cursor="cur.normal"/>
 
-  <status id="status" x="21" y="8" stopBitmap="status.icon.stop" playBitmap="status.icon.play" pauseBitmap="status.icon.pause" ghost="1"/>
+  <status id="status" x="33" y="8" stopBitmap="status.icon.stop" playBitmap="status.icon.play" pauseBitmap="status.icon.pause" ghost="1"/>
   
 	<layer id="player.background.display.vis.scale" x="19" y="0" image="display.vis.bg" alpha="253" ghost="1"/>
-
 	<text id="display.time" display="TIME" x="51" y="0" w="122" h="36" ticker="0" font="numbers" fontsize="38" forcefixed="1" color="black" 
 	timeroffstyle="0" valign="top" align="right" cursor="cur.normal" bold="0" tooltip="Time Display (click to toggle elapsed/remaining)"/>
 
 	<!--rect id="plssayer.vis" x="27" y="41" w="143" h="31" color="0,0,250" filled="0"/-->
-	<layer id="WMP" x="25" y="38" w="148" h="36" ghost="1" alpha="0" image="wmpvoid"/>
+	
 	<vis id="player.vis" x="27" y="40" w="144" h="32" cursor="cur.normal" gammagroup="visualizers"/>
 	<layer id="hide.for.gordon" x="169" y="39" image="hide.for.gordon" ghost="1"/>
 	<layer id="hide.for.vic" x="27" y="71" image="show.for.gordon" ghost="1"/>
@@ -191,7 +193,7 @@
 </groupdef>
 <groupdef id="player.timedisplay.songtitle" cursor="cur.normal">
 
-	<text text="Time Display" x="-2" y="0" w="122" h="36" font="tahoma" fontsize="15" color="0,70,213" ghost="1"/>
+	<text id="player.timedisplay.text" text="Time Display" x="-2" y="0" w="122" h="36" font="tahoma" fontsize="15" color="0,70,213" ghost="1"/>
 	<text text="Song Title" x="189" y="0" w="122" h="36" font="tahoma" fontsize="15" color="0,70,213" ghost="1"/>
 
 </groupdef>

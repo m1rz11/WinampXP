@@ -13,13 +13,18 @@ Function setColoroscRange (String rgb, int start, int end);									//set oscill
 Function setColoroscOdd (String rgb);														//set odd oscilloscope color					rgb value("0,255,127")
 Function setColoroscEven (String rgb);														//set even oscilloscope color					rgb value("0,255,127")
 
+Function darkDisplay(Boolean visible);
+
 Global Container containerMain;
 Global Container containerPL;
 Global Layout layoutPL, layoutMainNormal, layoutMainShade;
-Global Group NormalGroupMain, NormalGroupDisplay, ShadeGroupMain, ShadeGroupDisplay;
+Global Group NormalGroupMain, NormalGroupDisplay, ShadeGroupMain, ShadeGroupDisplay, TDSongTitleGroup;
 Global Vis visualizer, visualizershade, visualizerpl;
 Global Layer wmpblackness;
 Global Button OAIDUBtnUE1, OAIDUBtnUE2, OAIDUBtnUE3;
+Global GuiObject DisplayTime;
+Global Status DisplayStatusIcons;
+Global Text TDText;
 
 Global PopUpMenu visMenu;
 Global PopUpMenu specmenu;
@@ -30,9 +35,14 @@ Global PopUpMenu stylemenu;
 Global PopUpMenu colmenu;
 
 Global Int currentMode, a_falloffspeed, p_falloffspeed, a_coloring, v_color;
-Global Boolean show_peaks;
+Global Boolean show_peaks, dark_display;
 Global layer Trigger, HideForVic, TriggerBlocker, TriggerBlockerShade;
 
+//OAIDU mess
+Global GuiObject OAIDUo;
+Global Layer OAIDUon, OAIDUoh, OAIDUod;
+Global ToggleButton OAIDUa;
+Global Button OAIDUi, OAIDUd, OAIDUu;
 
 
 System.onScriptLoaded()
@@ -41,6 +51,7 @@ System.onScriptLoaded()
 	layoutMainNormal = containerMain.getLayout("normal");
 	NormalGroupMain = layoutMainNormal.findObject("player.normal.group.main");
 	NormalGroupDisplay = NormalGroupMain.findObject("player.normal.group.display");
+	TDSongTitleGroup = NormalGroupMain.findObject("player.timedisplay.songtitle");
 	OAIDUBtnUE1 = NormalGroupDisplay.findObject("OAIDU.buttons.U.menuentry1");
   OAIDUBtnUE2 = NormalGroupDisplay.findObject("OAIDU.buttons.U.menuentry2");
   OAIDUBtnUE3 = NormalGroupDisplay.findObject("OAIDU.buttons.U.menuentry3");
@@ -56,7 +67,6 @@ System.onScriptLoaded()
   containerPL = System.getContainer("PLEdit");
   layoutPL = containerPL.getLayout("normalpl");
 	visualizerpl = layoutPL.findObject("shade.vis");
-
 
 	Trigger = NormalGroupDisplay.findObject("player.vis.trigger");
 	TriggerBlocker = layoutPL.findObject("player.vis.blocker");
@@ -75,6 +85,25 @@ System.onScriptLoaded()
 	visualizerpl.setXmlParam("peakfalloff", integerToString(p_falloffspeed));
 	visualizerpl.setXmlParam("falloff", integerToString(a_falloffspeed));
 	
+	//display stuff
+	DisplayTime = NormalGroupDisplay.getObject("display.time");
+	DisplayStatusIcons = NormalGroupDisplay.getObject("status");
+	TDText = TDSongTitleGroup.getObject("player.timedisplay.text");
+
+	//oaidu stuff
+	OAIDUo = NormalGroupDisplay.getObject("OAIDU.buttons.O.m");
+	OAIDUon = NormalGroupDisplay.getObject("OAIDU.buttons.O.m");
+	OAIDUoh = NormalGroupDisplay.getObject("OAIDU.buttons.O.m");
+	OAIDUod = NormalGroupDisplay.getObject("OAIDU.buttons.O.m");
+
+	OAIDUa = NormalGroupDisplay.getObject("OAIDU.buttons.A");
+	OAIDUi = NormalGroupDisplay.getObject("OAIDU.buttons.I");
+	OAIDUd = NormalGroupDisplay.getObject("OAIDU.buttons.D");
+	OAIDUu = NormalGroupDisplay.getObject("OAIDU.buttons.U");
+
+	darkDisplay(dark_display);
+
+	
 
 	refreshVisSettings ();
 }
@@ -91,6 +120,7 @@ refreshVisSettings ()
 {
 	currentMode = getPrivateInt(getSkinName(), "Visualizer Mode", 1);
 	show_peaks = getPrivateInt(getSkinName(), "Visualizer show Peaks", 1);
+	dark_display = getPrivateInt(getSkinName(), "Dark Display", 0);
 	a_falloffspeed = getPrivateInt(getSkinName(), "Visualizer analyzer falloff", 3);
 	p_falloffspeed = getPrivateInt(getSkinName(), "Visualizer peaks falloff", 2);
 	a_coloring = getPrivateInt(getSkinName(), "Visualizer analyzer coloring", 0);
@@ -138,7 +168,6 @@ refreshVisSettings ()
 		visualizer.setXmlParam("colorallbands", "49,106,197");
 		visualizer.setXmlParam("colorbandpeak", "49,106,197");
 		setColorOsc("49,106,197");
-		wmpblackness.setXmlParam("alpha","0");
 		visualizer.setXmlParam("fps", "30");
 	}
 	if (v_color == 2)
@@ -166,7 +195,6 @@ refreshVisSettings ()
 		visualizer.setXmlParam("colorosc3", "181,189,189");
 		visualizer.setXmlParam("colorosc4", "160,170,175");
 		visualizer.setXmlParam("colorosc5", "148,156,165");
-		wmpblackness.setXmlParam("alpha","0");
 		visualizer.setXmlParam("fps", "30");
 	}
 	else if (v_color == 3)
@@ -174,7 +202,6 @@ refreshVisSettings ()
 		visualizer.setXmlParam("colorallbands", "0,176,32");
 		visualizer.setXmlParam("colorbandpeak", "32,32,255");
 		setColorosc("160,255,160");
-		wmpblackness.setXmlParam("alpha","253");
 		visualizer.setXmlParam("fps", "24");
 	}
 	else if (v_color == 4)
@@ -182,7 +209,6 @@ refreshVisSettings ()
 		visualizer.setXmlParam("colorallbands", "0,0,255");
 		visualizer.setXmlParam("colorbandpeak", "255,255,255");
 		setColorosc("160,255,160");
-		wmpblackness.setXmlParam("alpha","253");
 		visualizer.setXmlParam("fps", "24");
 	}
 	else if (v_color == 5)
@@ -190,10 +216,10 @@ refreshVisSettings ()
 		visualizer.setXmlParam("colorallbands", "255,165,0");
 		visualizer.setXmlParam("colorbandpeak", "255,0,0");
 		setColorosc("160,255,160");
-		wmpblackness.setXmlParam("alpha","253");
 		visualizer.setXmlParam("fps", "24");
 	}
 	setVis (currentMode);
+	darkDisplay(dark_display);
 }
 
 Trigger.onLeftButtonDown (int x, int y)
@@ -244,6 +270,7 @@ Trigger.onRightButtonUp (int x, int y)
 	visMenu.addCommand("Options:", 102, 0, 1);
 
 	visMenu.addCommand("Show Peaks", 101, show_peaks == 1, 0);
+	visMenu.addCommand("Dark Display", 103, dark_display == 2, 0);
 	pksmenu.addCommand("Slower", 200, p_falloffspeed == 0, 0);
 	pksmenu.addCommand("Slow", 201, p_falloffspeed == 1, 0);
 	pksmenu.addCommand("Moderate", 202, p_falloffspeed == 2, 0);
@@ -300,6 +327,13 @@ ProcessMenuResult (int a)
 		visualizershade.setXmlParam("peaks", integerToString(show_peaks));
 		visualizerpl.setXmlParam("peaks", integerToString(show_peaks));
 		setPrivateInt(getSkinName(), "Visualizer show Peaks", show_peaks);
+	}
+
+	else if (a == 103)
+	{
+		dark_display = (dark_display - 1) * (-1);
+		darkDisplay(dark_display);		//yeah i know
+		setPrivateInt(getSkinName(), "Dark Display", dark_display);
 	}
 
 	else if (a >= 200 && a <= 204)
@@ -371,7 +405,6 @@ ProcessMenuResult (int a)
 			visualizer.setXmlParam("colorallbands", "49,106,197");
 			visualizer.setXmlParam("colorbandpeak", "49,106,197");
 			setColorOsc("49,106,197");
-			wmpblackness.setXmlParam("alpha","0");
 			visualizer.setXmlParam("fps", "30");
 		}
 		if (v_color == 2)
@@ -399,7 +432,6 @@ ProcessMenuResult (int a)
 			visualizer.setXmlParam("colorosc3", "181,189,189");
 			visualizer.setXmlParam("colorosc4", "160,170,175");
 			visualizer.setXmlParam("colorosc5", "148,156,165");
-			wmpblackness.setXmlParam("alpha","0");
 			visualizer.setXmlParam("fps", "30");
 		}
 		else if (v_color == 3)
@@ -408,7 +440,6 @@ ProcessMenuResult (int a)
 			visualizer.setXmlParam("colorbandpeak", "32,32,255");
 
 			setColorosc("160,255,160");
-			wmpblackness.setXmlParam("alpha","253");
 			visualizer.setXmlParam("fps", "24");
 		}
 		else if (v_color == 4)
@@ -417,7 +448,6 @@ ProcessMenuResult (int a)
 			visualizer.setXmlParam("colorbandpeak", "255,255,255");
 
 			setColorosc("160,255,160");
-			wmpblackness.setXmlParam("alpha","253");
 			visualizer.setXmlParam("fps", "24");
 		}
 		else if (v_color == 5)
@@ -426,7 +456,6 @@ ProcessMenuResult (int a)
 			visualizer.setXmlParam("colorbandpeak", "255,0,0");
 
 			setColorosc("160,255,160");
-			wmpblackness.setXmlParam("alpha","253");
 			visualizer.setXmlParam("fps", "24");
 		}
 		setPrivateInt(getSkinName(), "Visualizer Color themes", v_color);
@@ -539,6 +568,84 @@ setColoroscEven(String rgb)
 	visualizer.setXmlParam("colorosc4", rgb);
 }
 
+darkDisplay(Boolean visible){
+	if(visible){
+		//dark display on
+
+		wmpblackness.setXmlParam("alpha","255");
+		DisplayTime.setXmlParam("color","WHITE");
+
+		DisplayStatusIcons.setXmlParam("stopBitmap","status.icon.stop.dark");
+		DisplayStatusIcons.setXmlParam("playBitmap","status.icon.play.dark");
+		DisplayStatusIcons.setXmlParam("pauseBitmap","status.icon.pause.dark");
+
+		TDText.setXmlParam("text","");
+		/*
+		//whatever i did here is not right
+		//send help
+		OAIDUo.setXmlParam("normal","OAIDU.buttons.O.n.dark");
+		OAIDUo.setXmlParam("hover","OAIDU.buttons.O.h.dark");
+		OAIDUo.setXmlParam("down","OAIDU.buttons.O.d.dark");
+
+		OAIDUon.setXmlParam("image","OAIDU.buttons.O.n.dark");
+		OAIDUoh.setXmlParam("image","OAIDU.buttons.O.h.dark");
+		OAIDUod.setXmlParam("image","OAIDU.buttons.O.d.dark");
+
+		OAIDUa.setXmlParam("image","OAIDU.buttons.A.dark.1.0");
+		OAIDUa.setXmlParam("hoverimage","OAIDU.buttons.A.dark.2.0");
+		OAIDUa.setXmlParam("downimage","OAIDU.buttons.A.dark.3.0");
+		*/
+		OAIDUi.setXmlParam("image","OAIDU.buttons.I.n.dark");
+		OAIDUi.setXmlParam("hoverimage","OAIDU.buttons.I.h.dark");
+		OAIDUi.setXmlParam("downimage","OAIDU.buttons.I.n.dark");
+
+		OAIDUd.setXmlParam("image","OAIDU.buttons.D.n.dark");
+		OAIDUd.setXmlParam("hoverimage","OAIDU.buttons.D.h.dark");
+		OAIDUd.setXmlParam("downimage","OAIDU.buttons.D.n.dark");
+
+		OAIDUu.setXmlParam("image","OAIDU.buttons.U.n.dark");
+		OAIDUu.setXmlParam("hoverimage","OAIDU.buttons.U.h.dark");
+		OAIDUu.setXmlParam("downimage","OAIDU.buttons.U.n.dark");
+		
+	}
+	else{
+		//dark display off
+
+		wmpblackness.setXmlParam("alpha","0");
+		DisplayTime.setXmlParam("color","BLACK");
+
+		DisplayStatusIcons.setXmlParam("stopBitmap","status.icon.stop");
+		DisplayStatusIcons.setXmlParam("playBitmap","status.icon.play");
+		DisplayStatusIcons.setXmlParam("pauseBitmap","status.icon.pause");
+
+		TDText.setXmlParam("text","Time Display");
+		/*
+		OAIDUo.setXmlParam("normal","OAIDU.buttons.O.n");
+		OAIDUo.setXmlParam("hover","OAIDU.buttons.O.h");
+		OAIDUo.setXmlParam("down","OAIDU.buttons.O.d");
+
+		OAIDUon.setXmlParam("image","OAIDU.buttons.O.n");
+		OAIDUoh.setXmlParam("image","OAIDU.buttons.O.h");
+		OAIDUod.setXmlParam("image","OAIDU.buttons.O.d");
+
+		OAIDUa.setXmlParam("image","OAIDU.buttons.A.1.0");
+		OAIDUa.setXmlParam("hoverimage","OAIDU.buttons.A.2.0");
+		OAIDUa.setXmlParam("downimage","OAIDU.buttons.A.3.0");
+		*/
+		OAIDUi.setXmlParam("image","OAIDU.buttons.I.n");
+		OAIDUi.setXmlParam("hoverimage","OAIDU.buttons.I.h");
+		OAIDUi.setXmlParam("downimage","OAIDU.buttons.I.n");
+
+		OAIDUd.setXmlParam("image","OAIDU.buttons.D.n");
+		OAIDUd.setXmlParam("hoverimage","OAIDU.buttons.D.h");
+		OAIDUd.setXmlParam("downimage","OAIDU.buttons.D.n");
+
+		OAIDUu.setXmlParam("image","OAIDU.buttons.U.n");
+		OAIDUu.setXmlParam("hoverimage","OAIDU.buttons.U.h");
+		OAIDUu.setXmlParam("downimage","OAIDU.buttons.U.n");
+		
+	}
+}
 
 setVis (int mode)
 {

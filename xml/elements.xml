@@ -30,7 +30,7 @@
 	
 	<!-- player-normal -->
 	
-  <bitmap id="wmpvoid" file="images/void.png" x="0" y="0" w="144" h="32"/>
+  <bitmap id="wmpvoid" file="images/void.png" x="0" y="0" w="178" h="86"/>
 	
   <bitmap id="songtitle.l" file="images/songtitle.png" x="0" y="0" w="68" h="25" gammagroup="titlebarstripes"/>
   <bitmap id="songtitle.m" file="images/songtitle.png" x="69" y="0" w="3" h="25" gammagroup="titlebarstripes"/>
@@ -201,6 +201,24 @@
   <bitmap id="OAIDU.buttons.D.h" file="images/player-main.png" x="13" y="213" w="12" h="14" gammagroup="display-text"/>
   <bitmap id="OAIDU.buttons.U.n" file="images/player-main.png" x="26" y="227" w="12" h="14" gammagroup="display-text"/>
   <bitmap id="OAIDU.buttons.U.h" file="images/player-main.png" x="13" y="227" w="12" h="14" gammagroup="display-text"/>
+
+  <bitmap id="OAIDU.buttons.O.n.dark" file="images/player-main.png" x="14" y="92" w="11" h="14" gammagroup="display-text"/>
+  <bitmap id="OAIDU.buttons.O.h.dark" file="images/player-main.png" x="1" y="92" w="12" h="14" gammagroup="display-text"/>
+  <bitmap id="OAIDU.buttons.O.d.dark" file="images/player-main.png" x="14" y="92" w="12" h="14" gammagroup="display-text"/>
+  
+  <bitmap id="OAIDU.buttons.A.dark.1.0" file="images/player-main.png" x="14" y="106" w="11" h="14" gammagroup="display-text"/>
+  <bitmap id="OAIDU.buttons.A.dark.1.1" file="images/player-main.png" x="1" y="106" w="12" h="14" gammagroup="display-text"/>
+  <bitmap id="OAIDU.buttons.A.dark.2.0" file="images/player-main.png" x="1" y="106" w="12" h="14" gammagroup="display-text"/>
+  <bitmap id="OAIDU.buttons.A.dark.2.1" file="images/player-main.png" x="1" y="106" w="12" h="14" gammagroup="display-text"/>
+  <bitmap id="OAIDU.buttons.A.dark.3.1" file="images/player-main.png" x="14" y="106" w="11" h="14" gammagroup="display-text"/>
+  <bitmap id="OAIDU.buttons.A.dark.3.0" file="images/player-main.png" x="14" y="106" w="11" h="14" gammagroup="display-text"/>
+  
+  <bitmap id="OAIDU.buttons.I.n.dark" file="images/player-main.png" x="14" y="120" w="11" h="14" gammagroup="display-text"/>
+  <bitmap id="OAIDU.buttons.I.h.dark" file="images/player-main.png" x="1" y="120" w="12" h="14" gammagroup="display-text"/>
+  <bitmap id="OAIDU.buttons.D.n.dark" file="images/player-main.png" x="14" y="134" w="11" h="14" gammagroup="display-text"/>
+  <bitmap id="OAIDU.buttons.D.h.dark" file="images/player-main.png" x="1" y="134" w="12" h="14" gammagroup="display-text"/>
+  <bitmap id="OAIDU.buttons.U.n.dark" file="images/player-main.png" x="14" y="148" w="11" h="14" gammagroup="display-text"/>
+  <bitmap id="OAIDU.buttons.U.h.dark" file="images/player-main.png" x="1" y="148" w="12" h="14" gammagroup="display-text"/>
   
   <bitmap id="player.songticker.bg.left" file="images/player-main.png" x="216" y="73" w="81" h="21" gammagroup="display"/> 
   <bitmap id="player.songticker.bg.middle" file="images/player-main.png" x="297" y="73" w="82" h="21" gammagroup="display"/> 
@@ -226,6 +244,10 @@
   <bitmap id="status.icon.play" file="images/player-main.png" x="56" y="244" w="24" h="24" gammagroup="display-text"/> 
   <bitmap id="status.icon.pause" file="images/player-main.png" x="81" y="244" w="24" h="24" gammagroup="display-text"/>
   <bitmap id="status.icon.stop" file="images/player-main.png" x="106" y="244" w="24" h="24" gammagroup="display-text"/> 
+
+  <bitmap id="status.icon.play.dark" file="images/player-main.png" x="131" y="244" w="24" h="24" gammagroup="display-text"/> 
+  <bitmap id="status.icon.pause.dark" file="images/player-main.png" x="156" y="244" w="24" h="24" gammagroup="display-text"/>
+  <bitmap id="status.icon.stop.dark" file="images/player-main.png" x="181" y="244" w="24" h="24" gammagroup="display-text"/> 
 
 	<!-- Shade mode -->
 
