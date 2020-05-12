@@ -98,7 +98,7 @@
 	
 	<!--rect id="plssayer.vis" x="-354" y="-36" w="72" h="15" alpha="253" relatx="1" relaty="1"  color="0,0,250" filled="0"/-->
 	<vis id="shade.vis" x="-354" y="-36" w="72" h="15" relatx="1" relaty="1" cursor="cur.normal" gammagroup="visualizers"/>
-	<rect id="hide.for.gordon" x="-283" y="-36" w="2" h="17" relatx="1" relaty="1" color="28,22,50" filled="1" gammagroup="display"/>
+	<!-- rect id="hide.for.gordon" x="-283" y="-36" w="2" h="17" relatx="1" relaty="1" color="28,22,50" filled="1" gammagroup="display"/ -->
   <!--layer id="hide.for.vic" x="27" y="71" image="none" ghost="1" alpha="0"/-->
 	<layer id="player.vis.blocker" x="-354" y="-36" w="72" h="15" relatx="1" relaty="1" image="none" cursor="cur.normal" alpha="0"/>
 	

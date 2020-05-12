@@ -33,6 +33,7 @@ Global PopUpMenu pksmenu;
 Global PopUpMenu anamenu;
 Global PopUpMenu stylemenu;
 Global PopUpMenu colmenu;
+Global PopUpMenu wmpmenu;
 
 Global Int currentMode, a_falloffspeed, p_falloffspeed, a_coloring, v_color;
 Global Boolean show_peaks, dark_display;
@@ -246,6 +247,7 @@ Trigger.onRightButtonUp (int x, int y)
 	anamenu = new PopUpMenu;
 	stylemenu = new PopUpMenu;
 	colmenu = new PopUpMenu;
+	wmpmenu= new PopUpMenu;
 
 	visMenu.addCommand("Presets:", 999, 0, 1);
 	visMenu.addCommand("No Visualization", 100, currentMode == 0, 0);
@@ -253,9 +255,10 @@ Trigger.onRightButtonUp (int x, int y)
 	visMenu.addSubMenu(colmenu, "Visualizer Emulation Mode");
 	colmenu.addCommand("Luna", 500, v_color == 0, 0);
 	colmenu.addCommand("Winamp/WACUP", 502, v_color == 2, 0);
-	colmenu.addCommand("Windows Media Player (Bars and Scope)", 503, v_color == 3, 0);
-	colmenu.addCommand("Windows Media Player (Ocean Mist and Scope)", 504, v_color == 4, 0);
-	colmenu.addCommand("Windows Media Player (Fire Storm and Scope)", 505, v_color == 5, 0);
+	colmenu.addSubMenu(wmpmenu, "Windows Media Player");
+	wmpmenu.addCommand("Bars", 503, v_color == 3, 0);
+	wmpmenu.addCommand("Ocean Mist", 504, v_color == 4, 0);
+	wmpmenu.addCommand("Fire Storm", 505, v_color == 5, 0);
 	
 	specmenu.addCommand("Thick Bands", 1, currentMode == 1, 0);
 	specmenu.addCommand("Thin Bands", 2, currentMode == 2, 0);
@@ -270,7 +273,7 @@ Trigger.onRightButtonUp (int x, int y)
 	visMenu.addCommand("Options:", 102, 0, 1);
 
 	visMenu.addCommand("Show Peaks", 101, show_peaks == 1, 0);
-	visMenu.addCommand("Dark Display", 103, dark_display == 2, 0);
+	visMenu.addCommand("Dark Display (WIP)", 103, dark_display == 2, 0);
 	pksmenu.addCommand("Slower", 200, p_falloffspeed == 0, 0);
 	pksmenu.addCommand("Slow", 201, p_falloffspeed == 1, 0);
 	pksmenu.addCommand("Moderate", 202, p_falloffspeed == 2, 0);
