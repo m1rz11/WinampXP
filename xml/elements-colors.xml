@@ -115,6 +115,6 @@
 	
   <!-- WACUP only: Waveseeker -->
 
-  <color id="plugin.waveseeker.background" value="31,31,54" gammagroup="plastic"/>
-  <color id="plugin.waveseeker.wave_normal" value="148,147,165" gammagroup="greybuttons"/>
-  <color id="plugin.waveseeker.wave_playing" value="138,196,64" gammagroup="display-text"/>
+  <color id="plugin.waveseeker.background" value="236,233,216" gammagroup="plastic"/>
+  <color id="plugin.waveseeker.wave_normal" value="162,183,208" gammagroup="greybuttons"/>
+  <color id="plugin.waveseeker.wave_playing" value="50,107,197" gammagroup="display-text"/>
