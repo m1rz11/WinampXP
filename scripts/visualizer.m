@@ -19,7 +19,7 @@ Global Container containerMain;
 Global Container containerPL;
 Global Layout layoutPL, layoutMainNormal, layoutMainShade;
 Global Group NormalGroupMain, NormalGroupDisplay, ShadeGroupMain, ShadeGroupDisplay, TDSongTitleGroup;
-Global Vis visualizer, visualizershade, visualizerpl;
+Global Vis visualizer, visualizershade, visualizerpl, visualizerwmp, visualizerwmps1, visualizerwmps2, visualizerwmps3;
 Global Layer wmpblackness;
 Global Button OAIDUBtnUE1, OAIDUBtnUE2, OAIDUBtnUE3;
 Global GuiObject DisplayTime;
@@ -58,6 +58,12 @@ System.onScriptLoaded()
   OAIDUBtnUE3 = NormalGroupDisplay.findObject("OAIDU.buttons.U.menuentry3");
 
 	visualizer = NormalGroupDisplay.findObject("player.vis");
+	
+	visualizerwmp = NormalGroupDisplay.findObject("wmp.vis");
+	visualizerwmps1 = NormalGroupDisplay.findObject("wmp.vis.shadow1");
+	visualizerwmps2 = NormalGroupDisplay.findObject("wmp.vis.shadow2");
+	visualizerwmps3 = NormalGroupDisplay.findObject("wmp.vis.shadow3");
+	
 	wmpblackness = NormalGroupDisplay.findObject("WMP");
 
 	layoutMainShade = containerMain.getLayout("shade");
@@ -77,6 +83,22 @@ System.onScriptLoaded()
 	visualizer.setXmlParam("peaks", integerToString(show_peaks));
 	visualizer.setXmlParam("peakfalloff", integerToString(p_falloffspeed));
 	visualizer.setXmlParam("falloff", integerToString(a_falloffspeed));
+	
+	visualizerwmp.setXmlParam("peaks", integerToString(show_peaks));
+	visualizerwmp.setXmlParam("peakfalloff", integerToString(p_falloffspeed));
+	visualizerwmp.setXmlParam("falloff", integerToString(a_falloffspeed));
+	
+	visualizerwmps1.setXmlParam("peaks", integerToString(show_peaks));
+	visualizerwmps1.setXmlParam("peakfalloff", integerToString(p_falloffspeed));
+	visualizerwmps1.setXmlParam("falloff", integerToString(a_falloffspeed));
+	
+	visualizerwmps2.setXmlParam("peaks", integerToString(show_peaks));
+	visualizerwmps2.setXmlParam("peakfalloff", integerToString(p_falloffspeed));
+	visualizerwmps2.setXmlParam("falloff", integerToString(a_falloffspeed));
+	
+	visualizerwmps3.setXmlParam("peaks", integerToString(show_peaks));
+	visualizerwmps3.setXmlParam("peakfalloff", integerToString(p_falloffspeed));
+	visualizerwmps3.setXmlParam("falloff", integerToString(a_falloffspeed));
 
 	visualizershade.setXmlParam("peaks", integerToString(show_peaks));
 	visualizershade.setXmlParam("peakfalloff", integerToString(p_falloffspeed));
@@ -125,11 +147,27 @@ refreshVisSettings ()
 	a_falloffspeed = getPrivateInt(getSkinName(), "Visualizer analyzer falloff", 3);
 	p_falloffspeed = getPrivateInt(getSkinName(), "Visualizer peaks falloff", 2);
 	a_coloring = getPrivateInt(getSkinName(), "Visualizer analyzer coloring", 0);
-	v_color = getPrivateInt(getSkinName(), "Visualizer Color themes", 0);
+	v_color = getPrivateInt(getSkinName(), "Visualizer Color themes", 5);
 
 	visualizer.setXmlParam("peaks", integerToString(show_peaks));
 	visualizer.setXmlParam("peakfalloff", integerToString(p_falloffspeed));
 	visualizer.setXmlParam("falloff", integerToString(a_falloffspeed));
+	
+	visualizerwmp.setXmlParam("peaks", integerToString(show_peaks));
+	visualizerwmp.setXmlParam("peakfalloff", integerToString(p_falloffspeed));
+	visualizerwmp.setXmlParam("falloff", integerToString(a_falloffspeed));
+	
+	visualizerwmps1.setXmlParam("peaks", integerToString(show_peaks));
+	visualizerwmps1.setXmlParam("peakfalloff", integerToString(p_falloffspeed));
+	visualizerwmps1.setXmlParam("falloff", integerToString(a_falloffspeed));
+	
+	visualizerwmps2.setXmlParam("peaks", integerToString(show_peaks));
+	visualizerwmps2.setXmlParam("peakfalloff", integerToString(p_falloffspeed));
+	visualizerwmps2.setXmlParam("falloff", integerToString(a_falloffspeed));
+	
+	visualizerwmps3.setXmlParam("peaks", integerToString(show_peaks));
+	visualizerwmps3.setXmlParam("peakfalloff", integerToString(p_falloffspeed));
+	visualizerwmps3.setXmlParam("falloff", integerToString(a_falloffspeed));
 
 	visualizershade.setXmlParam("peaks", integerToString(show_peaks));
 	visualizershade.setXmlParam("peakfalloff", integerToString(p_falloffspeed));
@@ -165,60 +203,178 @@ refreshVisSettings ()
 	}
 	
 	if(v_color == 0 || v_color == 1){
-		//default blue color
-		visualizer.setXmlParam("colorallbands", "49,106,197");
-		visualizer.setXmlParam("colorbandpeak", "49,106,197");
-		setColorOsc("49,106,197");
-		visualizer.setXmlParam("fps", "30");
-	}
-	if (v_color == 2)
-	{
-		//winamp color
-		visualizer.setXmlParam("ColorBand1", "22,131,7");
-		visualizer.setXmlParam("ColorBand2", "39,147,0");
-		visualizer.setXmlParam("ColorBand3", "47,155,7");
-		visualizer.setXmlParam("ColorBand4", "55,180,15");
-		visualizer.setXmlParam("ColorBand5", "48,189,15");
-		visualizer.setXmlParam("ColorBand6", "39,205,15");
-		visualizer.setXmlParam("ColorBand7", "146,221,32");
-		visualizer.setXmlParam("ColorBand8", "187,221,40");
-		visualizer.setXmlParam("ColorBand9", "212,180,32");
-		visualizer.setXmlParam("ColorBand10", "220,164,23");
-		visualizer.setXmlParam("ColorBand11", "197,122,7");
-		visualizer.setXmlParam("ColorBand12", "213,114,0");
-		visualizer.setXmlParam("ColorBand13", "213,101,0");
-		visualizer.setXmlParam("ColorBand14", "213,89,0");
-		visualizer.setXmlParam("ColorBand15", "205,40,15");
-		visualizer.setXmlParam("ColorBand16", "238,48,15");
-		visualizer.setXmlParam("colorbandpeak", "150,150,150");
-		visualizer.setXmlParam("colorosc1", "255,255,255");
-		visualizer.setXmlParam("colorosc2", "214,214,222");
-		visualizer.setXmlParam("colorosc3", "181,189,189");
-		visualizer.setXmlParam("colorosc4", "160,170,175");
-		visualizer.setXmlParam("colorosc5", "148,156,165");
-		visualizer.setXmlParam("fps", "30");
-	}
-	else if (v_color == 3)
-	{
-		visualizer.setXmlParam("colorallbands", "0,176,32");
-		visualizer.setXmlParam("colorbandpeak", "32,32,255");
-		setColorosc("160,255,160");
-		visualizer.setXmlParam("fps", "24");
-	}
-	else if (v_color == 4)
-	{
-		visualizer.setXmlParam("colorallbands", "0,0,255");
-		visualizer.setXmlParam("colorbandpeak", "255,255,255");
-		setColorosc("160,255,160");
-		visualizer.setXmlParam("fps", "24");
-	}
-	else if (v_color == 5)
-	{
-		visualizer.setXmlParam("colorallbands", "255,165,0");
-		visualizer.setXmlParam("colorbandpeak", "255,0,0");
-		setColorosc("160,255,160");
-		visualizer.setXmlParam("fps", "24");
-	}
+			//default blue color
+			visualizer.setXmlParam("alpha","255");
+			
+			visualizerwmp.setXmlParam("alpha","0");
+			visualizerwmp.setXmlParam("mode","0");
+			visualizerwmps1.setXmlParam("alpha","0");
+			visualizerwmps1.setXmlParam("mode","0");
+			visualizerwmps2.setXmlParam("alpha","0");
+			visualizerwmps2.setXmlParam("mode","0");
+			visualizerwmps3.setXmlParam("alpha","0");
+			visualizerwmps3.setXmlParam("mode","0");
+			
+			visualizer.setXmlParam("colorallbands", "49,106,197");
+			visualizer.setXmlParam("colorbandpeak", "49,106,197");
+			setColorOsc("49,106,197");
+			visualizer.setXmlParam("fps", "30");
+		}
+		if (v_color == 2)
+		{
+			//winamp color
+			visualizer.setXmlParam("alpha","255");
+			
+			visualizerwmp.setXmlParam("alpha","0");
+			visualizerwmp.setXmlParam("mode","0");
+			visualizerwmps1.setXmlParam("alpha","0");
+			visualizerwmps1.setXmlParam("mode","0");
+			visualizerwmps2.setXmlParam("alpha","0");
+			visualizerwmps2.setXmlParam("mode","0");
+			visualizerwmps3.setXmlParam("alpha","0");
+			visualizerwmps3.setXmlParam("mode","0");
+			
+			visualizer.setXmlParam("ColorBand1", "22,131,7");
+			visualizer.setXmlParam("ColorBand2", "39,147,0");
+			visualizer.setXmlParam("ColorBand3", "47,155,7");
+			visualizer.setXmlParam("ColorBand4", "55,180,15");
+			visualizer.setXmlParam("ColorBand5", "48,189,15");
+			visualizer.setXmlParam("ColorBand6", "39,205,15");
+			visualizer.setXmlParam("ColorBand7", "146,221,32");
+			visualizer.setXmlParam("ColorBand8", "187,221,40");
+			visualizer.setXmlParam("ColorBand9", "212,180,32");
+			visualizer.setXmlParam("ColorBand10", "220,164,23");
+			visualizer.setXmlParam("ColorBand11", "197,122,7");
+			visualizer.setXmlParam("ColorBand12", "213,114,0");
+			visualizer.setXmlParam("ColorBand13", "213,101,0");
+			visualizer.setXmlParam("ColorBand14", "213,89,0");
+			visualizer.setXmlParam("ColorBand15", "205,40,15");
+			visualizer.setXmlParam("ColorBand16", "238,48,15");
+			visualizer.setXmlParam("colorbandpeak", "150,150,150");
+			visualizer.setXmlParam("colorosc1", "255,255,255");
+			visualizer.setXmlParam("colorosc2", "214,214,222");
+			visualizer.setXmlParam("colorosc3", "181,189,189");
+			visualizer.setXmlParam("colorosc4", "160,170,175");
+			visualizer.setXmlParam("colorosc5", "148,156,165");
+			visualizer.setXmlParam("fps", "30");
+		}
+		else if (v_color == 3)		//bars
+		{
+			visualizerwmp.setXmlParam("mode", "1");
+			visualizerwmp.setXmlParam("alpha","255");
+			visualizerwmp.setXmlParam("falloff","2");
+			visualizerwmp.setXmlParam("peakfalloff","1");
+			visualizerwmps1.setXmlParam("alpha","0");
+			visualizerwmps2.setXmlParam("alpha","0");
+			visualizerwmps3.setXmlParam("alpha","0");
+			visualizer.setXmlParam("alpha","0");
+			visualizerwmp.setXmlParam("colorallbands", "0,176,32");
+			visualizerwmp.setXmlParam("colorbandpeak", "32,32,255");
+			visualizerwmp.setXmlParam("bandwidth","wide");
+
+			setColorosc("160,255,160");
+			visualizer.setXmlParam("fps", "24");
+		}
+		else if (v_color == 4)		//ocean mist
+		{
+			visualizer.setXmlParam("alpha","0");
+			
+			visualizerwmp.setXmlParam("alpha","255");
+			
+			visualizerwmps1.setXmlParam("alpha","128");
+			visualizerwmps2.setXmlParam("alpha","64");
+			visualizerwmps3.setXmlParam("alpha","32");
+			
+			visualizerwmps1.setXmlParam("falloff", "2");
+			visualizerwmps2.setXmlParam("falloff", "1");
+			visualizerwmps3.setXmlParam("falloff", "0");
+			
+			visualizerwmps1.setXmlParam("peakfalloff", "1");
+			visualizerwmps2.setXmlParam("peakfalloff", "0");
+			visualizerwmps3.setXmlParam("peakfalloff", "0");
+			
+			visualizerwmp.setXmlParam("colorallbands", "0,0,255");
+			visualizerwmp.setXmlParam("colorbandpeak", "255,255,255");
+			visualizerwmp.setXmlParam("bandwidth","thin");
+			visualizerwmp.setXmlParam("peakfalloff","2");
+			
+			visualizerwmp.setXmlParam("mode", "1");
+			
+			visualizerwmps1.setXmlParam("mode", "1");
+			visualizerwmps2.setXmlParam("mode", "1");
+			visualizerwmps3.setXmlParam("mode", "1");
+			
+			visualizerwmps1.setXmlParam("colorallbands", "0,0,255");
+			visualizerwmps1.setXmlParam("colorbandpeak", "255,255,255");
+			visualizerwmps2.setXmlParam("colorallbands", "0,0,255");
+			visualizerwmps2.setXmlParam("colorbandpeak", "255,255,255");
+			visualizerwmps3.setXmlParam("colorallbands", "0,0,255");
+			visualizerwmps3.setXmlParam("colorbandpeak", "255,255,255");
+
+			setColorosc("160,255,160");
+			visualizer.setXmlParam("fps", "24");
+		}
+		else if (v_color == 5)		//fire storm
+		{
+			visualizer.setXmlParam("alpha","0");
+			
+			visualizerwmp.setXmlParam("alpha","255");
+			
+			visualizerwmps1.setXmlParam("alpha","128");
+			visualizerwmps2.setXmlParam("alpha","64");
+			visualizerwmps3.setXmlParam("alpha","32");
+			
+			visualizerwmps1.setXmlParam("falloff", "2");
+			visualizerwmps2.setXmlParam("falloff", "1");
+			visualizerwmps3.setXmlParam("falloff", "0");
+			
+			visualizerwmps1.setXmlParam("peakfalloff", "1");
+			visualizerwmps2.setXmlParam("peakfalloff", "0");
+			visualizerwmps3.setXmlParam("peakfalloff", "0");
+			
+			visualizerwmp.setXmlParam("colorallbands", "255,165,0");
+			visualizerwmp.setXmlParam("colorbandpeak", "255,0,0");
+			visualizerwmp.setXmlParam("bandwidth","thin");
+			visualizerwmp.setXmlParam("peakfalloff","2");
+			
+			visualizerwmps1.setXmlParam("colorallbands", "255,165,0");
+			visualizerwmps1.setXmlParam("colorbandpeak", "255,0,0");
+			visualizerwmps2.setXmlParam("colorallbands", "255,165,0");
+			visualizerwmps2.setXmlParam("colorbandpeak", "255,0,0");
+			visualizerwmps3.setXmlParam("colorallbands", "255,165,0");
+			visualizerwmps3.setXmlParam("colorbandpeak", "255,0,0");
+			
+			visualizerwmp.setXmlParam("mode", "1");
+			
+			visualizerwmps1.setXmlParam("mode", "1");
+			visualizerwmps2.setXmlParam("mode", "1");
+			visualizerwmps3.setXmlParam("mode", "1");
+
+			setColorosc("160,255,160");
+			visualizer.setXmlParam("fps", "24");
+		}
+		else if (v_color == 6)		//scope
+		{
+			visualizer.setXmlParam("alpha","0");
+			visualizerwmp.setXmlParam("alpha","255");
+			visualizerwmps1.setXmlParam("alpha","0");
+			visualizerwmps1.setXmlParam("mode","0");
+			visualizerwmps2.setXmlParam("alpha","0");
+			visualizerwmps2.setXmlParam("mode","0");
+			visualizerwmps3.setXmlParam("alpha","0");
+			visualizerwmps3.setXmlParam("mode","0");
+			
+			visualizerwmp.setXmlParam("colorosc1","160,255,160");
+			visualizerwmp.setXmlParam("colorosc2","160,255,160");
+			visualizerwmp.setXmlParam("colorosc3","160,255,160");
+			visualizerwmp.setXmlParam("colorosc4","160,255,160");
+			visualizerwmp.setXmlParam("colorosc5","160,255,160");
+			
+			visualizerwmp.setXmlParam("mode", "2");
+
+			setColorosc("160,255,160");
+			visualizer.setXmlParam("fps", "24");
+		}
 	setVis (currentMode);
 	darkDisplay(dark_display);
 }
@@ -255,10 +411,11 @@ Trigger.onRightButtonUp (int x, int y)
 	visMenu.addSubMenu(colmenu, "Visualizer Emulation Mode");
 	colmenu.addCommand("Luna", 500, v_color == 0, 0);
 	colmenu.addCommand("Winamp/WACUP", 502, v_color == 2, 0);
-	colmenu.addSubMenu(wmpmenu, "Windows Media Player");
+	colmenu.addSubMenu(wmpmenu, "Windows Media Player Modes");
 	wmpmenu.addCommand("Bars", 503, v_color == 3, 0);
 	wmpmenu.addCommand("Ocean Mist", 504, v_color == 4, 0);
 	wmpmenu.addCommand("Fire Storm", 505, v_color == 5, 0);
+	wmpmenu.addCommand("Scope", 506, v_color == 6, 0);
 	
 	specmenu.addCommand("Thick Bands", 1, currentMode == 1, 0);
 	specmenu.addCommand("Thin Bands", 2, currentMode == 2, 0);
@@ -273,7 +430,7 @@ Trigger.onRightButtonUp (int x, int y)
 	visMenu.addCommand("Options:", 102, 0, 1);
 
 	visMenu.addCommand("Show Peaks", 101, show_peaks == 1, 0);
-	visMenu.addCommand("Dark Display (WIP)", 103, dark_display == 2, 0);
+	visMenu.addCommand("Dark Display", 103, dark_display == 2, 0);
 	pksmenu.addCommand("Slower", 200, p_falloffspeed == 0, 0);
 	pksmenu.addCommand("Slow", 201, p_falloffspeed == 1, 0);
 	pksmenu.addCommand("Moderate", 202, p_falloffspeed == 2, 0);
@@ -400,11 +557,22 @@ ProcessMenuResult (int a)
     OAIDUBtnUE3.Leftclick ();
   }
 
-	else if (a >= 500 && a <= 505)
+	else if (a >= 500 && a <= 506)
 	{
 		v_color = a - 500;
 		if(v_color == 0 || v_color == 1){
 			//default blue color
+			visualizer.setXmlParam("alpha","255");
+			
+			visualizerwmp.setXmlParam("alpha","0");
+			visualizerwmp.setXmlParam("mode","0");
+			visualizerwmps1.setXmlParam("alpha","0");
+			visualizerwmps1.setXmlParam("mode","0");
+			visualizerwmps2.setXmlParam("alpha","0");
+			visualizerwmps2.setXmlParam("mode","0");
+			visualizerwmps3.setXmlParam("alpha","0");
+			visualizerwmps3.setXmlParam("mode","0");
+			
 			visualizer.setXmlParam("colorallbands", "49,106,197");
 			visualizer.setXmlParam("colorbandpeak", "49,106,197");
 			setColorOsc("49,106,197");
@@ -413,6 +581,17 @@ ProcessMenuResult (int a)
 		if (v_color == 2)
 		{
 			//winamp color
+			visualizer.setXmlParam("alpha","255");
+			
+			visualizerwmp.setXmlParam("alpha","0");
+			visualizerwmp.setXmlParam("mode","0");
+			visualizerwmps1.setXmlParam("alpha","0");
+			visualizerwmps1.setXmlParam("mode","0");
+			visualizerwmps2.setXmlParam("alpha","0");
+			visualizerwmps2.setXmlParam("mode","0");
+			visualizerwmps3.setXmlParam("alpha","0");
+			visualizerwmps3.setXmlParam("mode","0");
+			
 			visualizer.setXmlParam("ColorBand1", "22,131,7");
 			visualizer.setXmlParam("ColorBand2", "39,147,0");
 			visualizer.setXmlParam("ColorBand3", "47,155,7");
@@ -437,26 +616,119 @@ ProcessMenuResult (int a)
 			visualizer.setXmlParam("colorosc5", "148,156,165");
 			visualizer.setXmlParam("fps", "30");
 		}
-		else if (v_color == 3)
+		else if (v_color == 3)		//bars
 		{
-			visualizer.setXmlParam("colorallbands", "0,176,32");
-			visualizer.setXmlParam("colorbandpeak", "32,32,255");
+			visualizerwmp.setXmlParam("mode", "1");
+			visualizerwmp.setXmlParam("alpha","255");
+			visualizerwmp.setXmlParam("falloff","2");
+			visualizerwmp.setXmlParam("peakfalloff","1");
+			visualizerwmps1.setXmlParam("alpha","0");
+			visualizerwmps2.setXmlParam("alpha","0");
+			visualizerwmps3.setXmlParam("alpha","0");
+			visualizer.setXmlParam("alpha","0");
+			visualizerwmp.setXmlParam("colorallbands", "0,176,32");
+			visualizerwmp.setXmlParam("colorbandpeak", "32,32,255");
+			visualizerwmp.setXmlParam("bandwidth","wide");
 
 			setColorosc("160,255,160");
 			visualizer.setXmlParam("fps", "24");
 		}
-		else if (v_color == 4)
+		else if (v_color == 4)		//ocean mist
 		{
-			visualizer.setXmlParam("colorallbands", "0,0,255");
-			visualizer.setXmlParam("colorbandpeak", "255,255,255");
+			visualizer.setXmlParam("alpha","0");
+			
+			visualizerwmp.setXmlParam("alpha","255");
+			
+			visualizerwmps1.setXmlParam("alpha","128");
+			visualizerwmps2.setXmlParam("alpha","64");
+			visualizerwmps3.setXmlParam("alpha","32");
+			
+			visualizerwmps1.setXmlParam("falloff", "2");
+			visualizerwmps2.setXmlParam("falloff", "1");
+			visualizerwmps3.setXmlParam("falloff", "0");
+			
+			visualizerwmps1.setXmlParam("peakfalloff", "1");
+			visualizerwmps2.setXmlParam("peakfalloff", "0");
+			visualizerwmps3.setXmlParam("peakfalloff", "0");
+			
+			visualizerwmp.setXmlParam("colorallbands", "0,0,255");
+			visualizerwmp.setXmlParam("colorbandpeak", "255,255,255");
+			visualizerwmp.setXmlParam("bandwidth","thin");
+			visualizerwmp.setXmlParam("peakfalloff","2");
+			
+			visualizerwmp.setXmlParam("mode", "1");
+			
+			visualizerwmps1.setXmlParam("mode", "1");
+			visualizerwmps2.setXmlParam("mode", "1");
+			visualizerwmps3.setXmlParam("mode", "1");
+			
+			visualizerwmps1.setXmlParam("colorallbands", "0,0,255");
+			visualizerwmps1.setXmlParam("colorbandpeak", "255,255,255");
+			visualizerwmps2.setXmlParam("colorallbands", "0,0,255");
+			visualizerwmps2.setXmlParam("colorbandpeak", "255,255,255");
+			visualizerwmps3.setXmlParam("colorallbands", "0,0,255");
+			visualizerwmps3.setXmlParam("colorbandpeak", "255,255,255");
 
 			setColorosc("160,255,160");
 			visualizer.setXmlParam("fps", "24");
 		}
-		else if (v_color == 5)
+		else if (v_color == 5)		//fire storm
 		{
-			visualizer.setXmlParam("colorallbands", "255,165,0");
-			visualizer.setXmlParam("colorbandpeak", "255,0,0");
+			visualizer.setXmlParam("alpha","0");
+			
+			visualizerwmp.setXmlParam("alpha","255");
+			
+			visualizerwmps1.setXmlParam("alpha","128");
+			visualizerwmps2.setXmlParam("alpha","64");
+			visualizerwmps3.setXmlParam("alpha","32");
+			
+			visualizerwmps1.setXmlParam("falloff", "2");
+			visualizerwmps2.setXmlParam("falloff", "1");
+			visualizerwmps3.setXmlParam("falloff", "0");
+			
+			visualizerwmps1.setXmlParam("peakfalloff", "1");
+			visualizerwmps2.setXmlParam("peakfalloff", "0");
+			visualizerwmps3.setXmlParam("peakfalloff", "0");
+			
+			visualizerwmp.setXmlParam("colorallbands", "255,165,0");
+			visualizerwmp.setXmlParam("colorbandpeak", "255,0,0");
+			visualizerwmp.setXmlParam("bandwidth","thin");
+			visualizerwmp.setXmlParam("peakfalloff","2");
+			
+			visualizerwmps1.setXmlParam("colorallbands", "255,165,0");
+			visualizerwmps1.setXmlParam("colorbandpeak", "255,0,0");
+			visualizerwmps2.setXmlParam("colorallbands", "255,165,0");
+			visualizerwmps2.setXmlParam("colorbandpeak", "255,0,0");
+			visualizerwmps3.setXmlParam("colorallbands", "255,165,0");
+			visualizerwmps3.setXmlParam("colorbandpeak", "255,0,0");
+			
+			visualizerwmp.setXmlParam("mode", "1");
+			
+			visualizerwmps1.setXmlParam("mode", "1");
+			visualizerwmps2.setXmlParam("mode", "1");
+			visualizerwmps3.setXmlParam("mode", "1");
+
+			setColorosc("160,255,160");
+			visualizer.setXmlParam("fps", "24");
+		}
+		else if (v_color == 6)		//scope
+		{
+			visualizer.setXmlParam("alpha","0");
+			visualizerwmp.setXmlParam("alpha","255");
+			visualizerwmps1.setXmlParam("alpha","0");
+			visualizerwmps1.setXmlParam("mode","0");
+			visualizerwmps2.setXmlParam("alpha","0");
+			visualizerwmps2.setXmlParam("mode","0");
+			visualizerwmps3.setXmlParam("alpha","0");
+			visualizerwmps3.setXmlParam("mode","0");
+			
+			visualizerwmp.setXmlParam("colorosc1","160,255,160");
+			visualizerwmp.setXmlParam("colorosc2","160,255,160");
+			visualizerwmp.setXmlParam("colorosc3","160,255,160");
+			visualizerwmp.setXmlParam("colorosc4","160,255,160");
+			visualizerwmp.setXmlParam("colorosc5","160,255,160");
+			
+			visualizerwmp.setXmlParam("mode", "2");
 
 			setColorosc("160,255,160");
 			visualizer.setXmlParam("fps", "24");
