@@ -177,9 +177,9 @@
 
 	<!--rect id="plssayer.vis" x="27" y="41" w="143" h="31" color="0,0,250" filled="0"/-->
 	
-	<vis id="wmp.vis.shadow3" x="27" y="40" w="144" h="32" ghost="1" cursor="cur.normal" bandwidth="thin" FPS="22" falloff="0" peakfalloff="0" mode="1" gammagroup="visualizers"/>
-	<vis id="wmp.vis.shadow2" x="27" y="40" w="144" h="32" ghost="1" cursor="cur.normal" bandwidth="thin" FPS="24" falloff="1" peakfalloff="0" mode="1" gammagroup="visualizers"/>
-	<vis id="wmp.vis.shadow1" x="27" y="40" w="144" h="32" ghost="1" cursor="cur.normal" bandwidth="thin" FPS="23" falloff="2" peakfalloff="1" mode="1" gammagroup="visualizers"/>
+	<vis id="wmp.vis.shadow3" x="27" y="40" w="144" h="32" ghost="1" cursor="cur.normal" bandwidth="thin" FPS="20" falloff="0" peakfalloff="0" mode="1" gammagroup="visualizers"/>
+	<vis id="wmp.vis.shadow2" x="27" y="40" w="144" h="32" ghost="1" cursor="cur.normal" bandwidth="thin" FPS="25" falloff="1" peakfalloff="0" mode="1" gammagroup="visualizers"/>
+	<vis id="wmp.vis.shadow1" x="27" y="40" w="144" h="32" ghost="1" cursor="cur.normal" bandwidth="thin" FPS="24" falloff="2" peakfalloff="1" mode="1" gammagroup="visualizers"/>
 	<vis id="wmp.vis" x="27" y="40" w="144" h="32" ghost="1" cursor="cur.normal" gammagroup="visualizers"/>
 	
 	<vis id="player.vis" x="27" y="40" w="144" h="32" cursor="cur.normal" gammagroup="visualizers"/>
