@@ -2,38 +2,42 @@
 Author:		Victhor
 ---------------------------------------------------*/
 
-#include "std.mi"
+#include "lib/std.mi"
 
 Global Group scriptGroup;
-Global Button Donate, DeviantArt, Zsolt;
+Global Button link1,link2,link3,link4;
 
 
 System.onScriptLoaded ()
 {
 	scriptGroup = getScriptGroup();
-  Donate = scriptGroup.findObject("link.donate");
-  Zsolt = scriptGroup.findObject("link.zsolt");
-  DeviantArt = scriptGroup.findObject("link.deviantart");
+  link1 = scriptGroup.findObject("link1");
+  link2 = scriptGroup.findObject("link2");
+  link3 = scriptGroup.findObject("link3");
+  link4 = scriptGroup.findObject("link4");
 }
 
 
-Donate.onLeftClick()
+link1.onLeftClick()
 {
-	System.navigateUrlBrowser("https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=H2NNRMPGKKVDA");
-	//System.navigateUrlBrowser("https://www.paypal.me/victorbrocaz"); // Should I use this?
-	//return 1;
+	System.navigateUrlBrowser("https://www.deviantart.com/victhor/art/Winamp-Classic-Modern-805797724");
 	complete;
 }
 
-
-DeviantArt.onLeftClick()
+link2.onLeftClick()
 {
-	System.navigateUrlBrowser("https://www.deviantart.com/victhor");
+	System.navigateUrlBrowser("http://mirzi.6f.sk/");
 	complete;
 }
 
-Zsolt.onLeftClick()
+link3.onLeftClick()
 {
-	System.navigateUrlBrowser("http://www.trn.hu");
+	System.navigateUrlBrowser("https://github.com/The1Freeman");
+	complete;
+}
+
+link4.onLeftClick()
+{
+	System.navigateUrlBrowser("https://github.com/mirzi1/WinampXP");
 	complete;
 }

@@ -502,6 +502,12 @@
   <bitmap id="vid.button.misc.n" file="images/window/windows-background-main.png" x="302" y="365" w="20" h="20" gammagroup="display-text"/>
   <bitmap id="vid.button.misc.h" file="images/window/windows-background-main.png" x="302" y="386" w="20" h="20" gammagroup="display-text"/>
   <bitmap id="vid.button.misc.d" file="images/window/windows-background-main.png" x="302" y="407" w="20" h="20" gammagroup="display-text"/>
+
+  <!-- ok button -->
+
+  <bitmap id="okbutton.normal" file="images/OKbutton.png" x="0" y="0" w="75" h="23" gammagroup="plastic"/>
+	<bitmap id="okbutton.down" file="images/OKbutton.png" x="0" y="24" w="75" h="23" gammagroup="plastic"/>
+  <bitmap id="okbutton.hover" file="images/OKbutton.png" x="0" y="48" w="75" h="23" gammagroup="plastic"/>
   	
 	<!-- Windows shade -->
 	

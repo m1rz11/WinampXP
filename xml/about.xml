@@ -1,13 +1,15 @@
 <elements>
-	<bitmap id="main.about" file="images/background-main-about.png" w="380" h="321"/>
+	<bitmap id="main.about" file="images/background-main-about.png" w="413" h="322"/>
 </elements>
 
-<groupdef id="skin.about.group" x="0" y="0" w="380" h="321" rectrgn="1">
+<groupdef id="skin.about.group" x="0" y="0" w="421" h="354" rectrgn="1">
   <!--rect id="main.abouts" x="0" y="0" h="321" w="380" color="0,0,150" filled="1"/-->
-  <layer id="main.about" image="main.about" w="380" h="321" cursor="cur.normal"/>
-  <button id="link.deviantart" x="60" y="164" w="213" h="30" image="links.normal" hoverimage="links.hover" downimage="links.down" cursor="IDC_HAND" rectrgn="1"/>
-  <button id="link.zsolt" x="60" y="203" w="86" h="30" image="links.normal" hoverimage="links.hover" downimage="links.down" cursor="IDC_HAND" rectrgn="1"/>
-  <button id="link.donate" x="50" y="280" w="280" h="30" image="links.normal" hoverimage="links.hover" downimage="links.down" cursor="IDC_HAND" rectrgn="1"/>
+  <layer id="main.about" image="main.about" w="413" h="322" cursor="cur.normal"/>
+  <button id="link1" x="140" y="154" w="114" h="13" image="links.normal" cursor="IDC_HAND" rectrgn="1"/>
+  <button id="link2" x="96" y="171" w="23" h="13" image="links.normal" cursor="IDC_HAND" rectrgn="1"/>
+  <button id="link3" x="201" y="171" w="118" h="13" image="links.normal"  cursor="IDC_HAND" rectrgn="1"/>
+  <button id="link4" x="52" y="248" w="111" h="13" image="links.normal"  cursor="IDC_HAND" rectrgn="1"/>
+  <button id="window.button.close" action="CLOSE" x="330" y="290" image="okbutton.normal" hoverimage="okbutton.hover" downimage="okbutton.down" alpha="255" cursor="cur.close"/>
 	<script file="scripts/about.maki"/>
 </groupdef>
 
@@ -15,8 +17,8 @@
 <container id="about" name="About the skin" default_visible="0">
 
 
-<layout id="normal" minimum_w="410" minimum_h="381" h="381" w="410" maximum_w="410" maximum_h="381">
-	<Wasabi:Standardframe:NoStatus x="0" y="0" w="410" h="381" content="skin.about.group" />
+<layout id="normal" minimum_w="421" minimum_h="354" h="354" w="421" maximum_w="421" maximum_h="354">
+	<Wasabi:Standardframe:NoStatus x="0" y="0" w="421" h="354" content="skin.about.group" />
   <!--sendparams target="titlebar.title.bg.group" w="170"/-->
 	
   <layer id="resize.disabler" x="0" y="35" w="15" h="0" relath="1" image="none" cursor="cur.normal"/>
