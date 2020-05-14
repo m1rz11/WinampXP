@@ -14,12 +14,14 @@
 	<layer id="pledit.region.bottom.left" x="0" y="-3" relaty="1" image="window.shade.region.bottom.left" ghost="1" sysregion="-2"/>
 	<layer id="pledit.region.bottom.right" x="-3" y="-3" RELATX="1" RELATY="1" image="window.shade.region.bottom.right" ghost="1" sysregion="-2"/>
 	
-	<layer id="pledit.background.grip.mid" x="-56" y="0" w="4" h="35" image="shade.resizer" relatx="1" dblclickaction="SWITCH;normal" move="0" tooltip="Adjust Horizontal Size" resize="right" alpha="253" cursor="cur.posbar"/>
+	<layer id="pledit.background.grip.mid" x="-4" y="0" w="4" h="35" image="shade.resizer" relatx="1" dblclickaction="SWITCH;normal" move="0" tooltip="Adjust Horizontal Size" resize="right" alpha="253" cursor="cur.posbar"/>
 
 	<group id="pledit.shade.group.display" x="4" y="3" cursor="cur.normal"/>
 
-	<button id="pledit.button.switch" action="SWITCH" param="normalpl" x="-49" y="4" relatx="1" image="window.shade.button.switch" hoverimage="window.shade.button.switch.h" downimage="window.shade.button.switch.d" tooltip="Toggle Windowshade Mode" activealpha="253" inactivealpha="110" cursor="cur.normal"/>
-	<button id="pledit.button.close" action="CLOSE" x="-26" y="4" relatx="1" image="window.shade.button.close" hoverimage="window.shade.button.close.h" downimage="window.shade.button.close.d" tooltip="Close" activealpha="253" inactivealpha="110" cursor="cur.close"/>
+	<button id="pledit.button.switch" action="SWITCH" param="normalpl" x="-50" y="1" relatx="1" image="shade.button.switch.n" hoverimage="shade.button.switch.h"
+	downimage="shade.button.switch.d" tooltip="Toggle Windowshade Mode" activealpha="253" inactivealpha="110" cursor="cur.normal"/>
+	<button id="pledit.button.close" action="CLOSE" x="-29" y="3" relatx="1" image="window.shade.button.close" hoverimage="window.shade.button.close.h" downimage="window.shade.button.close.d" tooltip="Close" activealpha="253" inactivealpha="110" cursor="cur.close"/>
+	<button id="player.button.minimize" action="MINIMIZE" x="-75" y="3" relatx="1" image="player.button.minimize" hoverimage="player.button.minimize.h" downimage="player.button.minimize.d" tooltip="Minimize" activealpha="253" inactivealpha="100" cursor="cur.normal"/>
 </groupdef>
 
 <groupdef id="pledit.shade.group.display" w="-65" h="29" relatw="1">
@@ -27,12 +29,19 @@
 	<layer id="pledit.background.display.center" x="81" y="0" w="-100" relatw="1" image="pl.shade.display.middle" tile="1" ghost="1" />
 	<layer id="pledit.background.display.right" x="-19" y="0" relatx="1" image="pl.shade.display.right" ghost="1" />
 	
-  <playlistPlus id="main.pl" x="5" y="7" w="-8" h="19" relatw="1" font="sarpanch" fontsize="18" linespacing="1" color="0,0,0" antialias="1" playcolor="60,60,60" sysregion="1"/>
+	<playlistPlus id="main.pl" x="2" y="7" w="-15" h="19" relatw="1" font="trebuc" fontsize="17" linespacing="1" bold="1"
+  color="10,24,131" antialias="1" playcolor="10,24,131" sysregion="1" ghost="1" activealpha="253" inactiveAlpha="0"/>
+	
+  <playlistPlus id="main.pl" x="1" y="6" w="-15" h="19" relatw="1" font="trebuc" fontsize="17" linespacing="1" bold="1"
+  color="255,255,255" antialias="1" playcolor="255,255,255" sysregion="1" ghost="1" activealpha="253" inactiveAlpha="0"/>
+  
+  <playlistPlus id="main.pl" x="1" y="6" w="-15" h="19" relatw="1" font="trebuc" fontsize="17" linespacing="1" bold="1"
+  color="216,228,248" antialias="1" playcolor="216,228,248" sysregion="1" ghost="1" activealpha="0" inactiveAlpha="253"/>
 </groupdef>
 
 
 <groupdef id="xui.playlistplus.selector">
-	<rect id="selector" fitparent="1" filled="1" color="wasabi.list.background" alpha="255"/>
+	<!--rect id="selector" fitparent="1" filled="1" color="wasabi.list.background" alpha="255"/-->
 </groupdef>
 
 <!--groupdef id="elipsis">
@@ -106,15 +115,15 @@
 	rightclickaction="trackmenu" color="0,0,0" alpha="253" cursor="cur.normal"/>
 
 	<group id="pledit.miniplayback.buttons" x="-278" y="-38" relatx="1" relaty="1" cursor="cur.normal" alpha="253"/>
-	<group id="pledit.switch.button" x="-79" y="-2" h="30" w="55" relatx="1"/>
+	<group id="pledit.switch.button" x="-80" y="-1" h="30" w="55" relatx="1"/>
 
   <!--script file="scripts\visualizer.maki" param="shade.vis;player.vis.trigger;hide.for.vic"/-->
 	
 </layout> 
 
 
-<layout id="shade" w="550" h="35" minimum_w="550" minimum_h="35" maximum_w="10000" droptarget="pldr" desktopalpha="0" linkwidth="normalpl">
-	<group id="pledit.shade.group.main" x="0" y="0" h="35" ghost="1" cursor="cur.normal"/>
+<layout id="shade" w="550" h="29" minimum_w="550" minimum_h="29" maximum_w="10000" droptarget="pldr" desktopalpha="0" linkwidth="normalpl">
+	<group id="pledit.shade.group.main" x="0" y="0" h="29" ghost="1" cursor="cur.normal"/>
 </layout>	
 	
 </container>

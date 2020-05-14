@@ -1,7 +1,7 @@
 <groupdef id="player.shade.group.main" w="0" h="35" relatw="1">
-	<layer id="background.shade.l" x="0" y="0" h="35" image="shade.background.main.left" sysregion="1"/>
-	<layer id="background.shade.m" x="267" y="0" h="35" w="-538" relatw="1" image="shade.background.main.middle" sysregion="1"/>
-	<layer id="background.shade.r" x="-271" y="0" h="35" relatx="1" image="shade.background.main.right" sysregion="1"/>
+	<layer id="background.shade.l" x="0" y="0" h="29" image="shade.background.main.left" sysregion="1"/>
+	<layer id="background.shade.m" x="267" y="0" h="29" w="-538" relatw="1" image="shade.background.main.middle" sysregion="1"/>
+	<layer id="background.shade.r" x="-271" y="0" h="29" relatx="1" image="shade.background.main.right" sysregion="1"/>
 
 	<layer id="pledit.region.top.left" x="0" y="0" image="window.shade.region.top.left" ghost="1" sysregion="-2"/>
 	<layer id="pledit.region.top.right" x="-3" y="0" relatx="1" image="window.shade.region.top.right" ghost="1" sysregion="-2"/>
@@ -21,12 +21,12 @@
 	
 	<!--layer id="shade.buttons.bg" x="-268" y="2" relatx="1" image="shade.buttons.bg" cursor="cur.normal"/-->
 	
-	<button id="player.button.previous" action="PREV" x="-192" y="0" relatx="1" image="shade.button.previous.n" hoverimage="shade.button.previous.h" downimage="shade.button.previous.d" tooltip="Pevious Track" cursor="cur.normal" activealpha="253" inactivealpha="100"/>
-	<button id="player.button.pause" action="PAUSE" x="-168" y="0" relatx="1" image="shade.button.pause.n" hoverimage="shade.button.pause.h" downimage="shade.button.pause.d" tooltip="Pause" cursor="cur.normal" activealpha="253" inactivealpha="100"/>
-	<button id="player.button.play" action="PLAY" x="-168" y="0" relatx="1" image="shade.button.play.n" hoverimage="shade.button.play.h" downimage="shade.button.play.d" tooltip="Play" cursor="cur.normal" activealpha="253" inactivealpha="100"/>
-	<button id="player.button.stop" action="STOP" x="-145" y="0" relatx="1" image="shade.button.stop.n" hoverimage="shade.button.stop.h" downimage="shade.button.stop.d" tooltip="Stop" cursor="cur.normal" activealpha="253" inactivealpha="100"/>
-	<button id="player.button.next" action="NEXT" x="-122" y="0" relatx="1" image="shade.button.next.n" hoverimage="shade.button.next.h" downimage="shade.button.next.d" tooltip="Next Track" cursor="cur.normal" activealpha="253" inactivealpha="100"/>
-  <button id="player.button.eject" action="EJECT" x="-100" y="0" relatx="1" image="shade.button.eject.n" hoverimage="shade.button.eject.h" downimage="shade.button.eject.d" tooltip="Open file(s)" cursor="cur.normal" activealpha="253" inactivealpha="100"/>
+	<button id="player.button.previous" action="PREV" x="-192" y="1" relatx="1" image="shade.button.previous.n" hoverimage="shade.button.previous.h" downimage="shade.button.previous.d" tooltip="Pevious Track" cursor="cur.normal" activealpha="253" inactivealpha="100"/>
+	<button id="player.button.pause" action="PAUSE" x="-168" y="1" relatx="1" image="shade.button.pause.n" hoverimage="shade.button.pause.h" downimage="shade.button.pause.d" tooltip="Pause" cursor="cur.normal" activealpha="253" inactivealpha="100"/>
+	<button id="player.button.play" action="PLAY" x="-168" y="1" relatx="1" image="shade.button.play.n" hoverimage="shade.button.play.h" downimage="shade.button.play.d" tooltip="Play" cursor="cur.normal" activealpha="253" inactivealpha="100"/>
+	<button id="player.button.stop" action="STOP" x="-145" y="1" relatx="1" image="shade.button.stop.n" hoverimage="shade.button.stop.h" downimage="shade.button.stop.d" tooltip="Stop" cursor="cur.normal" activealpha="253" inactivealpha="100"/>
+	<button id="player.button.next" action="NEXT" x="-122" y="1" relatx="1" image="shade.button.next.n" hoverimage="shade.button.next.h" downimage="shade.button.next.d" tooltip="Next Track" cursor="cur.normal" activealpha="253" inactivealpha="100"/>
+  <button id="player.button.eject" action="EJECT" x="-100" y="1" relatx="1" image="shade.button.eject.n" hoverimage="shade.button.eject.h" downimage="shade.button.eject.d" tooltip="Open file(s)" cursor="cur.normal" activealpha="253" inactivealpha="100"/>
 
 	<grid id="seek.bg" x="-245" y="0" h="30" w="50" relatx="1" left="shade.seek.bg.left" middle="shade.seek.bg.middle" right="shade.seek.bg.right" move="0" alpha="253" tooltip="Seeking Bar" cursor="cur.normal"/>
 
@@ -34,11 +34,11 @@
 	<slider id="player.slider.seek" action="SEEK" x="-245" y="2" w="55" h="29" relatx="1" orientation="horizontal" thumb="shade.seek.slider.n" downthumb="shade.seek.slider.d" tooltip="Seeking Bar" alpha="253" cursor="cur.posbar"/>
 	<slider id="player.slider.seek.ghost" action="SEEK" x="-245" y="2" w="55" h="29" relatx="1" orientation="horizontal" thumb="shade.seek.slider.n" downthumb="shade.seek.slider.d" tooltip="Seeking Bar" alpha="253" cursor="cur.posbar"/>
 
-	<layer id="player.resizer.mid" x="-75" y="0" w="4" h="35" image="shade.resizer" relatx="1" move="0" resize="right" alpha="253" tooltip="Adjust Horizontal Size" rectrgn="1" cursor="cur.posbar"/>
+	<layer id="player.resizer.mid" x="-4" y="0" w="4" h="35" image="shade.resizer" relatx="1" move="0" resize="right" alpha="253" tooltip="Adjust Horizontal Size" rectrgn="1" cursor="cur.posbar"/>
 	
-	<button id="player.button.minimize" action="MINIMIZE" x="-73" y="0" relatx="1" image="shade.button.minimize.n" hoverimage="shade.button.minimize.h" downimage="shade.button.minimize.d" tooltip="Minimize" cursor="cur.normal" activealpha="253" inactivealpha="100"/>
-	<button id="player.button.switch" action="SWITCH" param="NORMAL" x="-50" y="0" relatx="1" image="shade.button.switch.n" hoverimage="shade.button.switch.h" downimage="shade.button.switch.d" tooltip="Toggle Windowshade Mode" cursor="cur.normal" activealpha="253" inactivealpha="100"/>
-	<button id="player.button.close" action="CLOSE" x="-27" y="0" relatx="1" image="shade.button.close.n" hoverimage="shade.button.close.h" downimage="shade.button.close.d" tooltip="Close" cursor="cur.close" activealpha="253" inactivealpha="100"/>
+	<button id="player.button.minimize" action="MINIMIZE" x="-73" y="1" relatx="1" image="shade.button.minimize.n" hoverimage="shade.button.minimize.h" downimage="shade.button.minimize.d" tooltip="Minimize" cursor="cur.normal" activealpha="253" inactivealpha="100"/>
+	<button id="player.button.switch" action="SWITCH" param="NORMAL" x="-50" y="1" relatx="1" image="shade.button.switch.n" hoverimage="shade.button.switch.h" downimage="shade.button.switch.d" tooltip="Toggle Windowshade Mode" cursor="cur.normal" activealpha="253" inactivealpha="100"/>
+	<button id="player.button.close" action="CLOSE" x="-27" y="1" relatx="1" image="shade.button.close.n" hoverimage="shade.button.close.h" downimage="shade.button.close.d" tooltip="Close" cursor="cur.close" activealpha="253" inactivealpha="100"/>
 
   <script file="scripts\play_pause.maki" param="player.button.play;player.button.pause"/>	
 </groupdef>
@@ -51,23 +51,22 @@
 	<button id="vismenu.menuentry3" x="7" y="9" h="0" w="0" action="WA5:Prefs" param="33" image="none"/>
 
 	<!--rect id="plssayer.vis" x="8" y="10" w="72" h="15" color="0,0,250" filled="0"/-->
-	<vis id="shade.vis" x="8" y="10" w="72" h="15" alpha="253" cursor="cur.normal" gammagroup="visualizers"/>
+	<vis id="shade.vis" x="8" y="10" w="72" h="16" alpha="253" cursor="cur.normal" gammagroup="visualizers"/>
   <!-- rect id="hide.for.gordon" x="79" y="9" w="2" h="19" color="20,18,28" filled="1" ghost="1" gammagroup="display"/ -->
-	<layer id="hide.for.vic" x="27" y="71" image="none" ghost="1"/>
-	<layer id="player.vis.blocker" x="8" y="10" w="72" h="15" image="none" cursor="cur.normal"/>
+	<!--layer id="player.vis.blocker" x="8" y="10" w="72" h="15" image="none" cursor="cur.normal"/-->
 	
-	<text id="shade.time" display="TIME" x="80" y="9" w="86" h="20" font="trebuc" fontsize="21" timecolonwidth="9" timeroffstyle="0" align="center" 
+	<text id="shade.time" display="TIME" x="80" y="5" w="86" h="20" font="trebuc" fontsize="21" timecolonwidth="9" timeroffstyle="0" align="center" 
 	 color="white" forcefixed="1" bold="1" dblclickaction="trackinfo" cursor="cur.normal" tooltip="Time Display (click to toggle elapsed/remaining)"/>
 	
-	<Songticker id="shade.display.songname" x="175" y="7" w="-179" h="20" relatw="1" showlen="1" font="trebuc" fontsize="18" align="center" 
+	<Songticker id="shade.display.songname" x="175" y="5" w="-179" h="20" relatw="1" showlen="1" font="trebuc" fontsize="18" align="center" 
 	rightclickaction="trackmenu" color="white" dblclickaction="trackinfo" alpha="253" cursor="cur.normal" tooltip="Song Title (right-click for options)"/>
 	
-	<text id="player.display.actioninfo" x="175" y="7" w="-179" h="20" relatw="1" font="trebuc" fontsize="18" align="center" color="white" alpha="253" cursor="cur.normal"/>
+	<text id="player.display.actioninfo" x="175" y="5" w="-179" h="20" relatw="1" font="trebuc" fontsize="18" align="center" color="white" alpha="253" cursor="cur.normal"/>
 
   <!--script file="scripts\visualizer.maki" param="shade.vis;player.vis.trigger;hide.for.vic"/-->
   <script file="scripts\pauseblink.maki"/>
 </groupdef>
 
-<layout id="shade" w="550" h="35" minimum_w="550" minimum_h="35" maximum_w="10000" desktopalpha="1" droptarget="pldr" linkwidth="normal" appbar="top|bottom">
+<layout id="shade" w="550" h="29" minimum_w="550" minimum_h="29" maximum_w="10000" desktopalpha="1" droptarget="pldr" linkwidth="normal" appbar="top|bottom">
 	<group id="player.shade.group.main" x="0" y="0" cursor="cur.normal"/>
 </layout>

@@ -61,10 +61,10 @@
   <script file="scripts\eq_animated_bars.maki"/>
 </groupdef>
 
-<groupdef id="equalizer.shade.group" w="0" h="35" ghost="1" relatw="1">
-	<layer id="background.shade.l" x="0" y="0" h="35" image="shade.background.main.left" dblclickaction="SWITCH;normal" sysregion="1"/>
-	<layer id="background.shade.m" x="267" y="0" h="35" w="-538" relatw="1" image="shade.background.main.middle" dblclickaction="SWITCH;normal" sysregion="1"/>
-	<layer id="background.shade.r" x="-271" y="0" h="35" relatx="1" image="shade.background.main.right" dblclickaction="SWITCH;normal" sysregion="1"/>
+<groupdef id="equalizer.shade.group" w="0" h="29" ghost="1" relatw="1">
+	<layer id="background.shade.l" x="0" y="0" h="29" image="shade.background.main.left" dblclickaction="SWITCH;normal" sysregion="1"/>
+	<layer id="background.shade.m" x="267" y="0" h="29" w="-538" relatw="1" image="shade.background.main.middle" dblclickaction="SWITCH;normal" sysregion="1"/>
+	<layer id="background.shade.r" x="-271" y="0" h="29" relatx="1" image="shade.background.main.right" dblclickaction="SWITCH;normal" sysregion="1"/>
 
 
 	<grid id="shade.titlebar.stripes" x="10" y="3" w="-80" h="28" relatw="1" left="titlebar.stripes.left" middle="titlebar.stripes.center" right="titlebar.stripes.right" move="1" activealpha="253" inactivealpha="100" ghost="1"/>
@@ -78,11 +78,12 @@
 
   <group id="eq.shade.volbalance" x="0" y="6" w="221" h="28"/>
 
-	<layer id="eq.background.grip.mid" x="-60" y="0" w="4" h="35" image="shade.resizer" relatx="1" dblclickaction="SWITCH;normal" alpha="253" resize="right" cursor="cur.posbar" />
-
-	<button id="eq.button.switch" action="SWITCH" param="NORMAL" x="-49" y="4" relatx="1" image="window.shade.button.switch" hoverimage="window.shade.button.switch.h" 
-	downimage="window.shade.button.switch.d" tooltip="Toggle Windowshade Mode" activealpha="253" inactivealpha="110" cursor="cur.normal"/>
-	<button id="eq.button.close" action="CLOSE" x="-26" y="4" relatx="1" image="window.shade.button.close" hoverimage="window.shade.button.close.h" 
+	<layer id="eq.background.grip.mid" x="-4" y="0" w="4" h="35" image="shade.resizer" relatx="1" dblclickaction="SWITCH;normal" alpha="253" resize="right" cursor="cur.posbar" />
+	
+	<button id="player.button.minimize" action="MINIMIZE" x="-75" y="3" relatx="1" image="player.button.minimize" hoverimage="player.button.minimize.h" downimage="player.button.minimize.d" tooltip="Minimize" activealpha="253" inactivealpha="100" cursor="cur.normal"/>
+	<button id="eq.button.switch" action="SWITCH" param="NORMAL" x="-50" y="1" relatx="1" image="shade.button.switch.n" hoverimage="shade.button.switch.h"
+	downimage="shade.button.switch.d" tooltip="Toggle Windowshade Mode" activealpha="253" inactivealpha="110" cursor="cur.normal"/>
+	<button id="eq.button.close" action="CLOSE" x="-29" y="3" relatx="1" image="window.shade.button.close" hoverimage="window.shade.button.close.h" 
 	downimage="window.shade.button.close.d" tooltip="Close" activealpha="253" inactivealpha="110" cursor="cur.close"/>
 </groupdef>
 
@@ -125,7 +126,7 @@
   <sendparams target="disabled.switch" alpha="0"/>
 
 	<group id="equalizer.normal.group.main.content" x="1" y="30" h="207" w="550"/>
-  <group id="pledit.switch.button" x="-80" y="0" h="30" w="55" relatx="1"/>
+  <group id="pledit.switch.button" x="-81" y="1" h="30" w="55" relatx="1"/>
 
   <layer id="resize.disabler.top" x="10" y="0" w="-20" h="10" relatw="1" image="none" move="1" cursor="cur.move"/>
   <layer id="resize.disabler.top.left" x="0" y="0" w="12" h="53" image="none" resize="left" regionop="1" rectrgn="1" cursor="cur.posbar"/>
@@ -136,8 +137,8 @@
 </layout> 
 
 
-<layout id="shade" w="550" h="35" minimum_w="550" maximum_w="10000" droptarget="pldr" desktopalpha="1" linkwidth="normal">
-	<group id="equalizer.shade.group" x="0" y="0" h="35" ghost="1" cursor="cur.normal"/>
+<layout id="shade" w="550" h="29" minimum_w="550" minimum_h="29" maximum_w="10000" droptarget="pldr" desktopalpha="1" linkwidth="normal">
+	<group id="equalizer.shade.group" x="0" y="0" h="29" ghost="1" cursor="cur.normal"/>
 </layout>	
 	
   <script file="scripts\eq.maki"/>
