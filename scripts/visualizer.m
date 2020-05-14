@@ -430,7 +430,7 @@ Trigger.onRightButtonUp (int x, int y)
 	visMenu.addCommand("Options:", 102, 0, 1);
 
 	visMenu.addCommand("Show Peaks", 101, show_peaks == 1, 0);
-	visMenu.addCommand("Dark Display", 103, dark_display == 2, 0);
+	visMenu.addCommand("Dark Display (WIP)", 103, dark_display == 2, 0);
 	pksmenu.addCommand("Slower", 200, p_falloffspeed == 0, 0);
 	pksmenu.addCommand("Slow", 201, p_falloffspeed == 1, 0);
 	pksmenu.addCommand("Moderate", 202, p_falloffspeed == 2, 0);
