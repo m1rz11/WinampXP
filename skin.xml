@@ -2,12 +2,10 @@
 
 <WinampAbstractionLayer version="1.35">
 	<skininfo>
-		<version>1.05</version>
-		<name>Winamp Classic Modern</name>
-		<comment>Modernizing the good old Winamp Classic skin</comment>
-		<author>Graphics by Zsolt Vajda // Coding by Victor Brocaz</author>
-		<email>victorbrocaz@gmail.com</email>
-		<homepage>www.deviantart.com/victhor // www.trn.hu</homepage>
+		<version>1.0</version>
+		<name>Nullsoft Winamp XP</name>
+		<comment>A Modern Skin in the style of Windows XP based on Winamp Classic Modern</comment>
+		<author>mirzi // Gordon Freeman // Victhor</author>
 		<screenshot>screenshot.png</screenshot>
 		<wacupscreenshot>wacupscreenshot.png</wacupscreenshot>
 	</skininfo>
