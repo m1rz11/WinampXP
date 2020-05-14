@@ -253,9 +253,9 @@
 
   <bitmap id="shade.resizer" file="images/player-shade.png" x="421" y="45" w="4" h="35" gammagroup="plastic"/>
 
-  <bitmap id="shade.background.main.left" file="images/player-shade.png" x="0" y="81" w="267" h="35" gammagroup="plastic"/>
-  <bitmap id="shade.background.main.middle" file="images/player-shade.png" x="267" y="81" w="10" h="35" gammagroup="plastic"/>
-  <bitmap id="shade.background.main.right" file="images/player-shade.png" x="277" y="81" w="271" h="35" gammagroup="plastic"/>
+  <bitmap id="shade.background.main.left" file="images/player-shade.png" x="0" y="81" w="267" h="29" gammagroup="plastic"/>
+  <bitmap id="shade.background.main.middle" file="images/player-shade.png" x="267" y="81" w="10" h="29" gammagroup="plastic"/>
+  <bitmap id="shade.background.main.right" file="images/player-shade.png" x="277" y="81" w="271" h="29" gammagroup="plastic"/>
 
   <bitmap id="shade.background.display.left" file="images/player-shade.png" x="130" y="51" w="81" h="29" gammagroup="display" />
   <bitmap id="shade.background.display.middle" file="images/player-shade.png" x="212" y="51" w="32" h="29" gammagroup="display"/>
@@ -355,35 +355,35 @@
 	
 	<!-- active state -->
 	
-  <bitmap id="window.normal.titlebar.left" file="images/window/windows_xp_border_active.png" x="0" y="0" w="28" h="29" gammagroup="plastic"/>
-  <bitmap id="window.normal.titlebar.middle" file="images/window/windows_xp_border_active.png" x="29" y="0" w="3" h="29" gammagroup="plastic"/>
-  <bitmap id="window.normal.titlebar.right" file="images/window/windows_xp_border_active.png" x="33" y="0" w="35" h="29" gammagroup="plastic"/>
+  <bitmap id="window.normal.titlebar.left" file="images/window/windows_xp_border_active.png" x="0" y="0" w="28" h="30" gammagroup="plastic"/>
+  <bitmap id="window.normal.titlebar.middle" file="images/window/windows_xp_border_active.png" x="29" y="0" w="3" h="30" gammagroup="plastic"/>
+  <bitmap id="window.normal.titlebar.right" file="images/window/windows_xp_border_active.png" x="33" y="0" w="35" h="30" gammagroup="plastic"/>
 
   <bitmap id="window.normal.top.left" file="images/window/windows-background-main.png" x="0" y="133" w="267" h="14" gammagroup="plastic"/>
   <bitmap id="window.normal.top.middle" file="images/window/windows-background-main.png" x="267" y="133" w="10" h="14" gammagroup="plastic"/>
   <bitmap id="window.normal.top.right" file="images/window/windows-background-main.png" x="277" y="133" w="271" h="14" gammagroup="plastic"/>
 
-  <bitmap id="window.normal.left" file="images/window/windows_xp_border_active.png" x="0" y="30" w="4" h="31" gammagroup="plastic"/>
-  <bitmap id="window.normal.middle" file="images/window/windows_xp_border_active.png" x="4" y="30" w="60" h="31" gammagroup="plastic"/>
-  <bitmap id="window.normal.right" file="images/window/windows_xp_border_active.png" x="64" y="30" w="4" h="31" gammagroup="plastic"/>
+  <bitmap id="window.normal.left" file="images/window/windows_xp_border_active.png" x="0" y="31" w="4" h="31" gammagroup="plastic"/>
+  <bitmap id="window.normal.middle" file="images/window/windows_xp_border_active.png" x="4" y="31" w="60" h="31" gammagroup="plastic"/>
+  <bitmap id="window.normal.right" file="images/window/windows_xp_border_active.png" x="64" y="31" w="4" h="31" gammagroup="plastic"/>
 
-  <bitmap id="window.normal.bottom.left" file="images/window/windows_xp_border_active.png" x="0" y="62" w="5" h="4" gammagroup="plastic"/>
-  <bitmap id="window.normal.bottom.middle" file="images/window/windows_xp_border_active.png" x="6" y="62" w="39" h="4" gammagroup="plastic"/>
-  <bitmap id="window.normal.bottom.right" file="images/window/windows_xp_border_active.png" x="63" y="62" w="5" h="4" gammagroup="plastic"/>
+  <bitmap id="window.normal.bottom.left" file="images/window/windows_xp_border_active.png" x="0" y="63" w="5" h="4" gammagroup="plastic"/>
+  <bitmap id="window.normal.bottom.middle" file="images/window/windows_xp_border_active.png" x="6" y="63" w="39" h="4" gammagroup="plastic"/>
+  <bitmap id="window.normal.bottom.right" file="images/window/windows_xp_border_active.png" x="63" y="63" w="5" h="4" gammagroup="plastic"/>
 
 	<!-- inactive state -->
 
-  <bitmap id="window.normal.titlebar.left.inactive" file="images/window/windows_xp_border_inactive.png" x="0" y="0" w="28" h="29" gammagroup="plastic"/>
-  <bitmap id="window.normal.titlebar.middle.inactive" file="images/window/windows_xp_border_inactive.png" x="29" y="0" w="3" h="29" gammagroup="plastic"/>
-  <bitmap id="window.normal.titlebar.right.inactive" file="images/window/windows_xp_border_inactive.png" x="33" y="0" w="35" h="29" gammagroup="plastic"/>
+  <bitmap id="window.normal.titlebar.left.inactive" file="images/window/windows_xp_border_inactive.png" x="0" y="0" w="28" h="30" gammagroup="plastic"/>
+  <bitmap id="window.normal.titlebar.middle.inactive" file="images/window/windows_xp_border_inactive.png" x="29" y="0" w="3" h="30" gammagroup="plastic"/>
+  <bitmap id="window.normal.titlebar.right.inactive" file="images/window/windows_xp_border_inactive.png" x="33" y="0" w="35" h="30" gammagroup="plastic"/>
 
-  <bitmap id="window.normal.left.inactive" file="images/window/windows_xp_border_inactive.png" x="0" y="30" w="4" h="31" gammagroup="plastic"/>
-  <bitmap id="window.normal.middle.inactive" file="images/window/windows_xp_border_inactive.png" x="4" y="30" w="60" h="31" gammagroup="plastic"/>
-  <bitmap id="window.normal.right.inactive" file="images/window/windows_xp_border_inactive.png" x="64" y="30" w="4" h="31" gammagroup="plastic"/>
+  <bitmap id="window.normal.left.inactive" file="images/window/windows_xp_border_inactive.png" x="0" y="31" w="4" h="31" gammagroup="plastic"/>
+  <bitmap id="window.normal.middle.inactive" file="images/window/windows_xp_border_inactive.png" x="4" y="31" w="60" h="31" gammagroup="plastic"/>
+  <bitmap id="window.normal.right.inactive" file="images/window/windows_xp_border_inactive.png" x="64" y="31" w="4" h="31" gammagroup="plastic"/>
 
-  <bitmap id="window.normal.bottom.left.inactive" file="images/window/windows_xp_border_inactive.png" x="0" y="62" w="5" h="4" gammagroup="plastic"/>
-  <bitmap id="window.normal.bottom.middle.inactive" file="images/window/windows_xp_border_inactive.png" x="6" y="62" w="39" h="4" gammagroup="plastic"/>
-  <bitmap id="window.normal.bottom.right.inactive" file="images/window/windows_xp_border_inactive.png" x="63" y="62" w="5" h="4" gammagroup="plastic"/>
+  <bitmap id="window.normal.bottom.left.inactive" file="images/window/windows_xp_border_inactive.png" x="0" y="63" w="5" h="4" gammagroup="plastic"/>
+  <bitmap id="window.normal.bottom.middle.inactive" file="images/window/windows_xp_border_inactive.png" x="6" y="63" w="39" h="4" gammagroup="plastic"/>
+  <bitmap id="window.normal.bottom.right.inactive" file="images/window/windows_xp_border_inactive.png" x="63" y="63" w="5" h="4" gammagroup="plastic"/>
 
 
 	<!-- dro example elements -->

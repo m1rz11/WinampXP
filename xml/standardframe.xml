@@ -56,9 +56,9 @@
 	<layer id="window.top.middle" x="267" y="34" w="-538" relatw="1" image="window.normal.top.middle" stretch="1" move="0"/>
   <layer id="window.top.right" x="-271" y="34" relatx="1" image="window.normal.top.right" resize="right" move="0" cursor="cur.posbar"/>
 	
-	<layer id="window.left" x="0" y="29" h="-32" activealpha="255" inactiveAlpha="0" relath="1" image="window.normal.left" stretch="1" resize="left" move="0" cursor="cur.posbar"/>
-	<layer id="window.middle" x="4" y="29" w="-0" h="-31" relatw="1" relath="1" image="window.normal.middle" stretch="1" move="0"/>
-	<layer id="window.right" x="-4" y="29" h="-32" activealpha="255" inactiveAlpha="0" relatx="1" relath="1" image="window.normal.right" stretch="1" resize="right" move="0" cursor="cur.posbar"/>
+	<layer id="window.left" x="0" y="30" h="-33" activealpha="255" inactiveAlpha="0" relath="1" image="window.normal.left" stretch="1" resize="left" move="0" cursor="cur.posbar"/>
+	<layer id="window.middle" x="4" y="30" w="-0" h="-32" relatw="1" relath="1" image="window.normal.middle" stretch="1" move="0"/>
+	<layer id="window.right" x="-4" y="30" h="-33" activealpha="255" inactiveAlpha="0" relatx="1" relath="1" image="window.normal.right" stretch="1" resize="right" move="0" cursor="cur.posbar"/>
 	
 	<layer id="window.left.inactive" x="0" y="29" h="-32" activealpha="0" inactiveAlpha="255" relath="1" image="window.normal.left.inactive" stretch="1" resize="left" move="0" cursor="cur.posbar"/>
 
@@ -81,11 +81,11 @@
 
   <Wasabi:TitleBar id="wasabi.titlebar" x="12" y="0" w="-47" h="34" relatw="1"/>
 
-	<button id="window.button.close" action="CLOSE" x="-28" y="2" relatx="1" image="window.normal.button.close" hoverimage="window.normal.button.close.h" 
+	<button id="window.button.close" action="CLOSE" x="-29" y="3" relatx="1" image="window.normal.button.close" hoverimage="window.normal.button.close.h" 
 	downimage="window.normal.button.close.down" activealpha="253" inactivealpha="100" tooltip="Close" cursor="cur.close"/>
 	<button id="player.button.mainmenu" action="SYSMENU" x="0" y="1" image="player.button.mainmenu" hoverimage="player.button.mainmenu.h" downimage="player.button.mainmenu.d" activealpha="253" inactivealpha="253" tooltip="Winamp Menu" cursor="cur.normal"/>
-	<layer id="disabled.switch" x="-51" y="2" relatx="1" image="player.button.switch" activealpha="100" inactivealpha="64"/>
-	<button id="player.button.minimize" action="MINIMIZE" x="-74" y="2" relatx="1" image="player.button.minimize" hoverimage="player.button.minimize.h" downimage="player.button.minimize.d" tooltip="Minimize" activealpha="253" inactivealpha="100" cursor="cur.normal"/>
+	<layer id="disabled.switch" x="-52" y="3" relatx="1" image="player.button.switch" activealpha="100" inactivealpha="64"/>
+	<button id="player.button.minimize" action="MINIMIZE" x="-75" y="3" relatx="1" image="player.button.minimize" hoverimage="player.button.minimize.h" downimage="player.button.minimize.d" tooltip="Minimize" activealpha="253" inactivealpha="100" cursor="cur.normal"/>
  </groupdef>
 
 
@@ -139,7 +139,7 @@
   <layer x="-15" y="-15" relatx="1" relaty="1" image="normal.resizer.bottomright" ghost="1" alpha="253"/>
   <layer x="-20" y="-20" w="20" h="20" relatx="1" relaty="1" image="none" resize="bottomright" cursor="cur.resbottomright" alpha="0"/>
 
-  <script id="standardframe.script" file="scripts/standardframe.maki" param="4,29,-8,-33,0,0,1,1" />
+  <script id="standardframe.script" file="scripts/standardframe.maki" param="4,30,-8,-34,0,0,1,1" />
 
 </groupdef>
 
