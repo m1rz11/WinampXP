@@ -62,10 +62,13 @@
 </groupdef>
 
 <groupdef id="equalizer.shade.group" w="0" h="29" ghost="1" relatw="1">
-	<layer id="background.shade.l" x="0" y="0" h="29" image="shade.background.main.left" dblclickaction="SWITCH;normal" sysregion="1"/>
-	<layer id="background.shade.m" x="267" y="0" h="29" w="-538" relatw="1" image="shade.background.main.middle" dblclickaction="SWITCH;normal" sysregion="1"/>
-	<layer id="background.shade.r" x="-271" y="0" h="29" relatx="1" image="shade.background.main.right" dblclickaction="SWITCH;normal" sysregion="1"/>
+	<layer id="background.shade.l" x="0" y="0" h="29" image="shade.background.main.left" activealpha="255" inactivealpha="0" dblclickaction="SWITCH;normal" sysregion="1"/>
+	<layer id="background.shade.m" x="267" y="0" h="29" w="-538" relatw="1" image="shade.background.main.middle" activealpha="255" inactivealpha="0" dblclickaction="SWITCH;normal" sysregion="1"/>
+	<layer id="background.shade.r" x="-271" y="0" h="29" relatx="1" image="shade.background.main.right" activealpha="255" inactivealpha="0" dblclickaction="SWITCH;normal" sysregion="1"/>
 
+	<layer id="background.shade.l.i" x="0" y="0" h="29" image="shade.background.main.left.inactive" activealpha="0" inactivealpha="255" dblclickaction="SWITCH;normal" sysregion="1"/>
+	<layer id="background.shade.m.i" x="267" y="0" h="29" w="-538" relatw="1" image="shade.background.main.middle.inactive" activealpha="0" inactivealpha="255" dblclickaction="SWITCH;normal" sysregion="1"/>
+	<layer id="background.shade.r.i" x="-271" y="0" h="29" relatx="1" image="shade.background.main.right.inactive" activealpha="0" inactivealpha="255" dblclickaction="SWITCH;normal" sysregion="1"/>
 
 	<grid id="shade.titlebar.stripes" x="10" y="3" w="-80" h="28" relatw="1" left="titlebar.stripes.left" middle="titlebar.stripes.center" right="titlebar.stripes.right" move="1" activealpha="253" inactivealpha="100" ghost="1"/>
 
@@ -103,7 +106,7 @@
 </groupdef>
 
 <groupdef id="eq.shade.titlebar.center">
-	<layer id="eq.background.main.center" x="0" y="-3" w="260" h="35" image="window.shade.background.main.center" tile="1" ghost="1" alpha="253"/>
+	
 </groupdef>
 
 
