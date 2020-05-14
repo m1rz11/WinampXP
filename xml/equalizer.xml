@@ -1,7 +1,7 @@
 <container id="equalizer" name="Equalizer" default_visible="1" default_x="0" default_y="242" default_w="550">
 
 <groupdef id="equalizer.normal.group.main.content">
-  <layer id="eq.normal.bg" x="0" y="-31" image="eq.normal.bg" move="1" sysregion="1" alpha="253"/>
+  <layer id="eq.normal.bg" x="0" y="-31" image="eq.normal.bg" move="1" sysregion="1" alpha="255"/>
   <rect id="eq.mover" x="10" y="3" h="200" w="-20" relatw="1" filled="1" move="1" cursor="cur.normal" alpha="0"/>
 
 	<ToggleButton id="eq.button.on" action="EQ_TOGGLE" x="9" y="7" w="52" h="48" image="eq.normal.button.power.on" hoverimage="eq.normal.button.power.on.h" downimage="eq.normal.button.power.on.d" cursor="cur.normal"/>
@@ -10,7 +10,7 @@
   <layer id="eq.light.on" x="26" y="28" w="48" h="48" image="onauto.light.on" ghost="1"/>
   <layer id="eq.light.auto" x="74" y="28" w="48" h="48" image="onauto.light.on" ghost="1"/>
   
-  <layer id="eq.spline.bg" x="143" y="7" image="eq.normal.background.display" alpha="253" cursor="cur.normal"/>
+  <layer id="eq.spline.bg" x="143" y="7" image="eq.normal.background.display" alpha="255" cursor="cur.normal"/>
   <eqvis x="153" y="15" w="239" h="31" colortop="0,0,0" colormiddle="0,0,0" colorbottom="0,0,0" colorpreamp="128,128,128" ghost="1" />
 
 	<togglebutton id="eq.button.presets.menu" action="MENU" param="PRESETS" x="474" y="45" w="1" h="1" image="none"/>
@@ -20,22 +20,22 @@
 
   <!--images source="preamp" x="38" y="68" w="5" h="106" images="player.animation.eq.sliders" imagesspacing="106"/-->
 	
-  <Animatedlayer id="preamp_layer" image="eq.slider.bg.anim" x="46" y="70" w="6" h="107" ghost="1" alpha="253"/>
+  <Animatedlayer id="preamp_layer" image="eq.slider.bg.anim" x="46" y="70" w="6" h="107" ghost="1" alpha="255"/>
   
 	<slider id="preamp" action="EQ_BAND" param="PREAMP" x="38" y="64" h="119" w="22" orientation="vertical" thumb="eq.normal.button.slider.v.n" hoverthumb="eq.normal.button.slider.v.h" downthumb="eq.normal.button.slider.v.d" tooltip="Preamp" cursor="cur.normal"/>
 
 	<!--layer id="eq1.bg" x="131" y="70" image="eq.slider.bg.1" ghost="1"/-->
 	
-  <Animatedlayer id="eq1.bg" image="eq.slider.bg.anim" x="131" y="70" w="6" h="107" ghost="1" alpha="253"/>
-  <Animatedlayer id="eq2.bg" image="eq.slider.bg.anim" x="171" y="70" w="6" h="107" ghost="1" alpha="253"/>
-  <Animatedlayer id="eq3.bg" image="eq.slider.bg.anim" x="211" y="70" w="6" h="107" ghost="1" alpha="253"/>
-  <Animatedlayer id="eq4.bg" image="eq.slider.bg.anim" x="251" y="70" w="6" h="107" ghost="1" alpha="253"/>
-  <Animatedlayer id="eq5.bg" image="eq.slider.bg.anim" x="291" y="70" w="6" h="107" ghost="1" alpha="253"/>
-  <Animatedlayer id="eq6.bg" image="eq.slider.bg.anim" x="331" y="70" w="6" h="107" ghost="1" alpha="253"/>
-  <Animatedlayer id="eq7.bg" image="eq.slider.bg.anim" x="371" y="70" w="6" h="107" ghost="1" alpha="253"/>
-  <Animatedlayer id="eq8.bg" image="eq.slider.bg.anim" x="411" y="70" w="6" h="107" ghost="1" alpha="253"/>
-  <Animatedlayer id="eq9.bg" image="eq.slider.bg.anim" x="451" y="70" w="6" h="107" ghost="1" alpha="253"/>
-  <Animatedlayer id="eq10.bg" image="eq.slider.bg.anim" x="491" y="70" w="6" h="107" ghost="1" alpha="253"/>
+  <Animatedlayer id="eq1.bg" image="eq.slider.bg.anim" x="131" y="70" w="6" h="107" ghost="1" alpha="255"/>
+  <Animatedlayer id="eq2.bg" image="eq.slider.bg.anim" x="171" y="70" w="6" h="107" ghost="1" alpha="255"/>
+  <Animatedlayer id="eq3.bg" image="eq.slider.bg.anim" x="211" y="70" w="6" h="107" ghost="1" alpha="255"/>
+  <Animatedlayer id="eq4.bg" image="eq.slider.bg.anim" x="251" y="70" w="6" h="107" ghost="1" alpha="255"/>
+  <Animatedlayer id="eq5.bg" image="eq.slider.bg.anim" x="291" y="70" w="6" h="107" ghost="1" alpha="255"/>
+  <Animatedlayer id="eq6.bg" image="eq.slider.bg.anim" x="331" y="70" w="6" h="107" ghost="1" alpha="255"/>
+  <Animatedlayer id="eq7.bg" image="eq.slider.bg.anim" x="371" y="70" w="6" h="107" ghost="1" alpha="255"/>
+  <Animatedlayer id="eq8.bg" image="eq.slider.bg.anim" x="411" y="70" w="6" h="107" ghost="1" alpha="255"/>
+  <Animatedlayer id="eq9.bg" image="eq.slider.bg.anim" x="451" y="70" w="6" h="107" ghost="1" alpha="255"/>
+  <Animatedlayer id="eq10.bg" image="eq.slider.bg.anim" x="491" y="70" w="6" h="107" ghost="1" alpha="255"/>
 			
 	<slider id="eq1" action="EQ_BAND" param="1" x="123" y="65" h="119" w="22" orientation="vertical" thumb="eq.normal.button.slider.v.n" hoverthumb="eq.normal.button.slider.v.h" downthumb="eq.normal.button.slider.v.d" tooltip="70 Hz" cursor="cur.normal"/>
 	<slider id="eq2" action="EQ_BAND" param="2" x="163" y="65" h="119" w="22" orientation="vertical" thumb="eq.normal.button.slider.v.n" hoverthumb="eq.normal.button.slider.v.h" downthumb="eq.normal.button.slider.v.d" tooltip="180 Hz" cursor="cur.normal"/>
@@ -53,8 +53,8 @@
 	<button id="EQ_m12" x="68" y="165" w="36" h="17" rectrgn="1" image="none" cursor="cur.normal"/>
 		
 
-  <layer id="eq.frequency.labels.m" x="69" y="66" image="eq.normal.labels.main" ghost="1" alpha="253"/>
-  <layer id="eq.frequency.labels" x="24" y="184" image="eq.normal.labels.winamp" ghost="1" alpha="253"/>
+  <layer id="eq.frequency.labels.m" x="69" y="66" image="eq.normal.labels.main" ghost="1" alpha="255"/>
+  <layer id="eq.frequency.labels" x="24" y="184" image="eq.normal.labels.winamp" ghost="1" alpha="255"/>
 	
 	<!--slider id="eq.slider.crossfade" cfgattrib="{F1239F09-8CC6-4081-8519-C2AE99FCB14C};Crossfade time" high="20" x="186" y="178" w="83" h="14" thumb="eq.normal.button.slider.horizontal" downthumb="eq.normal.button.slider.horizontal"/-->
 
@@ -70,7 +70,7 @@
 	<layer id="background.shade.m.i" x="267" y="0" h="29" w="-538" relatw="1" image="shade.background.main.middle.inactive" activealpha="0" inactivealpha="255" dblclickaction="SWITCH;normal" sysregion="1"/>
 	<layer id="background.shade.r.i" x="-271" y="0" h="29" relatx="1" image="shade.background.main.right.inactive" activealpha="0" inactivealpha="255" dblclickaction="SWITCH;normal" sysregion="1"/>
 
-	<grid id="shade.titlebar.stripes" x="10" y="3" w="-80" h="28" relatw="1" left="titlebar.stripes.left" middle="titlebar.stripes.center" right="titlebar.stripes.right" move="1" activealpha="253" inactivealpha="100" ghost="1"/>
+	<grid id="shade.titlebar.stripes" x="10" y="3" w="-80" h="28" relatw="1" left="titlebar.stripes.left" middle="titlebar.stripes.center" right="titlebar.stripes.right" move="1" activealpha="255" inactivealpha="100" ghost="1"/>
 
   <group id="eq.shade.titlebar.center" x="0" y="3" w="260" h="28" ghost="1"/>
   
@@ -81,13 +81,13 @@
 
   <group id="eq.shade.volbalance" x="0" y="6" w="221" h="28"/>
 
-	<layer id="eq.background.grip.mid" x="-4" y="0" w="4" h="35" image="shade.resizer" relatx="1" dblclickaction="SWITCH;normal" alpha="253" resize="right" cursor="cur.posbar" />
+	<layer id="eq.background.grip.mid" x="-4" y="0" w="4" h="35" image="shade.resizer" relatx="1" dblclickaction="SWITCH;normal" alpha="255" resize="right" cursor="cur.posbar" />
 	
-	<button id="player.button.minimize" action="MINIMIZE" x="-75" y="3" relatx="1" image="player.button.minimize" hoverimage="player.button.minimize.h" downimage="player.button.minimize.d" tooltip="Minimize" activealpha="253" inactivealpha="100" cursor="cur.normal"/>
+	<button id="player.button.minimize" action="MINIMIZE" x="-75" y="3" relatx="1" image="player.button.minimize" hoverimage="player.button.minimize.h" downimage="player.button.minimize.d" tooltip="Minimize" activealpha="255" inactivealpha="100" cursor="cur.normal"/>
 	<button id="eq.button.switch" action="SWITCH" param="NORMAL" x="-50" y="1" relatx="1" image="shade.button.switch.n" hoverimage="shade.button.switch.h"
-	downimage="shade.button.switch.d" tooltip="Toggle Windowshade Mode" activealpha="253" inactivealpha="110" cursor="cur.normal"/>
+	downimage="shade.button.switch.d" tooltip="Toggle Windowshade Mode" activealpha="255" inactivealpha="110" cursor="cur.normal"/>
 	<button id="eq.button.close" action="CLOSE" x="-29" y="3" relatx="1" image="window.shade.button.close" hoverimage="window.shade.button.close.h" 
-	downimage="window.shade.button.close.d" tooltip="Close" activealpha="253" inactivealpha="110" cursor="cur.close"/>
+	downimage="window.shade.button.close.d" tooltip="Close" activealpha="255" inactivealpha="110" cursor="cur.close"/>
 </groupdef>
 
 
@@ -95,12 +95,12 @@
 	<layer id="player.bg.volume" x="1" y="3" image="player.bg.vol" tooltip="Volume Bar"/>
   <!--  using image source is buggy with color themes -->
   <!--images source="volume" x="5" y="6" w="120" h="8" images="player.animation.volume" imagesspacing="8"/-->
-  <Animatedlayer id="volume.anim" x="5" y="6" w="120" h="8" image="player.animation.volume" ghost="1" alpha="253"/>
+  <Animatedlayer id="volume.anim" x="5" y="6" w="120" h="8" image="player.animation.volume" ghost="1" alpha="255"/>
 	<slider id="player.slider.volume.shadow" x="0" y="0" w="130" h="26" action="VOLUME" orientation="horizontal" thumb="thumb.volpan.slider.shadow" hoverthumb="thumb.volpan.slider.shadow" downthumb="thumb.volpan.slider.shadow"/>	
 	<slider id="player.slider.volume" x="0" y="0" w="130" h="26" action="VOLUME" orientation="horizontal" thumb="thumb.volpan.slider.n" hoverthumb="thumb.volpan.slider.h" downthumb="thumb.volpan.slider.d" cursor="cur.posbar" tooltip="Volume Bar"/>
 
 	<layer id="eq.bg.pan" x="143" y="3" image="player.bg.balance" tooltip="Panning Bar"/>
-  <Animatedlayer id="balance.anim" x="147" y="6" w="71" h="8" image="player.animation.balance" ghost="1" alpha="253"/>
+  <Animatedlayer id="balance.anim" x="147" y="6" w="71" h="8" image="player.animation.balance" ghost="1" alpha="255"/>
 	<slider id="eq.slider.pan.shadow" x="143" y="0" w="81" h="26" action="PAN" thumb="thumb.volpan.slider.shadow" hoverthumb="thumb.volpan.slider.shadow" downthumb="thumb.volpan.slider.shadow"/>
 	<slider id="eq.slider.pan" x="143" y="0" w="81" h="26" action="PAN" thumb="thumb.volpan.slider.n" hoverthumb="thumb.volpan.slider.h" downthumb="thumb.volpan.slider.d" cursor="cur.posbar" tooltip="Panning Bar"/>
 </groupdef>
@@ -113,7 +113,7 @@
 <groupdef id="pledit.switch.button">
   <!--layer id="window.top.middle" x="0" y="0" w="0" relatw="1" image="window.normal.titlebar.middle" resize="top" stretch="1" ghost="1" cursor="cur.restop"/-->
 	<button id="pledit.button.switch" action="SWITCH" param="SHADE" x="29" y="2" image="window.shade.button.switch" hoverimage="window.shade.button.switch.h" 
-	downimage="window.shade.button.switch.d" tooltip="Toggle Windowshade Mode" activealpha="253" inactivealpha="110" cursor="cur.normal"/>
+	downimage="window.shade.button.switch.d" tooltip="Toggle Windowshade Mode" activealpha="255" inactivealpha="110" cursor="cur.normal"/>
 </groupdef>
 
 

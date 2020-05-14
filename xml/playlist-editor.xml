@@ -18,14 +18,14 @@
 	<layer id="pledit.region.bottom.left" x="0" y="-3" relaty="1" image="window.shade.region.bottom.left" ghost="1" sysregion="-2"/>
 	<layer id="pledit.region.bottom.right" x="-3" y="-3" RELATX="1" RELATY="1" image="window.shade.region.bottom.right" ghost="1" sysregion="-2"/>
 	
-	<layer id="pledit.background.grip.mid" x="-4" y="0" w="4" h="35" image="shade.resizer" relatx="1" dblclickaction="SWITCH;normal" move="0" tooltip="Adjust Horizontal Size" resize="right" alpha="253" cursor="cur.posbar"/>
+	<layer id="pledit.background.grip.mid" x="-4" y="0" w="4" h="35" image="shade.resizer" relatx="1" dblclickaction="SWITCH;normal" move="0" tooltip="Adjust Horizontal Size" resize="right" alpha="255" cursor="cur.posbar"/>
 
 	<group id="pledit.shade.group.display" x="4" y="3" cursor="cur.normal"/>
 
 	<button id="pledit.button.switch" action="SWITCH" param="normalpl" x="-50" y="1" relatx="1" image="shade.button.switch.n" hoverimage="shade.button.switch.h"
-	downimage="shade.button.switch.d" tooltip="Toggle Windowshade Mode" activealpha="253" inactivealpha="110" cursor="cur.normal"/>
-	<button id="pledit.button.close" action="CLOSE" x="-29" y="3" relatx="1" image="window.shade.button.close" hoverimage="window.shade.button.close.h" downimage="window.shade.button.close.d" tooltip="Close" activealpha="253" inactivealpha="110" cursor="cur.close"/>
-	<button id="player.button.minimize" action="MINIMIZE" x="-75" y="3" relatx="1" image="player.button.minimize" hoverimage="player.button.minimize.h" downimage="player.button.minimize.d" tooltip="Minimize" activealpha="253" inactivealpha="100" cursor="cur.normal"/>
+	downimage="shade.button.switch.d" tooltip="Toggle Windowshade Mode" activealpha="255" inactivealpha="110" cursor="cur.normal"/>
+	<button id="pledit.button.close" action="CLOSE" x="-29" y="3" relatx="1" image="window.shade.button.close" hoverimage="window.shade.button.close.h" downimage="window.shade.button.close.d" tooltip="Close" activealpha="255" inactivealpha="110" cursor="cur.close"/>
+	<button id="player.button.minimize" action="MINIMIZE" x="-75" y="3" relatx="1" image="player.button.minimize" hoverimage="player.button.minimize.h" downimage="player.button.minimize.d" tooltip="Minimize" activealpha="255" inactivealpha="100" cursor="cur.normal"/>
 </groupdef>
 
 <groupdef id="pledit.shade.group.display" w="-65" h="29" relatw="1">
@@ -34,13 +34,13 @@
 	<layer id="pledit.background.display.right" x="-19" y="0" relatx="1" image="pl.shade.display.right" ghost="1" />
 	
 	<playlistPlus id="main.pl" x="2" y="7" w="-15" h="19" relatw="1" font="trebuc" fontsize="17" linespacing="1" bold="1"
-  color="10,24,131" antialias="1" playcolor="10,24,131" sysregion="1" ghost="1" activealpha="253" inactiveAlpha="0"/>
+  color="10,24,131" antialias="1" playcolor="10,24,131" sysregion="1" ghost="1" activealpha="255" inactiveAlpha="0"/>
 	
   <playlistPlus id="main.pl" x="1" y="6" w="-15" h="19" relatw="1" font="trebuc" fontsize="17" linespacing="1" bold="1"
-  color="255,255,255" antialias="1" playcolor="255,255,255" sysregion="1" ghost="1" activealpha="253" inactiveAlpha="0"/>
+  color="255,255,255" antialias="1" playcolor="255,255,255" sysregion="1" ghost="1" activealpha="255" inactiveAlpha="0"/>
   
   <playlistPlus id="main.pl" x="1" y="6" w="-15" h="19" relatw="1" font="trebuc" fontsize="17" linespacing="1" bold="1"
-  color="216,228,248" antialias="1" playcolor="216,228,248" sysregion="1" ghost="1" activealpha="0" inactiveAlpha="253"/>
+  color="216,228,248" antialias="1" playcolor="216,228,248" sysregion="1" ghost="1" activealpha="0" inactivealpha="255"/>
 </groupdef>
 
 
@@ -81,7 +81,7 @@
 </groupdef>
 
 <groupdef id="pledit.switch.button">
-	<button id="pledit.button.switch" action="SWITCH" param="SHADE" x="28" y="4" image="window.shade.button.switch" hoverimage="window.shade.button.switch.h" downimage="window.shade.button.switch.d" tooltip="Toggle Windowshade Mode" activealpha="253" inactivealpha="110" cursor="cur.normal"/>
+	<button id="pledit.button.switch" action="SWITCH" param="SHADE" x="28" y="4" image="window.shade.button.switch" hoverimage="window.shade.button.switch.h" downimage="window.shade.button.switch.d" tooltip="Toggle Windowshade Mode" activealpha="255" inactivealpha="110" cursor="cur.normal"/>
 </groupdef>
 
 
@@ -94,7 +94,7 @@
   <sendparams target="componentname" w="-81"/>
   <sendparams target="disabled.switch" alpha="0"/>
 
-	<sendparams target="wasabi.frame.layout.base.bg" h="0" alpha="253"/> <!-- PL window specific -->
+	<sendparams target="wasabi.frame.layout.base.bg" h="0" alpha="255"/> <!-- PL window specific -->
 	<sendparams target="mousetrap" dblClickAction="SWITCH;shade"/>
 
 	<button id="pledit.buttons.bg" x="9" y="-49" relaty="1" image="window.buttons.bg"/>
@@ -106,19 +106,19 @@
 	<button id="pledit.button.bg" x="-59" y="-49" relatx="1" relaty="1" image="window.button.bg"/>
 	<button id="pledit.button.list" action="PE_LIST" x="-58" y="-48" relatx="1" relaty="1" image="window.pl.button.ploptns.n" hoverimage="window.pl.button.ploptns.h" downimage="window.pl.button.ploptns.d" tooltip="Manage Playlist" rectrgn="1" cursor="cur.normal"/>
 
-  <grid id="pl.display.bg" x="-362" y="-43" h="29" w="301" relatx="1" relaty="1" left="window.pl.display.bg.left" middle="window.pl.display.bg.middle" right="window.pl.display.bg.right" ghost="1" alpha="253"/>
-  <grid id="pl.display" x="-362" y="-43" h="29" w="301" relatx="1" relaty="1" left="window.pl.display.left" middle="window.pl.display.middle" right="window.pl.display.right" ghost="1" alpha="253"/>
+  <grid id="pl.display.bg" x="-362" y="-43" h="29" w="301" relatx="1" relaty="1" left="window.pl.display.bg.left" middle="window.pl.display.bg.middle" right="window.pl.display.bg.right" ghost="1" alpha="255"/>
+  <grid id="pl.display" x="-362" y="-43" h="29" w="301" relatx="1" relaty="1" left="window.pl.display.left" middle="window.pl.display.middle" right="window.pl.display.right" ghost="1" alpha="255"/>
 	
-	<!--rect id="plssayer.vis" x="-354" y="-36" w="72" h="15" alpha="253" relatx="1" relaty="1"  color="0,0,250" filled="0"/-->
+	<!--rect id="plssayer.vis" x="-354" y="-36" w="72" h="15" alpha="255" relatx="1" relaty="1"  color="0,0,250" filled="0"/-->
 	<vis id="shade.vis" x="-354" y="-36" w="72" h="15" relatx="1" relaty="1" cursor="cur.normal" gammagroup="visualizers"/>
 	<!-- rect id="hide.for.gordon" x="-283" y="-36" w="2" h="17" relatx="1" relaty="1" color="28,22,50" filled="1" gammagroup="display"/ -->
   <!--layer id="hide.for.vic" x="27" y="71" image="none" ghost="1" alpha="0"/-->
 	<layer id="player.vis.blocker" x="-354" y="-36" w="72" h="15" relatx="1" relaty="1" image="none" cursor="cur.normal" alpha="0"/>
 	
 	<text id="pledit.info" x="-181" y="-37" h="19" w="116" relatx="1" relaty="1" display="PE_Info" font="sarpanch" fontsize="14" valign="middle" align="center" 
-	rightclickaction="trackmenu" color="0,0,0" alpha="253" cursor="cur.normal"/>
+	rightclickaction="trackmenu" color="0,0,0" alpha="255" cursor="cur.normal"/>
 
-	<group id="pledit.miniplayback.buttons" x="-278" y="-38" relatx="1" relaty="1" cursor="cur.normal" alpha="253"/>
+	<group id="pledit.miniplayback.buttons" x="-278" y="-38" relatx="1" relaty="1" cursor="cur.normal" alpha="255"/>
 	<group id="pledit.switch.button" x="-80" y="-1" h="30" w="55" relatx="1"/>
 
   <!--script file="scripts\visualizer.maki" param="shade.vis;player.vis.trigger;hide.for.vic"/-->

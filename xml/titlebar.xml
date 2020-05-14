@@ -25,13 +25,13 @@
   -->
   
   <text id="window.titlebar.title.dropshadow" x="13" y="-3" w="600" h="42" default=":componentname" font="trebuc" fontsize="17"
-    align="left" color="10,24,131" bold="1" antialias="1" activealpha="253" inactiveAlpha="0" forceuppercase="0"/>
+    align="left" color="10,24,131" bold="1" antialias="1" activealpha="255" inactiveAlpha="0" forceuppercase="0"/>
 	
   <text id="window.titlebar.title" x="12" y="-4" w="600" h="42" default=":componentname" font="trebuc" fontsize="17"
-    align="left" color="255,255,255" bold="1" antialias="1" activealpha="253" inactiveAlpha="0" forceuppercase="0"/>
+    align="left" color="255,255,255" bold="1" antialias="1" activealpha="255" inactiveAlpha="0" forceuppercase="0"/>
 	
   <text id="window.titlebar.title.dim" x="12" y="-4" w="600" h="42" default=":componentname" font="trebuc" fontsize="17"
-    align="left" color="216,228,248" bold="1" antialias="1" activealpha="0" inactiveAlpha="253" forceuppercase="0"/>
+    align="left" color="216,228,248" bold="1" antialias="1" activealpha="0" inactivealpha="255" forceuppercase="0"/>
 
   <!--
   <group id="wasabi.titlebar.streak" instanceid="wasabi.titlebar.streak.right" x="0" y="3" w="-155" relatw="1" h="30" sysregion="1"/>
@@ -51,9 +51,9 @@
 <!--
 <groupdef id="wasabi.titlebar.streak">
 
-  <layer id="titlebar.left" x="0" y="1" image="titlebar.window.stripes.left" activealpha="253" inactiveAlpha="110"/>
-  <layer id="titlebar.center" x="10" y="1" w="-10" relatw="1" image="titlebar.window.stripes.center" activealpha="253" inactiveAlpha="110" cursor="cur.normal"/>
-  <layer id="titlebar.right" x="-10" y="1" relatx="1" image="titlebar.window.stripes.right" activealpha="253" inactiveAlpha="110" />
+  <layer id="titlebar.left" x="0" y="1" image="titlebar.window.stripes.left" activealpha="255" inactiveAlpha="110"/>
+  <layer id="titlebar.center" x="10" y="1" w="-10" relatw="1" image="titlebar.window.stripes.center" activealpha="255" inactiveAlpha="110" cursor="cur.normal"/>
+  <layer id="titlebar.right" x="-10" y="1" relatx="1" image="titlebar.window.stripes.right" activealpha="255" inactiveAlpha="110" />
     
 </groupdef>
 -->

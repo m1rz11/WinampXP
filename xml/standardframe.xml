@@ -82,10 +82,10 @@
   <Wasabi:TitleBar id="wasabi.titlebar" x="12" y="0" w="-47" h="34" relatw="1"/>
 
 	<button id="window.button.close" action="CLOSE" x="-29" y="3" relatx="1" image="window.normal.button.close" hoverimage="window.normal.button.close.h" 
-	downimage="window.normal.button.close.down" activealpha="253" inactivealpha="100" tooltip="Close" cursor="cur.close"/>
-	<button id="player.button.mainmenu" action="SYSMENU" x="0" y="1" image="player.button.mainmenu" hoverimage="player.button.mainmenu.h" downimage="player.button.mainmenu.d" activealpha="253" inactivealpha="253" tooltip="Winamp Menu" cursor="cur.normal"/>
+	downimage="window.normal.button.close.down" activealpha="255" inactivealpha="100" tooltip="Close" cursor="cur.close"/>
+	<button id="player.button.mainmenu" action="SYSMENU" x="0" y="1" image="player.button.mainmenu" hoverimage="player.button.mainmenu.h" downimage="player.button.mainmenu.d" activealpha="255" inactivealpha="255" tooltip="Winamp Menu" cursor="cur.normal"/>
 	<layer id="disabled.switch" x="-52" y="3" relatx="1" image="player.button.switch" activealpha="100" inactivealpha="64"/>
-	<button id="player.button.minimize" action="MINIMIZE" x="-75" y="3" relatx="1" image="player.button.minimize" hoverimage="player.button.minimize.h" downimage="player.button.minimize.d" tooltip="Minimize" activealpha="253" inactivealpha="100" cursor="cur.normal"/>
+	<button id="player.button.minimize" action="MINIMIZE" x="-75" y="3" relatx="1" image="player.button.minimize" hoverimage="player.button.minimize.h" downimage="player.button.minimize.d" tooltip="Minimize" activealpha="255" inactivealpha="100" cursor="cur.normal"/>
  </groupdef>
 
 
@@ -136,7 +136,7 @@
   
   <layer x="0" y="-20" w="20" h="20" relaty="1" image="none" resize="bottomleft" cursor="cur.resbottomleft" alpha="0"/>
   <layer x="20" y="-20" w="-40" h="20" relatw="1" relaty="1" image="none" resize="bottom" cursor="cur.resvert" alpha="0"/>
-  <layer x="-15" y="-15" relatx="1" relaty="1" image="normal.resizer.bottomright" ghost="1" alpha="253"/>
+  <layer x="-15" y="-15" relatx="1" relaty="1" image="normal.resizer.bottomright" ghost="1" alpha="255"/>
   <layer x="-20" y="-20" w="20" h="20" relatx="1" relaty="1" image="none" resize="bottomright" cursor="cur.resbottomright" alpha="0"/>
 
   <script id="standardframe.script" file="scripts/standardframe.maki" param="4,30,-8,-34,0,0,1,1" />
