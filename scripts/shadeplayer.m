@@ -1,10 +1,13 @@
+#include "lib/fileio.mi"
+
 Function initShadePlayer();
 Function unloadShadePlayer();
 
 Global Group ScriptGroup, MainGroupShade, DisplayGroupShade, MainGroupMainPlayer, MainGroupPlayerDisplay;
-Global Button VisMenuEntry1, VisMenuEntry2, VisMenuEntry3;
+Global Button VisMenuEntry1, VisMenuEntry2, VisMenuEntry3, ShadeMainMenu;
 Global GuiObject DisplayTimeShade, Visualization, DisplayTimeMainPlayer;
 Global int timemodestring;
+Global File myCheckerDoc;
 
 initShadePlayer() {
 	MainGroupMainPlayer = layoutMainNormal.getObject("player.normal.group.main");
@@ -18,8 +21,17 @@ initShadePlayer() {
   VisMenuEntry1 = DisplayGroupShade.getObject("vismenu.menuentry1");
   VisMenuEntry2 = DisplayGroupShade.getObject("vismenu.menuentry2");
   VisMenuEntry3 = DisplayGroupShade.getObject("vismenu.menuentry3");
+
+  ShadeMainMenu = MainGroupShade.getObject("player.button.mainmenu");
   
   Visualization = DisplayGroupShade.getObject("shade.vis");
+  Visualization.setXmlParam("colorallbands", "255,255,255");
+  Visualization.setXmlParam("colorbandpeak", "255,255,255");
+	Visualization.setXmlParam("colorosc1", "255,255,255");
+	Visualization.setXmlParam("colorosc2", "255,255,255");
+	Visualization.setXmlParam("colorosc3", "255,255,255");
+	Visualization.setXmlParam("colorosc4", "255,255,255");
+	Visualization.setXmlParam("colorosc5", "255,255,255");
 
   timemodestring = getPrivateInt(getSkinName(), "timemodestring", timemodestring);
 
@@ -34,6 +46,18 @@ initShadePlayer() {
     DisplayTimeMainPlayer.setXmlParam("display", "TIMEREMAINING");
     DisplayTimeShade.setXmlParam("display", "TIMEREMAINING");
     timemodestring = 2;
+  }
+
+  myCheckerDoc = new File;
+  String temp = (Application.GetSettingsPath()+"/WACUP_Tools/koopa.ini");
+  myCheckerDoc.load (temp);
+  
+  if(!myCheckerDoc.exists())
+  {
+    MainGroupMainPlayer.setXmlParam("name","Winamp");
+    ShadeMainMenu.setXmlParam("image","shade.button.mainmenu.n.winamp");
+    ShadeMainMenu.setXmlParam("hoverimage","shade.button.mainmenu.h.winamp");
+    ShadeMainMenu.setXmlParam("downimage","shade.button.mainmenu.d.winamp");
   }
 }
 

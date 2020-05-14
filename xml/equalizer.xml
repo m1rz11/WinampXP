@@ -14,7 +14,7 @@
   <eqvis x="153" y="15" w="239" h="31" colortop="0,0,0" colormiddle="0,0,0" colorbottom="0,0,0" colorpreamp="128,128,128" ghost="1" />
 
 	<togglebutton id="eq.button.presets.menu" action="MENU" param="PRESETS" x="474" y="45" w="1" h="1" image="none"/>
-	<button id="eq.button.presets.gfx" x="470" y="7" image="eq.normal.button.presets" hoverimage="eq.normal.button.presets.h" downimage="eq.normal.button.presets.d" cursor="cur.normal"/>
+	<button id="eq.button.presets.gfx" x="470" y="7" image="eq.normal.button.presets" hoverimage="eq.normal.button.presets.h" downimage="eq.normal.button.presets.d" rectrgn="1" cursor="cur.normal"/>
   <script file="scripts\sc_mouseredir.maki" param="eq.button.presets.gfx;eq.button.presets.menu"/>
   <!-- I like to place the menu under the button -not the pointer- whenever I can -->
 

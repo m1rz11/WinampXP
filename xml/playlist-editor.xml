@@ -98,13 +98,13 @@
 	<sendparams target="mousetrap" dblClickAction="SWITCH;shade"/>
 
 	<button id="pledit.buttons.bg" x="9" y="-49" relaty="1" image="window.buttons.bg"/>
-	<button id="pledit.button.add" action="PE_ADD" x="9" y="-48" relaty="1" image="window.pl.button.add.n" hoverimage="window.pl.button.add.h" downimage="window.pl.button.add.d" tooltip="Add Files to Playlist" cursor="cur.normal"/>
-	<button id="pledit.button.rem" action="PE_REM" x="55" y="-48" relaty="1" image="window.pl.button.rem.n" hoverimage="window.pl.button.rem.h" downimage="window.pl.button.rem.d" tooltip="Remove Files from Playlist" cursor="cur.normal"/>
-	<button id="pledit.button.sel" action="PE_SEL" x="97" y="-48" relaty="1" image="window.pl.button.sel.n" hoverimage="window.pl.button.sel.h" downimage="window.pl.button.sel.d" tooltip="Select Files in Playlist" cursor="cur.normal"/>
-	<button id="pledit.button.misc" action="PE_MISC" x="139" y="-48" relaty="1" image="window.pl.button.misc.n" hoverimage="window.pl.button.misc.h" downimage="window.pl.button.misc.d" tooltip="Misc Actions" cursor="cur.normal"/>
+	<button id="pledit.button.add" action="PE_ADD" x="9" y="-48" relaty="1" image="window.pl.button.add.n" hoverimage="window.pl.button.add.h" downimage="window.pl.button.add.d" tooltip="Add Files to Playlist" rectrgn="1" cursor="cur.normal"/>
+	<button id="pledit.button.rem" action="PE_REM" x="55" y="-48" relaty="1" image="window.pl.button.rem.n" hoverimage="window.pl.button.rem.h" downimage="window.pl.button.rem.d" tooltip="Remove Files from Playlist" rectrgn="1" cursor="cur.normal"/>
+	<button id="pledit.button.sel" action="PE_SEL" x="97" y="-48" relaty="1" image="window.pl.button.sel.n" hoverimage="window.pl.button.sel.h" downimage="window.pl.button.sel.d" tooltip="Select Files in Playlist" rectrgn="1" cursor="cur.normal"/>
+	<button id="pledit.button.misc" action="PE_MISC" x="139" y="-48" relaty="1" image="window.pl.button.misc.n" hoverimage="window.pl.button.misc.h" downimage="window.pl.button.misc.d" tooltip="Misc Actions" rectrgn="1" cursor="cur.normal"/>
 
 	<button id="pledit.button.bg" x="-59" y="-49" relatx="1" relaty="1" image="window.button.bg"/>
-	<button id="pledit.button.list" action="PE_LIST" x="-58" y="-48" relatx="1" relaty="1" image="window.pl.button.ploptns.n" hoverimage="window.pl.button.ploptns.h" downimage="window.pl.button.ploptns.d" tooltip="Manage Playlist" cursor="cur.normal"/>
+	<button id="pledit.button.list" action="PE_LIST" x="-58" y="-48" relatx="1" relaty="1" image="window.pl.button.ploptns.n" hoverimage="window.pl.button.ploptns.h" downimage="window.pl.button.ploptns.d" tooltip="Manage Playlist" rectrgn="1" cursor="cur.normal"/>
 
   <grid id="pl.display.bg" x="-362" y="-43" h="29" w="301" relatx="1" relaty="1" left="window.pl.display.bg.left" middle="window.pl.display.bg.middle" right="window.pl.display.bg.right" ghost="1" alpha="253"/>
   <grid id="pl.display" x="-362" y="-43" h="29" w="301" relatx="1" relaty="1" left="window.pl.display.left" middle="window.pl.display.middle" right="window.pl.display.right" ghost="1" alpha="253"/>

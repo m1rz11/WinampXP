@@ -276,8 +276,12 @@
   <bitmap id="shade.seek.slider.d" file="images/player-shade.png" x="476" y="118" w="21" h="34" gammagroup="goldbuttons"/>
 
   <bitmap id="shade.button.mainmenu.n" file="images/player-shade.png" x="4" y="0" w="22" h="26" gammagroup="goldbuttons"/>
-  <bitmap id="shade.button.mainmenu.h" file="images/player-shade.png" x="4" y="27" w="22" h="26" gammagroup="goldbuttons"/>
-  <bitmap id="shade.button.mainmenu.d" file="images/player-shade.png" x="4" y="54" w="22" h="26" gammagroup="goldbuttons"/>
+  <bitmap id="shade.button.mainmenu.h" file="images/player-shade.png" x="4" y="0" w="22" h="26" gammagroup="goldbuttons"/>
+  <bitmap id="shade.button.mainmenu.d" file="images/player-shade.png" x="4" y="0" w="22" h="26" gammagroup="goldbuttons"/>
+
+  <bitmap id="shade.button.mainmenu.n.winamp" file="images/player-shade.png" x="4" y="27" w="22" h="26" gammagroup="goldbuttons"/>
+  <bitmap id="shade.button.mainmenu.h.winamp" file="images/player-shade.png" x="4" y="27" w="22" h="26" gammagroup="goldbuttons"/>
+  <bitmap id="shade.button.mainmenu.d.winamp" file="images/player-shade.png" x="4" y="27" w="22" h="26" gammagroup="goldbuttons"/>
 
   <bitmap id="shade.button.minimize.n" file="images/player-shade.png" x="477" y="0" w="22" h="26" gammagroup="goldbuttons"/>
   <bitmap id="shade.button.minimize.h" file="images/player-shade.png" x="477" y="27" w="22" h="26" gammagroup="goldbuttons"/>

@@ -1,4 +1,4 @@
-<groupdef id="player.shade.group.main" w="0" h="35" relatw="1">
+<groupdef id="player.shade.group.main" name="WACUP" w="0" h="35" relatw="1">
 	<layer id="background.shade.l" x="0" y="0" h="29" image="shade.background.main.left" activealpha="255" inactivealpha="0" sysregion="1"/>
 	<layer id="background.shade.m" x="267" y="0" h="29" w="-538" relatw="1" image="shade.background.main.middle" activealpha="255" inactivealpha="0" sysregion="1"/>
 	<layer id="background.shade.r" x="-271" y="0" h="29" relatx="1" image="shade.background.main.right" activealpha="255" inactivealpha="0" sysregion="1"/>
@@ -12,6 +12,15 @@
 	<layer id="pledit.region.bottom.left" x="0" y="-3" relaty="1" image="window.shade.region.bottom.left" ghost="1" sysregion="-2"/>
 	<layer id="pledit.region.bottom.right" x="-3" y="-3" relatx="1" relaty="1" image="window.shade.region.bottom.right" ghost="1" sysregion="-2"/>
 
+	<text id="window.titlebar.title.dropshadow" x="25" y="-3" w="600" h="42" default=":componentname" font="trebuc" fontsize="17"
+    align="left" color="10,24,131" bold="1" antialias="1" activealpha="253" inactiveAlpha="0" forceuppercase="0"/>
+	
+  	<text id="window.titlebar.title" x="24" y="-4" w="600" h="42" default=":componentname" font="trebuc" fontsize="17"
+    align="left" color="255,255,255" bold="1" antialias="1" activealpha="253" inactiveAlpha="0" forceuppercase="0"/>
+	
+  	<text id="window.titlebar.title.dim" x="24" y="-4" w="600" h="42" default=":componentname" font="trebuc" fontsize="17"
+    align="left" color="216,228,248" bold="1" antialias="1" activealpha="0" inactiveAlpha="253" forceuppercase="0"/>
+
 	<layer id="switcher.dummy" fitparent="1" image="none" dblclickaction="SWITCH;normal" move="1" cursor="cur.normal"/>
 
 	<button id="player.button.mainmenu" action="SYSMENU" x="0" y="1" image="shade.button.mainmenu.n" hoverimage="shade.button.mainmenu.h" downimage="shade.button.mainmenu.d" tooltip="Winamp Menu"  activealpha="253" inactivealpha="100" cursor="cur.normal"/>
@@ -19,7 +28,6 @@
 
 	<layer id="winamp.txt" x="27" y="2" image="shade.winamp.txt" activealpha="253" inactivealpha="100" ghost="1"/>
 	<layer id="shade.bars" x="98" y="2" image="shade.bars" activealpha="253" inactivealpha="100" ghost="1"/>
-
 	
 	<group id="player.shade.group.display" x="118" y="0" ghost="1" cursor="cur.normal"/>
 	
@@ -34,9 +42,9 @@
 
 	<grid id="seek.bg" x="-245" y="0" h="30" w="50" relatx="1" left="shade.seek.bg.left" middle="shade.seek.bg.middle" right="shade.seek.bg.right" move="0" alpha="253" tooltip="Seeking Bar" cursor="cur.normal"/>
 
-	<slider id="player.slider.seek.shadow" action="SEEK" x="-245" y="2" w="55" h="29" relatx="1" orientation="horizontal" thumb="shade.seek.slider.shadow" downthumb="shade.seek.slider.shadow" alpha="250"/>	
-	<slider id="player.slider.seek" action="SEEK" x="-245" y="2" w="55" h="29" relatx="1" orientation="horizontal" thumb="shade.seek.slider.n" downthumb="shade.seek.slider.d" tooltip="Seeking Bar" alpha="253" cursor="cur.posbar"/>
-	<slider id="player.slider.seek.ghost" action="SEEK" x="-245" y="2" w="55" h="29" relatx="1" orientation="horizontal" thumb="shade.seek.slider.n" downthumb="shade.seek.slider.d" tooltip="Seeking Bar" alpha="253" cursor="cur.posbar"/>
+	<slider id="player.slider.seek.shadow" action="SEEK" x="-247" y="2" w="55" h="29" relatx="1" orientation="horizontal" thumb="shade.seek.slider.shadow" downthumb="shade.seek.slider.shadow" alpha="250"/>	
+	<slider id="player.slider.seek" action="SEEK" x="-247" y="2" w="55" h="29" relatx="1" orientation="horizontal" thumb="shade.seek.slider.n" downthumb="shade.seek.slider.d" tooltip="Seeking Bar" alpha="253" cursor="cur.posbar"/>
+	<slider id="player.slider.seek.ghost" action="SEEK" x="-247" y="2" w="55" h="29" relatx="1" orientation="horizontal" thumb="shade.seek.slider.n" downthumb="shade.seek.slider.d" tooltip="Seeking Bar" alpha="253" cursor="cur.posbar"/>
 
 	<layer id="player.resizer.mid" x="-4" y="0" w="4" h="35" image="shade.resizer" relatx="1" move="0" resize="right" alpha="253" tooltip="Adjust Horizontal Size" rectrgn="1" cursor="cur.posbar"/>
 	
