@@ -1,6 +1,0 @@
-This features / functionalities can't be replicated on the Modern skin engine currently (to my knowledge):
-
-- Freeze visualizer when pausing music.
-- "Autoscroll songname" on songticker's right click menu (to get it I should do the entire menu through script.. it's not worth it)
-- "Configure plugin" entry from the Vis menu (on "OAIDU buttons") won't jump to Milkdrop2 config window, it only shows the F1 menu (when the window is visible and IF it's playing...)
-- Up and Down buttons below the PL's scrollbar (used to scroll the PL)

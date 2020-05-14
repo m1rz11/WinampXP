@@ -256,6 +256,10 @@
   <bitmap id="shade.background.main.left" file="images/player-shade.png" x="0" y="81" w="267" h="29" gammagroup="plastic"/>
   <bitmap id="shade.background.main.middle" file="images/player-shade.png" x="267" y="81" w="10" h="29" gammagroup="plastic"/>
   <bitmap id="shade.background.main.right" file="images/player-shade.png" x="277" y="81" w="271" h="29" gammagroup="plastic"/>
+  
+  <bitmap id="shade.background.main.left.inactive" file="images/player-shade-inactive.png" x="0" y="0" w="267" h="29" gammagroup="plastic"/>
+  <bitmap id="shade.background.main.middle.inactive" file="images/player-shade-inactive.png" x="267" y="0" w="10" h="29" gammagroup="plastic"/>
+  <bitmap id="shade.background.main.right.inactive" file="images/player-shade-inactive.png" x="277" y="0" w="271" h="29" gammagroup="plastic"/>
 
   <bitmap id="shade.background.display.left" file="images/player-shade.png" x="130" y="51" w="81" h="29" gammagroup="display" />
   <bitmap id="shade.background.display.middle" file="images/player-shade.png" x="212" y="51" w="32" h="29" gammagroup="display"/>

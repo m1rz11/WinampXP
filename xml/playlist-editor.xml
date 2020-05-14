@@ -5,9 +5,13 @@
 </groupdef>
 
 <groupdef id="pledit.shade.group.main" w="0" h="35" ghost="1" relatw="1">
-	<layer id="pledit.background.main.left" x="0" y="0" h="35" image="window.shade.background.main.left" dblclickaction="SWITCH;normal" move="1" ghost="0" sysregion="1" cursor="cur.normal"/>
-	<layer id="pledit.background.main.center" x="267" y="0" w="-366" relatw="1" h="35" image="window.shade.background.main.center" tile="1" dblclickaction="SWITCH;normal" move="1" ghost="0" sysregion="1" cursor="cur.normal"/>
-	<layer id="pledit.background.main.right" x="-271" y="0" relatx="1" h="35" image="window.shade.background.main.right" dblclickaction="SWITCH;normal" move="1" ghost="0" sysregion="1" cursor="cur.normal"/>
+	<layer id="pledit.background.main.left" x="0" y="0" h="35" image="window.shade.background.main.left" activealpha="255" inactivealpha="0" dblclickaction="SWITCH;normal" move="1" ghost="0" sysregion="1" cursor="cur.normal"/>
+	<layer id="pledit.background.main.center" x="267" y="0" w="-366" relatw="1" h="35" image="window.shade.background.main.center" activealpha="255" inactivealpha="0" tile="1" dblclickaction="SWITCH;normal" move="1" ghost="0" sysregion="1" cursor="cur.normal"/>
+	<layer id="pledit.background.main.right" x="-271" y="0" relatx="1" h="35" image="window.shade.background.main.right" activealpha="255" inactivealpha="0" dblclickaction="SWITCH;normal" move="1" ghost="0" sysregion="1" cursor="cur.normal"/>
+	
+	<layer id="background.shade.l.i" x="0" y="0" h="29" image="shade.background.main.left.inactive" activealpha="0" inactivealpha="255" dblclickaction="SWITCH;normal" sysregion="1"/>
+	<layer id="background.shade.m.i" x="267" y="0" h="29" w="-538" relatw="1" image="shade.background.main.middle.inactive" activealpha="0" inactivealpha="255" dblclickaction="SWITCH;normal" sysregion="1"/>
+	<layer id="background.shade.r.i" x="-271" y="0" h="29" relatx="1" image="shade.background.main.right.inactive" activealpha="0" inactivealpha="255" dblclickaction="SWITCH;normal" sysregion="1"/>
 	
 	<layer id="pledit.region.top.left" x="0" y="0" image="window.shade.region.top.left" ghost="1" sysregion="-2"/>
 	<layer id="pledit.region.top.right" x="-3" y="0" relatx="1" image="window.shade.region.top.right" ghost="1" sysregion="-2"/>
