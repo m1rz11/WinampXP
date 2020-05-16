@@ -69,9 +69,9 @@
   <bitmap id="player.animation.balance" file="images/balance.png" gammagroup="multicolorbars"/>
   
   <bitmap id="player.seeker.slider.shadow" file="images/player-main.png" x="295" y="514" w="62" h="34" gammagroup="plastic"/>
-  <bitmap id="player.seeker.slider.n" file="images/player-main.png" x="19" y="514" w="11" h="34" gammagroup="goldbuttons"/>
-  <bitmap id="player.seeker.slider.h" file="images/player-main.png" x="82" y="514" w="11" h="34" gammagroup="goldbuttons"/>
-  <bitmap id="player.seeker.slider.d" file="images/player-main.png" x="145" y="514" w="11" h="34" gammagroup="goldbuttons"/>
+  <bitmap id="player.seeker.slider.n" file="images/player-main.png" x="1" y="514" w="11" h="22" gammagroup="goldbuttons"/>
+  <bitmap id="player.seeker.slider.h" file="images/player-main.png" x="12" y="514" w="11" h="22" gammagroup="goldbuttons"/>
+  <bitmap id="player.seeker.slider.d" file="images/player-main.png" x="23" y="514" w="11" h="22" gammagroup="goldbuttons"/>
   
   <bitmap id="thumb.volpan.slider.shadow" file="images/player-main.png" x="205" y="242" w="11" h="26" gammagroup="plastic"/>
   

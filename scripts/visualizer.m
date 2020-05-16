@@ -218,6 +218,7 @@ refreshVisSettings ()
 			visualizer.setXmlParam("colorallbands", "49,106,197");
 			visualizer.setXmlParam("colorbandpeak", "49,106,197");
 			setColorOsc("49,106,197");
+
 			visualizer.setXmlParam("fps", "30");
 		}
 		if (v_color == 2)
@@ -741,106 +742,68 @@ ProcessMenuResult (int a)
 //sets every ColorBand in a range to a color
 setColorBands(String rgb, int start, int end)
 {
-	if(start==1 && start<end){visualizer.setXmlParam("ColorBand1", rgb);start++;}
-	if(start==2 && start<end){visualizer.setXmlParam("ColorBand2", rgb);start++;}
-	if(start==3 && start<end){visualizer.setXmlParam("ColorBand3", rgb);start++;}
-	if(start==4 && start<end){visualizer.setXmlParam("ColorBand4", rgb);start++;}
-	if(start==5 && start<end){visualizer.setXmlParam("ColorBand5", rgb);start++;}
-	if(start==6 && start<end){visualizer.setXmlParam("ColorBand6", rgb);start++;}
-	if(start==7 && start<end){visualizer.setXmlParam("ColorBand7", rgb);start++;}
-	if(start==8 && start<end){visualizer.setXmlParam("ColorBand8", rgb);start++;}
-	if(start==9 && start<end){visualizer.setXmlParam("ColorBand9", rgb);start++;}
-	if(start==10 && start<end){visualizer.setXmlParam("ColorBand10", rgb);start++;}
-	if(start==11 && start<end){visualizer.setXmlParam("ColorBand11", rgb);start++;}
-	if(start==12 && start<end){visualizer.setXmlParam("ColorBand12", rgb);start++;}
-	if(start==13 && start<end){visualizer.setXmlParam("ColorBand13", rgb);start++;}
-	if(start==14 && start<end){visualizer.setXmlParam("ColorBand14", rgb);start++;}
-	if(start==15 && start<end){visualizer.setXmlParam("ColorBand15", rgb);start++;}
-	if(start==16 && start<end){visualizer.setXmlParam("ColorBand16", rgb);start++;}
+	for(int i=start; i<=end; i++){
+		visualizer.setXmlParam("ColorBand"+integerToString(i)+"", rgb);
+	}
 }
 
 //sets every odd ColorBand to a color
 setColorBandsOdd(String rgb)
 {
-	visualizer.setXmlParam("ColorBand1", rgb);
-	visualizer.setXmlParam("ColorBand3", rgb);
-	visualizer.setXmlParam("ColorBand5", rgb);
-	visualizer.setXmlParam("ColorBand7", rgb);
-	visualizer.setXmlParam("ColorBand9", rgb);
-	visualizer.setXmlParam("ColorBand11", rgb);
-	visualizer.setXmlParam("ColorBand13", rgb);
-	visualizer.setXmlParam("ColorBand15", rgb);
+	for(int i=1; i<=15; i=i+2){
+		visualizer.setXmlParam("ColorBand"+integerToString(i)+"", rgb);
+	}
 }
 
 //sets every even ColorBand to a color
 setColorBandsEven(String rgb)
 {
-	visualizer.setXmlParam("ColorBand2", rgb);
-	visualizer.setXmlParam("ColorBand4", rgb);
-	visualizer.setXmlParam("ColorBand6", rgb);
-	visualizer.setXmlParam("ColorBand8", rgb);
-	visualizer.setXmlParam("ColorBand10", rgb);
-	visualizer.setXmlParam("ColorBand12", rgb);
-	visualizer.setXmlParam("ColorBand14", rgb);
-	visualizer.setXmlParam("ColorBand16", rgb);
+	for(int i=2; i<=16; i=i+2){
+		visualizer.setXmlParam("ColorBand"+integerToString(i)+"", rgb);
+	}
 }
 
 //makes a gradient using rgb values and steps for each color
 setColorBandsGradient(int r, int g, int b, int stepr, int stepg, int stepb)
 {
-	//duct tape edition
 	String grad = integerToString(r) +","+ integerToString(g) +","+ integerToString(b);
-	visualizer.setXmlParam("ColorBand1", grad); r=r+stepr; g=g+stepg; b=b+stepb; grad = integerToString(r) +","+ integerToString(g) +","+ integerToString(b);
-	visualizer.setXmlParam("ColorBand2", grad); r=r+stepr; g=g+stepg; b=b+stepb; grad = integerToString(r) +","+ integerToString(g) +","+ integerToString(b);
-	visualizer.setXmlParam("ColorBand3", grad); r=r+stepr; g=g+stepg; b=b+stepb; grad = integerToString(r) +","+ integerToString(g) +","+ integerToString(b);
-	visualizer.setXmlParam("ColorBand4", grad); r=r+stepr; g=g+stepg; b=b+stepb; grad = integerToString(r) +","+ integerToString(g) +","+ integerToString(b);
-	visualizer.setXmlParam("ColorBand5", grad); r=r+stepr; g=g+stepg; b=b+stepb; grad = integerToString(r) +","+ integerToString(g) +","+ integerToString(b);
-	visualizer.setXmlParam("ColorBand6", grad); r=r+stepr; g=g+stepg; b=b+stepb; grad = integerToString(r) +","+ integerToString(g) +","+ integerToString(b);
-	visualizer.setXmlParam("ColorBand7", grad); r=r+stepr; g=g+stepg; b=b+stepb; grad = integerToString(r) +","+ integerToString(g) +","+ integerToString(b);
-	visualizer.setXmlParam("ColorBand8", grad); r=r+stepr; g=g+stepg; b=b+stepb; grad = integerToString(r) +","+ integerToString(g) +","+ integerToString(b);
-	visualizer.setXmlParam("ColorBand9", grad); r=r+stepr; g=g+stepg; b=b+stepb; grad = integerToString(r) +","+ integerToString(g) +","+ integerToString(b);
-	visualizer.setXmlParam("ColorBand10", grad); r=r+stepr; g=g+stepg; b=b+stepb; grad = integerToString(r) +","+ integerToString(g) +","+ integerToString(b);
-	visualizer.setXmlParam("ColorBand11", grad); r=r+stepr; g=g+stepg; b=b+stepb; grad = integerToString(r) +","+ integerToString(g) +","+ integerToString(b);
-	visualizer.setXmlParam("ColorBand12", grad); r=r+stepr; g=g+stepg; b=b+stepb; grad = integerToString(r) +","+ integerToString(g) +","+ integerToString(b);
-	visualizer.setXmlParam("ColorBand13", grad); r=r+stepr; g=g+stepg; b=b+stepb; grad = integerToString(r) +","+ integerToString(g) +","+ integerToString(b);
-	visualizer.setXmlParam("ColorBand14", grad); r=r+stepr; g=g+stepg; b=b+stepb; grad = integerToString(r) +","+ integerToString(g) +","+ integerToString(b);
-	visualizer.setXmlParam("ColorBand15", grad); r=r+stepr; g=g+stepg; b=b+stepb; grad = integerToString(r) +","+ integerToString(g) +","+ integerToString(b);
-	visualizer.setXmlParam("ColorBand16", grad);
+	for(int i=1; i<=16; i++){
+		visualizer.setXmlParam("ColorBand"+integerToString(i)+"", grad);
+		r=r+stepr; g=g+stepg; b=b+stepb;
+		grad = integerToString(r) +","+ integerToString(g) +","+ integerToString(b);
+	}
 }
 
 //sets every colorosc to a color
 setColorosc(String rgb)
 {
-	visualizer.setXmlParam("colorosc1", rgb);
-	visualizer.setXmlParam("colorosc2", rgb);
-	visualizer.setXmlParam("colorosc3", rgb);
-	visualizer.setXmlParam("colorosc4", rgb);
-	visualizer.setXmlParam("colorosc5", rgb);
+	for(int i=1; i<=5; i++){
+		visualizer.setXmlParam("colorosc"+integerToString(i)+"", rgb);
+	}
 }
 
 //sets every colorosc in a range color
 setColoroscRange(String rgb, int start, int end)
 {
-	if(start==1 && start<end){visualizer.setXmlParam("colorosc1", rgb);start++;}
-	if(start==2 && start<end){visualizer.setXmlParam("colorosc2", rgb);start++;}
-	if(start==3 && start<end){visualizer.setXmlParam("colorosc3", rgb);start++;}
-	if(start==4 && start<end){visualizer.setXmlParam("colorosc4", rgb);start++;}
-	if(start==5 && start<end){visualizer.setXmlParam("colorosc5", rgb);start++;}
+	for(int i=start; i<=end; i++){
+		visualizer.setXmlParam("colorosc"+integerToString(i)+"", rgb);
+	}
 }
 
 //sets every odd colorosc to a color
 setColoroscOdd(String rgb)
 {
-	visualizer.setXmlParam("colorosc1", rgb);
-	visualizer.setXmlParam("colorosc3", rgb);
-	visualizer.setXmlParam("colorosc5", rgb);
+	for(int i=1; i<=5; i=i+2){
+		visualizer.setXmlParam("colorosc"+integerToString(i)+"", rgb);
+	}
 }
 
 //sets every even colorosc to a color
 setColoroscEven(String rgb)
 {
-	visualizer.setXmlParam("colorosc2", rgb);
-	visualizer.setXmlParam("colorosc4", rgb);
+	for(int i=2; i<=4; i=i+2){
+		visualizer.setXmlParam("colorosc"+integerToString(i)+"", rgb);
+	}
 }
 
 darkDisplay(Boolean visible){
