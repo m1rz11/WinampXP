@@ -83,10 +83,10 @@
 
 	<layer id="eq.background.grip.mid" x="-4" y="0" w="4" h="35" image="shade.resizer" relatx="1" dblclickaction="SWITCH;normal" alpha="255" resize="right" cursor="cur.posbar" />
 	
-	<button id="player.button.minimize" action="MINIMIZE" x="-75" y="3" relatx="1" image="player.button.minimize" hoverimage="player.button.minimize.h" downimage="player.button.minimize.d" tooltip="Minimize" activealpha="255" inactivealpha="100" cursor="cur.normal"/>
+	<button id="player.button.minimize" action="MINIMIZE" x="-73" y="6" relatx="1" image="player.button.minimize" hoverimage="player.button.minimize.h" downimage="player.button.minimize.d" tooltip="Minimize" activealpha="255" inactivealpha="100" cursor="cur.normal"/>
 	<button id="eq.button.switch" action="SWITCH" param="NORMAL" x="-50" y="1" relatx="1" image="shade.button.switch.n" hoverimage="shade.button.switch.h"
 	downimage="shade.button.switch.d" tooltip="Toggle Windowshade Mode" activealpha="255" inactivealpha="110" cursor="cur.normal"/>
-	<button id="eq.button.close" action="CLOSE" x="-29" y="3" relatx="1" image="window.shade.button.close" hoverimage="window.shade.button.close.h" 
+	<button id="eq.button.close" action="CLOSE" x="-27" y="6" relatx="1" image="window.shade.button.close" hoverimage="window.shade.button.close.h" 
 	downimage="window.shade.button.close.d" tooltip="Close" activealpha="255" inactivealpha="110" cursor="cur.close"/>
 </groupdef>
 
@@ -112,7 +112,7 @@
 
 <groupdef id="pledit.switch.button">
   <!--layer id="window.top.middle" x="0" y="0" w="0" relatw="1" image="window.normal.titlebar.middle" resize="top" stretch="1" ghost="1" cursor="cur.restop"/-->
-	<button id="pledit.button.switch" action="SWITCH" param="SHADE" x="29" y="2" image="window.shade.button.switch" hoverimage="window.shade.button.switch.h" 
+	<button id="pledit.button.switch" action="SWITCH" param="SHADE" x="31" y="5" image="window.shade.button.switch" hoverimage="window.shade.button.switch.h" 
 	downimage="window.shade.button.switch.d" tooltip="Toggle Windowshade Mode" activealpha="255" inactivealpha="110" cursor="cur.normal"/>
 </groupdef>
 

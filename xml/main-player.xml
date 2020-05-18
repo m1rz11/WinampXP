@@ -89,9 +89,9 @@
 	<layer id="titlebar.switch" x="30" y="0" w="-83" h="30" relatw="1" dblclickaction="SWITCH;shade" move="1" ghost="0" cursor="cur.move"/>
   
 	<button id="player.button.mainmenu" action="SYSMENU" x="0" y="1" image="player.button.mainmenu" hoverimage="player.button.mainmenu.h" downimage="player.button.mainmenu.d" activealpha="255" inactivealpha="255" tooltip="Winamp Menu" cursor="cur.normal"/>
-	<button id="player.button.minimize" action="MINIMIZE" x="-75" y="3" relatx="1" image="player.button.minimize" hoverimage="player.button.minimize.h" downimage="player.button.minimize.d" tooltip="Minimize" activealpha="255" inactivealpha="100" cursor="cur.normal"/>
-	<button id="player.button.switch" action="SWITCH" param="SHADE" x="-52" y="3" relatx="1" image="player.button.switch" hoverimage="player.button.switch.h" downimage="player.button.switch.d" tooltip="Toggle Windowshade Mode" activealpha="255" inactivealpha="100" cursor="cur.normal"/>
-	<button id="player.button.close" action="CLOSE" x="-29" y="3" relatx="1" image="player.button.close" hoverimage="player.button.close.h" downimage="player.button.close.d" tooltip="Close" activealpha="255" inactivealpha="100" cursor="cur.close"/>
+	<button id="player.button.minimize" action="MINIMIZE" x="-73" y="6" relatx="1" image="player.button.minimize" hoverimage="player.button.minimize.h" downimage="player.button.minimize.d" tooltip="Minimize" activealpha="255" inactivealpha="100" cursor="cur.normal"/>
+	<button id="player.button.switch" action="SWITCH" param="SHADE" x="-50" y="6" relatx="1" image="player.button.switch" hoverimage="player.button.switch.h" downimage="player.button.switch.d" tooltip="Toggle Windowshade Mode" activealpha="255" inactivealpha="100" cursor="cur.normal"/>
+	<button id="player.button.close" action="CLOSE" x="-27" y="6" relatx="1" image="player.button.close" hoverimage="player.button.close.h" downimage="player.button.close.d" tooltip="Close" activealpha="255" inactivealpha="100" cursor="cur.close"/>
 	
 	<!--group id="songticker.options" x="0" y="43" h="0" w="295" alpha="0" sysregion="1"/>
   <script file="scripts\centerobject.maki" param="songticker.options,1,0"/-->
