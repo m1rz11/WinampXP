@@ -81,7 +81,12 @@
 </groupdef>
 
 <groupdef id="pledit.switch.button">
-	<button id="pledit.button.switch" action="SWITCH" param="SHADE" x="30" y="7" image="window.shade.button.switch" hoverimage="window.shade.button.switch.h" downimage="window.shade.button.switch.d" tooltip="Toggle Windowshade Mode" activealpha="255" inactivealpha="110" cursor="cur.normal"/>
+	<!-- active -->
+	<button x="-25" y="7" relatx="1" image="player.button.switch" activealpha="255" inactivealpha="0" cursor="cur.normal"/>
+
+	<!-- inactive -->
+	<button x="-25" y="7" relatx="1" image="player.button.switch.inactive" activealpha="0" inactivealpha="255" cursor="cur.normal"/>
+	<button id="pledit.button.switch" action="SWITCH" param="SHADE" x="30" y="7" image="player.button.transparent" hoverimage="window.shade.button.switch.h" downimage="window.shade.button.switch.d" tooltip="Toggle Windowshade Mode" alpha="255" cursor="cur.normal"/>
 </groupdef>
 
 

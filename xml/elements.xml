@@ -87,6 +87,8 @@
   <bitmap id="player.button.mainmenu.winamp.h" file="images/player-main.png" x="56" y="29" w="26" h="28" gammagroup="goldbuttons"/>
   <bitmap id="player.button.mainmenu.winamp.d" file="images/player-main.png" x="83" y="29" w="26" h="28" gammagroup="goldbuttons"/>
 
+  <bitmap id="player.button.transparent" file="images/player-main.png" x="110" y="29" w="21" h="21" gammagroup="goldbuttons"/>
+
   <bitmap id="player.button.minimize.inactive" file="images/player-main.png" x="480" y="0" w="21" h="21" gammagroup="goldbuttons"/>
   <bitmap id="player.button.minimize" file="images/player-main.png" x="480" y="22" w="21" h="21" gammagroup="goldbuttons"/>
   <bitmap id="player.button.minimize.h" file="images/player-main.png" x="480" y="44" w="21" h="21" gammagroup="goldbuttons"/>
@@ -96,6 +98,9 @@
   <bitmap id="player.button.switch" file="images/player-main.png" x="502" y="22" w="21" h="21" gammagroup="goldbuttons"/>
   <bitmap id="player.button.switch.h" file="images/player-main.png" x="502" y="44" w="21" h="21" gammagroup="goldbuttons"/>
   <bitmap id="player.button.switch.d" file="images/player-main.png" x="502" y="66" w="21" h="21" gammagroup="goldbuttons"/>
+
+  <bitmap id="player.button.switch.disabled" file="images/player-main.png" x="29" y="58" w="21" h="21" gammagroup="goldbuttons"/>
+  <bitmap id="player.button.switch.disabled.inactive" file="images/player-main.png" x="51" y="58" w="21" h="21" gammagroup="goldbuttons"/>
   
   <bitmap id="player.button.close.inactive" file="images/player-main.png" x="524" y="0" w="21" h="21" gammagroup="goldbuttons"/>
   <bitmap id="player.button.close" file="images/player-main.png" x="524" y="22" w="21" h="21" gammagroup="goldbuttons"/>
