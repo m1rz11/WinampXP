@@ -291,14 +291,19 @@
   <bitmap id="shade.button.mainmenu.h.winamp" file="images/player-shade.png" x="4" y="27" w="22" h="26" gammagroup="goldbuttons"/>
   <bitmap id="shade.button.mainmenu.d.winamp" file="images/player-shade.png" x="4" y="27" w="22" h="26" gammagroup="goldbuttons"/>
 
+  <bitmap id="shade.button.transparent" file="images/player-shade.png" x="454" y="218" w="22" h="26" gammagroup="goldbuttons"/>
+
+  <bitmap id="shade.button.minimize.inactive" file="images/player-shade.png" x="477" y="218" w="22" h="26" gammagroup="goldbuttons"/>
   <bitmap id="shade.button.minimize.n" file="images/player-shade.png" x="477" y="0" w="22" h="26" gammagroup="goldbuttons"/>
   <bitmap id="shade.button.minimize.h" file="images/player-shade.png" x="477" y="27" w="22" h="26" gammagroup="goldbuttons"/>
   <bitmap id="shade.button.minimize.d" file="images/player-shade.png" x="477" y="54" w="22" h="26" gammagroup="goldbuttons"/>
   
+  <bitmap id="shade.button.switch.inactive" file="images/player-shade.png" x="500" y="218" w="22" h="26" gammagroup="goldbuttons"/>
   <bitmap id="shade.button.switch.n" file="images/player-shade.png" x="500" y="0" w="22" h="26" gammagroup="goldbuttons"/>
   <bitmap id="shade.button.switch.h" file="images/player-shade.png" x="500" y="27" w="22" h="26" gammagroup="goldbuttons"/>
   <bitmap id="shade.button.switch.d" file="images/player-shade.png" x="500" y="54" w="22" h="26" gammagroup="goldbuttons"/>
   
+  <bitmap id="shade.button.close.inactive" file="images/player-shade.png" x="523" y="218" w="22" h="26" gammagroup="goldbuttons"/>
   <bitmap id="shade.button.close.n" file="images/player-shade.png" x="523" y="0" w="22" h="26" gammagroup="goldbuttons"/>
   <bitmap id="shade.button.close.h" file="images/player-shade.png" x="523" y="27" w="22" h="26" gammagroup="goldbuttons"/>
   <bitmap id="shade.button.close.d" file="images/player-shade.png" x="523" y="54" w="22" h="26" gammagroup="goldbuttons"/>

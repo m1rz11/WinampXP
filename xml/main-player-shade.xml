@@ -23,7 +23,7 @@
 
 	<layer id="switcher.dummy" fitparent="1" image="none" dblclickaction="SWITCH;normal" move="1" cursor="cur.normal"/>
 
-	<button id="player.button.mainmenu" action="SYSMENU" x="0" y="1" image="shade.button.mainmenu.n" hoverimage="shade.button.mainmenu.h" downimage="shade.button.mainmenu.d" tooltip="Winamp Menu"  activealpha="255" inactivealpha="100" cursor="cur.normal"/>
+	<button id="player.button.mainmenu" action="SYSMENU" x="0" y="1" image="shade.button.mainmenu.n" hoverimage="shade.button.mainmenu.h" downimage="shade.button.mainmenu.d" tooltip="Winamp Menu" alpha="255" cursor="cur.normal"/>
 	<slider id="player.slider.volume" action="VOLUME" x="137" y="10" w="71" h="14" orientation="horizontal" thumb="shade.button.slider" downthumb="shade.button.slider" ghost="1" alpha="0"/>
 
 	<layer id="winamp.txt" x="27" y="2" image="shade.winamp.txt" activealpha="255" inactivealpha="100" ghost="1"/>
@@ -48,9 +48,19 @@
 
 	<layer id="player.resizer.mid" x="-4" y="0" w="4" h="35" image="shade.resizer" relatx="1" move="0" resize="right" alpha="255" tooltip="Adjust Horizontal Size" rectrgn="1" cursor="cur.posbar"/>
 	
-	<button id="player.button.minimize" action="MINIMIZE" x="-73" y="1" relatx="1" image="shade.button.minimize.n" hoverimage="shade.button.minimize.h" downimage="shade.button.minimize.d" tooltip="Minimize" cursor="cur.normal" activealpha="255" inactivealpha="100"/>
-	<button id="player.button.switch" action="SWITCH" param="NORMAL" x="-50" y="1" relatx="1" image="shade.button.switch.n" hoverimage="shade.button.switch.h" downimage="shade.button.switch.d" tooltip="Toggle Windowshade Mode" cursor="cur.normal" activealpha="255" inactivealpha="100"/>
-	<button id="player.button.close" action="CLOSE" x="-27" y="1" relatx="1" image="shade.button.close.n" hoverimage="shade.button.close.h" downimage="shade.button.close.d" tooltip="Close" cursor="cur.close" activealpha="255" inactivealpha="100"/>
+	<!-- active -->
+	<button x="-73" y="1" relatx="1" image="shade.button.minimize.n" cursor="cur.close" activealpha="255" inactivealpha="0"/>
+	<button x="-50" y="1" relatx="1" image="shade.button.switch.n" cursor="cur.close" activealpha="255" inactivealpha="0"/>
+	<button x="-27" y="1" relatx="1" image="shade.button.close.n" cursor="cur.close" activealpha="255" inactivealpha="0"/>
+
+	<!-- inactive -->
+	<button x="-73" y="1" relatx="1" image="shade.button.minimize.inactive" cursor="cur.close" activealpha="0" inactivealpha="255"/>
+	<button x="-50" y="1" relatx="1" image="shade.button.switch.inactive" cursor="cur.close" activealpha="0" inactivealpha="255"/>
+	<button x="-27" y="1" relatx="1" image="shade.button.close.inactive" cursor="cur.close" activealpha="0" inactivealpha="255"/>
+
+	<button id="player.button.minimize" action="MINIMIZE" x="-73" y="1" relatx="1" image="shade.button.transparent" hoverimage="shade.button.minimize.h" downimage="shade.button.minimize.d" tooltip="Minimize" cursor="cur.normal" alpha="255"/>
+	<button id="player.button.switch" action="SWITCH" param="NORMAL" x="-50" y="1" relatx="1" image="shade.button.transparent" hoverimage="shade.button.switch.h" downimage="shade.button.switch.d" tooltip="Toggle Windowshade Mode" cursor="cur.normal" alpha="255"/>
+	<button id="player.button.close" action="CLOSE" x="-27" y="1" relatx="1" image="shade.button.transparent" hoverimage="shade.button.close.h" downimage="shade.button.close.d" tooltip="Close" cursor="cur.close" alpha="255"/>
 
   <script file="scripts\play_pause.maki" param="player.button.play;player.button.pause"/>	
 </groupdef>

@@ -82,12 +82,22 @@
   <group id="eq.shade.volbalance" x="0" y="6" w="221" h="28"/>
 
 	<layer id="eq.background.grip.mid" x="-4" y="0" w="4" h="35" image="shade.resizer" relatx="1" dblclickaction="SWITCH;normal" alpha="255" resize="right" cursor="cur.posbar" />
+
+		<!-- active -->
+	<button x="-73" y="1" relatx="1" image="shade.button.minimize.n" cursor="cur.close" activealpha="255" inactivealpha="0"/>
+	<button x="-50" y="1" relatx="1" image="shade.button.switch.n" cursor="cur.close" activealpha="255" inactivealpha="0"/>
+	<button x="-27" y="1" relatx="1" image="shade.button.close.n" cursor="cur.close" activealpha="255" inactivealpha="0"/>
+
+	<!-- inactive -->
+	<button x="-73" y="1" relatx="1" image="shade.button.minimize.inactive" cursor="cur.close" activealpha="0" inactivealpha="255"/>
+	<button x="-50" y="1" relatx="1" image="shade.button.switch.inactive" cursor="cur.close" activealpha="0" inactivealpha="255"/>
+	<button x="-27" y="1" relatx="1" image="shade.button.close.inactive" cursor="cur.close" activealpha="0" inactivealpha="255"/>
 	
-	<button id="player.button.minimize" action="MINIMIZE" x="-73" y="6" relatx="1" image="player.button.minimize" hoverimage="player.button.minimize.h" downimage="player.button.minimize.d" tooltip="Minimize" activealpha="255" inactivealpha="100" cursor="cur.normal"/>
-	<button id="eq.button.switch" action="SWITCH" param="NORMAL" x="-50" y="1" relatx="1" image="shade.button.switch.n" hoverimage="shade.button.switch.h"
-	downimage="shade.button.switch.d" tooltip="Toggle Windowshade Mode" activealpha="255" inactivealpha="110" cursor="cur.normal"/>
-	<button id="eq.button.close" action="CLOSE" x="-27" y="6" relatx="1" image="window.shade.button.close" hoverimage="window.shade.button.close.h" 
-	downimage="window.shade.button.close.d" tooltip="Close" activealpha="255" inactivealpha="110" cursor="cur.close"/>
+	<button id="player.button.minimize" action="MINIMIZE" x="-73" y="6" relatx="1" image="player.button.transparent" hoverimage="player.button.minimize.h" downimage="player.button.minimize.d" tooltip="Minimize" alpha="255" cursor="cur.normal"/>
+	<button id="eq.button.switch" action="SWITCH" param="NORMAL" x="-50" y="1" relatx="1" image="shade.button.transparent" hoverimage="shade.button.switch.h"
+	downimage="shade.button.switch.d" tooltip="Toggle Windowshade Mode" alpha="255" cursor="cur.normal"/>
+	<button id="eq.button.close" action="CLOSE" x="-27" y="6" relatx="1" image="player.button.transparent" hoverimage="window.shade.button.close.h" 
+	downimage="window.shade.button.close.d" tooltip="Close" alpha="255" cursor="cur.close"/>
 </groupdef>
 
 
