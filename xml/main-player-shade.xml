@@ -36,16 +36,16 @@
 	
 	<!-- active buttons -->
 	<button x="-192" y="1" relatx="1" image="shade.button.previous.n" activealpha="255" inactivealpha="0" cursor="cur.normal"/>
-	<button x="-168" y="1" relatx="1" image="shade.button.pause.n" activealpha="255" inactivealpha="0" cursor="cur.normal"/>
-	<button x="-168" y="1" relatx="1" image="shade.button.play.n" activealpha="255" inactivealpha="0" cursor="cur.normal"/>
+	<button id="pause.active" x="-168" y="1" relatx="1" image="shade.button.pause.n" activealpha="255" inactivealpha="0" cursor="cur.normal"/>
+	<button id="play.active" x="-168" y="1" relatx="1" image="shade.button.play.n" activealpha="255" inactivealpha="0" cursor="cur.normal"/>
 	<button x="-145" y="1" relatx="1" image="shade.button.stop.n" activealpha="255" inactivealpha="0" cursor="cur.normal"/>
 	<button x="-122" y="1" relatx="1" image="shade.button.next.n" activealpha="255" inactivealpha="0" cursor="cur.normal"/>
 	<button x="-100" y="1" relatx="1" image="shade.button.eject.n" activealpha="255" inactivealpha="0" cursor="cur.normal"/>
 	
 	<!-- inactive buttons -->
 	<button x="-193" y="2" relatx="1" image="shade.button.previous.inactive" activealpha="0" inactivealpha="255" cursor="cur.normal"/>
-	<button x="-169" y="2" relatx="1" image="shade.button.pause.inactive" activealpha="0" inactivealpha="255" cursor="cur.normal"/>
-	<button x="-169" y="2" relatx="1" image="shade.button.play.inactive" activealpha="0" inactivealpha="255" cursor="cur.normal"/>
+	<button id="pause.inactive" x="-169" y="2" relatx="1" image="shade.button.pause.inactive" activealpha="0" inactivealpha="255" cursor="cur.normal"/>
+	<button id="play.inactive" x="-169" y="2" relatx="1" image="shade.button.play.inactive" activealpha="0" inactivealpha="255" cursor="cur.normal"/>
 	<button x="-146" y="2" relatx="1" image="shade.button.stop.inactive" activealpha="0" inactivealpha="255" cursor="cur.normal"/>
 	<button x="-123" y="2" relatx="1" image="shade.button.next.inactive" activealpha="0" inactivealpha="255" cursor="cur.normal"/>
 	<button x="-101" y="2" relatx="1" image="shade.button.eject.inactive" activealpha="0" inactivealpha="255" cursor="cur.normal"/>
