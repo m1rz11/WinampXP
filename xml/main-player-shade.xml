@@ -32,13 +32,30 @@
 	<group id="player.shade.group.display" x="118" y="0" ghost="1" cursor="cur.normal"/>
 	
 	<!--layer id="shade.buttons.bg" x="-268" y="2" relatx="1" image="shade.buttons.bg" cursor="cur.normal"/-->
+
 	
-	<button id="player.button.previous" action="PREV" x="-192" y="1" relatx="1" image="shade.button.previous.n" hoverimage="shade.button.previous.h" downimage="shade.button.previous.d" tooltip="Pevious Track" cursor="cur.normal" activealpha="255" inactivealpha="100"/>
-	<button id="player.button.pause" action="PAUSE" x="-168" y="1" relatx="1" image="shade.button.pause.n" hoverimage="shade.button.pause.h" downimage="shade.button.pause.d" tooltip="Pause" cursor="cur.normal" activealpha="255" inactivealpha="100"/>
-	<button id="player.button.play" action="PLAY" x="-168" y="1" relatx="1" image="shade.button.play.n" hoverimage="shade.button.play.h" downimage="shade.button.play.d" tooltip="Play" cursor="cur.normal" activealpha="255" inactivealpha="100"/>
-	<button id="player.button.stop" action="STOP" x="-145" y="1" relatx="1" image="shade.button.stop.n" hoverimage="shade.button.stop.h" downimage="shade.button.stop.d" tooltip="Stop" cursor="cur.normal" activealpha="255" inactivealpha="100"/>
-	<button id="player.button.next" action="NEXT" x="-122" y="1" relatx="1" image="shade.button.next.n" hoverimage="shade.button.next.h" downimage="shade.button.next.d" tooltip="Next Track" cursor="cur.normal" activealpha="255" inactivealpha="100"/>
-  <button id="player.button.eject" action="EJECT" x="-100" y="1" relatx="1" image="shade.button.eject.n" hoverimage="shade.button.eject.h" downimage="shade.button.eject.d" tooltip="Open file(s)" cursor="cur.normal" activealpha="255" inactivealpha="100"/>
+	<!-- active buttons -->
+	<button x="-192" y="1" relatx="1" image="shade.button.previous.n" activealpha="255" inactivealpha="0" cursor="cur.normal"/>
+	<button x="-168" y="1" relatx="1" image="shade.button.pause.n" activealpha="255" inactivealpha="0" cursor="cur.normal"/>
+	<button x="-168" y="1" relatx="1" image="shade.button.play.n" activealpha="255" inactivealpha="0" cursor="cur.normal"/>
+	<button x="-145" y="1" relatx="1" image="shade.button.stop.n" activealpha="255" inactivealpha="0" cursor="cur.normal"/>
+	<button x="-122" y="1" relatx="1" image="shade.button.next.n" activealpha="255" inactivealpha="0" cursor="cur.normal"/>
+	<button x="-100" y="1" relatx="1" image="shade.button.eject.n" activealpha="255" inactivealpha="0" cursor="cur.normal"/>
+	
+	<!-- inactive buttons -->
+	<button x="-193" y="2" relatx="1" image="shade.button.previous.inactive" activealpha="0" inactivealpha="255" cursor="cur.normal"/>
+	<button x="-169" y="2" relatx="1" image="shade.button.pause.inactive" activealpha="0" inactivealpha="255" cursor="cur.normal"/>
+	<button x="-169" y="2" relatx="1" image="shade.button.play.inactive" activealpha="0" inactivealpha="255" cursor="cur.normal"/>
+	<button x="-146" y="2" relatx="1" image="shade.button.stop.inactive" activealpha="0" inactivealpha="255" cursor="cur.normal"/>
+	<button x="-123" y="2" relatx="1" image="shade.button.next.inactive" activealpha="0" inactivealpha="255" cursor="cur.normal"/>
+	<button x="-101" y="2" relatx="1" image="shade.button.eject.inactive" activealpha="0" inactivealpha="255" cursor="cur.normal"/>
+	
+	<button id="player.button.previous" action="PREV" x="-192" y="1" relatx="1" image="shade.button.transparent2731" hoverimage="shade.button.previous.h" downimage="shade.button.previous.d" tooltip="Pevious Track" cursor="cur.normal" alpha="255"/>
+	<button id="player.button.pause" action="PAUSE" x="-168" y="1" relatx="1" image="shade.button.transparent2631" hoverimage="shade.button.pause.h" downimage="shade.button.pause.d" tooltip="Pause" cursor="cur.normal" alpha="255"/>
+	<button id="player.button.play" action="PLAY" x="-168" y="1" relatx="1" image="shade.button.transparent2631" hoverimage="shade.button.play.h" downimage="shade.button.play.d" tooltip="Play" cursor="cur.normal" alpha="255"/>
+	<button id="player.button.stop" action="STOP" x="-145" y="1" relatx="1" image="shade.button.transparent2631" hoverimage="shade.button.stop.h" downimage="shade.button.stop.d" tooltip="Stop" cursor="cur.normal" alpha="255"/>
+	<button id="player.button.next" action="NEXT" x="-122" y="1" relatx="1" image="shade.button.transparent2731" hoverimage="shade.button.next.h" downimage="shade.button.next.d" tooltip="Next Track" cursor="cur.normal" alpha="255"/>
+  	<button id="player.button.eject" action="EJECT" x="-100" y="1" relatx="1" image="shade.button.transparent3031" hoverimage="shade.button.eject.h" downimage="shade.button.eject.d" tooltip="Open file(s)" cursor="cur.normal" alpha="255"/>
 
 	<grid id="seek.bg" x="-245" y="0" h="30" w="50" relatx="1" left="shade.seek.bg.left" middle="shade.seek.bg.middle" right="shade.seek.bg.right" move="0" alpha="255" tooltip="Seeking Bar" cursor="cur.normal"/>
 

@@ -309,23 +309,33 @@
   <bitmap id="shade.button.close.d" file="images/player-shade.png" x="523" y="54" w="22" h="26" gammagroup="goldbuttons"/>
 
   <bitmap id="shade.buttons.bg" file="images/player-shade.png" x="267" y="118" w="162" h="31" gammagroup="plastic"/>
+
+  <bitmap id="shade.button.transparent2731" file="images/player-shade.png" x="432" y="153" w="27" h="31" gammagroup="greybuttons"/>
+  <bitmap id="shade.button.transparent2631" file="images/player-shade.png" x="432" y="153" w="26" h="31" gammagroup="greybuttons"/>
+  <bitmap id="shade.button.transparent3031" file="images/player-shade.png" x="432" y="153" w="30" h="31" gammagroup="greybuttons"/>
   
+  <bitmap id="shade.button.previous.inactive" file="images/player-shade.png" x="103" y="215" w="27" h="31" gammagroup="greybuttons"/>
   <bitmap id="shade.button.previous.n" file="images/player-shade.png" x="268" y="150" w="27" h="31" gammagroup="greybuttons"/>
   <bitmap id="shade.button.previous.h" file="images/player-shade.png" x="268" y="182" w="27" h="31" gammagroup="greybuttons"/>
   <bitmap id="shade.button.previous.d" file="images/player-shade.png" x="268" y="214" w="27" h="31" gammagroup="greybuttons"/>
+  <bitmap id="shade.button.play.inactive" file="images/player-shade.png" x="130" y="215" w="26" h="31" gammagroup="greybuttons"/>
   <bitmap id="shade.button.play.n" file="images/player-shade.png" x="295" y="150" w="26" h="31" gammagroup="greybuttons"/>
   <bitmap id="shade.button.play.h" file="images/player-shade.png" x="295" y="182" w="26" h="31" gammagroup="greybuttons"/>
   <bitmap id="shade.button.play.d" file="images/player-shade.png" x="295" y="214" w="26" h="31" gammagroup="greybuttons"/>
+  <bitmap id="shade.button.pause.inactive" file="images/player-shade.png" x="156" y="215" w="26" h="31" gammagroup="greybuttons"/>
   <bitmap id="shade.button.pause.n" file="images/player-shade.png" x="321" y="150" w="26" h="31" gammagroup="greybuttons"/>
   <bitmap id="shade.button.pause.h" file="images/player-shade.png" x="321" y="182" w="26" h="31" gammagroup="greybuttons"/>
   <bitmap id="shade.button.pause.d" file="images/player-shade.png" x="321" y="214" w="26" h="31" gammagroup="greybuttons"/>
+  <bitmap id="shade.button.stop.inactive" file="images/player-shade.png" x="182" y="215" w="26" h="31" gammagroup="greybuttons"/>
   <bitmap id="shade.button.stop.n" file="images/player-shade.png" x="347" y="150" w="26" h="31" gammagroup="greybuttons"/>
   <bitmap id="shade.button.stop.h" file="images/player-shade.png" x="347" y="182" w="26" h="31" gammagroup="greybuttons"/>
   <bitmap id="shade.button.stop.d" file="images/player-shade.png" x="347" y="214" w="26" h="31" gammagroup="greybuttons"/>
+  <bitmap id="shade.button.next.inactive" file="images/player-shade.png" x="208" y="215" w="27" h="31" gammagroup="greybuttons"/>
   <bitmap id="shade.button.next.n" file="images/player-shade.png" x="373" y="150" w="27" h="31" gammagroup="greybuttons"/>
   <bitmap id="shade.button.next.h" file="images/player-shade.png" x="373" y="182" w="27" h="31" gammagroup="greybuttons"/>
   <bitmap id="shade.button.next.d" file="images/player-shade.png" x="373" y="214" w="27" h="31" gammagroup="greybuttons"/>
 
+  <bitmap id="shade.button.eject.inactive" file="images/player-shade.png" x="235" y="215" w="30" h="31" gammagroup="greybuttons"/>
   <bitmap id="shade.button.eject.n" file="images/player-shade.png" x="400" y="150" w="30" h="31" gammagroup="greybuttons"/>
   <bitmap id="shade.button.eject.h" file="images/player-shade.png" x="400" y="182" w="30" h="31" gammagroup="greybuttons"/>
   <bitmap id="shade.button.eject.d" file="images/player-shade.png" x="400" y="214" w="30" h="31" gammagroup="greybuttons"/>
