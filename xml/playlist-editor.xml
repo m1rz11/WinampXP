@@ -17,6 +17,8 @@
 	<layer id="pledit.region.top.right" x="-3" y="0" relatx="1" image="window.shade.region.top.right" ghost="1" sysregion="-2"/>
 	<layer id="pledit.region.bottom.left" x="0" y="-3" relaty="1" image="window.shade.region.bottom.left" ghost="1" sysregion="-2"/>
 	<layer id="pledit.region.bottom.right" x="-3" y="-3" RELATX="1" RELATY="1" image="window.shade.region.bottom.right" ghost="1" sysregion="-2"/>
+
+	<button id="pl.shade.mainmenu" action="SYSMENU" x="0" y="1" image="player.button.mainmenu" hoverimage="player.button.mainmenu.h" downimage="player.button.mainmenu.d" alpha="255" tooltip="Winamp Menu" cursor="cur.normal"/>
 	
 	<layer id="pledit.background.grip.mid" x="-4" y="0" w="4" h="35" image="shade.resizer" relatx="1" dblclickaction="SWITCH;normal" move="0" tooltip="Adjust Horizontal Size" resize="right" alpha="255" cursor="cur.posbar"/>
 
@@ -43,13 +45,13 @@
 	<layer id="pledit.background.display.center" x="81" y="0" w="-100" relatw="1" image="pl.shade.display.middle" tile="1" ghost="1" />
 	<layer id="pledit.background.display.right" x="-19" y="0" relatx="1" image="pl.shade.display.right" ghost="1" />
 	
-	<playlistPlus id="main.pl" x="2" y="7" w="-15" h="19" relatw="1" font="trebuc" fontsize="17" linespacing="1" bold="1"
+	<playlistPlus id="main.pl" x="19" y="7" w="-33" h="19" relatw="1" font="trebuc" fontsize="17" linespacing="1" bold="1"
   color="10,24,131" antialias="1" playcolor="10,24,131" sysregion="1" ghost="1" activealpha="255" inactiveAlpha="0"/>
 	
-  <playlistPlus id="main.pl" x="1" y="6" w="-15" h="19" relatw="1" font="trebuc" fontsize="17" linespacing="1" bold="1"
+  <playlistPlus id="main.pl" x="18" y="6" w="-33" h="19" relatw="1" font="trebuc" fontsize="17" linespacing="1" bold="1"
   color="255,255,255" antialias="1" playcolor="255,255,255" sysregion="1" ghost="1" activealpha="255" inactiveAlpha="0"/>
   
-  <playlistPlus id="main.pl" x="1" y="6" w="-15" h="19" relatw="1" font="trebuc" fontsize="17" linespacing="1" bold="1"
+  <playlistPlus id="main.pl" x="18" y="6" w="-33" h="19" relatw="1" font="trebuc" fontsize="17" linespacing="1" bold="1"
   color="216,228,248" antialias="1" playcolor="216,228,248" sysregion="1" ghost="1" activealpha="0" inactivealpha="255"/>
 </groupdef>
 

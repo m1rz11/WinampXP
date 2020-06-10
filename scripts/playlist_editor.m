@@ -19,12 +19,15 @@ Global group scriptGroup/*, elipsis*/, MainGroup;
 global text dummy;
 global guiobject plslider;
 global group selector;
+global Group shadeGroupMain;
 global layer mousetrap;
 global string xuiparams = "";
 global int currNumLines, currMaxLines, linespace, pltopMod;
 global int currSel;
 global string playcolor, textcolor, selcolor;
 Global Windowholder plwh;
+
+Global Button shadeMainMenuIcon;
 
 Global Vis PLVisualizer;
 
@@ -45,6 +48,9 @@ System.onScriptLoaded() {
 
 	layoutPLNormal = containerPL.getLayout("normalpl");
 	layoutPLShade = containerPL.getLayout("shade");
+
+	shadeGroupMain = layoutPLShade.getObject("pledit.shade.group.main");
+	shadeMainMenuIcon = shadeGroupMain.getObject("pl.shade.mainmenu");
 
 	scriptGroup = getScriptGroup();
 
@@ -97,6 +103,9 @@ System.onScriptLoaded() {
 	} else {
 		plwh.setXmlParam("x", "-2");
 		plwh.setXmlParam("w", "2");
+		shadeMainMenuIcon.setXmlParam("image", "player.button.mainmenu.winamp");
+    	shadeMainMenuIcon.setXmlParam("hoverimage", "player.button.mainmenu.winamp.h");
+    	shadeMainMenuIcon.setXmlParam("downimage", "player.button.mainmenu.winamp.d");
 	}
 }
 

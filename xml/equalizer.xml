@@ -70,6 +70,17 @@
 	<layer id="background.shade.m.i" x="267" y="0" h="29" w="-538" relatw="1" image="shade.background.main.middle.inactive" activealpha="0" inactivealpha="255" dblclickaction="SWITCH;normal" sysregion="1"/>
 	<layer id="background.shade.r.i" x="-271" y="0" h="29" relatx="1" image="shade.background.main.right.inactive" activealpha="0" inactivealpha="255" dblclickaction="SWITCH;normal" sysregion="1"/>
 
+	<button id="eq.shade.mainmenu" action="SYSMENU" x="0" y="1" image="player.button.mainmenu" hoverimage="player.button.mainmenu.h" downimage="player.button.mainmenu.d" alpha="255" tooltip="Winamp Menu" cursor="cur.normal"/>
+	
+	<text id="window.titlebar.title.dropshadow" x="25" y="-3" w="600" h="42" default=":componentname" font="trebuc" fontsize="17"
+    align="left" color="10,24,131" bold="1" antialias="1" activealpha="255" inactiveAlpha="0" move="1" dblclickaction="SWITCH;normal" forceuppercase="0"/>
+	
+  	<text id="window.titlebar.title" x="24" y="-4" w="600" h="42" default=":componentname" font="trebuc" fontsize="17"
+    align="left" color="255,255,255" bold="1" antialias="1" activealpha="255" inactiveAlpha="0" move="1" dblclickaction="SWITCH;normal" forceuppercase="0"/>
+	
+  	<text id="window.titlebar.title.dim" x="24" y="-4" w="600" h="42" default=":componentname" font="trebuc" fontsize="17"
+    align="left" color="216,228,248" bold="1" antialias="1" activealpha="0" inactivealpha="255" move="1" dblclickaction="SWITCH;normal" forceuppercase="0"/>
+
 	<grid id="shade.titlebar.stripes" x="10" y="3" w="-80" h="28" relatw="1" left="titlebar.stripes.left" middle="titlebar.stripes.center" right="titlebar.stripes.right" move="1" activealpha="255" inactivealpha="100" ghost="1"/>
 
   <group id="eq.shade.titlebar.center" x="0" y="3" w="260" h="28" ghost="1"/>
@@ -79,7 +90,7 @@
 	<layer id="pledit.region.bottom.left" x="0" y="-3" relaty="1" image="window.shade.region.bottom.left" ghost="1" sysregion="-2"/>
 	<layer id="pledit.region.bottom.right" x="-3" y="-3" relatx="1" relaty="1" image="window.shade.region.bottom.right" ghost="1" sysregion="-2"/>
 
-  <group id="eq.shade.volbalance" x="0" y="6" w="221" h="28"/>
+  <group id="eq.shade.volbalance" x="0" y="6" w="228" h="28"/>
 
 	<layer id="eq.background.grip.mid" x="-4" y="0" w="4" h="35" image="shade.resizer" relatx="1" dblclickaction="SWITCH;normal" alpha="255" resize="right" cursor="cur.posbar" />
 

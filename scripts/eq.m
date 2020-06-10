@@ -1,5 +1,7 @@
 #include "lib/std.mi"
 #include "lib/winampconfig.mi"
+#include "lib/application.mi"
+#include "lib/fileio.mi"
 
 #define ISOBANDS "31.5 Hz,63 Hz,125 Hz,250 Hz,500 Hz,1 KHz,2 KHz,4 KHz,8 KHz,16 KHz"
 #define WINAMPBANDS "70 Hz,180 Hz,320 Hz,600 Hz,1 KHz,3 KHz,6 KHz,12 KHz,14 KHz,16 KHz"
@@ -16,7 +18,7 @@ Global GuiObject textNormalSongInfo, textShadeSongInfo;
 Global Text textNormalActionInfo, textShadeActionInfo;
 Global Group ShadeGroupMain, ShadeGroupDisplay, EqNormalGroup, EQShadeGroup, EQShadeTitlebarCenter, EQShadeVolBalance;
 
-Global Button btnEQp12, btnEQ0, btnEQm12;
+Global Button btnEQp12, btnEQ0, btnEQm12, shadeMainMenuIcon;
 Global Layer EqONLight, AutoONLight, FrequencyLabel;
 
 Global Slider sliderEqNormalEQBand00, sliderEqNormalEQBand01, sliderEqNormalEQBand02, sliderEqNormalEQBand03, sliderEqNormalEQBand04, sliderEqNormalEQBand05;
@@ -27,7 +29,6 @@ Global Togglebutton EqONBtn, AutoONBtn;
 Function showActionInfo(String strValue);
 Function setSongTicker();
 
-
 Global Timer timerSongTicker;
 Global Boolean boolReleaseSongTicker;
 Global Boolean boolSongTicker;
@@ -35,6 +36,7 @@ Global Boolean boolSongTicker;
 Global int AutoState;
 Global int EqState;
 
+Global File myCheckerDoc;
 
 System.onScriptLoaded() {
   containerMain = System.getContainer("main");
@@ -102,12 +104,24 @@ System.onScriptLoaded() {
 	EQShadeGroup = layoutEqShade.getObject("equalizer.shade.group");
 	EQShadeTitlebarCenter = EQShadeGroup.getObject("eq.shade.titlebar.center");
 	EQShadeVolBalance = EQShadeGroup.getObject("eq.shade.volbalance");
+
+  shadeMainMenuIcon = EQShadeGroup.getObject("eq.shade.mainmenu");
 	
   _ShadeCenterInit(EQShadeTitlebarCenter, EQShadeGroup, 1, 0);
   _ShadeCenterInit(EQShadeVolBalance, EQShadeGroup, 1, 0);
   _ShadeCenterInit(EqNormalGroup, layoutEqNormal, 1, 0);
 	 
 	setSongTicker();
+
+  myCheckerDoc = new File;
+	String temp = (Application.GetSettingsPath()+"/WACUP_Tools/koopa.ini");
+	myCheckerDoc.load (temp);
+
+	if(!myCheckerDoc.exists()) {
+    shadeMainMenuIcon.setXmlParam("image", "player.button.mainmenu.winamp");
+    shadeMainMenuIcon.setXmlParam("hoverimage", "player.button.mainmenu.winamp.h");
+    shadeMainMenuIcon.setXmlParam("downimage", "player.button.mainmenu.winamp.d");
+  }
 }
 
 System.onScriptUnloading() {
