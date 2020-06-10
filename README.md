@@ -13,9 +13,6 @@ Victhor, the original creator of [Winamp Classic Modern](https://www.deviantart.
 
 ### TODO:
 - Remove unused code and other stuff
-- Finally fix the dark display
 
 ### Planned features
-- Dark display
-- Window themes (Olive Green, Silver, Media Center, Royale Noir)
-- More accurate Minimize/Shade/Close buttons
+- Window themes (Olive Green, Silver, Media Center, Royale Noir, Whistler)
