@@ -166,18 +166,18 @@
 	<layer id="oaidu.button.o.h" x="7" y="5" image="OAIDU.buttons.O.h"/>
 	<layer id="oaidu.button.o.d" x="7" y="5" image="OAIDU.buttons.O.d"/>
 	
-  <Menu id="OAIDU.buttons.O.m" menu="WA5:Options" x="7" y="0" h="17" w="14" normal="oaidu.button.o.n" hover="oaidu.button.o.h" down="oaidu.button.o.d" tooltip="Options Menu" rectrgn="1" cursor="cur.normal"/>
-  <NStatesButton id="OAIDU.buttons.A" x="7" y="19" image="OAIDU.buttons.A.1." hoverimage="OAIDU.buttons.A.2." downimage="OAIDU.buttons.A.3." rectrgn="1" cfgattrib="{280876CF-48C0-40BC-8E86-73CE6BB462E5};Always on top" nstates="2" cfgvals="0;1" tooltip="Toggle Always on top" cursor="cur.normal"/>
-	<button id="OAIDU.buttons.I" action="trackinfo" x="7" y="33" image="OAIDU.buttons.I.n" hoverimage="OAIDU.buttons.I.h" downimage="OAIDU.buttons.I.n" alpha="255" tooltip="File Info Box" rectrgn="1" cursor="cur.normal"/>
+  <Menu id="OAIDU.buttons.O.m" menu="WA5:Options" x="7" y="0" h="17" w="14" normal="oaidu.button.o.n" hover="oaidu.button.o.n" down="oaidu.button.o.n" tooltip="Options Menu" rectrgn="1" cursor="cur.normal"/>
+  <NStatesButton id="OAIDU.buttons.A" x="7" y="19" image="OAIDU.buttons.A.1." hoverimage="OAIDU.buttons.A.1." downimage="OAIDU.buttons.A.1." rectrgn="1" cfgattrib="{280876CF-48C0-40BC-8E86-73CE6BB462E5};Always on top" nstates="2" cfgvals="0;1" tooltip="Toggle Always on top" cursor="cur.normal"/>
+	<button id="OAIDU.buttons.I" action="trackinfo" x="7" y="33" image="OAIDU.buttons.I.n" alpha="255" tooltip="File Info Box" rectrgn="1" cursor="cur.normal"/>
 
 	<!--  D and U buttons handled by script -->
 	<button id="OAIDU.menu.D" x="7" y="47" image="none" action="CONTROLMENU" cursor="cur.normal"/>
-	<button id="OAIDU.buttons.D" x="7" y="47" image="OAIDU.buttons.D.n" hoverimage="OAIDU.buttons.D.h" downimage="OAIDU.buttons.D.n" alpha="255" tooltip="Toggle Doublesize Mode" rectrgn="1" cursor="cur.normal"/>
+	<button id="OAIDU.buttons.D" x="7" y="47" image="OAIDU.buttons.D.n" alpha="255" tooltip="Toggle Doublesize Mode" rectrgn="1" cursor="cur.normal"/>
 
 	<button id="OAIDU.buttons.U.menuentry1" x="7" y="61" h="0" w="0" action="TOGGLE" param="guid:avs" image="none" cursor="cur.normal"/>
 	<button id="OAIDU.buttons.U.menuentry2" x="7" y="61" h="0" w="0" action="Vis_Cfg" image="none"/>
 	<button id="OAIDU.buttons.U.menuentry3" x="7" y="61" h="0" w="0" action="WA5:Prefs" param="33" image="none"/>
-	<button id="OAIDU.buttons.U" x="7" y="61" image="OAIDU.buttons.U.n" hoverimage="OAIDU.buttons.U.h" downimage="OAIDU.buttons.U.n" tooltip="Visualization Menu" rectrgn="1" cursor="cur.normal"/>
+	<button id="OAIDU.buttons.U" x="7" y="61" image="OAIDU.buttons.U.n" tooltip="Visualization Menu" rectrgn="1" cursor="cur.normal"/>
 
   <status id="status" x="33" y="8" stopBitmap="status.icon.stop" playBitmap="status.icon.play" pauseBitmap="status.icon.pause" ghost="1"/>
   

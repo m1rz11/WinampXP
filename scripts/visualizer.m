@@ -115,9 +115,9 @@ System.onScriptLoaded()
 
 	//oaidu stuff
 	OAIDUo = NormalGroupDisplay.getObject("OAIDU.buttons.O.m");
-	OAIDUon = NormalGroupDisplay.getObject("OAIDU.buttons.O.m");
-	OAIDUoh = NormalGroupDisplay.getObject("OAIDU.buttons.O.m");
-	OAIDUod = NormalGroupDisplay.getObject("OAIDU.buttons.O.m");
+	OAIDUon = NormalGroupDisplay.getObject("oaidu.button.o.n");
+	OAIDUoh = NormalGroupDisplay.getObject("oaidu.button.o.h");
+	OAIDUod = NormalGroupDisplay.getObject("oaidu.button.o.d");
 
 	OAIDUa = NormalGroupDisplay.getObject("OAIDU.buttons.A");
 	OAIDUi = NormalGroupDisplay.getObject("OAIDU.buttons.I");
@@ -431,7 +431,7 @@ Trigger.onRightButtonUp (int x, int y)
 	visMenu.addCommand("Options:", 102, 0, 1);
 
 	visMenu.addCommand("Show Peaks", 101, show_peaks == 1, 0);
-	visMenu.addCommand("Dark Display (WIP)", 103, dark_display == 2, 0);
+	visMenu.addCommand("Dark Display", 103, dark_display == 2, 0);
 	pksmenu.addCommand("Slower", 200, p_falloffspeed == 0, 0);
 	pksmenu.addCommand("Slow", 201, p_falloffspeed == 1, 0);
 	pksmenu.addCommand("Moderate", 202, p_falloffspeed == 2, 0);
@@ -818,33 +818,24 @@ darkDisplay(Boolean visible){
 		DisplayStatusIcons.setXmlParam("pauseBitmap","status.icon.pause.dark");
 
 		TDText.setXmlParam("text","");
-		/*
-		//whatever i did here is not right
-		//send help
+		
 		OAIDUo.setXmlParam("normal","OAIDU.buttons.O.n.dark");
-		OAIDUo.setXmlParam("hover","OAIDU.buttons.O.h.dark");
-		OAIDUo.setXmlParam("down","OAIDU.buttons.O.d.dark");
+		OAIDUo.setXmlParam("hover","OAIDU.buttons.O.n.dark");
+		OAIDUo.setXmlParam("down","OAIDU.buttons.O.n.dark");
 
 		OAIDUon.setXmlParam("image","OAIDU.buttons.O.n.dark");
-		OAIDUoh.setXmlParam("image","OAIDU.buttons.O.h.dark");
-		OAIDUod.setXmlParam("image","OAIDU.buttons.O.d.dark");
-
-		OAIDUa.setXmlParam("image","OAIDU.buttons.A.dark.1.0");
-		OAIDUa.setXmlParam("hoverimage","OAIDU.buttons.A.dark.2.0");
-		OAIDUa.setXmlParam("downimage","OAIDU.buttons.A.dark.3.0");
-		*/
+		OAIDUoh.setXmlParam("image","OAIDU.buttons.O.n.dark");
+		OAIDUod.setXmlParam("image","OAIDU.buttons.O.n.dark");
+		
+		OAIDUa.setXmlParam("image","OAIDU.buttons.A.dark.1.");
+		OAIDUa.setXmlParam("hoverimage","OAIDU.buttons.A.dark.1.");
+		OAIDUa.setXmlParam("downimage","OAIDU.buttons.A.dark.1.");
+		
 		OAIDUi.setXmlParam("image","OAIDU.buttons.I.n.dark");
-		OAIDUi.setXmlParam("hoverimage","OAIDU.buttons.I.h.dark");
-		OAIDUi.setXmlParam("downimage","OAIDU.buttons.I.n.dark");
 
 		OAIDUd.setXmlParam("image","OAIDU.buttons.D.n.dark");
-		OAIDUd.setXmlParam("hoverimage","OAIDU.buttons.D.h.dark");
-		OAIDUd.setXmlParam("downimage","OAIDU.buttons.D.n.dark");
 
 		OAIDUu.setXmlParam("image","OAIDU.buttons.U.n.dark");
-		OAIDUu.setXmlParam("hoverimage","OAIDU.buttons.U.h.dark");
-		OAIDUu.setXmlParam("downimage","OAIDU.buttons.U.n.dark");
-		
 	}
 	else{
 		//dark display off
@@ -857,31 +848,24 @@ darkDisplay(Boolean visible){
 		DisplayStatusIcons.setXmlParam("pauseBitmap","status.icon.pause");
 
 		TDText.setXmlParam("text","Time Display");
-		/*
+
 		OAIDUo.setXmlParam("normal","OAIDU.buttons.O.n");
-		OAIDUo.setXmlParam("hover","OAIDU.buttons.O.h");
-		OAIDUo.setXmlParam("down","OAIDU.buttons.O.d");
+		OAIDUo.setXmlParam("hover","OAIDU.buttons.O.n");
+		OAIDUo.setXmlParam("down","OAIDU.buttons.O.n");
 
 		OAIDUon.setXmlParam("image","OAIDU.buttons.O.n");
-		OAIDUoh.setXmlParam("image","OAIDU.buttons.O.h");
-		OAIDUod.setXmlParam("image","OAIDU.buttons.O.d");
-
-		OAIDUa.setXmlParam("image","OAIDU.buttons.A.1.0");
-		OAIDUa.setXmlParam("hoverimage","OAIDU.buttons.A.2.0");
-		OAIDUa.setXmlParam("downimage","OAIDU.buttons.A.3.0");
-		*/
+		OAIDUoh.setXmlParam("image","OAIDU.buttons.O.n");
+		OAIDUod.setXmlParam("image","OAIDU.buttons.O.n");
+		
+		OAIDUa.setXmlParam("image","OAIDU.buttons.A.1.");
+		OAIDUa.setXmlParam("hoverimage","OAIDU.buttons.A.1.");
+		OAIDUa.setXmlParam("downimage","OAIDU.buttons.A.1.");
+		
 		OAIDUi.setXmlParam("image","OAIDU.buttons.I.n");
-		OAIDUi.setXmlParam("hoverimage","OAIDU.buttons.I.h");
-		OAIDUi.setXmlParam("downimage","OAIDU.buttons.I.n");
 
 		OAIDUd.setXmlParam("image","OAIDU.buttons.D.n");
-		OAIDUd.setXmlParam("hoverimage","OAIDU.buttons.D.h");
-		OAIDUd.setXmlParam("downimage","OAIDU.buttons.D.n");
 
 		OAIDUu.setXmlParam("image","OAIDU.buttons.U.n");
-		OAIDUu.setXmlParam("hoverimage","OAIDU.buttons.U.h");
-		OAIDUu.setXmlParam("downimage","OAIDU.buttons.U.n");
-		
 	}
 }
 

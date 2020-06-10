@@ -189,6 +189,7 @@ initMainPlayer() {
 	
   dblscalestate = getPrivateInt(getSkinName(), "dblscalestate", dblscalestate);
   
+  /*
   if (dblscalestate == 0)
   {
     OAIDUBtnD.setXmlParam("image", "OAIDU.buttons.D.n");
@@ -197,7 +198,7 @@ initMainPlayer() {
   {
     OAIDUBtnD.setXmlParam("image", "OAIDU.buttons.D.h");
   }
-  
+  */
   
   //iswacup = getPrivateInt(getSkinName(), "iswacup", iswacup);
   
@@ -582,13 +583,13 @@ OAIDUBtnD.onLeftButtonUp (int x, int y)
   if (layoutMainNormal.getScale() < 2)
   {
     layoutMainNormal.setScale(layoutMainNormal.getScale()*2);
-    OAIDUBtnD.setXmlParam("image", "OAIDU.buttons.D.h");
+    //OAIDUBtnD.setXmlParam("image", "OAIDU.buttons.D.h");
     dblscalestate = 1;
   }
   else
   {
     layoutMainNormal.setScale(layoutMainNormal.getScale()/2);
-    OAIDUBtnD.setXmlParam("image", "OAIDU.buttons.D.n");
+    //OAIDUBtnD.setXmlParam("image", "OAIDU.buttons.D.n");
     dblscalestate = 0;
   }
 }
@@ -606,13 +607,13 @@ System.onKeyDown(String key)
     if (layoutMainNormal.getScale() < 2)
     {
       layoutMainNormal.setScale(layoutMainNormal.getScale()*2);
-      OAIDUBtnD.setXmlParam("image", "OAIDU.buttons.D.h");
+      //OAIDUBtnD.setXmlParam("image", "OAIDU.buttons.D.h");
       dblscalestate = 1;
     }
     else
     {
       layoutMainNormal.setScale(layoutMainNormal.getScale()/2);
-      OAIDUBtnD.setXmlParam("image", "OAIDU.buttons.D.n");
+      //OAIDUBtnD.setXmlParam("image", "OAIDU.buttons.D.n");
       dblscalestate = 0;
     }
 	}

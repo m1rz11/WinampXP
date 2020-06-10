@@ -196,10 +196,13 @@
   <bitmap id="OAIDU.buttons.O.h" file="images/player-main.png" x="13" y="171" w="12" h="14" gammagroup="display-text"/>
   <bitmap id="OAIDU.buttons.O.d" file="images/player-main.png" x="26" y="171" w="12" h="14" gammagroup="display-text"/>
   
+  <bitmap id="OAIDU.buttons.A.1." file="images/player-main.png" x="26" y="185" w="12" h="14" gammagroup="display-text"/>
   <bitmap id="OAIDU.buttons.A.1.0" file="images/player-main.png" x="26" y="185" w="12" h="14" gammagroup="display-text"/>
-  <bitmap id="OAIDU.buttons.A.1.1" file="images/player-main.png" x="13" y="185" w="12" h="14" gammagroup="display-text"/>
+  <bitmap id="OAIDU.buttons.A.1.1" file="images/player-main.png" x="26" y="185" w="12" h="14" gammagroup="display-text"/>
+  <bitmap id="OAIDU.buttons.A.2." file="images/player-main.png" x="13" y="185" w="12" h="14" gammagroup="display-text"/>
   <bitmap id="OAIDU.buttons.A.2.0" file="images/player-main.png" x="13" y="185" w="12" h="14" gammagroup="display-text"/>
   <bitmap id="OAIDU.buttons.A.2.1" file="images/player-main.png" x="13" y="185" w="12" h="14" gammagroup="display-text"/>
+  <bitmap id="OAIDU.buttons.A.3." file="images/player-main.png" x="26" y="185" w="12" h="14" gammagroup="display-text"/>
   <bitmap id="OAIDU.buttons.A.3.1" file="images/player-main.png" x="26" y="185" w="12" h="14" gammagroup="display-text"/>
   <bitmap id="OAIDU.buttons.A.3.0" file="images/player-main.png" x="26" y="185" w="12" h="14" gammagroup="display-text"/>
   
@@ -214,10 +217,13 @@
   <bitmap id="OAIDU.buttons.O.h.dark" file="images/player-main.png" x="1" y="92" w="12" h="14" gammagroup="display-text"/>
   <bitmap id="OAIDU.buttons.O.d.dark" file="images/player-main.png" x="14" y="92" w="12" h="14" gammagroup="display-text"/>
   
+  <bitmap id="OAIDU.buttons.A.dark.1." file="images/player-main.png" x="14" y="106" w="11" h="14" gammagroup="display-text"/>
   <bitmap id="OAIDU.buttons.A.dark.1.0" file="images/player-main.png" x="14" y="106" w="11" h="14" gammagroup="display-text"/>
-  <bitmap id="OAIDU.buttons.A.dark.1.1" file="images/player-main.png" x="1" y="106" w="12" h="14" gammagroup="display-text"/>
+  <bitmap id="OAIDU.buttons.A.dark.1.1" file="images/player-main.png" x="14" y="106" w="11" h="14" gammagroup="display-text"/>
+  <bitmap id="OAIDU.buttons.A.dark.2." file="images/player-main.png" x="1" y="106" w="12" h="14" gammagroup="display-text"/>
   <bitmap id="OAIDU.buttons.A.dark.2.0" file="images/player-main.png" x="1" y="106" w="12" h="14" gammagroup="display-text"/>
   <bitmap id="OAIDU.buttons.A.dark.2.1" file="images/player-main.png" x="1" y="106" w="12" h="14" gammagroup="display-text"/>
+  <bitmap id="OAIDU.buttons.A.dark.3." file="images/player-main.png" x="14" y="106" w="11" h="14" gammagroup="display-text"/>
   <bitmap id="OAIDU.buttons.A.dark.3.1" file="images/player-main.png" x="14" y="106" w="11" h="14" gammagroup="display-text"/>
   <bitmap id="OAIDU.buttons.A.dark.3.0" file="images/player-main.png" x="14" y="106" w="11" h="14" gammagroup="display-text"/>
   
