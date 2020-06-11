@@ -77,7 +77,7 @@
 	
 	<layer id="mousetrap" x="0" y="0" w="0" relatw="1" h="0" relath="1" rectrgn="1" move="1" dblclickaction="SWITCH;normal" cursor="cur.normal"/>
 	  
-  <script id="xui.playlistplus.script" file="scripts\playlist_editor.maki"/>
+  <script id="xui.playlistplus.script" file="..\WinampXP\scripts\playlist_editor.maki"/>
 </groupdef>
 
 
@@ -89,7 +89,7 @@
 	<button id="player.button.next" action="NEXT" x="60" y="0" image="pl.button.next.n" hoverimage="pl.button.next.h" downimage="pl.button.next.d" rectrgn="1" cursor="cur.normal"/>
   <button id="player.button.eject" action="EJECT" x="80" y="0" image="pl.button.eject.n" hoverimage="pl.button.eject.h" downimage="pl.button.eject.d" rectrgn="1" cursor="cur.normal"/>
 
-  <script file="scripts\play_pause.maki" param="player.button.play;player.button.pause"/>
+  <script file="..\WinampXP\scripts\play_pause.maki" param="player.button.play;player.button.pause"/>
 </groupdef>
 
 <groupdef id="pledit.switch.button">

@@ -7,6 +7,8 @@ Global Group ScriptGroup, MainGroupShade, DisplayGroupShade, MainGroupMainPlayer
 Global Button VisMenuEntry1, VisMenuEntry2, VisMenuEntry3, ShadeMainMenu;
 Global GuiObject DisplayTimeShade, Visualization, DisplayTimeMainPlayer;
 Global int timemodestring;
+
+Global Text Title1, Title2, Title3;
 Global File myCheckerDoc;
 
 initShadePlayer() {
@@ -17,6 +19,10 @@ initShadePlayer() {
 	MainGroupShade = layoutMainShade.getObject("player.shade.group.main");
 	DisplayGroupShade = MainGroupShade.getObject("player.shade.group.display");
   DisplayTimeShade = DisplayGroupShade.getObject("shade.time");
+
+  Title1 = MainGroupShade.getObject("shade.window.titlebar.title.dropshadow");
+  Title2 = MainGroupShade.getObject("shade.window.titlebar.title");
+  Title3 = MainGroupShade.getObject("shade.window.titlebar.title.dim");
 
   VisMenuEntry1 = DisplayGroupShade.getObject("vismenu.menuentry1");
   VisMenuEntry2 = DisplayGroupShade.getObject("vismenu.menuentry2");
@@ -54,7 +60,10 @@ initShadePlayer() {
   
   if(!myCheckerDoc.exists())
   {
-    MainGroupMainPlayer.setXmlParam("name","Winamp");
+    Title1.setXmlParam("text","Winamp");
+    Title2.setXmlParam("text","Winamp");
+    Title3.setXmlParam("text","Winamp");
+    
     ShadeMainMenu.setXmlParam("image","shade.button.mainmenu.n.winamp");
     ShadeMainMenu.setXmlParam("hoverimage","shade.button.mainmenu.h.winamp");
     ShadeMainMenu.setXmlParam("downimage","shade.button.mainmenu.d.winamp");

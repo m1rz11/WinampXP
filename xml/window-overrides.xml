@@ -16,6 +16,6 @@
      relatw="1" relath="0" align="left" default="Tooltip Sample" 
      font="tahoma" fontsize="14" color="wasabi.tooltip.text"/>
 	
-	<script id="tip" file="scripts\tooltips.maki"/>
+	<script id="tip" file="..\WinampXP\scripts\tooltips.maki"/>
 
 </groupdef>

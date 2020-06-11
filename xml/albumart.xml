@@ -3,7 +3,7 @@
 <groupdef id="albumart.group">
 	<AlbumArt id="waaa" fitparent="1" move="1"/>
 
-	<script file="scripts/albumart.maki" param="waaa" />
+	<script file="../WinampXP/scripts/albumart.maki" param="waaa" />
 </groupdef>
 
 <layout id="normal" minimum_w="212" minimum_h="242" h="242" w="212" appbar="top|bottom|left|right">

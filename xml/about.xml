@@ -10,7 +10,7 @@
   <button id="link3" x="201" y="171" w="118" h="13" image="links.normal"  cursor="IDC_HAND" rectrgn="1"/>
   <button id="link4" x="52" y="248" w="111" h="13" image="links.normal"  cursor="IDC_HAND" rectrgn="1"/>
   <button id="window.button.close" action="CLOSE" x="330" y="290" image="okbutton.normal" hoverimage="okbutton.hover" downimage="okbutton.down" alpha="255" cursor="cur.close"/>
-	<script file="scripts/about.maki"/>
+	<script file="../WinampXP/scripts/about.maki"/>
 </groupdef>
 
 

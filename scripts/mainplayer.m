@@ -28,7 +28,7 @@ Global GuiObject SonginfoFrequencyBG, SonginfoFrequencyDISPLAY, SonginfoBitrateB
 Global Layer EqButton, PLButton, SonginfoMono, SonginfoStereo, SonginfoBitrateLabel, SonginfoFrequencyLabel;
 Global togglebutton RepeatLight, ShuffleLight;
 Global Layer WinampTxt, AboutBG, WinampTxtShade;
-Global Text SonginfoBitrate, SonginfoFrequency;
+Global Text SonginfoBitrate, SonginfoFrequency, Title1, Title2, Title3;
 Global Slider EqBalance;
 Global Layer Trigger;
 Global Container MainContainer;
@@ -84,6 +84,10 @@ initMainPlayer() {
   OAIDUBtnUE1 = DisplayGroup.getObject("OAIDU.buttons.U.menuentry1");
   OAIDUBtnUE2 = DisplayGroup.getObject("OAIDU.buttons.U.menuentry2");
   OAIDUBtnUE3 = DisplayGroup.getObject("OAIDU.buttons.U.menuentry3");
+
+  Title1 = MainGroup.getObject("window.titlebar.title.dropshadow");
+  Title2 = MainGroup.getObject("window.titlebar.title");
+  Title3 = MainGroup.getObject("window.titlebar.title.dim");
 
 	//SongtickerOptionsGroup = MainGroup.getObject("songticker.options");
 
@@ -225,7 +229,11 @@ initMainPlayer() {
     AboutBtn.setXmlParam("image", "button.about.n");
     AboutBtn.setXmlParam("hoverimage", "button.about.h");
     AboutBtn.setXmlParam("downimage", "button.about.d");
-    MainContainer.setXmlParam("name","Winamp");
+    //MainContainer.setXmlParam("name","Winamp");   //nope
+    Title1.setXmlParam("text","Winamp");
+    Title2.setXmlParam("text","Winamp");
+    Title3.setXmlParam("text","Winamp");
+
     WinampIcon.setXmlParam("image", "player.button.mainmenu.winamp");
     WinampIcon.setXmlParam("hoverimage", "player.button.mainmenu.winamp.h");
     WinampIcon.setXmlParam("downimage", "player.button.mainmenu.winamp.d");

@@ -15,7 +15,7 @@
 
 	<togglebutton id="eq.button.presets.menu" action="MENU" param="PRESETS" x="474" y="45" w="1" h="1" image="none"/>
 	<button id="eq.button.presets.gfx" x="470" y="7" image="eq.normal.button.presets" hoverimage="eq.normal.button.presets.h" downimage="eq.normal.button.presets.d" rectrgn="1" cursor="cur.normal"/>
-  <script file="scripts\sc_mouseredir.maki" param="eq.button.presets.gfx;eq.button.presets.menu"/>
+  <script file="..\WinampXP\scripts\sc_mouseredir.maki" param="eq.button.presets.gfx;eq.button.presets.menu"/>
   <!-- I like to place the menu under the button -not the pointer- whenever I can -->
 
   <!--images source="preamp" x="38" y="68" w="5" h="106" images="player.animation.eq.sliders" imagesspacing="106"/-->
@@ -58,7 +58,7 @@
 	
 	<!--slider id="eq.slider.crossfade" cfgattrib="{F1239F09-8CC6-4081-8519-C2AE99FCB14C};Crossfade time" high="20" x="186" y="178" w="83" h="14" thumb="eq.normal.button.slider.horizontal" downthumb="eq.normal.button.slider.horizontal"/-->
 
-  <script file="scripts\eq_animated_bars.maki"/>
+  <script file="..\WinampXP\scripts\eq_animated_bars.maki"/>
 </groupdef>
 
 <groupdef id="equalizer.shade.group" w="0" h="29" ghost="1" relatw="1">
@@ -172,5 +172,5 @@
 	<group id="equalizer.shade.group" x="0" y="0" h="29" ghost="1" cursor="cur.normal"/>
 </layout>	
 	
-  <script file="scripts\eq.maki"/>
+  <script file="..\WinampXP\scripts\eq.maki"/>
 </container>

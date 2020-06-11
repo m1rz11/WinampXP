@@ -1,4 +1,4 @@
-<container id="main" name="WACUP" default_visible="1" default_x="0" default_y="0">
+<container id="main" name="Main Window" default_visible="1" default_x="0" default_y="0">
 	
 <groupdef id="player.normal.group.main">
 
@@ -77,13 +77,13 @@
 	<group id="titlebar.winamptxt.group" x="0" y="0" h="30" w="124"/>
 
 
-	<text id="window.titlebar.title.dropshadow" x="25" y="-3" w="600" h="42" default=":componentname" font="trebuc" fontsize="17"
+	<text id="window.titlebar.title.dropshadow" x="25" y="-3" w="600" h="42" default="WACUP" font="trebuc" fontsize="17"
     align="left" color="10,24,131" bold="1" antialias="1" activealpha="255" inactiveAlpha="0" forceuppercase="0"/>
 	
-  	<text id="window.titlebar.title" x="24" y="-4" w="600" h="42" default=":componentname" font="trebuc" fontsize="17"
+  	<text id="window.titlebar.title" x="24" y="-4" w="600" h="42" default="WACUP" font="trebuc" fontsize="17"
     align="left" color="255,255,255" bold="1" antialias="1" activealpha="255" inactiveAlpha="0" forceuppercase="0"/>
 	
-  	<text id="window.titlebar.title.dim" x="24" y="-4" w="600" h="42" default=":componentname" font="trebuc" fontsize="17"
+  	<text id="window.titlebar.title.dim" x="24" y="-4" w="600" h="42" default="WACUP" font="trebuc" fontsize="17"
     align="left" color="216,228,248" bold="1" antialias="1" activealpha="0" inactivealpha="255" forceuppercase="0"/>
 
 	<layer id="titlebar.switch" x="30" y="0" w="-83" h="30" relatw="1" dblclickaction="SWITCH;shade" move="1" ghost="0" cursor="cur.move"/>
@@ -201,7 +201,7 @@
 
 	disabling pauseblink.maki to emulate WMP's behaviour when pausing a song
 	
-  <script file="scripts\pauseblink.maki"/>
+  <script file="..\WinampXP\scripts\pauseblink.maki"/>
   
   -->
 

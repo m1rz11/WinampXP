@@ -123,7 +123,7 @@
   <layer x="-20" y="-4" w="20" h="4" relatx="1" relaty="1" image="none" resize="bottomright" cursor="cur.resbottomright" alpha="0"/>
 
   <layoutstatus id="frame.layoutstatus" x="13" y="-48" w="-47" h="0" relaty="1" relatw="1" exclude="{system}" />
-  <script id="standardframe.script" file="scripts/standardframe.maki" param="15,44,-30,-60,0,0,1,1" />
+  <script id="standardframe.script" file="..\WinampXP\scripts/standardframe.maki" param="15,44,-30,-60,0,0,1,1" />
 
 </groupdef>
 
@@ -149,7 +149,7 @@
   <layer x="-15" y="-15" relatx="1" relaty="1" image="normal.resizer.bottomright" ghost="1" alpha="255"/>
   <layer x="-20" y="-20" w="20" h="20" relatx="1" relaty="1" image="none" resize="bottomright" cursor="cur.resbottomright" alpha="0"/>
 
-  <script id="standardframe.script" file="scripts/standardframe.maki" param="4,30,-8,-34,0,0,1,1" />
+  <script id="standardframe.script" file="..\WinampXP\scripts/standardframe.maki" param="4,30,-8,-34,0,0,1,1" />
 
 </groupdef>
 
