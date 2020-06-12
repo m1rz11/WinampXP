@@ -14,9 +14,9 @@ Victhor, the original creator of [Winamp Classic Modern](https://www.deviantart.
 ### TODO:
 For the next release:
 - Olive Green theme
-- Silver Theme
+- Silver theme
 
 For a later release:
-- Media Center Theme
-- Royale Noir Theme
+- Media Center theme
+- Royale Noir theme
 - Whistler theme
