@@ -12,7 +12,11 @@ Victhor, the original creator of [Winamp Classic Modern](https://www.deviantart.
 [Godron "The1" Freeman](https://github.com/The1Freeman), for doing a huge amount of work with xml files and porting some features over from [Winamp 2000 SP4](https://github.com/The1Freeman/Winamp2000SP4).
 
 ### TODO:
-- Remove unused code and other stuff
+For the next release:
+- Olive Green theme
+- Silver Theme
 
-### Planned features
-- Window themes (Olive Green, Silver, Media Center, Royale Noir, Whistler)
+For a later release:
+- Media Center Theme
+- Royale Noir Theme
+- Whistler theme
