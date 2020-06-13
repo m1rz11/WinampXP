@@ -17,6 +17,8 @@ For the next release:
 - Silver theme
 
 For a later release:
-- Media Center theme
+- Royale theme
 - Royale Noir theme
+- Embedded theme
+- Zune theme
 - Whistler theme
