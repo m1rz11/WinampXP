@@ -25,9 +25,12 @@
 	</accelerators>
 	
 	<include file="../WinampXP/xml/elements.xml"/>
+	<elements>
+	<include file="xml/elements-colors.xml"/>
+	</elements>
 	<include file="../WinampXP/xml/system.xml"/>
-  <include file="../WinampXP/xml/standardframe.xml"/>
-  <include file="../WinampXP/xml/titlebar.xml"/>
+  	<include file="../WinampXP/xml/standardframe.xml"/>
+  	<include file="../WinampXP/xml/titlebar.xml"/>
 	<include file="../WinampXP/xml/main-player.xml"/>
 	<include file="../WinampXP/xml/albumart.xml"/>
 	<include file="../WinampXP/xml/equalizer.xml"/>

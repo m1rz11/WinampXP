@@ -208,8 +208,8 @@
 </groupdef>
 <groupdef id="player.timedisplay.songtitle" cursor="cur.normal">
 
-	<text id="player.timedisplay.text" text="Time Display" x="-2" y="0" w="122" h="36" font="tahoma" fontsize="15" color="0,70,213" ghost="1"/>
-	<text text="Song Title" x="186" y="0" w="122" h="36" font="tahoma" fontsize="15" color="0,70,213" ghost="1"/>
+	<text id="player.timedisplay.text" text="Time Display" x="-2" y="0" w="122" h="36" font="tahoma" fontsize="15" color="tdtext.color" ghost="1"/>
+	<text text="Song Title" x="186" y="0" w="122" h="36" font="tahoma" fontsize="15" color="tdtext.color" ghost="1"/>
 
 </groupdef>
 <layout id="normal" minimum_h="242" minimum_w="550" maximum_w="10000" w="550" h="242" desktopalpha="1" droptarget="pldr" linkwidth="shade" appbar="top|bottom" >

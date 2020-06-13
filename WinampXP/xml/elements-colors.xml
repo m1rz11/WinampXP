@@ -1,7 +1,10 @@
   <color id="greentxtsui" value="138,196,64" gammagroup="display-sui-text"/>
   <color id="greentxttime" value="138,196,64" gammagroup="display-text"/>
   
-  	<color id="wasabi.text.color" value="0,0,0"/>
+  <color id="wasabi.text.color" value="0,0,0"/>
+
+  <!-- time display and song title box text color -->
+  <color id="tdtext.color" value="0,70,213"/>
 
 	<!-- Generic Lists -->
 	<color id="wasabi.list.text" value="0,0,0" gammagroup="display-sui-text"/> <!--lists/trees item foreground (also edit text) -->

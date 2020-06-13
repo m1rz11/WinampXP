@@ -573,5 +573,4 @@
   <bitmap id="window.shade.button.close.d" file="images/player-main.png" x="524" y="66" w="21" h="21" gammagroup="goldbuttons"/>
 
 	<include file="elements-system.xml"/>
-	<include file="elements-colors.xml"/>
 </elements>

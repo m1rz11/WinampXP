@@ -202,8 +202,8 @@ refreshVisSettings ()
 		visualizerpl.setXmlParam("coloring", "Line");
 	}
 	
-	if(v_color == 0 || v_color == 1){
-			//default blue color
+		if(v_color == 0 || v_color == 1){
+			//luna
 			visualizer.setXmlParam("alpha","255");
 			
 			visualizerwmp.setXmlParam("alpha","0");
@@ -221,7 +221,7 @@ refreshVisSettings ()
 
 			visualizer.setXmlParam("fps", "30");
 		}
-		if (v_color == 2)
+		else if (v_color == 2)
 		{
 			//winamp color
 			visualizer.setXmlParam("alpha","255");
@@ -376,6 +376,44 @@ refreshVisSettings ()
 			setColorosc("160,255,160");
 			visualizer.setXmlParam("fps", "24");
 		}
+		else if(v_color == 7){
+			//olive green
+			visualizer.setXmlParam("alpha","255");
+			
+			visualizerwmp.setXmlParam("alpha","0");
+			visualizerwmp.setXmlParam("mode","0");
+			visualizerwmps1.setXmlParam("alpha","0");
+			visualizerwmps1.setXmlParam("mode","0");
+			visualizerwmps2.setXmlParam("alpha","0");
+			visualizerwmps2.setXmlParam("mode","0");
+			visualizerwmps3.setXmlParam("alpha","0");
+			visualizerwmps3.setXmlParam("mode","0");
+			
+			visualizer.setXmlParam("colorallbands", "147,160,112");
+			visualizer.setXmlParam("colorbandpeak", "153,84,10");
+			setColorOsc("147,160,112");
+
+			visualizer.setXmlParam("fps", "30");
+		}
+		else if(v_color == 8){
+			//silver
+			visualizer.setXmlParam("alpha","255");
+			
+			visualizerwmp.setXmlParam("alpha","0");
+			visualizerwmp.setXmlParam("mode","0");
+			visualizerwmps1.setXmlParam("alpha","0");
+			visualizerwmps1.setXmlParam("mode","0");
+			visualizerwmps2.setXmlParam("alpha","0");
+			visualizerwmps2.setXmlParam("mode","0");
+			visualizerwmps3.setXmlParam("alpha","0");
+			visualizerwmps3.setXmlParam("mode","0");
+			
+			visualizer.setXmlParam("colorallbands", "178,180,191");
+			visualizer.setXmlParam("colorbandpeak", "178,180,191");
+			setColorOsc("178,180,191");
+
+			visualizer.setXmlParam("fps", "30");
+		}
 	setVis (currentMode);
 	darkDisplay(dark_display);
 }
@@ -411,6 +449,8 @@ Trigger.onRightButtonUp (int x, int y)
 	
 	visMenu.addSubMenu(colmenu, "Visualizer Emulation Mode");
 	colmenu.addCommand("Luna", 500, v_color == 0, 0);
+	colmenu.addCommand("Olive Green", 507, v_color == 7, 0);
+	colmenu.addCommand("Silver", 508, v_color == 8, 0);
 	colmenu.addCommand("Winamp/WACUP", 502, v_color == 2, 0);
 	colmenu.addSubMenu(wmpmenu, "Windows Media Player Modes");
 	wmpmenu.addCommand("Bars", 503, v_color == 3, 0);
@@ -558,7 +598,7 @@ ProcessMenuResult (int a)
     OAIDUBtnUE3.Leftclick ();
   }
 
-	else if (a >= 500 && a <= 506)
+	else if (a >= 500 && a <= 508)
 	{
 		v_color = a - 500;
 		if(v_color == 0 || v_color == 1){
@@ -579,7 +619,7 @@ ProcessMenuResult (int a)
 			setColorOsc("49,106,197");
 			visualizer.setXmlParam("fps", "30");
 		}
-		if (v_color == 2)
+		else if (v_color == 2)
 		{
 			//winamp color
 			visualizer.setXmlParam("alpha","255");
@@ -733,6 +773,44 @@ ProcessMenuResult (int a)
 
 			setColorosc("160,255,160");
 			visualizer.setXmlParam("fps", "24");
+		}
+		else if(v_color == 7){
+			//olive green
+			visualizer.setXmlParam("alpha","255");
+			
+			visualizerwmp.setXmlParam("alpha","0");
+			visualizerwmp.setXmlParam("mode","0");
+			visualizerwmps1.setXmlParam("alpha","0");
+			visualizerwmps1.setXmlParam("mode","0");
+			visualizerwmps2.setXmlParam("alpha","0");
+			visualizerwmps2.setXmlParam("mode","0");
+			visualizerwmps3.setXmlParam("alpha","0");
+			visualizerwmps3.setXmlParam("mode","0");
+			
+			visualizer.setXmlParam("colorallbands", "147,160,112");
+			visualizer.setXmlParam("colorbandpeak", "153,84,10");
+			setColorOsc("147,160,112");
+
+			visualizer.setXmlParam("fps", "30");
+		}
+		else if(v_color == 8){
+			//silver
+			visualizer.setXmlParam("alpha","255");
+			
+			visualizerwmp.setXmlParam("alpha","0");
+			visualizerwmp.setXmlParam("mode","0");
+			visualizerwmps1.setXmlParam("alpha","0");
+			visualizerwmps1.setXmlParam("mode","0");
+			visualizerwmps2.setXmlParam("alpha","0");
+			visualizerwmps2.setXmlParam("mode","0");
+			visualizerwmps3.setXmlParam("alpha","0");
+			visualizerwmps3.setXmlParam("mode","0");
+			
+			visualizer.setXmlParam("colorallbands", "178,180,191");
+			visualizer.setXmlParam("colorbandpeak", "178,180,191");
+			setColorOsc("178,180,191");
+
+			visualizer.setXmlParam("fps", "30");
 		}
 		setPrivateInt(getSkinName(), "Visualizer Color themes", v_color);
 	}

@@ -25,9 +25,12 @@
 	</accelerators>
 	
 	<include file="xml/elements.xml"/>
+	<elements>
+	<include file="xml/elements-colors.xml"/>
+	</elements>
 	<include file="xml/system.xml"/>
-  <include file="xml/standardframe.xml"/>
-  <include file="xml/titlebar.xml"/>
+  	<include file="xml/standardframe.xml"/>
+  	<include file="xml/titlebar.xml"/>
 	<include file="xml/main-player.xml"/>
 	<include file="xml/albumart.xml"/>
 	<include file="xml/equalizer.xml"/>
