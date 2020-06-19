@@ -9,7 +9,7 @@ Special thanks:
 
 Victhor, the original creator of [Winamp Classic Modern](https://www.deviantart.com/victhor/art/Winamp-Classic-Modern-by-Victhor-805797724), which is the foundation for this project.
 
-[Godron "The1" Freeman](https://github.com/The1Freeman), for doing a huge amount of work with xml files and porting some features over from [Winamp 2000 SP4](https://github.com/The1Freeman/Winamp2000SP4).
+[Godron "The1" Freeman](https://github.com/The1Freeman), the man behind [Winamp 2000 SP4](https://github.com/The1Freeman/Winamp2000SP4) for giving me a huge head start with development, and implementing many more cool features, like a WMP style visualizer.
 
 ### TODO:
 For the next release:
@@ -18,7 +18,6 @@ For the next release:
 
 For a later release:
 - Improved layout for playlist editor and equalizer
-
 - Royale theme
 - Royale Noir theme
 - Embedded theme
