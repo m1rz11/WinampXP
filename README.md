@@ -13,10 +13,12 @@ Victhor, the original creator of [Winamp Classic Modern](https://www.deviantart.
 
 ### TODO:
 For the next release:
-- Olive Green theme
+- ~~Olive Green theme~~
 - Silver theme
 
 For a later release:
+- Improved layout for playlist editor and equalizer
+
 - Royale theme
 - Royale Noir theme
 - Embedded theme
