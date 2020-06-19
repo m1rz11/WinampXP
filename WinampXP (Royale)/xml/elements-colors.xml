@@ -111,10 +111,10 @@
   <elementalias id="wasabi.scrollbar.foreground.inverted" target="wasabi.scrollbar.background"/>
 	<elementalias id="wasabi.scrollbar.background.inverted" target="wasabi.scrollbar.background"/>
 
-	<color id="wasabi.scrollbar.foreground.inverted" value="88,91,101" gammagroup="plastic"/> <!-- inverse scrollbar foreground color -->
-	<color id="wasabi.scrollbar.background.inverted" value="20,18,28" gammagroup="plastic"/> <!-- inverse inverse scrollbar background color AND PL Editor bg-->
-	<color id="wasabi.scrollbar.foreground" value="88,91,101" gammagroup="plastic"/> <!-- scrollbar foreground color -->
-	<color id="wasabi.scrollbar.background" value="20,18,28" gammagroup="plastic"/> <!-- scrollbar background color -->
+	<color id="wasabi.scrollbar.foreground.inverted" value="255,255,255" gammagroup="plastic"/> <!-- inverse scrollbar foreground color -->
+	<color id="wasabi.scrollbar.background.inverted" value="255,255,255" gammagroup="plastic"/> <!-- inverse inverse scrollbar background color AND PL Editor bg-->
+	<color id="wasabi.scrollbar.foreground" value="255,255,255" gammagroup="plastic"/> <!-- scrollbar foreground color -->
+	<color id="wasabi.scrollbar.background" value="255,255,255" gammagroup="plastic"/> <!-- scrollbar background color -->
 	
   <!-- WACUP only: Waveseeker -->
 
