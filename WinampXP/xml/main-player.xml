@@ -76,15 +76,14 @@
 	<grid id="titlebar.stripes" x="32" y="3" w="-120" h="28" relatw="1" left="titlebar.stripes.left" middle="titlebar.stripes.center" right="titlebar.stripes.right" move="1" activealpha="255" inactivealpha="100" />
 	<group id="titlebar.winamptxt.group" x="0" y="0" h="30" w="124"/>
 
-
 	<text id="window.titlebar.title.dropshadow" x="25" y="-3" w="600" h="42" default="WACUP" font="trebuc" fontsize="17"
-    align="left" color="10,24,131" bold="1" antialias="1" activealpha="255" inactiveAlpha="0" forceuppercase="0"/>
-	
+    align="left" color="titlebar.text.shadow" bold="1" antialias="1" activealpha="255" inactiveAlpha="0" forceuppercase="0"/>
+
   	<text id="window.titlebar.title" x="24" y="-4" w="600" h="42" default="WACUP" font="trebuc" fontsize="17"
-    align="left" color="255,255,255" bold="1" antialias="1" activealpha="255" inactiveAlpha="0" forceuppercase="0"/>
+    align="left" color="titlebar.text" bold="1" antialias="1" activealpha="255" inactiveAlpha="0" forceuppercase="0"/>
 	
   	<text id="window.titlebar.title.dim" x="24" y="-4" w="600" h="42" default="WACUP" font="trebuc" fontsize="17"
-    align="left" color="216,228,248" bold="1" antialias="1" activealpha="0" inactivealpha="255" forceuppercase="0"/>
+    align="left" color="titlebar.text.inactive" bold="1" antialias="1" activealpha="0" inactivealpha="255" forceuppercase="0"/>
 
 	<layer id="titlebar.switch" x="30" y="0" w="-83" h="30" relatw="1" dblclickaction="SWITCH;shade" move="1" ghost="0" cursor="cur.move"/>
 

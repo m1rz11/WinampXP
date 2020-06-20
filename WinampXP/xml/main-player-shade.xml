@@ -13,13 +13,13 @@
 	<layer id="pledit.region.bottom.right" x="-3" y="-3" relatx="1" relaty="1" image="window.shade.region.bottom.right" ghost="1" sysregion="-2"/>
 
 	<text id="shade.window.titlebar.title.dropshadow" x="25" y="-3" w="600" h="42" text="WACUP" font="trebuc" fontsize="17"
-    align="left" color="10,24,131" bold="1" antialias="1" activealpha="255" inactiveAlpha="0" forceuppercase="0"/>
+    align="left" color="titlebar.text.shadow" bold="1" antialias="1" activealpha="255" inactiveAlpha="0" forceuppercase="0"/>
 	
   	<text id="shade.window.titlebar.title" x="24" y="-4" w="600" h="42" text="WACUP" font="trebuc" fontsize="17"
-    align="left" color="255,255,255" bold="1" antialias="1" activealpha="255" inactiveAlpha="0" forceuppercase="0"/>
+    align="left" color="titlebar.text" bold="1" antialias="1" activealpha="255" inactiveAlpha="0" forceuppercase="0"/>
 	
   	<text id="shade.window.titlebar.title.dim" x="24" y="-4" w="600" h="42" text="WACUP" font="trebuc" fontsize="17"
-    align="left" color="216,228,248" bold="1" antialias="1" activealpha="0" inactivealpha="255" forceuppercase="0"/>
+    align="left" color="titlebar.text.inactive" bold="1" antialias="1" activealpha="0" inactivealpha="255" forceuppercase="0"/>
 
 	<layer id="switcher.dummy" fitparent="1" image="none" dblclickaction="SWITCH;normal" move="1" cursor="cur.normal"/>
 

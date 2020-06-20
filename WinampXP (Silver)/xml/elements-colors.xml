@@ -4,7 +4,7 @@
   <color id="wasabi.text.color" value="0,0,0"/>
   
   <!-- time display and song title box text color -->
-  <color id="tdtext.color" value="153,84,10"/>
+  <color id="tdtext.color" value="0,70,203"/>
 
 	<!-- Generic Lists -->
 	<color id="wasabi.list.text" value="0,0,0" gammagroup="display-sui-text"/> <!--lists/trees item foreground (also edit text) -->
@@ -13,9 +13,9 @@
 	<color id="wasabi.list.background.alternate" value="255,255,255" gammagroup="display"/>	
 
   <color id="wasabi.list.text.selected" value="255,255,255" gammagroup="current-active"/> <!--listview/treeview selection bar text color -->
-	<color id="wasabi.list.text.selected.background" value="147,160,112" gammagroup="selection-bg"/> <!--listview/treeview selection bar background color -->
-	<color id="studio.list.item.selected" value="147,160,112" gammagroup="current-active"/>
-	<color id="studio.list.item.focused" value="147,160,112" gammagroup="selection-bg"/>
+	<color id="wasabi.list.text.selected.background" value="178,180,191" gammagroup="selection-bg"/> <!--listview/treeview selection bar background color -->
+	<color id="studio.list.item.selected" value="178,180,191" gammagroup="current-active"/>
+	<color id="studio.list.item.focused" value="178,180,191" gammagroup="selection-bg"/>
   <color id="studio.list.item.selected.fg" value="128,128,128" gammagroup="display-sui-text"/>
 
 	<color id="wasabi.list.text.current" value="180,180,180" gammagroup="current-active"/> <!-- currently playing item in lists -->
@@ -44,18 +44,19 @@
   <color id="studio.tree.selected" value="0,0,0" gammagroup="selection-bg"/>
   <color id="studio.tree.hilited" value="greentxtsui" gammagroup="display-sui-text"/>
   <color id="studio.tree.hiliteddrop" value="greentxtsui" gammagroup="display-sui-text"/>
+  
 
   <!-- Generic Lists -->
   <color id="studio.list.text" value="0,0,0" gammagroup="display-sui-text"/>
 
   <!-- Item Lists -->
-  <color id="common.itemlist.outline.current" value="147,160,112" gammagroup="display-sui-text"/>
+  <color id="common.itemlist.outline.current" value="178,180,191" gammagroup="display-sui-text"/>
   <color id="common.itemlist.outline.focus" value="240,240,240" gammagroup="display-sui-text"/>
 
   <!-- playlist editor -->
   <color id="pledit.text" value="0,0,0" gammagroup="display-sui-text"/>
   <color id="pledit.text.current" value="248,248,248" gammagroup="current-active"/>
-  <color id="pledit.currentoutline" value="147,160,112" gammagroup="current-active"/>
+  <color id="pledit.currentoutline" value="178,180,191" gammagroup="current-active"/>
   <color id="pledit.dir.plitem.currect" value="255,255,255" gammagroup="current-active"/>
   <color id="pledit.dir.plitem" value="0,0,0" gammagroup="display-sui-text"/>
   <color id="pledit.dir.working" value="175,175,175" gammagroup="display-sui-text"/>
@@ -81,10 +82,14 @@
   <color id="wasabi.popupmenu.text.inactive" value="183,183,183" gammagroup="display-sui-text"/>
 
   <!-- Winamp 5.53+ PopupMenu -->
-
   <color id="wasabi.popupmenu.frame" value="172,168,153" gammagroup="display-sui"/>
   <color id="wasabi.popupmenu.separator" value="172,168,153" gammagroup="display-sui"/>
-  <color id="wasabi.popupmenu.background.selected" value="147,160,112" gammagroup="selection-bg"/>
+  <color id="wasabi.popupmenu.background.selected" value="178,180,191" gammagroup="selection-bg"/>
+
+  <!-- Titlebar text -->
+  <color id="titlebar.text" value="14,16,16" gammagroup="current-active"/>
+	<color id="titlebar.text.shadow" value="199,194,209" gammagroup="selection-bg"/>
+  <color id="titlebar.text.inactive" value="162,161,161" gammagroup="display-sui-text"/>
 
   <!-- Tooltip/Button -->	
   <color id="wasabi.tooltip.text" value="wasabi.popupmenu.text" gammagroup="txtlabels"/>

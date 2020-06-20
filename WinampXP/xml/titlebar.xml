@@ -25,13 +25,13 @@
   -->
   
   <text id="window.titlebar.title.dropshadow" x="13" y="-3" w="600" h="42" default=":componentname" font="trebuc" fontsize="17"
-    align="left" color="10,24,131" bold="1" antialias="1" activealpha="255" inactiveAlpha="0" forceuppercase="0"/>
+    align="left" color="titlebar.text.shadow" bold="1" antialias="1" activealpha="255" inactiveAlpha="0" forceuppercase="0"/>
 	
   <text id="window.titlebar.title" x="12" y="-4" w="600" h="42" default=":componentname" font="trebuc" fontsize="17"
-    align="left" color="255,255,255" bold="1" antialias="1" activealpha="255" inactiveAlpha="0" forceuppercase="0"/>
+    align="left" color="titlebar.text" bold="1" antialias="1" activealpha="255" inactiveAlpha="0" forceuppercase="0"/>
 	
   <text id="window.titlebar.title.dim" x="12" y="-4" w="600" h="42" default=":componentname" font="trebuc" fontsize="17"
-    align="left" color="216,228,248" bold="1" antialias="1" activealpha="0" inactivealpha="255" forceuppercase="0"/>
+    align="left" color="titlebar.text.inactive" bold="1" antialias="1" activealpha="0" inactivealpha="255" forceuppercase="0"/>
 
   <!--
   <group id="wasabi.titlebar.streak" instanceid="wasabi.titlebar.streak.right" x="0" y="3" w="-155" relatw="1" h="30" sysregion="1"/>

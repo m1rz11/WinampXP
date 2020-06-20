@@ -73,13 +73,13 @@
 	<button id="eq.shade.mainmenu" action="SYSMENU" x="0" y="1" image="player.button.mainmenu" hoverimage="player.button.mainmenu.h" downimage="player.button.mainmenu.d" alpha="255" tooltip="Winamp Menu" cursor="cur.normal"/>
 	
 	<text id="window.titlebar.title.dropshadow" x="25" y="-3" w="600" h="42" default=":componentname" font="trebuc" fontsize="17"
-    align="left" color="10,24,131" bold="1" antialias="1" activealpha="255" inactiveAlpha="0" move="1" dblclickaction="SWITCH;normal" forceuppercase="0"/>
+    align="left" color="titlebar.text.shadow" bold="1" antialias="1" activealpha="255" inactiveAlpha="0" move="1" dblclickaction="SWITCH;normal" forceuppercase="0"/>
 	
   	<text id="window.titlebar.title" x="24" y="-4" w="600" h="42" default=":componentname" font="trebuc" fontsize="17"
-    align="left" color="255,255,255" bold="1" antialias="1" activealpha="255" inactiveAlpha="0" move="1" dblclickaction="SWITCH;normal" forceuppercase="0"/>
+    align="left" color="titlebar.text" bold="1" antialias="1" activealpha="255" inactiveAlpha="0" move="1" dblclickaction="SWITCH;normal" forceuppercase="0"/>
 	
   	<text id="window.titlebar.title.dim" x="24" y="-4" w="600" h="42" default=":componentname" font="trebuc" fontsize="17"
-    align="left" color="216,228,248" bold="1" antialias="1" activealpha="0" inactivealpha="255" move="1" dblclickaction="SWITCH;normal" forceuppercase="0"/>
+    align="left" color="titlebar.text.inactive" bold="1" antialias="1" activealpha="0" inactivealpha="255" move="1" dblclickaction="SWITCH;normal" forceuppercase="0"/>
 
 	<grid id="shade.titlebar.stripes" x="10" y="3" w="-80" h="28" relatw="1" left="titlebar.stripes.left" middle="titlebar.stripes.center" right="titlebar.stripes.right" move="1" activealpha="255" inactivealpha="100" ghost="1"/>
 

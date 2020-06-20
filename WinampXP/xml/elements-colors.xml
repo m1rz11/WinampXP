@@ -38,7 +38,6 @@
 	<color id="wasabi.window.text" value="0,0,0" gammagroup="window-text"/> <!--text color within windows -->
 	<color id="wasabi.border.sunken" value="172,168,153" gammagroup="display-sui"/> <!-- color of dividers and sunken borders (also affects playlist scrollbar outline at the sides) -->
 
-
   <!-- Generic Trees -->
   <color id="studio.tree.text" value="0,0,0" gammagroup="display-sui-text"/>
   <color id="studio.tree.selected" value="0,0,0" gammagroup="selection-bg"/>
@@ -86,11 +85,15 @@
   <color id="wasabi.popupmenu.separator" value="172,168,153" gammagroup="display-sui"/>
   <color id="wasabi.popupmenu.background.selected" value="49,106,197" gammagroup="selection-bg"/>
 
+  <!-- Titlebar text -->
+  <color id="titlebar.text" value="255,255,255" gammagroup="current-active"/>
+	<color id="titlebar.text.shadow" value="10,24,131" gammagroup="selection-bg"/>
+  <color id="titlebar.text.inactive" value="216,228,248" gammagroup="display-sui-text"/>
+
   <!-- Tooltip/Button -->	
   <color id="wasabi.tooltip.text" value="wasabi.popupmenu.text" gammagroup="txtlabels"/>
   <color id="wasabi.tooltip.background" value="wasabi.popupmenu.background" gammagroup="plastic"/>
   <color id="wasabi.tooltip.frame" value="wasabi.popupmenu.frame" gammagroup="display-sui"/>
-
 
   <!-- Components -->
   <color id="studio.status.text" value="240,240,240" gammagroup="display-sui-text"/>

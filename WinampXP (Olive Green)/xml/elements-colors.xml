@@ -86,6 +86,11 @@
   <color id="wasabi.popupmenu.separator" value="172,168,153" gammagroup="display-sui"/>
   <color id="wasabi.popupmenu.background.selected" value="147,160,112" gammagroup="selection-bg"/>
 
+  <!-- Titlebar text -->
+  <color id="titlebar.text" value="255,255,255" gammagroup="current-active"/>
+	<color id="titlebar.text.shadow" value="65,64,10" gammagroup="selection-bg"/>
+  <color id="titlebar.text.inactive" value="255,255,255" gammagroup="display-sui-text"/>
+
   <!-- Tooltip/Button -->	
   <color id="wasabi.tooltip.text" value="wasabi.popupmenu.text" gammagroup="txtlabels"/>
   <color id="wasabi.tooltip.background" value="wasabi.popupmenu.background" gammagroup="plastic"/>
