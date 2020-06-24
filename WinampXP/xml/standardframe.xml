@@ -124,6 +124,9 @@
 
   <layoutstatus id="frame.layoutstatus" x="13" y="-48" w="-47" h="0" relaty="1" relatw="1" exclude="{system}" />
   <script id="standardframe.script" file="..\WinampXP\scripts/standardframe.maki" param="15,44,-30,-60,0,0,1,1" />
+  <!-- guess there is no other way -->
+  <script file="scripts/titletextAA_standardframe.maki"/>
+  
 
 </groupdef>
 

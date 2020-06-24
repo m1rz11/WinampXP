@@ -46,13 +46,13 @@
 	<layer id="pledit.background.display.right" x="-19" y="0" relatx="1" image="pl.shade.display.right" ghost="1" />
 	
 	<playlistPlus id="main.pl" x="19" y="7" w="-33" h="19" relatw="1" font="trebuc" fontsize="17" linespacing="1" bold="1"
-  color="titlebar.text.shadow" antialias="1" playcolor="10,24,131" sysregion="1" ghost="1" activealpha="255" inactiveAlpha="0"/>
+  color="titlebar.text.shadow" antialias="1" playcolor="titlebar.text.shadow" sysregion="1" ghost="1" activealpha="255" inactiveAlpha="0"/>
 	
   <playlistPlus id="main.pl" x="18" y="6" w="-33" h="19" relatw="1" font="trebuc" fontsize="17" linespacing="1" bold="1"
-  color="titlebar.text" antialias="1" playcolor="255,255,255" sysregion="1" ghost="1" activealpha="255" inactiveAlpha="0"/>
+  color="titlebar.text" antialias="1" playcolor="titlebar.text" sysregion="1" ghost="1" activealpha="255" inactiveAlpha="0"/>
   
   <playlistPlus id="main.pl" x="18" y="6" w="-33" h="19" relatw="1" font="trebuc" fontsize="17" linespacing="1" bold="1"
-  color="titlebar.text.inactive" antialias="1" playcolor="216,228,248" sysregion="1" ghost="1" activealpha="0" inactivealpha="255"/>
+  color="titlebar.text.inactive" antialias="1" playcolor="titlebar.text.inactive" sysregion="1" ghost="1" activealpha="0" inactivealpha="255"/>
 </groupdef>
 
 

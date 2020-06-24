@@ -95,10 +95,10 @@
 	<!--layer id="player.vis.blocker" x="8" y="10" w="72" h="15" image="none" cursor="cur.normal"/-->
 	
 	<text id="shade.time" display="TIME" x="80" y="5" w="86" h="20" font="trebuc" fontsize="21" timecolonwidth="9" timeroffstyle="0" align="center" 
-	 color="white" forcefixed="1" bold="1" dblclickaction="trackinfo" cursor="cur.normal" tooltip="Time Display (click to toggle elapsed/remaining)"/>
+	 color="titlebar.text" forcefixed="1" bold="1" dblclickaction="trackinfo" cursor="cur.normal" tooltip="Time Display (click to toggle elapsed/remaining)"/>
 	
 	<Songticker id="shade.display.songname" x="175" y="5" w="-179" h="20" relatw="1" showlen="1" font="trebuc" fontsize="18" align="center" 
-	rightclickaction="trackmenu" color="white" dblclickaction="trackinfo" alpha="255" cursor="cur.normal" tooltip="Song Title (right-click for options)"/>
+	rightclickaction="trackmenu" color="titlebar.text" dblclickaction="trackinfo" alpha="255" cursor="cur.normal" tooltip="Song Title (right-click for options)"/>
 	
 	<text id="player.display.actioninfo" x="175" y="5" w="-179" h="20" relatw="1" font="trebuc" fontsize="18" align="center" color="white" alpha="255" cursor="cur.normal"/>
 
