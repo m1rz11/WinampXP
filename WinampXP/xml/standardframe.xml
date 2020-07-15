@@ -153,6 +153,7 @@
   <layer x="-20" y="-20" w="20" h="20" relatx="1" relaty="1" image="none" resize="bottomright" cursor="cur.resbottomright" alpha="0"/>
 
   <script id="standardframe.script" file="..\WinampXP\scripts/standardframe.maki" param="4,30,-8,-34,0,0,1,1" />
+  <script file="scripts/titletextAA_standardframe.maki"/>
 
 </groupdef>
 
