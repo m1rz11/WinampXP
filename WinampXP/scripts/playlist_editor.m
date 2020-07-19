@@ -25,7 +25,6 @@ global string xuiparams = "";
 global int currNumLines, currMaxLines, linespace, pltopMod;
 global int currSel;
 global string playcolor, textcolor, selcolor;
-Global Windowholder plwh;
 
 Global Button shadeMainMenuIcon;
 
@@ -74,7 +73,6 @@ System.onScriptLoaded() {
 	//elipsis = scriptGroup.findObject("elipsis");
 
 	MainGroup = layoutPLNormal.findObject("pledit.content.group");
-	plwh = MainGroup.findObject("pl.wdh");
 
 	pltoptrack = getPrivateInt(getSkinName(),"PLTopTrack",0);
 	playcolor = "wasabi.list.text.current";
@@ -97,12 +95,7 @@ System.onScriptLoaded() {
 	String temp = (Application.GetSettingsPath()+"/WACUP_Tools/koopa.ini");
 	myCheckerDoc.load (temp);
 
-	if(myCheckerDoc.exists()) {
-		plwh.setXmlParam("x", "0");
-		plwh.setXmlParam("w", "0");
-	} else {
-		plwh.setXmlParam("x", "-2");
-		plwh.setXmlParam("w", "2");
+	if(!myCheckerDoc.exists()) {
 		shadeMainMenuIcon.setXmlParam("image", "player.button.mainmenu.winamp");
     	shadeMainMenuIcon.setXmlParam("hoverimage", "player.button.mainmenu.winamp.h");
     	shadeMainMenuIcon.setXmlParam("downimage", "player.button.mainmenu.winamp.d");
