@@ -120,6 +120,11 @@
 	<color id="wasabi.scrollbar.background.inverted" value="255,255,255" gammagroup="plastic"/> <!-- inverse inverse scrollbar background color AND PL Editor bg-->
 	<color id="wasabi.scrollbar.foreground" value="255,255,255" gammagroup="plastic"/> <!-- scrollbar foreground color -->
 	<color id="wasabi.scrollbar.background" value="255,255,255" gammagroup="plastic"/> <!-- scrollbar background color -->
+
+  <!-- vis colors for shade and pledit -->
+  <color id="vis.shade" value="255,255,255" gammagroup="plastic"/>
+  <color id="vis.shade.shadow" value="65,64,10" gammagroup="plastic"/>
+  <color id="vis.pledit" value="0,0,0" gammagroup="plastic"/>
 	
   <!-- WACUP only: Waveseeker -->
 

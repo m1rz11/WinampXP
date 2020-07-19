@@ -5,7 +5,7 @@ Function unloadShadePlayer();
 
 Global Group ScriptGroup, MainGroupShade, DisplayGroupShade, MainGroupMainPlayer, MainGroupPlayerDisplay;
 Global Button VisMenuEntry1, VisMenuEntry2, VisMenuEntry3, ShadeMainMenu;
-Global GuiObject DisplayTimeShade, Visualization, DisplayTimeMainPlayer;
+Global GuiObject DisplayTimeShade, DisplayTimeMainPlayer, Visualization;
 Global int timemodestring;
 
 Global Text Title1, Title2, Title3;
@@ -31,6 +31,8 @@ initShadePlayer() {
   ShadeMainMenu = MainGroupShade.getObject("player.button.mainmenu");
   
   Visualization = DisplayGroupShade.getObject("shade.vis");
+  /*
+  //don't think so
   Visualization.setXmlParam("colorallbands", "255,255,255");
   Visualization.setXmlParam("colorbandpeak", "255,255,255");
 	Visualization.setXmlParam("colorosc1", "255,255,255");
@@ -38,6 +40,7 @@ initShadePlayer() {
 	Visualization.setXmlParam("colorosc3", "255,255,255");
 	Visualization.setXmlParam("colorosc4", "255,255,255");
 	Visualization.setXmlParam("colorosc5", "255,255,255");
+  */
 
   timemodestring = getPrivateInt(getSkinName(), "timemodestring", timemodestring);
 
