@@ -467,6 +467,7 @@
   <bitmap id="window.button.bg" file="images/window/windows-background-main.png" x="187" y="299" w="51" h="44" gammagroup="plastic"/>
 
 	<!-- Playlist Window -->
+  <bitmap id="window.pl.bg" file="images/plbottom.png" x="0" y="0" w="540" h="40" gammagroup="plastic"/>
 	
   <bitmap id="window.pl.button.add.n" file="images/window/windows-background-main.png" x="9" y="344" w="46" h="48" gammagroup="greybuttons"/>
   <bitmap id="window.pl.button.add.h" file="images/window/windows-background-main.png" x="9" y="393" w="46" h="48" gammagroup="greybuttons"/>

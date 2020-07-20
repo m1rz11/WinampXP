@@ -1,7 +1,7 @@
 <container id="PLEdit" name="Playlist Editor" component="guid:{45F3F7C1-A6F3-4ee6-A15E-125E92FC3F8D}" default_visible="1" default_x="0" default_y="484" default_w="550" default_h="242">
 
 <groupdef id="pledit.content.group" cursor="cur.normal">
-	<component id="pl.wdh" x="-11" y="-14" w="22" relatw="1" h="-14" relath="1" noshowcmdbar="1" autoopen="1" autoclose="0" param="guid:{45F3F7C1-A6F3-4ee6-A15E-125E92FC3F8D}" />
+	<component id="pl.wdh" x="-11" y="-14" w="22" relatw="1" h="-15" relath="1" noshowcmdbar="1" autoopen="1" autoclose="0" param="guid:{45F3F7C1-A6F3-4ee6-A15E-125E92FC3F8D}" />
 </groupdef>
 
 <groupdef id="pledit.shade.group.main" w="0" h="35" ghost="1" relatw="1">
@@ -113,17 +113,19 @@
 
 	<sendparams target="mousetrap" dblClickAction="SWITCH;shade"/>
 
+	<layer id="pledit.background" image="window.pl.bg" x="4" y="-46" h="41" relatw="1" w="-8" relaty="1" alpha="255" cursor="cur.normal"/>
+
 	<button id="pledit.buttons.bg" x="9" y="-43" relaty="1" image="window.buttons.bg"/>
-	<button id="pledit.button.add" action="PE_ADD" x="9" y="-43" relaty="1" image="window.pl.button.add.n" hoverimage="window.pl.button.add.h" downimage="window.pl.button.add.d" tooltip="Add Files to Playlist" rectrgn="1" cursor="cur.normal"/>
-	<button id="pledit.button.rem" action="PE_REM" x="55" y="-43" relaty="1" image="window.pl.button.rem.n" hoverimage="window.pl.button.rem.h" downimage="window.pl.button.rem.d" tooltip="Remove Files from Playlist" rectrgn="1" cursor="cur.normal"/>
-	<button id="pledit.button.sel" action="PE_SEL" x="97" y="-43" relaty="1" image="window.pl.button.sel.n" hoverimage="window.pl.button.sel.h" downimage="window.pl.button.sel.d" tooltip="Select Files in Playlist" rectrgn="1" cursor="cur.normal"/>
-	<button id="pledit.button.misc" action="PE_MISC" x="139" y="-43" relaty="1" image="window.pl.button.misc.n" hoverimage="window.pl.button.misc.h" downimage="window.pl.button.misc.d" tooltip="Misc Actions" rectrgn="1" cursor="cur.normal"/>
+	<button id="pledit.button.add" action="PE_ADD" x="0" y="-43" relaty="1" image="window.pl.button.add.n" hoverimage="window.pl.button.add.h" downimage="window.pl.button.add.d" tooltip="Add Files to Playlist" rectrgn="1" cursor="cur.normal"/>
+	<button id="pledit.button.rem" action="PE_REM" x="44" y="-43" relaty="1" image="window.pl.button.rem.n" hoverimage="window.pl.button.rem.h" downimage="window.pl.button.rem.d" tooltip="Remove Files from Playlist" rectrgn="1" cursor="cur.normal"/>
+	<button id="pledit.button.sel" action="PE_SEL" x="84" y="-43" relaty="1" image="window.pl.button.sel.n" hoverimage="window.pl.button.sel.h" downimage="window.pl.button.sel.d" tooltip="Select Files in Playlist" rectrgn="1" cursor="cur.normal"/>
+	<button id="pledit.button.misc" action="PE_MISC" x="124" y="-43" relaty="1" image="window.pl.button.misc.n" hoverimage="window.pl.button.misc.h" downimage="window.pl.button.misc.d" tooltip="Misc Actions" rectrgn="1" cursor="cur.normal"/>
 
 	<button id="pledit.button.bg" x="-59" y="-43" relatx="1" relaty="1" image="window.button.bg"/>
 	<button id="pledit.button.list" action="PE_LIST" x="-58" y="-43" relatx="1" relaty="1" image="window.pl.button.ploptns.n" hoverimage="window.pl.button.ploptns.h" downimage="window.pl.button.ploptns.d" tooltip="Manage Playlist" rectrgn="1" cursor="cur.normal"/>
 
   <grid id="pl.display.bg" x="-362" y="-43" h="29" w="301" relatx="1" relaty="1" left="window.pl.display.bg.left" middle="window.pl.display.bg.middle" right="window.pl.display.bg.right" ghost="1" alpha="255"/>
-  <grid id="pl.display" x="-362" y="-38" h="29" w="301" relatx="1" relaty="1" left="window.pl.display.left" middle="window.pl.display.middle" right="window.pl.display.right" ghost="1" alpha="255"/>
+  <grid id="pl.display" x="-362" y="-43" h="29" w="301" relatx="1" relaty="1" left="window.pl.display.left" middle="window.pl.display.middle" right="window.pl.display.right" ghost="1" alpha="255"/>
 	
 	<!--rect id="plssayer.vis" x="-354" y="-36" w="72" h="15" alpha="255" relatx="1" relaty="1"  color="0,0,250" filled="0"/-->
 	<vis id="shade.vis" x="-354" y="-31" w="72" h="15" relatx="1" relaty="1" cursor="cur.normal" gammagroup="visualizers"/>
