@@ -28,8 +28,6 @@ global string playcolor, textcolor, selcolor;
 
 Global Button shadeMainMenuIcon;
 
-Global Vis PLVisualizer;
-
 global PlEdit PeListener;
 
 global timer delayOnLoad, scrollAnim, delayRefreshPL;
@@ -59,16 +57,6 @@ System.onScriptLoaded() {
 	dummy = scriptGroup.getObject("dummy");
 	selector = scriptGroup.getObject("xui.playlistplus.selector");
 	plslider = scriptGroup.getObject("plslider");
-
-	//vis garbage
-	PLVisualizer = layoutPLNormal.getObject("shade.vis");
-	PLvisualizer.setXmlParam("colorallbands", "0,0,0");
-	PLvisualizer.setXmlParam("colorbandpeak", "0,0,0");
-	PLvisualizer.setXmlParam("colorosc1", "0,0,0");
-	PLvisualizer.setXmlParam("colorosc2", "0,0,0");
-	PLvisualizer.setXmlParam("colorosc3", "0,0,0");
-	PLvisualizer.setXmlParam("colorosc4", "0,0,0");
-	PLvisualizer.setXmlParam("colorosc5", "0,0,0");
 
 	//elipsis = scriptGroup.findObject("elipsis");
 

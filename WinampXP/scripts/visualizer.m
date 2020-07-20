@@ -19,7 +19,7 @@ Global Container containerMain;
 Global Container containerPL;
 Global Layout layoutPL, layoutMainNormal, layoutMainShade;
 Global Group NormalGroupMain, NormalGroupDisplay, ShadeGroupMain, ShadeGroupDisplay, TDSongTitleGroup;
-Global Vis visualizer, visualizershade, visualizerpl, visualizerwmp, visualizerwmps1, visualizerwmps2, visualizerwmps3;
+Global Vis visualizer, visualizershade, /*visualizerpl, */visualizerwmp, visualizerwmps1, visualizerwmps2, visualizerwmps3;
 Global Layer wmpblackness;
 Global Button OAIDUBtnUE1, OAIDUBtnUE2, OAIDUBtnUE3;
 Global GuiObject DisplayTime;
@@ -71,9 +71,9 @@ System.onScriptLoaded()
 	ShadeGroupDisplay = ShadeGroupMain.findObject("player.shade.group.display");
 	visualizershade = ShadeGroupDisplay.findObject("shade.vis");
 		
-  containerPL = System.getContainer("PLEdit");
-  layoutPL = containerPL.getLayout("normalpl");
-	visualizerpl = layoutPL.findObject("shade.vis");
+  	containerPL = System.getContainer("PLEdit");
+  	layoutPL = containerPL.getLayout("normalpl");
+	//visualizerpl = layoutPL.findObject("shade.vis");
 
 	Trigger = NormalGroupDisplay.findObject("player.vis.trigger");
 	TriggerBlocker = layoutPL.findObject("player.vis.blocker");
@@ -103,11 +103,11 @@ System.onScriptLoaded()
 	visualizershade.setXmlParam("peaks", integerToString(show_peaks));
 	visualizershade.setXmlParam("peakfalloff", integerToString(p_falloffspeed));
 	visualizershade.setXmlParam("falloff", integerToString(a_falloffspeed));
-
+	/*
 	visualizerpl.setXmlParam("peaks", integerToString(show_peaks));
 	visualizerpl.setXmlParam("peakfalloff", integerToString(p_falloffspeed));
 	visualizerpl.setXmlParam("falloff", integerToString(a_falloffspeed));
-	
+	*/
 	//display stuff
 	DisplayTime = NormalGroupDisplay.getObject("display.time");
 	DisplayStatusIcons = NormalGroupDisplay.getObject("status");
@@ -130,7 +130,7 @@ System.onScriptLoaded()
 
 	refreshVisSettings ();
 }
-
+/*
 visualizerpl.onSetVisible(int on) {
 	if (on) refreshVisSettings ();
 }
@@ -138,7 +138,7 @@ visualizerpl.onSetVisible(int on) {
 visualizershade.onSetVisible(int on) {
 	if (on) refreshVisSettings ();
 }
-
+*/
 refreshVisSettings ()
 {
 	currentMode = getPrivateInt(getSkinName(), "Visualizer Mode", 1);
@@ -172,34 +172,34 @@ refreshVisSettings ()
 	visualizershade.setXmlParam("peaks", integerToString(show_peaks));
 	visualizershade.setXmlParam("peakfalloff", integerToString(p_falloffspeed));
 	visualizershade.setXmlParam("falloff", integerToString(a_falloffspeed));	
-
+/*
 	visualizerpl.setXmlParam("peaks", integerToString(show_peaks));
 	visualizerpl.setXmlParam("peakfalloff", integerToString(p_falloffspeed));
 	visualizerpl.setXmlParam("falloff", integerToString(a_falloffspeed));
-
+*/
 	if (a_coloring == 0)
 	{
 		visualizer.setXmlParam("coloring", "Normal");
 		visualizershade.setXmlParam("coloring", "Normal");
-		visualizerpl.setXmlParam("coloring", "Normal");
+		//visualizerpl.setXmlParam("coloring", "Normal");
 	}
 	else if (a_coloring == 1)
 	{
 		visualizer.setXmlParam("coloring", "Normal");
 		visualizershade.setXmlParam("coloring", "Normal");
-		visualizerpl.setXmlParam("coloring", "Normal");
+		//visualizerpl.setXmlParam("coloring", "Normal");
 	}
 	else if (a_coloring == 2)
 	{
 		visualizer.setXmlParam("coloring", "Fire");
 		visualizershade.setXmlParam("coloring", "Fire");
-		visualizerpl.setXmlParam("coloring", "Fire");
+		//visualizerpl.setXmlParam("coloring", "Fire");
 	}
 	else if (a_coloring == 3)
 	{
 		visualizer.setXmlParam("coloring", "Line");
 		visualizershade.setXmlParam("coloring", "Line");
-		visualizerpl.setXmlParam("coloring", "Line");
+		//visualizerpl.setXmlParam("coloring", "Line");
 	}
 	
 		if(v_color == 0 || v_color == 1){
@@ -526,7 +526,7 @@ ProcessMenuResult (int a)
 		show_peaks = (show_peaks - 1) * (-1);
 		visualizer.setXmlParam("peaks", integerToString(show_peaks));
 		visualizershade.setXmlParam("peaks", integerToString(show_peaks));
-		visualizerpl.setXmlParam("peaks", integerToString(show_peaks));
+		//visualizerpl.setXmlParam("peaks", integerToString(show_peaks));
 		setPrivateInt(getSkinName(), "Visualizer show Peaks", show_peaks);
 	}
 
@@ -542,7 +542,7 @@ ProcessMenuResult (int a)
 		p_falloffspeed = a - 200;
 		visualizer.setXmlParam("peakfalloff", integerToString(p_falloffspeed));
 		visualizershade.setXmlParam("peakfalloff", integerToString(p_falloffspeed));
-		visualizerpl.setXmlParam("peakfalloff", integerToString(p_falloffspeed));
+		//visualizerpl.setXmlParam("peakfalloff", integerToString(p_falloffspeed));
 		setPrivateInt(getSkinName(), "Visualizer peaks falloff", p_falloffspeed);
 	}
 
@@ -551,7 +551,7 @@ ProcessMenuResult (int a)
 		a_falloffspeed = a - 300;
 		visualizer.setXmlParam("falloff", integerToString(a_falloffspeed));
 		visualizershade.setXmlParam("falloff", integerToString(a_falloffspeed));
-		visualizerpl.setXmlParam("falloff", integerToString(a_falloffspeed));
+		//visualizerpl.setXmlParam("falloff", integerToString(a_falloffspeed));
 		setPrivateInt(getSkinName(), "Visualizer analyzer falloff", a_falloffspeed);
 	}
 
@@ -562,25 +562,25 @@ ProcessMenuResult (int a)
 		{
 			visualizer.setXmlParam("coloring", "Normal");
 			visualizershade.setXmlParam("coloring", "Normal");
-			visualizerpl.setXmlParam("coloring", "Normal");
+			//visualizerpl.setXmlParam("coloring", "Normal");
 		}
 		else if (a_coloring == 1)
 		{
 			visualizer.setXmlParam("coloring", "Normal");
 			visualizershade.setXmlParam("coloring", "Normal");
-			visualizerpl.setXmlParam("coloring", "Normal");
+			//visualizerpl.setXmlParam("coloring", "Normal");
 		}
 		else if (a_coloring == 2)
 		{
 			visualizer.setXmlParam("coloring", "Fire");
 			visualizershade.setXmlParam("coloring", "Fire");
-			visualizerpl.setXmlParam("coloring", "Fire");
+			//visualizerpl.setXmlParam("coloring", "Fire");
 		}
 		else if (a_coloring == 3)
 		{
 			visualizer.setXmlParam("coloring", "Line");
 			visualizershade.setXmlParam("coloring", "Line");
-			visualizerpl.setXmlParam("coloring", "Line");
+			//visualizerpl.setXmlParam("coloring", "Line");
 		}
 		setPrivateInt(getSkinName(), "Visualizer analyzer coloring", a_coloring);
 	}
@@ -955,57 +955,57 @@ setVis (int mode)
 		HideForVic.show();
 		visualizer.setMode(0);
 		visualizershade.setMode(0);
-		visualizerpl.setMode(0);
+		//visualizerpl.setMode(0);
 	}
 	else if (mode == 1)
 	{
 		visualizer.setXmlParam("bandwidth", "wide");
 		visualizershade.setXmlParam("bandwidth", "wide");
-		visualizerpl.setXmlParam("bandwidth", "wide");
+		//visualizerpl.setXmlParam("bandwidth", "wide");
 		HideForVic.show();
 		visualizer.setMode(1);
 		visualizershade.setMode(1);
-		visualizerpl.setMode(1);
+		//visualizerpl.setMode(1);
 	}
 	else if (mode == 2)
 	{
 		visualizer.setXmlParam("bandwidth", "thin");
 		visualizershade.setXmlParam("bandwidth", "thin");
-		visualizerpl.setXmlParam("bandwidth", "thin");
+		//visualizerpl.setXmlParam("bandwidth", "thin");
 		HideForVic.show();
 		visualizer.setMode(1);
 		visualizershade.setMode(1);
-		visualizerpl.setMode(1);
+		//visualizerpl.setMode(1);
 	}
 	else if (mode == 3)
 	{
 		visualizer.setXmlParam("oscstyle", "solid");
 		visualizershade.setXmlParam("oscstyle", "solid");
-		visualizerpl.setXmlParam("oscstyle", "solid");
+		//visualizerpl.setXmlParam("oscstyle", "solid");
 		HideForVic.hide();
 		visualizer.setMode(2);
 		visualizershade.setMode(2);
-		visualizerpl.setMode(2);
+		//visualizerpl.setMode(2);
 	}
 	else if (mode == 4)
 	{
 		visualizer.setXmlParam("oscstyle", "dots");
 		visualizershade.setXmlParam("oscstyle", "dots");
-		visualizerpl.setXmlParam("oscstyle", "dots");
+		//visualizerpl.setXmlParam("oscstyle", "dots");
 		HideForVic.hide();
 		visualizer.setMode(2);
 		visualizershade.setMode(2);
-		visualizerpl.setMode(2);
+		//visualizerpl.setMode(2);
 	}
 	else if (mode == 5)
 	{
 		visualizer.setXmlParam("oscstyle", "lines");
 		visualizershade.setXmlParam("oscstyle", "lines");
-		visualizerpl.setXmlParam("oscstyle", "lines");
+		//visualizerpl.setXmlParam("oscstyle", "lines");
 		HideForVic.hide();
 		visualizer.setMode(2);
 		visualizershade.setMode(2);
-		visualizerpl.setMode(2);
+		//visualizerpl.setMode(2);
 	}
 	currentMode = mode;
 }

@@ -45,13 +45,13 @@
 	<layer id="pledit.background.display.center" x="81" y="0" w="-100" relatw="1" image="pl.shade.display.middle" tile="1" ghost="1" />
 	<layer id="pledit.background.display.right" x="-19" y="0" relatx="1" image="pl.shade.display.right" ghost="1" />
 	
-	<playlistPlus id="main.pl" x="19" y="7" w="-33" h="19" relatw="1" font="trebuc" fontsize="17" linespacing="1" bold="1"
+	<playlistPlus id="main.pl" x="19" y="7" w="-28" h="19" relatw="1" font="trebuc" fontsize="17" linespacing="1" bold="1"
   color="titlebar.text.shadow" antialias="1" playcolor="titlebar.text.shadow" sysregion="1" ghost="1" activealpha="255" inactiveAlpha="0"/>
 	
-  <playlistPlus id="main.pl" x="18" y="6" w="-33" h="19" relatw="1" font="trebuc" fontsize="17" linespacing="1" bold="1"
+  <playlistPlus id="main.pl" x="18" y="6" w="-28" h="19" relatw="1" font="trebuc" fontsize="17" linespacing="1" bold="1"
   color="titlebar.text" antialias="1" playcolor="titlebar.text" sysregion="1" ghost="1" activealpha="255" inactiveAlpha="0"/>
   
-  <playlistPlus id="main.pl" x="18" y="6" w="-33" h="19" relatw="1" font="trebuc" fontsize="17" linespacing="1" bold="1"
+  <playlistPlus id="main.pl" x="18" y="6" w="-28" h="19" relatw="1" font="trebuc" fontsize="17" linespacing="1" bold="1"
   color="titlebar.text.inactive" antialias="1" playcolor="titlebar.text.inactive" sysregion="1" ghost="1" activealpha="0" inactivealpha="255"/>
 </groupdef>
 
@@ -81,7 +81,7 @@
 </groupdef>
 
 
-<groupdef id="pledit.miniplayback.buttons">
+<!--groupdef id="pledit.miniplayback.buttons">
 	<button id="player.button.previous" action="PREV" x="0" y="0" image="pl.button.previous.n" hoverimage="pl.button.previous.h" downimage="pl.button.previous.d" rectrgn="1" cursor="cur.normal"/>
 	<button id="player.button.pause" action="PAUSE" x="20" y="0" image="pl.button.pause.n" hoverimage="pl.button.pause.h" downimage="pl.button.pause.d" rectrgn="1" cursor="cur.normal"/>
 	<button id="player.button.play" action="PLAY" x="20" y="0" image="pl.button.play.n" hoverimage="pl.button.play.h" downimage="pl.button.play.d" rectrgn="1" cursor="cur.normal"/>
@@ -90,7 +90,7 @@
   <button id="player.button.eject" action="EJECT" x="80" y="0" image="pl.button.eject.n" hoverimage="pl.button.eject.h" downimage="pl.button.eject.d" rectrgn="1" cursor="cur.normal"/>
 
   <script file="..\WinampXP\scripts\play_pause.maki" param="player.button.play;player.button.pause"/>
-</groupdef>
+</groupdef-->
 
 <groupdef id="pledit.switch.button">
 	<!-- active -->
@@ -102,7 +102,7 @@
 </groupdef>
 
 
-<layout id="normalpl" background="component.basetexture" desktopalpha="0" minimum_h="242" minimum_w="550" linkwidth="shade" appbar="top|bottom|left|right" >
+<layout id="normalpl" background="component.basetexture" desktopalpha="0" minimum_h="242" minimum_w="212" linkwidth="shade" appbar="top|bottom|left|right" >
 	<Wasabi:StandardFrame:Status x="0" y="0" w="0" h="0" relatw="1" relath="1" content="pledit.content.group" />
 	<sendparams target="window.button.switch" visible="1"/>
 	<sendparams target="wasabi.frame.layout.windowcontrol" x="-62" w="51"/>
@@ -121,22 +121,28 @@
 	<button id="pledit.button.sel" action="PE_SEL" x="84" y="-43" relaty="1" image="window.pl.button.sel.n" hoverimage="window.pl.button.sel.h" downimage="window.pl.button.sel.d" tooltip="Select Files in Playlist" rectrgn="1" cursor="cur.normal"/>
 	<button id="pledit.button.misc" action="PE_MISC" x="124" y="-43" relaty="1" image="window.pl.button.misc.n" hoverimage="window.pl.button.misc.h" downimage="window.pl.button.misc.d" tooltip="Misc Actions" rectrgn="1" cursor="cur.normal"/>
 
-	<button id="pledit.button.bg" x="-59" y="-43" relatx="1" relaty="1" image="window.button.bg"/>
-	<button id="pledit.button.list" action="PE_LIST" x="-58" y="-43" relatx="1" relaty="1" image="window.pl.button.ploptns.n" hoverimage="window.pl.button.ploptns.h" downimage="window.pl.button.ploptns.d" tooltip="Manage Playlist" rectrgn="1" cursor="cur.normal"/>
+	<!--button id="pledit.button.bg" x="-59" y="-43" relatx="1" relaty="1" image="window.button.bg"/-->
+	<button id="pledit.button.list" action="PE_LIST" x="-52" y="-43" relatx="1" relaty="1" image="window.pl.button.ploptns.n" hoverimage="window.pl.button.ploptns.h" downimage="window.pl.button.ploptns.d" tooltip="Manage Playlist" rectrgn="1" cursor="cur.normal"/>
 
-  <grid id="pl.display.bg" x="-362" y="-43" h="29" w="301" relatx="1" relaty="1" left="window.pl.display.bg.left" middle="window.pl.display.bg.middle" right="window.pl.display.bg.right" ghost="1" alpha="255"/>
+  <!--grid id="pl.display.bg" x="-362" y="-43" h="29" w="301" relatx="1" relaty="1" left="window.pl.display.bg.left" middle="window.pl.display.bg.middle" right="window.pl.display.bg.right" ghost="1" alpha="255"/-->
   <grid id="pl.display" x="-362" y="-43" h="29" w="301" relatx="1" relaty="1" left="window.pl.display.left" middle="window.pl.display.middle" right="window.pl.display.right" ghost="1" alpha="255"/>
 	
 	<!--rect id="plssayer.vis" x="-354" y="-36" w="72" h="15" alpha="255" relatx="1" relaty="1"  color="0,0,250" filled="0"/-->
-	<vis id="shade.vis" x="-354" y="-31" w="72" h="15" relatx="1" relaty="1" cursor="cur.normal" gammagroup="visualizers"/>
+	<!--vis id="shade.vis" x="-354" y="-31" w="72" h="15" relatx="1" relaty="1" cursor="cur.normal" gammagroup="visualizers"/-->
 	<!-- rect id="hide.for.gordon" x="-283" y="-36" w="2" h="17" relatx="1" relaty="1" color="28,22,50" filled="1" gammagroup="display"/ -->
   <!--layer id="hide.for.vic" x="27" y="71" image="none" ghost="1" alpha="0"/-->
 	<layer id="player.vis.blocker" x="-354" y="-36" w="72" h="15" relatx="1" relaty="1" image="none" cursor="cur.normal" alpha="0"/>
 	
-	<text id="pledit.info" x="-181" y="-37" h="19" w="116" relatx="1" relaty="1" display="PE_Info" font="sarpanch" fontsize="14" valign="middle" align="center" 
-	rightclickaction="trackmenu" color="0,0,0" alpha="255" cursor="cur.normal"/>
+	<text id="pledit.info.shadow" x="-212" y="8" h="19" w="136" relatx="1" display="PE_Info" font="trebuc" fontsize="17" bold="1" valign="middle" align="right" 
+	rightclickaction="trackmenu" color="titlebar.text.shadow" move="1" activealpha="255" inactiveAlpha="0" dblClickAction="SWITCH;shade" cursor="cur.normal"/>
 
-	<group id="pledit.miniplayback.buttons" x="-278" y="-33" relatx="1" relaty="1" cursor="cur.normal" alpha="255"/>
+	<text id="pledit.info" x="-213" y="7" h="19" w="136" relatx="1" display="PE_Info" font="trebuc" fontsize="17" bold="1" valign="middle" align="right" 
+	rightclickaction="trackmenu" color="titlebar.text" move="1" activealpha="255" inactiveAlpha="0" dblClickAction="SWITCH;shade" cursor="cur.normal"/>
+
+	<text id="pledit.info" x="-213" y="7" h="19" w="136" relatx="1" display="PE_Info" font="trebuc" fontsize="17" bold="1" valign="middle" align="right" 
+	rightclickaction="trackmenu" color="titlebar.text.inactive" move="1" activealpha="0" inactiveAlpha="255" dblClickAction="SWITCH;shade" cursor="cur.normal"/>
+
+	<!--group id="pledit.miniplayback.buttons" x="-278" y="-33" relatx="1" relaty="1" cursor="cur.normal" alpha="255"/-->
 	<group id="pledit.switch.button" x="-80" y="-1" h="30" w="55" relatx="1"/>
 
   <!--script file="scripts\visualizer.maki" param="shade.vis;player.vis.trigger;hide.for.vic"/-->
@@ -144,7 +150,7 @@
 </layout> 
 
 
-<layout id="shade" w="550" h="29" minimum_w="550" minimum_h="29" maximum_w="10000" droptarget="pldr" desktopalpha="0" linkwidth="normalpl">
+<layout id="shade" w="550" h="29" minimum_w="212" minimum_h="29" maximum_w="10000" droptarget="pldr" desktopalpha="0" linkwidth="normalpl">
 	<group id="pledit.shade.group.main" x="0" y="0" h="29" ghost="1" cursor="cur.normal"/>
 </layout>	
 	
