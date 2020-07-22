@@ -5,7 +5,7 @@
   <!--layer id="eq.background" image="window.pl.bg" x="4" y="-20" relatw="1" relath="1" w="-8" h="20" alpha="255" cursor="cur.normal"/-->
   <layer id="eq.background2" image="window.pl.bg" x="4" y="-41" relatw="1" relaty="1" w="-8" h="40" alpha="255" cursor="cur.normal"/>
 
-  <layer id="eq.normal.bg" x="0" y="-85" image="eq.normal.bg" move="1" sysregion="1" alpha="255"/>
+  <layer id="eq.normal.bg" x="4" y="-78" image="eq.normal.bg" move="1" sysregion="1" alpha="255"/>
   <rect id="eq.mover" x="10" y="3" h="200" w="-20" relatw="1" filled="1" move="1" cursor="cur.normal" alpha="0"/>
 
 	<ToggleButton id="eq.button.on" action="EQ_TOGGLE" x="6" y="169" w="58" h="38" image="eq.normal.button.power.on" hoverimage="eq.normal.button.power.on.h" downimage="eq.normal.button.power.on.d" rectrgn="1" cursor="cur.normal"/>
@@ -24,41 +24,41 @@
 
   <!--images source="preamp" x="38" y="68" w="5" h="106" images="player.animation.eq.sliders" imagesspacing="106"/-->
 	
-  <Animatedlayer id="preamp_layer" image="eq.slider.bg.anim" x="46" y="70" w="6" h="107" ghost="1" alpha="255"/>
+  <Animatedlayer id="preamp_layer" image="eq.slider.bg.anim" x="50" y="77" w="6" h="107" ghost="1" alpha="255"/>
   
-	<slider id="preamp" action="EQ_BAND" param="PREAMP" x="38" y="64" h="119" w="22" orientation="vertical" thumb="eq.normal.button.slider.v.n" hoverthumb="eq.normal.button.slider.v.h" downthumb="eq.normal.button.slider.v.d" tooltip="Preamp" cursor="cur.normal"/>
+	<slider id="preamp" action="EQ_BAND" param="PREAMP" x="42" y="18" h="119" w="22" orientation="vertical" thumb="eq.normal.button.slider.v.n" hoverthumb="eq.normal.button.slider.v.h" downthumb="eq.normal.button.slider.v.d" tooltip="Preamp" cursor="cur.normal"/>
 
 	<!--layer id="eq1.bg" x="131" y="70" image="eq.slider.bg.1" ghost="1"/-->
 	
-  <Animatedlayer id="eq1.bg" image="eq.slider.bg.anim" x="131" y="70" w="6" h="107" ghost="1" alpha="255"/>
-  <Animatedlayer id="eq2.bg" image="eq.slider.bg.anim" x="171" y="70" w="6" h="107" ghost="1" alpha="255"/>
-  <Animatedlayer id="eq3.bg" image="eq.slider.bg.anim" x="211" y="70" w="6" h="107" ghost="1" alpha="255"/>
-  <Animatedlayer id="eq4.bg" image="eq.slider.bg.anim" x="251" y="70" w="6" h="107" ghost="1" alpha="255"/>
-  <Animatedlayer id="eq5.bg" image="eq.slider.bg.anim" x="291" y="70" w="6" h="107" ghost="1" alpha="255"/>
-  <Animatedlayer id="eq6.bg" image="eq.slider.bg.anim" x="331" y="70" w="6" h="107" ghost="1" alpha="255"/>
-  <Animatedlayer id="eq7.bg" image="eq.slider.bg.anim" x="371" y="70" w="6" h="107" ghost="1" alpha="255"/>
-  <Animatedlayer id="eq8.bg" image="eq.slider.bg.anim" x="411" y="70" w="6" h="107" ghost="1" alpha="255"/>
-  <Animatedlayer id="eq9.bg" image="eq.slider.bg.anim" x="451" y="70" w="6" h="107" ghost="1" alpha="255"/>
-  <Animatedlayer id="eq10.bg" image="eq.slider.bg.anim" x="491" y="70" w="6" h="107" ghost="1" alpha="255"/>
+  <Animatedlayer id="eq1.bg" image="eq.slider.bg.anim" x="135" y="77" w="6" h="107" ghost="1" alpha="255"/>
+  <Animatedlayer id="eq2.bg" image="eq.slider.bg.anim" x="175" y="77" w="6" h="107" ghost="1" alpha="255"/>
+  <Animatedlayer id="eq3.bg" image="eq.slider.bg.anim" x="215" y="77" w="6" h="107" ghost="1" alpha="255"/>
+  <Animatedlayer id="eq4.bg" image="eq.slider.bg.anim" x="255" y="77" w="6" h="107" ghost="1" alpha="255"/>
+  <Animatedlayer id="eq5.bg" image="eq.slider.bg.anim" x="295" y="77" w="6" h="107" ghost="1" alpha="255"/>
+  <Animatedlayer id="eq6.bg" image="eq.slider.bg.anim" x="335" y="77" w="6" h="107" ghost="1" alpha="255"/>
+  <Animatedlayer id="eq7.bg" image="eq.slider.bg.anim" x="375" y="77" w="6" h="107" ghost="1" alpha="255"/>
+  <Animatedlayer id="eq8.bg" image="eq.slider.bg.anim" x="415" y="77" w="6" h="107" ghost="1" alpha="255"/>
+  <Animatedlayer id="eq9.bg" image="eq.slider.bg.anim" x="455" y="77" w="6" h="107" ghost="1" alpha="255"/>
+  <Animatedlayer id="eq10.bg" image="eq.slider.bg.anim" x="495" y="77" w="6" h="107" ghost="1" alpha="255"/>
 			
-	<slider id="eq1" action="EQ_BAND" param="1" x="123" y="65" h="119" w="22" orientation="vertical" thumb="eq.normal.button.slider.v.n" hoverthumb="eq.normal.button.slider.v.h" downthumb="eq.normal.button.slider.v.d" tooltip="70 Hz" cursor="cur.normal"/>
-	<slider id="eq2" action="EQ_BAND" param="2" x="163" y="65" h="119" w="22" orientation="vertical" thumb="eq.normal.button.slider.v.n" hoverthumb="eq.normal.button.slider.v.h" downthumb="eq.normal.button.slider.v.d" tooltip="180 Hz" cursor="cur.normal"/>
-	<slider id="eq3" action="EQ_BAND" param="3" x="203" y="65" h="119" w="22" orientation="vertical" thumb="eq.normal.button.slider.v.n" hoverthumb="eq.normal.button.slider.v.h" downthumb="eq.normal.button.slider.v.d" tooltip="320 Hz" cursor="cur.normal"/>
-	<slider id="eq4" action="EQ_BAND" param="4" x="243" y="65" h="119" w="22" orientation="vertical" thumb="eq.normal.button.slider.v.n" hoverthumb="eq.normal.button.slider.v.h" downthumb="eq.normal.button.slider.v.d" tooltip="600 Hz" cursor="cur.normal"/>
-	<slider id="eq5" action="EQ_BAND" param="5" x="283" y="65" h="119" w="22" orientation="vertical" thumb="eq.normal.button.slider.v.n" hoverthumb="eq.normal.button.slider.v.h" downthumb="eq.normal.button.slider.v.d" tooltip="1Khz" cursor="cur.normal"/>
-	<slider id="eq6" action="EQ_BAND" param="6" x="323" y="65" h="119" w="22" orientation="vertical" thumb="eq.normal.button.slider.v.n" hoverthumb="eq.normal.button.slider.v.h" downthumb="eq.normal.button.slider.v.d" tooltip="3Khz" cursor="cur.normal"/>
-	<slider id="eq7" action="EQ_BAND" param="7" x="363" y="65" h="119" w="22" orientation="vertical" thumb="eq.normal.button.slider.v.n" hoverthumb="eq.normal.button.slider.v.h" downthumb="eq.normal.button.slider.v.d" tooltip="6Khz" cursor="cur.normal"/>
-	<slider id="eq8" action="EQ_BAND" param="8" x="403" y="65" h="119" w="22" orientation="vertical" thumb="eq.normal.button.slider.v.n" hoverthumb="eq.normal.button.slider.v.h" downthumb="eq.normal.button.slider.v.d" tooltip="12Khz" cursor="cur.normal"/>
-	<slider id="eq9" action="EQ_BAND" param="9" x="443" y="65" h="119" w="22" orientation="vertical" thumb="eq.normal.button.slider.v.n" hoverthumb="eq.normal.button.slider.v.h" downthumb="eq.normal.button.slider.v.d" tooltip="14Khz" cursor="cur.normal"/>
-	<slider id="eq10" action="EQ_BAND" param="10" x="483" y="65" h="119" w="22" orientation="vertical" thumb="eq.normal.button.slider.v.n" hoverthumb="eq.normal.button.slider.v.h" downthumb="eq.normal.button.slider.v.d" tooltip="16Khz" cursor="cur.normal"/>
+	<slider id="eq1" action="EQ_BAND" param="1" x="127" y="18" h="119" w="22" orientation="vertical" thumb="eq.normal.button.slider.v.n" hoverthumb="eq.normal.button.slider.v.h" downthumb="eq.normal.button.slider.v.d" tooltip="70 Hz" cursor="cur.normal"/>
+	<slider id="eq2" action="EQ_BAND" param="2" x="167" y="18" h="119" w="22" orientation="vertical" thumb="eq.normal.button.slider.v.n" hoverthumb="eq.normal.button.slider.v.h" downthumb="eq.normal.button.slider.v.d" tooltip="180 Hz" cursor="cur.normal"/>
+	<slider id="eq3" action="EQ_BAND" param="3" x="207" y="18" h="119" w="22" orientation="vertical" thumb="eq.normal.button.slider.v.n" hoverthumb="eq.normal.button.slider.v.h" downthumb="eq.normal.button.slider.v.d" tooltip="320 Hz" cursor="cur.normal"/>
+	<slider id="eq4" action="EQ_BAND" param="4" x="247" y="18" h="119" w="22" orientation="vertical" thumb="eq.normal.button.slider.v.n" hoverthumb="eq.normal.button.slider.v.h" downthumb="eq.normal.button.slider.v.d" tooltip="600 Hz" cursor="cur.normal"/>
+	<slider id="eq5" action="EQ_BAND" param="5" x="287" y="18" h="119" w="22" orientation="vertical" thumb="eq.normal.button.slider.v.n" hoverthumb="eq.normal.button.slider.v.h" downthumb="eq.normal.button.slider.v.d" tooltip="1Khz" cursor="cur.normal"/>
+	<slider id="eq6" action="EQ_BAND" param="6" x="327" y="18" h="119" w="22" orientation="vertical" thumb="eq.normal.button.slider.v.n" hoverthumb="eq.normal.button.slider.v.h" downthumb="eq.normal.button.slider.v.d" tooltip="3Khz" cursor="cur.normal"/>
+	<slider id="eq7" action="EQ_BAND" param="7" x="367" y="18" h="119" w="22" orientation="vertical" thumb="eq.normal.button.slider.v.n" hoverthumb="eq.normal.button.slider.v.h" downthumb="eq.normal.button.slider.v.d" tooltip="6Khz" cursor="cur.normal"/>
+	<slider id="eq8" action="EQ_BAND" param="8" x="407" y="18" h="119" w="22" orientation="vertical" thumb="eq.normal.button.slider.v.n" hoverthumb="eq.normal.button.slider.v.h" downthumb="eq.normal.button.slider.v.d" tooltip="12Khz" cursor="cur.normal"/>
+	<slider id="eq9" action="EQ_BAND" param="9" x="447" y="18" h="119" w="22" orientation="vertical" thumb="eq.normal.button.slider.v.n" hoverthumb="eq.normal.button.slider.v.h" downthumb="eq.normal.button.slider.v.d" tooltip="14Khz" cursor="cur.normal"/>
+	<slider id="eq10" action="EQ_BAND" param="10" x="487" y="18" h="119" w="22" orientation="vertical" thumb="eq.normal.button.slider.v.n" hoverthumb="eq.normal.button.slider.v.h" downthumb="eq.normal.button.slider.v.d" tooltip="16Khz" cursor="cur.normal"/>
 
-	<button	id="EQ_p12" x="68" y="65" w="36" h="17" rectrgn="1" image="none" cursor="cur.normal"/>
-	<button id="EQ_0" x="68" y="115" w="36" h="17" rectrgn="1" image="none" cursor="cur.normal"/>
-	<button id="EQ_m12" x="68" y="165" w="36" h="17" rectrgn="1" image="none" cursor="cur.normal"/>
+	<button	id="EQ_p12" x="73" y="22" w="32" h="9" rectrgn="1" image="none" cursor="cur.normal"/>
+	<button id="EQ_0" x="73" y="73" w="27" h="9" rectrgn="1" image="none" cursor="cur.normal"/>
+	<button id="EQ_m12" x="74" y="125" w="28" h="9" rectrgn="1" image="none" cursor="cur.normal"/>
 		
 
-  <layer id="eq.frequency.labels.m" x="69" y="15" image="eq.normal.labels.main" ghost="1" alpha="255"/>
-  <layer id="eq.frequency.labels" x="24" y="133" image="eq.normal.labels.winamp" ghost="1" alpha="255"/>
+  <layer id="eq.frequency.labels.m" x="73" y="22" image="eq.normal.labels.main" ghost="1" alpha="255"/>
+  <layer id="eq.frequency.labels" x="28" y="140" image="eq.normal.labels.winamp" ghost="1" alpha="255"/>
 	
 	<!--slider id="eq.slider.crossfade" cfgattrib="{F1239F09-8CC6-4081-8519-C2AE99FCB14C};Crossfade time" high="20" x="186" y="178" w="83" h="14" thumb="eq.normal.button.slider.horizontal" downthumb="eq.normal.button.slider.horizontal"/-->
 
