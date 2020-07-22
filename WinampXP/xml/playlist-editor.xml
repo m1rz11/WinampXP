@@ -121,6 +121,11 @@
 	<button id="pledit.button.sel" action="PE_SEL" x="84" y="-43" relaty="1" image="window.pl.button.sel.n" hoverimage="window.pl.button.sel.h" downimage="window.pl.button.sel.d" tooltip="Select Files in Playlist" rectrgn="1" cursor="cur.normal"/>
 	<button id="pledit.button.misc" action="PE_MISC" x="124" y="-43" relaty="1" image="window.pl.button.misc.n" hoverimage="window.pl.button.misc.h" downimage="window.pl.button.misc.d" tooltip="Misc Actions" rectrgn="1" cursor="cur.normal"/>
 
+	<!-- leaving this here for when the time comes -->
+	<!--togglebutton id="pledit.button.sel.menu" action="PE_ADD" x="40" y="120" w="1" h="1" image="none"/>
+	<button id="pledit.button.sel.gfx" x="160" y="-43" relaty="1" image="window.pl.button.sel.n" hoverimage="window.pl.button.sel.h" downimage="window.pl.button.sel.d" tooltip="Select Files in Playlist" rectrgn="1" cursor="cur.normal"/>
+	<script file="..\WinampXP\scripts\sc_mouseredir.maki" param="pledit.button.sel.gfx;pledit.button.sel.menu"/-->
+
 	<!--button id="pledit.button.bg" x="-59" y="-43" relatx="1" relaty="1" image="window.button.bg"/-->
 	<button id="pledit.button.list" action="PE_LIST" x="-52" y="-43" relatx="1" relaty="1" image="window.pl.button.ploptns.n" hoverimage="window.pl.button.ploptns.h" downimage="window.pl.button.ploptns.d" tooltip="Manage Playlist" rectrgn="1" cursor="cur.normal"/>
 
