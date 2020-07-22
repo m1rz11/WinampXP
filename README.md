@@ -18,7 +18,6 @@ For the next release:
 - Fix any inconsistencies/issues
 
 For a later release:
-- Improved layout for playlist editor and equalizer
 - Royale theme
 - Royale Noir theme
 - Embedded theme
