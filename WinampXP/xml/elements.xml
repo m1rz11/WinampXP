@@ -369,17 +369,17 @@
 	<bitmap id="eq.normal.labels.iso" file="images/eq-background-main.png" x="1" y="407" h="12" w="486" gammagroup="txtlabels"/>
 	<bitmap id="eq.normal.labels.main" file="images/eq-background-main.png" x="488" y="306" h="112" w="38" gammagroup="txtlabels"/>
 
-  <bitmap id="eq.normal.button.power.on" file="images/eq-background-main.png" x="9" y="247" w="52" h="48" gammagroup="greybuttons"/>
-  <bitmap id="eq.normal.button.power.on.h" file="images/eq-background-main.png" x="9" y="296" w="52" h="48" gammagroup="greybuttons"/>
-  <bitmap id="eq.normal.button.power.on.d" file="images/eq-background-main.png" x="9" y="345" w="52" h="48" gammagroup="greybuttons"/>
+  <bitmap id="eq.normal.button.power.on" file="images/eq-background-main.png" x="9" y="252" w="58" h="38" gammagroup="greybuttons"/>
+  <bitmap id="eq.normal.button.power.on.h" file="images/eq-background-main.png" x="9" y="301" w="58" h="38" gammagroup="greybuttons"/>
+  <bitmap id="eq.normal.button.power.on.d" file="images/eq-background-main.png" x="9" y="350" w="58" h="38" gammagroup="greybuttons"/>
   
-  <bitmap id="eq.normal.button.auto.on" file="images/eq-background-main.png" x="61" y="247" w="66" h="48" gammagroup="greybuttons"/>
-  <bitmap id="eq.normal.button.auto.on.h" file="images/eq-background-main.png" x="61" y="296" w="66" h="48" gammagroup="greybuttons"/>
-  <bitmap id="eq.normal.button.auto.on.d" file="images/eq-background-main.png" x="61" y="345" w="66" h="48" gammagroup="greybuttons"/>
+  <bitmap id="eq.normal.button.auto.on" file="images/eq-background-main.png" x="67" y="252" w="66" h="38" gammagroup="greybuttons"/>
+  <bitmap id="eq.normal.button.auto.on.h" file="images/eq-background-main.png" x="67" y="301" w="66" h="38" gammagroup="greybuttons"/>
+  <bitmap id="eq.normal.button.auto.on.d" file="images/eq-background-main.png" x="67" y="350" w="66" h="38" gammagroup="greybuttons"/>
   
-  <bitmap id="eq.normal.button.presets" file="images/eq-background-main.png" x="130" y="247" w="69" h="48" gammagroup="greybuttons"/>
-  <bitmap id="eq.normal.button.presets.h" file="images/eq-background-main.png" x="130" y="296" w="69" h="48" gammagroup="greybuttons"/>
-  <bitmap id="eq.normal.button.presets.d" file="images/eq-background-main.png" x="130" y="345" w="69" h="48" gammagroup="greybuttons"/>
+  <bitmap id="eq.normal.button.presets" file="images/eq-background-main.png" x="155" y="250" w="40" h="38" gammagroup="greybuttons"/>
+  <bitmap id="eq.normal.button.presets.h" file="images/eq-background-main.png" x="155" y="299" w="40" h="38" gammagroup="greybuttons"/>
+  <bitmap id="eq.normal.button.presets.d" file="images/eq-background-main.png" x="155" y="348" w="40" h="38" gammagroup="greybuttons"/>
 
   <bitmap id="onauto.light.off" file="images/eq-background-main.png" x="223" y="294" w="48" h="48" gammagroup="greybuttons"/>
   <bitmap id="onauto.light.on" file="images/eq-background-main.png" x="272" y="294" w="48" h="48" gammagroup="ledcolor"/>
