@@ -1,5 +1,5 @@
 # WinampXP
-Winamp modern skin based on the looks of Windows XP.
+Winamp modern skin based on the looks of Windows XP that aims for accuracy.
 
 Grab the latest release [Here](https://github.com/mirzi1/WinampXP/releases)
 
@@ -14,10 +14,10 @@ Victhor, the original creator of [Winamp Classic Modern](https://www.deviantart.
 ### TODO:
 For the next release:
 - ~~Olive Green theme~~
-- Silver theme
+- ~~Silver theme~~
+- Fix any inconsistencies/issues
 
 For a later release:
-- Improved layout for playlist editor and equalizer
 - Royale theme
 - Royale Noir theme
 - Embedded theme
