@@ -88,11 +88,11 @@ System.onScriptLoaded() {
   EqState=getPrivateInt(getSkinName(), "EqState", EqState);
   
 
-  if (AutoState == 1) { AutoONLight.setXmlParam("image", "onauto.light.on"); AutoState = 1; }
-  else { AutoONLight.setXmlParam("image", "onauto.light.off"); AutoState = 0; }
+  if (AutoState == 1) { AutoONLight.setXmlParam("image", "auto.light.on"); AutoState = 1; }
+  else { AutoONLight.setXmlParam("image", "auto.light.off"); AutoState = 0; }
 
-  if (EqState == 1) { EqONLight.setXmlParam("image", "onauto.light.on"); EqState = 1; }
-  else { EqONLight.setXmlParam("image", "onauto.light.off"); EqState = 0; }
+  if (EqState == 1) { EqONLight.setXmlParam("image", "on.light.on"); EqState = 1; }
+  else { EqONLight.setXmlParam("image", "on.light.off"); EqState = 0; }
 
 	textNormalActionInfo.hide();
 	textShadeActionInfo.hide();
@@ -134,14 +134,14 @@ System.onEqChanged (boolean newstatus)
 {
 	if (!newstatus)
 	{
-    if (EqONBtn.isMouseOverRect()) { EqONLight.setXmlParam("image", "onauto.light.off");	}
-    else if (!EqONBtn.isMouseOverRect()) { EqONLight.setXmlParam("image", "onauto.light.off"); }
+    if (EqONBtn.isMouseOverRect()) { EqONLight.setXmlParam("image", "on.light.off");	}
+    else if (!EqONBtn.isMouseOverRect()) { EqONLight.setXmlParam("image", "on.light.off"); }
     EqState = 0;
 	}
 	else
 	{
-    if (EqONBtn.isMouseOverRect()) { EqONLight.setXmlParam("image", "onauto.light.on.h");	}
-    else if (!EqONBtn.isMouseOverRect()) { EqONLight.setXmlParam("image", "onauto.light.on"); }
+    if (EqONBtn.isMouseOverRect()) { EqONLight.setXmlParam("image", "on.light.on");	}
+    else if (!EqONBtn.isMouseOverRect()) { EqONLight.setXmlParam("image", "on.light.on"); }
     EqState = 1;
 	}
 }
@@ -161,13 +161,13 @@ System.onEqChanged (boolean newstatus)
 AutoONBtn.onToggle(boolean onoff)
 {
 	if (onoff) {
-    if (AutoONBtn.isMouseOverRect()) { AutoONLight.setXmlParam("image", "onauto.light.off"); }
-    else if (!AutoONBtn.isMouseOverRect()) { AutoONLight.setXmlParam("image", "onauto.light.off"); }
+    if (AutoONBtn.isMouseOverRect()) { AutoONLight.setXmlParam("image", "auto.light.off"); }
+    else if (!AutoONBtn.isMouseOverRect()) { AutoONLight.setXmlParam("image", "auto.light.off"); }
   AutoState = 1;
 	}
 	else {
-    if (AutoONBtn.isMouseOverRect()) { AutoONLight.setXmlParam("image", "onauto.light.on.h");	}
-    else if (!AutoONBtn.isMouseOverRect()) { AutoONLight.setXmlParam("image", "onauto.light.on"); }
+    if (AutoONBtn.isMouseOverRect()) { AutoONLight.setXmlParam("image", "auto.light.off");	}
+    else if (!AutoONBtn.isMouseOverRect()) { AutoONLight.setXmlParam("image", "auto.light.on"); }
     AutoState = 0;
 	}
 }
@@ -245,13 +245,13 @@ AutoONBtn.onLeftButtonDown (int x, int y)
 EqONBtn.onLeftButtonUp (int x, int y)
 {
   if (EqONBtn.isMouseOverRect()) {
-    if (EqState == 1) { EqONLight.setXmlParam("image", "onauto.light.on.h"); EqState = 1; }
-    else if (EqState == 0) { EqONLight.setXmlParam("image", "onauto.light.off"); EqState = 0; }
+    if (EqState == 1) { EqONLight.setXmlParam("image", "on.light.on"); EqState = 1; }
+    else if (EqState == 0) { EqONLight.setXmlParam("image", "on.light.off"); EqState = 0; }
   }
   else
   {
-    if (EqState == 1) { EqONLight.setXmlParam("image", "onauto.light.on"); EqState = 1; }
-    else if (EqState == 0) { EqONLight.setXmlParam("image", "onauto.light.off"); EqState = 0; }
+    if (EqState == 1) { EqONLight.setXmlParam("image", "on.light.on"); EqState = 1; }
+    else if (EqState == 0) { EqONLight.setXmlParam("image", "on.light.off"); EqState = 0; }
   }
 }
 
@@ -259,13 +259,13 @@ AutoONBtn.onLeftButtonUp (int x, int y)
 {
   if (AutoONBtn.isMouseOverRect())
   {
-    if (AutoState == 1) { AutoONLight.setXmlParam("image", "onauto.light.on.h"); AutoState = 1; }
-    else if (AutoState == 0) { AutoONLight.setXmlParam("image", "onauto.light.off"); AutoState = 0; }
+    if (AutoState == 1) { AutoONLight.setXmlParam("image", "auto.light.on"); AutoState = 1; }
+    else if (AutoState == 0) { AutoONLight.setXmlParam("image", "auto.light.off"); AutoState = 0; }
   }
   else
   {
-    if (AutoState == 1) { AutoONLight.setXmlParam("image", "onauto.light.on.h"); AutoState = 1;	}
-    else if (AutoState == 0) { AutoONLight.setXmlParam("image", "onauto.light.off"); AutoState = 0; }
+    if (AutoState == 1) { AutoONLight.setXmlParam("image", "auto.light.on"); AutoState = 1;	}
+    else if (AutoState == 0) { AutoONLight.setXmlParam("image", "auto.light.off"); AutoState = 0; }
   }
 }
 /*
@@ -283,12 +283,12 @@ EqONBtn.onLeaveArea()
 {
   if (EqState == 1)
   {
-    EqONLight.setXmlParam("image", "onauto.light.on");
+    EqONLight.setXmlParam("image", "on.light.on");
     EqState = 1;
   }
   else if (EqState == 0)
   {
-    EqONLight.setXmlParam("image", "onauto.light.off");
+    EqONLight.setXmlParam("image", "on.light.off");
     EqState = 0;
   }
 }
@@ -297,12 +297,12 @@ AutoONBtn.onLeaveArea()
 {
   if (AutoState == 1)
   {
-    AutoONLight.setXmlParam("image", "onauto.light.on");
+    AutoONLight.setXmlParam("image", "auto.light.on");
     AutoState = 1;
   }
   else if (AutoState == 0)
   {
-    AutoONLight.setXmlParam("image", "onauto.light.off");
+    AutoONLight.setXmlParam("image", "auto.light.off");
     AutoState = 0;
   }
 }

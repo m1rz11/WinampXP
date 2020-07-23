@@ -11,11 +11,15 @@
 	<ToggleButton id="eq.button.on" action="EQ_TOGGLE" x="6" y="169" w="58" h="38" image="eq.normal.button.power.on" hoverimage="eq.normal.button.power.on.h" downimage="eq.normal.button.power.on.d" rectrgn="1" cursor="cur.normal"/>
 	<ToggleButton id="eq.button.auto" action="EQ_AUTO" x="64" y="169" w="66" h="38" image="eq.normal.button.auto.on" hoverimage="eq.normal.button.auto.on.h" downimage="eq.normal.button.auto.on.d" rectrgn="1" cursor="cur.normal"/>
 	
-  <layer id="eq.light.on" x="26" y="177" w="48" h="48" image="onauto.light.on" ghost="1"/>
-  <layer id="eq.light.auto" x="74" y="177" w="48" h="48" image="onauto.light.on" ghost="1"/>
+  <layer id="eq.light.on" x="7" y="170" w="56" h="36" image="on.light.on" ghost="1"/>
+  <layer id="eq.light.auto" x="65" y="170" w="64" h="36" image="auto.light.on" ghost="1"/>
+
+  <layer id="eq.separator1" x="132" y="171" w="1" h="35" image="eq.separator"/>
   
-  <layer id="eq.spline.bg" x="143" y="164" image="eq.normal.background.display" alpha="255" cursor="cur.normal"/>
-  <eqvis x="153" y="172" w="239" h="31" colortop="0,0,0" colormiddle="0,0,0" colorbottom="0,0,0" colorpreamp="128,128,128" ghost="1" />
+  <layer id="eq.spline.bg" x="126" y="164" w="362" image="eq.normal.background.display" alpha="255" cursor="cur.normal"/>
+  <eqvis x="136" y="172" w="362" h="31" colortop="0,0,0" colormiddle="0,0,0" colorbottom="0,0,0" colorpreamp="128,128,128" ghost="1" />
+
+  <layer id="eq.separator2" x="501" y="171" w="1" h="35" image="eq.separator"/>
 
 	<togglebutton id="eq.button.presets.menu" action="MENU" param="PRESETS" x="408" y="103" w="1" h="1" image="none"/>
 	<button id="eq.button.presets.gfx" x="504" y="169" image="eq.normal.button.presets" hoverimage="eq.normal.button.presets.h" downimage="eq.normal.button.presets.d" rectrgn="1" cursor="cur.normal"/>

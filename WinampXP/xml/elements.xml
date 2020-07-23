@@ -381,10 +381,12 @@
   <bitmap id="eq.normal.button.presets.h" file="images/eq-background-main.png" x="155" y="299" w="40" h="38" gammagroup="greybuttons"/>
   <bitmap id="eq.normal.button.presets.d" file="images/eq-background-main.png" x="155" y="348" w="40" h="38" gammagroup="greybuttons"/>
 
-  <bitmap id="onauto.light.off" file="images/eq-background-main.png" x="223" y="294" w="48" h="48" gammagroup="greybuttons"/>
-  <bitmap id="onauto.light.on" file="images/eq-background-main.png" x="272" y="294" w="48" h="48" gammagroup="ledcolor"/>
-  <bitmap id="onauto.light.on.h" file="images/eq-background-main.png" x="321" y="294" w="48" h="48" gammagroup="ledcolor"/>
-  <bitmap id="onauto.light.on.d" file="images/eq-background-main.png" x="370" y="294" w="48" h="48" gammagroup="ledcolor"/>
+  <bitmap id="on.light.off" file="images/eq-background-main.png" x="345" y="294" w="56" h="36" gammagroup="ledcolor"/>
+  <bitmap id="on.light.on" file="images/eq-background-main.png" x="223" y="294" w="56" h="36" gammagroup="ledcolor"/>
+  <bitmap id="auto.light.off" file="images/eq-background-main.png" x="402" y="294" w="64" h="36" gammagroup="ledcolor"/>
+  <bitmap id="auto.light.on" file="images/eq-background-main.png" x="280" y="294" w="64" h="36" gammagroup="ledcolor"/>
+  
+  <bitmap id="eq.separator" file="images/eq-background-main.png" x="200" y="333" w="1" h="35" gammagroup="greybuttons"/>
 
   <bitmap id="eq.slider.bg.anim" file="images/eq-sliders-bg.png" gammagroup="multicolorbars"/>
 
