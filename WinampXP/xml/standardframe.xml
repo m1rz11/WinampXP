@@ -111,16 +111,16 @@
 
   <group id="wasabi.frame.layout" x="0" y="0" w="0" h="0" relatw="1" relath="1"/>
 
-  <layer x="0" y="0" w="20" h="4" image="none" resize="topleft" cursor="cur.restopleft" alpha="0"/>
-  <layer x="20" y="0" w="-40" h="4" relatw="1" image="none" resize="top" cursor="cur.resvert" alpha="0"/>
-  <layer x="-10" y="0" w="10" h="4" relatx="1" image="none" resize="topright" cursor="cur.restopright" alpha="0"/>
+  <layer x="0" y="0" w="4" h="4" image="none" resize="topleft" cursor="cur.restopleft" alpha="0"/>
+  <layer x="4" y="0" w="0" h="4" relatw="1" image="none" resize="top" cursor="cur.resvert" alpha="0"/>
+  <layer x="-4" y="0" w="4" h="4" relatx="1" image="none" resize="topright" cursor="cur.restopright" alpha="0"/>
   <layer id="resizer.right" x="-4" relatx="1" y="37" w="4" h="-32" relath="1" image="none" resize="right" regionop="1" rectrgn="1" cursor="cur.posbar"/>
-  <layer x="0" y="0" w="40" h="4" relatx="1" relath="1" image="none" resize="left" regionop="1" rectrgn="1" cursor="cur.posbar"/>
+  <layer x="0" y="0" w="4" h="4" relatx="1" relath="1" image="none" resize="left" regionop="1" rectrgn="1" cursor="cur.posbar"/>
 
-  <layer x="0" y="-5" w="20" h="4" relaty="1" image="none" resize="bottomleft" cursor="cur.resbottomleft" alpha="0"/>
-  <layer x="20" y="-4" w="-40" h="4" relatw="1" relaty="1" image="none" resize="bottom" cursor="cur.resvert" alpha="0"/>
-  <layer x="-15" y="-15" relatx="1" relaty="1" image="normal.resizer.bottomright" ghost="1" alpha="0"/>
-  <layer x="-20" y="-4" w="20" h="4" relatx="1" relaty="1" image="none" resize="bottomright" cursor="cur.resbottomright" alpha="0"/>
+  <layer x="0" y="-4" w="8" h="4" relaty="1" image="none" resize="bottomleft" cursor="cur.resbottomleft" alpha="0"/>
+  <layer x="4" y="-4" w="-40" h="4" relatw="1" relaty="1" image="none" resize="bottom" cursor="cur.resvert" alpha="0"/>
+  <layer x="-4" y="-4" relatx="1" relaty="1" image="normal.resizer.bottomright" ghost="1" alpha="0"/>
+  <layer x="-4" y="-4" w="4" h="4" relatx="1" relaty="1" image="none" resize="bottomright" cursor="cur.resbottomright" alpha="0"/>
 
   <layoutstatus id="frame.layoutstatus" x="13" y="-48" w="-47" h="0" relaty="1" relatw="1" exclude="{system}" />
   <script id="standardframe.script" file="..\WinampXP\scripts/standardframe.maki" param="15,44,-30,-60,0,0,1,1" />

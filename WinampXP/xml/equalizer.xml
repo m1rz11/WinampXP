@@ -16,7 +16,7 @@
 
   <layer id="eq.separator1" x="132" y="171" w="1" h="35" image="eq.separator"/>
   
-  <layer id="eq.spline.bg" x="126" y="164" w="362" image="eq.normal.background.display" alpha="255" cursor="cur.normal"/>
+  <!--layer id="eq.spline.bg" x="126" y="164" image="eq.normal.background.display" alpha="255" cursor="cur.normal"/-->
   <eqvis x="136" y="172" w="362" h="31" colortop="0,0,0" colormiddle="0,0,0" colorbottom="0,0,0" colorpreamp="128,128,128" ghost="1" />
 
   <layer id="eq.separator2" x="501" y="171" w="1" h="35" image="eq.separator"/>
@@ -155,7 +155,17 @@
 
 <layout id="normaleq" background="component.basetexture" w="550" h="242" minimum_w="550" maximum_w="550" desktopalpha="0" linkwidth="shade" appbar="top|bottom">
 	<Wasabi:StandardFrame:NoStatus x="0" y="0" w="0" h="242" relatw="1"/>
-	<sendparams target="window.button.switch" visible="1" />
+	
+  <layer id="resize.disabler.top" x="10" y="0" w="-20" h="10" relatw="1" image="none" move="1" cursor="cur.move"/>
+  <layer id="resize.disabler.top.left" x="0" y="0" w="12" h="53" image="none" regionop="1" rectrgn="1" cursor="cur.posbar"/>
+  <layer id="resize.disabler.top.right" x="-10" relatx="1" y="0" w="10" h="53" image="none" regionop="1" rectrgn="1" cursor="cur.posbar"/>
+  <layer id="resize.disabler.bottom.left" x="0" y="190" w="10" h="53" image="none" regionop="1" rectrgn="1" cursor="cur.posbar"/>
+  <layer id="resize.disabler.bottom.right" x="-10" relatx="1" y="190" w="19" h="53" image="none" regionop="1" rectrgn="1" cursor="cur.posbar"/>
+  <layer id="resize.disabler.bottom" x="10" y="237" w="-20" h="7" relatw="1" image="none" cursor="cur.normal"/>
+  <layer id="resize.disabler.left" x="0" y="30" w="10" h="242" image="none" cursor="cur.normal"/>
+  <layer id="resize.disabler.right" x="-10" y="30" w="10" h="242" relatx="1" image="none" cursor="cur.normal"/>
+
+  <sendparams target="window.button.switch" visible="1" />
 	<sendparams target="wasabi.frame.layout.base.bg" visible="0" />
 	<sendparams target="wasabi.frame.layout.windowcontrol" x="-62" w="51" />
 	<sendparams target="wasabi.frame.layout.titlebar" w="0" />
@@ -164,15 +174,8 @@
   <sendparams target="componentname" w="-81"/>
   <sendparams target="disabled.switch" alpha="0"/>
 
-	<group id="equalizer.normal.group.main.content" x="1" y="30" h="208" w="550"/>
+  <group id="equalizer.normal.group.main.content" x="1" y="30" h="208" w="550"/>
   <group id="pledit.switch.button" x="-81" y="1" h="30" w="55" relatx="1"/>
-
-  <layer id="resize.disabler.top" x="10" y="0" w="-20" h="10" relatw="1" image="none" move="1" cursor="cur.move"/>
-  <layer id="resize.disabler.top.left" x="0" y="0" w="12" h="53" image="none" resize="left" regionop="1" rectrgn="1" cursor="cur.posbar"/>
-  <layer id="resize.disabler.top.right" x="-10" relatx="1" y="0" w="10" h="53" image="none" resize="right" regionop="1" rectrgn="1" cursor="cur.posbar"/>
-  <layer id="resize.disabler.bottom.left" x="0" y="190" w="10" h="53" image="none" resize="left" regionop="1" rectrgn="1" cursor="cur.posbar"/>
-  <layer id="resize.disabler.bottom.right" x="-10" relatx="1" y="190" w="19" h="53" image="none" resize="right" regionop="1" rectrgn="1" cursor="cur.posbar"/>
-  <layer id="resize.disabler.bottom" x="10" y="222" w="-20" h="22" relatw="1" image="none" cursor="cur.normal"/>
 </layout> 
 
 
