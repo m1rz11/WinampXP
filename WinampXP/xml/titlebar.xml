@@ -24,13 +24,13 @@
   <sendparams group="wasabi.titlebar.streak.left" target="titlebar.right" x="0"/>
   -->
   
-  <text id="window.titlebar.title.dropshadow" x="13" y="-3" relatw="1" w="-173" h="42" default=":componentname" font="trebuc" fontsize="17"
+  <text id="window.titlebar.title.dropshadow" x="13" y="-3" relatw="1" w="-77" h="42" default=":componentname" font="trebuc" fontsize="17"
     align="left" color="titlebar.text.shadow" bold="1" antialias="1" activealpha="255" inactiveAlpha="0" forceuppercase="0"/>
 	
-  <text id="window.titlebar.title" x="12" y="-4" relatw="1" w="-173" h="42" default=":componentname" font="trebuc" fontsize="17"
+  <text id="window.titlebar.title" x="12" y="-4" relatw="1" w="-77" h="42" default=":componentname" font="trebuc" fontsize="17"
     align="left" color="titlebar.text" bold="1" antialias="1" activealpha="255" inactiveAlpha="0" forceuppercase="0"/>
 	
-  <text id="window.titlebar.title.dim" x="12" y="-4" relatw="1" w="-173" h="42" default=":componentname" font="trebuc" fontsize="17"
+  <text id="window.titlebar.title.dim" x="12" y="-4" relatw="1" w="-77" h="42" default=":componentname" font="trebuc" fontsize="17"
     align="left" color="titlebar.text.inactive" bold="1" antialias="1" activealpha="0" inactivealpha="255" forceuppercase="0"/>
 
   <!--

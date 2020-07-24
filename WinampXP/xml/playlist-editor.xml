@@ -102,7 +102,7 @@
 </groupdef>
 
 
-<layout id="normalpl" background="component.basetexture" desktopalpha="0" minimum_h="242" minimum_w="212" linkwidth="shade" appbar="top|bottom|left|right" >
+<layout id="normalpl" background="component.basetexture" desktopalpha="0" minimum_h="242" minimum_w="308" linkwidth="shade" appbar="top|bottom|left|right" >
 	<Wasabi:StandardFrame:Status x="0" y="0" w="0" h="0" relatw="1" relath="1" content="pledit.content.group" />
 	<sendparams target="window.button.switch" visible="1"/>
 	<sendparams target="wasabi.frame.layout.windowcontrol" x="-62" w="51"/>
@@ -155,7 +155,7 @@
 </layout> 
 
 
-<layout id="shade" w="550" h="29" minimum_w="212" minimum_h="29" maximum_w="10000" droptarget="pldr" desktopalpha="0" linkwidth="normalpl">
+<layout id="shade" w="550" h="29" minimum_w="308" minimum_h="29" maximum_w="10000" droptarget="pldr" desktopalpha="0" linkwidth="normalpl">
 	<group id="pledit.shade.group.main" x="0" y="0" h="29" ghost="1" cursor="cur.normal"/>
 </layout>	
 	
