@@ -11,7 +11,7 @@
 
 </groupdef>
 
-<layout id="winampvis2" minimum_w="156" minimum_h="64" h="242" w="211" appbar="top|bottom|left|right">
+<layout id="winampvis2" minimum_w="296" minimum_h="98" h="242" w="211" appbar="top|bottom|left|right">
 	<Wasabi:Standardframe:NoStatus x="0" y="0" w="0" h="0" relatw="1" relath="1" content="i_hate_maki_sometimes"/>
 	<sendparams target="wasabi.frame.layout.base.bg" alpha="255"/>
   <sendparams target="titlebar.title.bg.group" w="170"/>
