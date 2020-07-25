@@ -41,6 +41,7 @@
 	<include file="xml/about.xml"/>
 	<include file="xml/color-themes.xml"/>
 	<include file="xml/window-overrides.xml"/>
+	<include file="xml/winampvis.xml"/>
 	
 	<scripts>
 		<script id="script.system" file="scripts/system.maki"></script>
