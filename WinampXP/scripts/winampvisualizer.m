@@ -468,28 +468,6 @@ refreshVisSettings ()
 		}
 		else if (v_color == 15)
 		{
-			visualizer.setXmlParam("ColorBand16", "130,166,170");
-			visualizer.setXmlParam("ColorBand15", "137,171,175");
-			visualizer.setXmlParam("ColorBand14", "145,175,180");
-			visualizer.setXmlParam("ColorBand13", "151,180,184");
-			visualizer.setXmlParam("ColorBand12", "159,185,188");
-			visualizer.setXmlParam("ColorBand11", "166,190,193");
-			visualizer.setXmlParam("ColorBand10", "173,194,197");
-			visualizer.setXmlParam("ColorBand9", "181,198,202");
-			visualizer.setXmlParam("ColorBand8", "188,203,207");
-			visualizer.setXmlParam("ColorBand7", "195,208,212");
-			visualizer.setXmlParam("ColorBand6", "202,213,215");
-			visualizer.setXmlParam("ColorBand5", "209,218,220");
-			visualizer.setXmlParam("ColorBand4", "217,222,225");
-			visualizer.setXmlParam("ColorBand3", "224,227,229");
-			visualizer.setXmlParam("ColorBand2", "231,232,233");
-			visualizer.setXmlParam("ColorBand1", "235,234,236");
-			visualizer.setXmlParam("colorbandpeak", "254,246,231");
-			visualizer.setXmlParam("colorosc5", "47,44,50");
-			visualizer.setXmlParam("colorosc4", "85,83,88");
-			visualizer.setXmlParam("colorosc3", "146,143,147");
-			visualizer.setXmlParam("colorosc2", "205,203,207");
-			visualizer.setXmlParam("colorosc1", "235,234,236");
 
 		}
 		else if (v_color == 16)
@@ -664,7 +642,6 @@ Trigger.onRightButtonUp (int x, int y)
 	
 	colmenu.addCommand("CHIPSPEECH", 519, v_color == 19, 0);
 	colmenu.addCommand("Microsoft Sam (miss_shinku)", 522, v_color == 22, 0);
-	colmenu.addCommand("Midori Mizuno", 515, v_color == 15, 0);
 	colmenu.addCommand("Sound Recorder", 514, v_color == 14, 0);
 
 	colmenu.addCommand("That old Hi-Fi", 517, v_color == 17, 0);
