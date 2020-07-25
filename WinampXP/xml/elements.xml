@@ -3,6 +3,10 @@
 	<!-- NONE / NULL images -->
   <!--bitmap id="none" file="images/window/windows-background-main.png" x="0" y="0" h="10" w="10" gammagroup="none" /--> <!-- Pink (visual help) -->
   <bitmap id="none" file="images/window/windows-background-main.png" x="162" y="0" h="10" w="10" gammagroup="none"/> <!-- transparent -->
+  
+  <!-- stuff -->
+  
+  <bitmap id="visgrid2" file="images/a_grid2.png" x="0" y="0" w="144" h="16"/>
 	
 	<!-- cursors -->
 	
