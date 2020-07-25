@@ -93,7 +93,7 @@ refreshVisSettings ()
 	p_falloffspeed = getPrivateInt(getSkinName(), "Visualizer peaks falloff2", 0);
 	a_coloring = getPrivateInt(getSkinName(), "Visualizer analyzer coloring2", 0);
 	v_fps = getPrivateInt(getSkinName(), "Visualizer FPS2", 3);
-	v_color = getPrivateInt(getSkinName(), "Visualizer Color themes2", 0);
+	v_color = getPrivateInt(getSkinName(), "Visualizer Color themes2", 22);
 
 	visualizer.setXmlParam("peaks", integerToString(show_peaks));
 	visgrid.setXmlParam("visible", integerToString(grid));
