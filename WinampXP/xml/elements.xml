@@ -10,14 +10,14 @@
 	
 	<!-- cursors -->
 	
-  <cursor id="cur.close" bitmap="..\WinampXP\cursors\close.png" hotspot_x="0" hotspot_y="0"/>
-  <cursor id="cur.move" bitmap="..\WinampXP\cursors\move.png" hotspot_x="0" hotspot_y="0"/>
+  <cursor id="cur.close" bitmap="..\WinampXP\cursors\normal.png" hotspot_x="0" hotspot_y="0"/>
+  <cursor id="cur.move" bitmap="..\WinampXP\cursors\normal.png" hotspot_x="0" hotspot_y="0"/>
   <cursor id="cur.normal" bitmap="..\WinampXP\cursors\normal.png" hotspot_x="0" hotspot_y="0"/>
   <cursor id="cur.posbar" bitmap="..\WinampXP\cursors\posbar.png" hotspot_x="10" hotspot_y="4"/>
   <cursor id="cur.resbottomright" bitmap="..\WinampXP\cursors\resbottomright.png" hotspot_x="7" hotspot_y="7"/>
   <cursor id="cur.resbottomleft" bitmap="..\WinampXP\cursors\resbottomleft.png" hotspot_x="7" hotspot_y="7"/>
-  <cursor id="cur.restopright" bitmap="..\WinampXP\cursors\restopright.png" hotspot_x="7" hotspot_y="7"/>
-  <cursor id="cur.restopleft" bitmap="..\WinampXP\cursors\restopleft.png" hotspot_x="7" hotspot_y="7"/>
+  <cursor id="cur.restopright" bitmap="..\WinampXP\cursors\resbottomleft.png" hotspot_x="7" hotspot_y="7"/>
+  <cursor id="cur.restopleft" bitmap="..\WinampXP\cursors\resbottomright.png" hotspot_x="7" hotspot_y="7"/>
   <cursor id="cur.resvert" bitmap="..\WinampXP\cursors\resvert.png" hotspot_x="4" hotspot_y="10"/>
 
 	
