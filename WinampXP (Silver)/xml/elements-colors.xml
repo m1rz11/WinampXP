@@ -20,10 +20,10 @@
 
 	<color id="wasabi.list.text.current" value="180,180,180" gammagroup="current-active"/> <!-- currently playing item in lists -->
 	<color id="wasabi.list.text.selected.inactive" value="0,0,0" gammagroup="selection-bg"/> <!-- listview/treeview selection bar textcolor (inactive) -->
-	<color id="wasabi.list.text.selected.background.inactive" value="236,233,216" gammagroup="selection-bg"/> <!-- listview/treeview selectionbar back color (inactive) -->
+	<color id="wasabi.list.text.selected.background.inactive" value="222,221,225" gammagroup="selection-bg"/> <!-- listview/treeview selectionbar back color (inactive) -->
 
 	<!-- edit wnds -->
-	<color id="wasabi.window.background" value="236,233,216" gammagroup="display-sui"/> <!-- window background. -	If this color is not defined, a whole container is created in memory to 
+	<color id="wasabi.window.background" value="222,221,225" gammagroup="display-sui"/> <!-- window background. -	If this color is not defined, a whole container is created in memory to 
 	extract a pixel, so specifying it makes skin loading faster --> <!-- also, look below, this needs to be loaded 1st, don't move it -->
 	
 	<color id="wasabi.list.column.background" value="wasabi.window.background" gammagroup="display-sui"/> <!-- listview header background color -->
@@ -128,6 +128,6 @@
 	
   <!-- WACUP only: Waveseeker -->
 
-  <color id="plugin.waveseeker.background" value="236,233,216" gammagroup="plastic"/>
+  <color id="plugin.waveseeker.background" value="222,221,225" gammagroup="plastic"/>
   <color id="plugin.waveseeker.wave_normal" value="162,183,208" gammagroup="greybuttons"/>
   <color id="plugin.waveseeker.wave_playing" value="50,107,197" gammagroup="display-text"/>
