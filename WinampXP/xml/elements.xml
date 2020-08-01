@@ -23,13 +23,13 @@
 	
 	<!-- fonts -->
 
-  <truetypefont id="sarpanch" file="fonts\tahoma.ttf" allowmapping="1"/>
-  <truetypefont id="numbers" file="fonts\tahoma.ttf" allowmapping="1"/>
+  <truetypefont id="sarpanch" file="..\WinampXP\fonts\tahoma.ttf" allowmapping="1"/>
+  <truetypefont id="numbers" file="..\WinampXP\fonts\tahoma.ttf" allowmapping="1"/>
 
-  <truetypefont id="tahoma" file="fonts\tahoma.ttf" allowmapping="1"/>
-  <truetypefont id="tahomabd" file="fonts\tahomabd.ttf" allowmapping="1"/>
-  <truetypefont id="trebuchet" file="fonts\trebuc.ttf" allowmapping="1"/>
-  <truetypefont id="trebuchetbd" file="fonts\trebucbd.ttf" allowmapping="1"/>
+  <truetypefont id="tahoma" file="..\WinampXP\fonts\tahoma.ttf" allowmapping="1"/>
+  <truetypefont id="tahomabd" file="..\WinampXP\fonts\tahomabd.ttf" allowmapping="1"/>
+  <truetypefont id="trebuchet" file="..\WinampXP\fonts\trebuc.ttf" allowmapping="1"/>
+  <truetypefont id="trebuchetbd" file="..\WinampXP\fonts\trebucbd.ttf" allowmapping="1"/>
 
 	
 	<!-- player-normal -->
