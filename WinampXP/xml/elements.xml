@@ -68,9 +68,9 @@
   <bitmap id="player.normal.bg.right.aboff" file="images/player-main.png" x="538" y="270" w="10" h="242" gammagroup="plastic"/>
 
   <bitmap id="player.bg.vol" file="images/player-main.png" x="217" y="170" w="129" h="16" gammagroup="plastic"/>
-  <bitmap id="player.animation.volume" file="images/volume.png" gammagroup="multicolorbars"/>
+  <!--bitmap id="player.animation.volume" file="images/volume.png" gammagroup="multicolorbars"/-->
   <bitmap id="player.bg.balance" file="images/player-main.png" x="353" y="170" w="80" h="16" gammagroup="plastic"/>
-  <bitmap id="player.animation.balance" file="images/balance.png" gammagroup="multicolorbars"/>
+  <!--bitmap id="player.animation.balance" file="images/balance.png" gammagroup="multicolorbars"/-->
   
   <bitmap id="player.seeker.slider.shadow" file="images/player-main.png" x="295" y="514" w="62" h="34" gammagroup="plastic"/>
   <bitmap id="player.seeker.slider.n" file="images/player-main.png" x="1" y="514" w="11" h="22" gammagroup="goldbuttons"/>
@@ -392,7 +392,7 @@
   
   <bitmap id="eq.separator" file="images/eq-background-main.png" x="200" y="333" w="1" h="35" gammagroup="greybuttons"/>
 
-  <bitmap id="eq.slider.bg.anim" file="images/eq-sliders-bg.png" gammagroup="multicolorbars"/>
+  <!--bitmap id="eq.slider.bg.anim" file="images/eq-sliders-bg.png" gammagroup="multicolorbars"/-->
 
 	<!-- Window -->
 	

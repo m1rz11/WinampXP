@@ -1,5 +1,5 @@
 <elements>
-	<bitmap id="main.about" file="images/background-main-about.png" w="413" h="322"/>
+	<bitmap id="main.about" file="../WinampXP/images/background-main-about.png" w="413" h="322"/>
 </elements>
 
 <groupdef id="skin.about.group" x="0" y="0" w="421" h="354" rectrgn="1">

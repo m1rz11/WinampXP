@@ -28,22 +28,22 @@
 
   <!--images source="preamp" x="38" y="68" w="5" h="106" images="player.animation.eq.sliders" imagesspacing="106"/-->
 	
-  <Animatedlayer id="preamp_layer" image="eq.slider.bg.anim" x="50" y="77" w="6" h="107" ghost="1" alpha="255"/>
+  <Animatedlayer id="preamp_layer" x="50" y="77" w="6" h="107" ghost="1" alpha="255"/>
   
 	<slider id="preamp" action="EQ_BAND" param="PREAMP" x="42" y="18" h="119" w="22" orientation="vertical" thumb="eq.normal.button.slider.v.n" hoverthumb="eq.normal.button.slider.v.h" downthumb="eq.normal.button.slider.v.d" tooltip="Preamp" cursor="cur.normal"/>
 
 	<!--layer id="eq1.bg" x="131" y="70" image="eq.slider.bg.1" ghost="1"/-->
 	
-  <Animatedlayer id="eq1.bg" image="eq.slider.bg.anim" x="135" y="77" w="6" h="107" ghost="1" alpha="255"/>
-  <Animatedlayer id="eq2.bg" image="eq.slider.bg.anim" x="175" y="77" w="6" h="107" ghost="1" alpha="255"/>
-  <Animatedlayer id="eq3.bg" image="eq.slider.bg.anim" x="215" y="77" w="6" h="107" ghost="1" alpha="255"/>
-  <Animatedlayer id="eq4.bg" image="eq.slider.bg.anim" x="255" y="77" w="6" h="107" ghost="1" alpha="255"/>
-  <Animatedlayer id="eq5.bg" image="eq.slider.bg.anim" x="295" y="77" w="6" h="107" ghost="1" alpha="255"/>
-  <Animatedlayer id="eq6.bg" image="eq.slider.bg.anim" x="335" y="77" w="6" h="107" ghost="1" alpha="255"/>
-  <Animatedlayer id="eq7.bg" image="eq.slider.bg.anim" x="375" y="77" w="6" h="107" ghost="1" alpha="255"/>
-  <Animatedlayer id="eq8.bg" image="eq.slider.bg.anim" x="415" y="77" w="6" h="107" ghost="1" alpha="255"/>
-  <Animatedlayer id="eq9.bg" image="eq.slider.bg.anim" x="455" y="77" w="6" h="107" ghost="1" alpha="255"/>
-  <Animatedlayer id="eq10.bg" image="eq.slider.bg.anim" x="495" y="77" w="6" h="107" ghost="1" alpha="255"/>
+  <Animatedlayer id="eq1.bg" x="135" y="77" w="6" h="107" ghost="1" alpha="255"/>
+  <Animatedlayer id="eq2.bg" x="175" y="77" w="6" h="107" ghost="1" alpha="255"/>
+  <Animatedlayer id="eq3.bg" x="215" y="77" w="6" h="107" ghost="1" alpha="255"/>
+  <Animatedlayer id="eq4.bg" x="255" y="77" w="6" h="107" ghost="1" alpha="255"/>
+  <Animatedlayer id="eq5.bg" x="295" y="77" w="6" h="107" ghost="1" alpha="255"/>
+  <Animatedlayer id="eq6.bg" x="335" y="77" w="6" h="107" ghost="1" alpha="255"/>
+  <Animatedlayer id="eq7.bg" x="375" y="77" w="6" h="107" ghost="1" alpha="255"/>
+  <Animatedlayer id="eq8.bg" x="415" y="77" w="6" h="107" ghost="1" alpha="255"/>
+  <Animatedlayer id="eq9.bg" x="455" y="77" w="6" h="107" ghost="1" alpha="255"/>
+  <Animatedlayer id="eq10.bg" x="495" y="77" w="6" h="107" ghost="1" alpha="255"/>
 			
 	<slider id="eq1" action="EQ_BAND" param="1" x="127" y="18" h="119" w="22" orientation="vertical" thumb="eq.normal.button.slider.v.n" hoverthumb="eq.normal.button.slider.v.h" downthumb="eq.normal.button.slider.v.d" tooltip="70 Hz" cursor="cur.normal"/>
 	<slider id="eq2" action="EQ_BAND" param="2" x="167" y="18" h="119" w="22" orientation="vertical" thumb="eq.normal.button.slider.v.n" hoverthumb="eq.normal.button.slider.v.h" downthumb="eq.normal.button.slider.v.d" tooltip="180 Hz" cursor="cur.normal"/>
@@ -124,12 +124,12 @@
 	<layer id="player.bg.volume" x="1" y="3" image="player.bg.vol" tooltip="Volume Bar"/>
   <!--  using image source is buggy with color themes -->
   <!--images source="volume" x="5" y="6" w="120" h="8" images="player.animation.volume" imagesspacing="8"/-->
-  <Animatedlayer id="volume.anim" x="5" y="6" w="120" h="8" image="player.animation.volume" ghost="1" alpha="255"/>
+  <Animatedlayer id="volume.anim" x="5" y="6" w="120" h="8" ghost="1" alpha="255"/>
 	<slider id="player.slider.volume.shadow" x="0" y="0" w="130" h="26" action="VOLUME" orientation="horizontal" thumb="thumb.volpan.slider.shadow" hoverthumb="thumb.volpan.slider.shadow" downthumb="thumb.volpan.slider.shadow"/>	
 	<slider id="player.slider.volume" x="0" y="0" w="130" h="26" action="VOLUME" orientation="horizontal" thumb="thumb.volpan.slider.n" hoverthumb="thumb.volpan.slider.h" downthumb="thumb.volpan.slider.d" cursor="cur.posbar" tooltip="Volume Bar"/>
 
 	<layer id="eq.bg.pan" x="143" y="3" image="player.bg.balance" tooltip="Panning Bar"/>
-  <Animatedlayer id="balance.anim" x="147" y="6" w="71" h="8" image="player.animation.balance" ghost="1" alpha="255"/>
+  <Animatedlayer id="balance.anim" x="147" y="6" w="71" h="8" ghost="1" alpha="255"/>
 	<slider id="eq.slider.pan.shadow" x="143" y="0" w="81" h="26" action="PAN" thumb="thumb.volpan.slider.shadow" hoverthumb="thumb.volpan.slider.shadow" downthumb="thumb.volpan.slider.shadow"/>
 	<slider id="eq.slider.pan" x="143" y="0" w="81" h="26" action="PAN" thumb="thumb.volpan.slider.n" hoverthumb="thumb.volpan.slider.h" downthumb="thumb.volpan.slider.d" cursor="cur.posbar" tooltip="Panning Bar"/>
 </groupdef>

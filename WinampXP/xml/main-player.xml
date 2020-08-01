@@ -25,13 +25,13 @@
 
 	<layer id="player.bg.volume" x="209" y="113" image="player.bg.vol" tooltip="Volume Bar"/>
 
-  <Animatedlayer id="main.volume.anim" x="213" y="116" w="120" h="8" image="player.animation.volume" ghost="1" alpha="255"/>
+  <Animatedlayer id="main.volume.anim" x="213" y="116" w="120" h="8" ghost="1" alpha="255"/>
 	<slider id="player.slider.volume.shadow" action="VOLUME" x="208" y="110" w="130" h="26" orientation="horizontal" thumb="thumb.volpan.slider.shadow" hoverthumb="thumb.volpan.slider.shadow" downthumb="thumb.volpan.slider.shadow"/>
 	<slider id="player.slider.volume" action="VOLUME" x="208" y="110" w="130" h="26" orientation="horizontal" thumb="thumb.volpan.slider.n" hoverthumb="thumb.volpan.slider.h" downthumb="thumb.volpan.slider.d" cursor="cur.normal" tooltip="Volume Bar"/>
 
 
 	<layer id="eq.bg.pan" x="346" y="113" image="player.bg.balance" tooltip="Panning Bar"/>
-  <Animatedlayer id="main.balance.anim" x="360" y="116" w="71" h="8" image="player.animation.balance" ghost="1" alpha="255"/>
+  <Animatedlayer id="main.balance.anim" x="360" y="116" w="71" h="8" ghost="1" alpha="255"/>
 	<slider id="eq.slider.pan.shadow" action="PAN" x="346" y="110" w="81" h="26" thumb="thumb.volpan.slider.shadow" hoverthumb="thumb.volpan.slider.shadow" downthumb="thumb.volpan.slider.shadow"/>
 	<slider id="eq.slider.pan" action="PAN" x="346" y="110" w="81" h="26" thumb="thumb.volpan.slider.n" hoverthumb="thumb.volpan.slider.h" downthumb="thumb.volpan.slider.d" cursor="cur.normal" tooltip="Panning Bar"/>
 	
