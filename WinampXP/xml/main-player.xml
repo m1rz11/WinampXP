@@ -46,10 +46,10 @@
   <layer id="player.button.pl" x="-64" y="107" relatx="1" image="player.normal.button.pl" alpha="255" cursor="cur.normal"/>
   <NStatesButton id="player.button.pl.light" x="-67" y="104" relatx="1" image="button.eqpl.light.1." hoverimage="button.eqpl.light.2." downimage="button.eqpl.light.3." rectrgn="1" action="TOGGLE" param="GUID:PL" nstates="2" cfgvals="0;1" tooltip="Toggle Playlist Editor" cursor="cur.normal"/>
 
-	<slider id="player.slider.seek.shadow" action="SEEK" x="19" y="141" w="-36" h="22" relatw="1" orientation="horizontal" thumb="player.seeker.slider.shadow" hoverthumb="player.seeker.slider.shadow" downthumb="player.seeker.slider.shadow" rectrgn="1"/>
-  <layer id="player.seek.cursor" x="19" y="139" w="-36" h="22" relatw="1" image="none" rectrgn="1" cursor="cur.normal" tooltip="Seeking Bar"/>
-	<slider id="player.slider.seek" action="SEEK" x="19" y="141" w="-36" h="22" relatw="1" orientation="horizontal" thumb="player.seeker.slider.n" hoverthumb="player.seeker.slider.h" downthumb="player.seeker.slider.d" rectrgn="1" cursor="cur.normal" tooltip="Seeking Bar"/>
-	<slider id="player.slider.seek.ghost" action="SEEK" x="19" y="141" w="-36" h="22" relatw="1" orientation="horizontal" thumb="player.seeker.slider.n" hoverthumb="player.seeker.slider.h" downthumb="player.seeker.slider.d" rectrgn="1" cursor="cur.normal"/>
+	<slider id="player.slider.seek.shadow" action="SEEK" x="19" y="141" w="-40" h="22" relatw="1" orientation="horizontal" thumb="player.seeker.slider.shadow" hoverthumb="player.seeker.slider.shadow" downthumb="player.seeker.slider.shadow" rectrgn="1"/>
+  <layer id="player.seek.cursor" x="19" y="139" w="-40" h="22" relatw="1" image="none" rectrgn="1" cursor="cur.normal" tooltip="Seeking Bar"/>
+	<slider id="player.slider.seek" action="SEEK" x="19" y="141" w="-40" h="22" relatw="1" orientation="horizontal" thumb="player.seeker.slider.n" hoverthumb="player.seeker.slider.h" downthumb="player.seeker.slider.d" rectrgn="1" cursor="cur.normal" tooltip="Seeking Bar"/>
+	<slider id="player.slider.seek.ghost" action="SEEK" x="19" y="141" w="-40" h="22" relatw="1" orientation="horizontal" thumb="player.seeker.slider.n" hoverthumb="player.seeker.slider.h" downthumb="player.seeker.slider.d" rectrgn="1" cursor="cur.normal"/>
 
 	<layer id="player.button.open.bg" x="242" y="175" image="player.button.eject.bg" ghost="1" alpha="255"/>
 
@@ -67,7 +67,7 @@
 	<togglebutton id="shuffle.light" x="-204" y="201" w="7" h="7" relatx="1" image="repeat.light.off" activeImage="repeat.light.on" ghost="1" alpha="255" cfgattrib="{45F3F7C1-A6F3-4EE6-A15E-125E92FC3F8D};Shuffle"/>
 
 	<NStatesButton id="button.repeat" x="-134" y="180" relatx="1" image="repeat.n." hoverimage="repeat.h." downimage="repeat.d."
-		rectrgn="1" nstates="3" cfgattrib="{45F3F7C1-A6F3-4EE6-A15E-125E92FC3F8D};Repeat" cfgvals="0;1;-1" tooltip="Toggle Repeat" alpha="255" cursor="cur.normal"/>
+		nstates="3" cfgattrib="{45F3F7C1-A6F3-4EE6-A15E-125E92FC3F8D};Repeat" cfgvals="0;1;-1" tooltip="Toggle Repeat" alpha="255" cursor="cur.normal"/>
 	<togglebutton id="repeat.light" x="-130" y="201" relatx="1" image="repeat.light.off" activeImage="repeat.light.on" ghost="1" alpha="255" cfgattrib="{45F3F7C1-A6F3-4EE6-A15E-125E92FC3F8D};Repeat"/>
 
 	<layer id="about.bg" x="-71" y="175" relatx="1" image="about.bg" alpha="255" ghost="1"/>
