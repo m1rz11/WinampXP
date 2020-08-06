@@ -99,13 +99,13 @@
 	<!--text id="shade.time" display="TIME" x="80" y="5" w="86" h="20" font="trebuc" fontsize="21" timecolonwidth="9" timeroffstyle="0" align="center" 
 	 color="titlebar.text" forcefixed="1" bold="1" dblclickaction="trackinfo" cursor="cur.normal" tooltip="Time Display (click to toggle elapsed/remaining)"/-->
 	<Songticker id="shade.display.songname.shadow" x="1" y="7" w="0" h="20" relatw="1" showlen="1" font="trebuc" fontsize="17" bold="1" align="left" 
-	rightclickaction="trackmenu" dblclickaction="SWITCH;normal" nograb="1" ticker="0" color="titlebar.text.shadow" move="1" activealpha="255" inactiveAlpha="0" cursor="cur.normal"/>
+	rightclickaction="trackmenu" dblclickaction="SWITCH;normal" nograb="1" ticker="1" color="titlebar.text.shadow" move="1" activealpha="255" inactiveAlpha="0" cursor="cur.normal"/>
 
 	<Songticker id="shade.display.songname" x="0" y="6" w="0" h="20" relatw="1" showlen="1" font="trebuc" fontsize="17" bold="1" align="left" 
-	rightclickaction="trackmenu" dblclickaction="SWITCH;normal" nograb="1" ticker="0" color="titlebar.text" move="1" activealpha="255" inactiveAlpha="0" cursor="cur.normal"/>,
+	rightclickaction="trackmenu" dblclickaction="SWITCH;normal" nograb="1" ticker="1" color="titlebar.text" move="1" activealpha="255" inactiveAlpha="0" cursor="cur.normal"/>,
 
 	<Songticker id="shade.display.songname.inactive" x="0" y="6" w="0" h="20" relatw="1" showlen="1" font="trebuc" fontsize="17" bold="1" align="left" 
-	rightclickaction="trackmenu" dblclickaction="SWITCH;normal" nograb="1" ticker="0" color="titlebar.text.inactive" move="1" activealpha="0" inactivealpha="255" cursor="cur.normal"/>
+	rightclickaction="trackmenu" dblclickaction="SWITCH;normal" nograb="1" ticker="1" color="titlebar.text.inactive" move="1" activealpha="0" inactivealpha="255" cursor="cur.normal"/>
 
 	<text id="player.display.actioninfo.shadow" x="1" y="7" w="0" h="20" relatw="1" font="trebuc" move="1" dblclickaction="SWITCH;normal"  fontsize="17" align="left" color="titlebar.text.shadow" bold="1" activealpha="255" inactiveAlpha="0" cursor="cur.normal"/>
 	<text id="player.display.actioninfo" x="0" y="6" w="0" h="20" relatw="1" font="trebuc" move="1" dblclickaction="SWITCH;normal"  fontsize="17" align="left" color="titlebar.text" bold="1" activealpha="255" inactiveAlpha="0" cursor="cur.normal"/>

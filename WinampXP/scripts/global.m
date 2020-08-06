@@ -32,7 +32,7 @@ initGlobal() {
 	textNormalActionInfo = layoutMainNormal.findObject("player.display.actioninfo");
 	
 	textShadeSongInfo = layoutMainShade.findObject("shade.display.songname");
-	textShadeSongInfoShadow = layoutMainShade.findObject("shade.display.songname1shadow");
+	textShadeSongInfoShadow = layoutMainShade.findObject("shade.display.songname.shadow");
 	textShadeSongInfoInactive = layoutMainShade.findObject("shade.display.songname.inactive");
 	textShadeActionInfo = layoutMainShade.findObject("player.display.actioninfo");
 	textShadeActionInfoShadow = layoutMainShade.findObject("player.display.actioninfo.shadow");
