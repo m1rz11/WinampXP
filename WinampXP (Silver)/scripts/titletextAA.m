@@ -5,16 +5,15 @@
 
 Global Container containerMain, containerPL , containerEQ;
 Global Layout layoutMainNormal, layoutMainShade, layoutPLNormal, layoutPLShade, layoutEQShade;
-Global Group MainGroup, MainGroupShade, PLGroupShade, PLGroupShadeDisplay, EQShadeGroup;
-Global Text MainTitle, ShadeTitle, PLEditInfo, EQShadeTitle;
-Global GuiObject PLShadeTitle;
+Global Group MainGroup, MainGroupShade, DisplayGroupShade, PLGroupShade, PLGroupShadeDisplay, EQShadeGroup;
+Global Text MainTitle, PLEditInfo, EQShadeTitle;
+Global GuiObject PLShadeTitle, ShadeTitle;
 
 System.onScriptLoaded(){
   containerMain = System.getContainer("main");
 	layoutMainNormal = containerMain.getLayout("normal");
 	MainGroup = layoutMainNormal.getObject("player.normal.group.main");
   layoutMainShade = containerMain.getLayout("shade");
-  MainGroupShade = layoutMainShade.getObject("player.shade.group.main");
 
   containerPL = System.getContainer("PLEdit");
   layoutPLShade = containerPL.getLayout("shade");
@@ -27,7 +26,7 @@ System.onScriptLoaded(){
   EQShadeGroup = layoutEQShade.getObject("equalizer.shade.group");
 
   MainTitle = MainGroup.getObject("window.titlebar.title.dropshadow");
-  ShadeTitle = MainGroupShade.getObject("shade.window.titlebar.title.dropshadow");
+  ShadeTitle = layoutMainShade.findObject("shade.display.songname.shadow");
   PLShadeTitle = PLGroupShadeDisplay.getObject("main.pl.shadow");
   PLEditInfo = layoutPLNormal.getObject("pledit.info.shadow");
   EQShadeTitle = EQShadeGroup.getObject("window.titlebar.title.dropshadow");
