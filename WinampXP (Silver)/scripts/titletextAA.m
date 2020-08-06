@@ -6,7 +6,7 @@
 Global Container containerMain, containerPL , containerEQ;
 Global Layout layoutMainNormal, layoutMainShade, layoutPLNormal, layoutPLShade, layoutEQShade;
 Global Group MainGroup, MainGroupShade, DisplayGroupShade, PLGroupShade, PLGroupShadeDisplay, EQShadeGroup;
-Global Text MainTitle, PLEditInfo, EQShadeTitle;
+Global Text MainTitle, PLEditInfo, EQShadeTitle, ShadeTitleTime;
 Global GuiObject PLShadeTitle, ShadeTitle;
 
 System.onScriptLoaded(){
@@ -27,6 +27,7 @@ System.onScriptLoaded(){
 
   MainTitle = MainGroup.getObject("window.titlebar.title.dropshadow");
   ShadeTitle = layoutMainShade.findObject("shade.display.songname.shadow");
+  ShadeTitleTime = layoutMainShade.findObject("player.display.actioninfo.shadow");
   PLShadeTitle = PLGroupShadeDisplay.getObject("main.pl.shadow");
   PLEditInfo = layoutPLNormal.getObject("pledit.info.shadow");
   EQShadeTitle = EQShadeGroup.getObject("window.titlebar.title.dropshadow");
@@ -35,6 +36,7 @@ System.onScriptLoaded(){
 
   MainTitle.setXmlParam("antialias", "0");
   ShadeTitle.setXmlParam("antialias", "0");
+  ShadeTitleTime.setXmlParam("antialias", "0");
   PLShadeTitle.setXmlParam("antialias", "0");
   PLEditInfo.setXmlParam("antialias", "0");
   EQShadeTitle.setXmlParam("antialias", "0");
