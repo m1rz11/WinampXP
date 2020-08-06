@@ -8,8 +8,8 @@ Global Container containerPL;
 Global Container containerEq;
 Global Layout layoutEqNormal, layoutEqShade, layoutMainNormal, layoutMainShade;
 Global Layout layoutPLNormal, layoutPLShade;
-Global GuiObject textNormalSongInfo, textShadeSongInfo;
-Global Text textNormalActionInfo, textShadeActionInfo;
+Global GuiObject textNormalSongInfo, textShadeSongInfo, textShadeSongInfoShadow;
+Global Text textNormalActionInfo, textShadeActionInfo, textShadeActionInfoShadow;
 Global Timer timerSongTicker;
 Global Boolean boolReleaseSongTicker;
 Global Boolean boolSongTicker;
@@ -32,10 +32,13 @@ initGlobal() {
 	textNormalActionInfo = layoutMainNormal.findObject("player.display.actioninfo");
 	
 	textShadeSongInfo = layoutMainShade.findObject("shade.display.songname");
+	textShadeSongInfoShadow = layoutMainShade.findObject("shade.display.songname.shadow");
 	textShadeActionInfo = layoutMainShade.findObject("player.display.actioninfo");
-	
+	textShadeActionInfoShadow = layoutMainShade.findObject("player.display.actioninfo.shadow");
+
 	textNormalActionInfo.hide();
 	textShadeActionInfo.hide();
+	textShadeActionInfoShadow.hide();
 	
 	timerSongTicker = new Timer;
 	timerSongTicker.setDelay(1000);
@@ -53,9 +56,11 @@ timerSongTicker.onTimer() {
 	if (boolReleaseSongTicker) {
 		textNormalActionInfo.hide();
 		textShadeActionInfo.hide();
+		textShadeActionInfoShadow.hide();
 		
 		textNormalSongInfo.show();
 		textShadeSongInfo.show();
+		textShadeSongInfoShadow.show();
 		
 		timerSongTicker.stop();
 	}
@@ -70,13 +75,17 @@ showActionInfo(String strValue) {
 	textNormalActionInfo.setText(strValue);
 	
 	textShadeSongInfo.hide();
+	textShadeSongInfoShadow.hide();
 	textShadeActionInfo.show();
+	textShadeActionInfoShadow.show();
 	textShadeActionInfo.setText(strValue);
+	textShadeActionInfoShadow.setText(strValue);
 }
 
 setSongTicker() {
 	textNormalSongInfo.setXMLParam("ticker", System.integerToString(boolSongTicker));
 	textShadeSongInfo.setXMLParam("ticker", System.integerToString(boolSongTicker));
+	textShadeSongInfoShadow.setXMLParam("ticker", System.integerToString(boolSongTicker));
 	
 	System.setPrivateInt(getSkinName(), "SongTicker", boolSongTicker);
 }
