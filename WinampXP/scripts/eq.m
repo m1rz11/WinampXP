@@ -14,7 +14,7 @@ Global Container containerMain;
 Global Container containerPL;
 Global Container containerEq;
 Global Layout layoutEqNormal, layoutEqShade, layoutMainNormal, layoutMainShade;
-Global GuiObject textNormalSongInfo, textShadeSongInfo;
+Global GuiObject textNormalSongInfo, textShadeSongInfo, textShadeSongInfoShadow, textShadeSongInfoInactive;
 Global Text textNormalActionInfo, textShadeActionInfo;
 Global Group ShadeGroupMain, ShadeGroupDisplay, EqNormalGroup, EQShadeGroup, EQShadeTitlebarCenter, EQShadeVolBalance;
 
@@ -49,6 +49,8 @@ System.onScriptLoaded() {
 	ShadeGroupMain = layoutMainShade.findObject("player.shade.group.main");
 	ShadeGroupDisplay = ShadeGroupMain.findObject("player.shade.group.display");
 	textShadeSongInfo = ShadeGroupDisplay.findObject("shade.display.songname");
+  textShadeSongInfoShadow = ShadeGroupDisplay.findObject("shade.display.songname.shadow");
+  textShadeSongInfoInactive = ShadeGroupDisplay.findObject("shade.display.songname.inactive");
 	textShadeActionInfo = ShadeGroupDisplay.findObject("player.display.actioninfo");	
 	
   containerEq = System.getContainer("equalizer");
@@ -327,6 +329,8 @@ timerSongTicker.onTimer() {
 
 		textNormalSongInfo.show();
 		textShadeSongInfo.show();
+    textShadeSongInfoShadow.show();
+    textShadeSongInfoInactive.show();
 		
 		timerSongTicker.stop();
 	}
@@ -341,13 +345,17 @@ showActionInfo(String strValue) {
 	textNormalActionInfo.setText(strValue);
 
 	textShadeSongInfo.hide();
+  textShadeSongInfoShadow.hide();
+  textShadeSongInfoInactive.hide();
 	textShadeActionInfo.show();
 	textShadeActionInfo.setText(strValue);
 }
 
 setSongTicker() {
 	textNormalSongInfo.setXMLParam("ticker", System.integerToString(boolSongTicker));
-	textShadeSongInfo.setXMLParam("ticker", System.integerToString(boolSongTicker));
+	//textShadeSongInfo.setXMLParam("ticker", System.integerToString(boolSongTicker));
+  //textShadeSongInfoShadow.setXMLParam("ticker", System.integerToString(boolSongTicker));
+  //textShadeSongInfoInactive.setXMLParam("ticker", System.integerToString(boolSongTicker));
 }
 
 

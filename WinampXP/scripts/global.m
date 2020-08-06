@@ -8,7 +8,7 @@ Global Container containerPL;
 Global Container containerEq;
 Global Layout layoutEqNormal, layoutEqShade, layoutMainNormal, layoutMainShade;
 Global Layout layoutPLNormal, layoutPLShade;
-Global GuiObject textNormalSongInfo, textShadeSongInfo, textShadeSongInfoShadow;
+Global GuiObject textNormalSongInfo, textShadeSongInfo, textShadeSongInfoShadow, textShadeSongInfoInactive;
 Global Text textNormalActionInfo, textShadeActionInfo, textShadeActionInfoShadow;
 Global Timer timerSongTicker;
 Global Boolean boolReleaseSongTicker;
@@ -32,7 +32,8 @@ initGlobal() {
 	textNormalActionInfo = layoutMainNormal.findObject("player.display.actioninfo");
 	
 	textShadeSongInfo = layoutMainShade.findObject("shade.display.songname");
-	textShadeSongInfoShadow = layoutMainShade.findObject("shade.display.songname.shadow");
+	textShadeSongInfoShadow = layoutMainShade.findObject("shade.display.songname1shadow");
+	textShadeSongInfoInactive = layoutMainShade.findObject("shade.display.songname.inactive");
 	textShadeActionInfo = layoutMainShade.findObject("player.display.actioninfo");
 	textShadeActionInfoShadow = layoutMainShade.findObject("player.display.actioninfo.shadow");
 
@@ -61,6 +62,7 @@ timerSongTicker.onTimer() {
 		textNormalSongInfo.show();
 		textShadeSongInfo.show();
 		textShadeSongInfoShadow.show();
+		textShadeSongInfoInactive.show();
 		
 		timerSongTicker.stop();
 	}
@@ -76,6 +78,7 @@ showActionInfo(String strValue) {
 	
 	textShadeSongInfo.hide();
 	textShadeSongInfoShadow.hide();
+	textShadeSongInfoInactive.hide();
 	textShadeActionInfo.show();
 	textShadeActionInfoShadow.show();
 	textShadeActionInfo.setText(strValue);
@@ -84,8 +87,9 @@ showActionInfo(String strValue) {
 
 setSongTicker() {
 	textNormalSongInfo.setXMLParam("ticker", System.integerToString(boolSongTicker));
-	textShadeSongInfo.setXMLParam("ticker", System.integerToString(boolSongTicker));
-	textShadeSongInfoShadow.setXMLParam("ticker", System.integerToString(boolSongTicker));
+	//textShadeSongInfo.setXMLParam("ticker", System.integerToString(boolSongTicker));
+	//textShadeSongInfoShadow.setXMLParam("ticker", System.integerToString(boolSongTicker));
+	//textShadeSongInfoInactive.setXMLParam("ticker", System.integerToString(boolSongTicker));
 	
 	System.setPrivateInt(getSkinName(), "SongTicker", boolSongTicker);
 }
