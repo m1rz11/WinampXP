@@ -87,9 +87,9 @@ showActionInfo(String strValue) {
 
 setSongTicker() {
 	textNormalSongInfo.setXMLParam("ticker", System.integerToString(boolSongTicker));
-	//textShadeSongInfo.setXMLParam("ticker", System.integerToString(boolSongTicker));
-	//textShadeSongInfoShadow.setXMLParam("ticker", System.integerToString(boolSongTicker));
-	//textShadeSongInfoInactive.setXMLParam("ticker", System.integerToString(boolSongTicker));
+	textShadeSongInfo.setXMLParam("ticker", System.integerToString(boolSongTicker));
+	textShadeSongInfoShadow.setXMLParam("ticker", System.integerToString(boolSongTicker));
+	textShadeSongInfoInactive.setXMLParam("ticker", System.integerToString(boolSongTicker));
 	
 	System.setPrivateInt(getSkinName(), "SongTicker", boolSongTicker);
 }

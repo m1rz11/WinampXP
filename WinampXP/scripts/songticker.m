@@ -35,13 +35,13 @@ updateTickerScrolling ()
 	}
 
 	if (songticker_scrolling_disabled_attrib.getData() == "1")
-	{ textNormalSongInfo.setXMLParam("ticker", "off"); textShadeSongInfo.setXMLParam("ticker", "off");
+	{ textNormalSongInfo.setXMLParam("ticker", "off"); textShadeSongInfo.setXMLParam("ticker", "off"); textShadeSongInfoShadow.setXMLParam("ticker", "off"); textShadeSongInfoInactive.setXMLParam("ticker", "off");
 	}
 	if (songticker_scrolling_modern_attrib.getData() == "1")
-	{ textNormalSongInfo.setXMLParam("ticker", "bounce"); textShadeSongInfo.setXMLParam("ticker", "bounce");
+	{ textNormalSongInfo.setXMLParam("ticker", "bounce"); textShadeSongInfo.setXMLParam("ticker", "bounce"); textShadeSongInfoShadow.setXMLParam("ticker", "bounce"); textShadeSongInfoInactive.setXMLParam("ticker", "bounce");
 	}
 	if (songticker_scrolling_classic_attrib.getData() == "1")
-	{ textNormalSongInfo.setXMLParam("ticker", "scroll"); textShadeSongInfo.setXMLParam("ticker", "scroll");
+	{ textNormalSongInfo.setXMLParam("ticker", "scroll"); textShadeSongInfo.setXMLParam("ticker", "scroll"); textShadeSongInfoShadow.setXMLParam("ticker", "scroll"); textShadeSongInfoInactive.setXMLParam("ticker", "scroll");
 	}
 
 }
