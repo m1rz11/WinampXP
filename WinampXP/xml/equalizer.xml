@@ -30,7 +30,7 @@
 	
   <Animatedlayer id="preamp_layer" x="50" y="77" w="6" h="107" ghost="1" alpha="255"/>
   
-	<slider id="preamp" action="EQ_BAND" param="PREAMP" x="42" y="18" h="119" w="22" orientation="vertical" thumb="eq.normal.button.slider.v.n" hoverthumb="eq.normal.button.slider.v.h" downthumb="eq.normal.button.slider.v.d" tooltip="Preamp" cursor="cur.normal"/>
+	<slider id="preamp" action="EQ_BAND" param="PREAMP" x="42" y="18" h="118" w="22" orientation="vertical" thumb="eq.normal.button.slider.v.n" hoverthumb="eq.normal.button.slider.v.h" downthumb="eq.normal.button.slider.v.d" tooltip="Preamp" cursor="cur.normal"/>
 
 	<!--layer id="eq1.bg" x="131" y="70" image="eq.slider.bg.1" ghost="1"/-->
 	
