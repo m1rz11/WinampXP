@@ -1,4 +1,4 @@
-![Logo](https://i.imgur.com/Bcz5Iaf.png)
+![Logo](https://i.imgur.com/u415TZD.png)
 
 A Winamp modern skin based on the looks of Windows XP that aims for accuracy.
 
