@@ -100,7 +100,7 @@
 
   <group id="eq.shade.volbalance" x="0" y="6" w="228" h="28"/>
 
-	<layer id="eq.background.grip.mid" x="-4" y="0" w="4" h="35" image="shade.resizer" relatx="1" dblclickaction="SWITCH;normal" alpha="255" resize="right" cursor="cur.posbar" />
+	<layer id="eq.background.grip.mid" x="-4" y="0" w="4" h="35" image="shade.resizer" relatx="1" dblclickaction="SWITCH;normal" alpha="255" resize="right" cursor="cur.normal" />
 
 		<!-- active -->
 	<button x="-73" y="1" relatx="1" image="shade.button.minimize.n" cursor="cur.close" activealpha="255" inactivealpha="0"/>
@@ -126,12 +126,12 @@
   <!--images source="volume" x="5" y="6" w="120" h="8" images="player.animation.volume" imagesspacing="8"/-->
   <Animatedlayer id="volume.anim" x="5" y="6" w="120" h="8" ghost="1" alpha="255"/>
 	<slider id="player.slider.volume.shadow" x="0" y="0" w="130" h="26" action="VOLUME" orientation="horizontal" thumb="thumb.volpan.slider.shadow" hoverthumb="thumb.volpan.slider.shadow" downthumb="thumb.volpan.slider.shadow"/>	
-	<slider id="player.slider.volume" x="0" y="0" w="130" h="26" action="VOLUME" orientation="horizontal" thumb="thumb.volpan.slider.n" hoverthumb="thumb.volpan.slider.h" downthumb="thumb.volpan.slider.d" cursor="cur.posbar" tooltip="Volume Bar"/>
+	<slider id="player.slider.volume" x="0" y="0" w="130" h="26" action="VOLUME" orientation="horizontal" thumb="thumb.volpan.slider.n" hoverthumb="thumb.volpan.slider.h" downthumb="thumb.volpan.slider.d" cursor="cur.normal" tooltip="Volume Bar"/>
 
 	<layer id="eq.bg.pan" x="143" y="3" image="player.bg.balance" tooltip="Panning Bar"/>
   <Animatedlayer id="balance.anim" x="147" y="6" w="71" h="8" ghost="1" alpha="255"/>
 	<slider id="eq.slider.pan.shadow" x="143" y="0" w="81" h="26" action="PAN" thumb="thumb.volpan.slider.shadow" hoverthumb="thumb.volpan.slider.shadow" downthumb="thumb.volpan.slider.shadow"/>
-	<slider id="eq.slider.pan" x="143" y="0" w="81" h="26" action="PAN" thumb="thumb.volpan.slider.n" hoverthumb="thumb.volpan.slider.h" downthumb="thumb.volpan.slider.d" cursor="cur.posbar" tooltip="Panning Bar"/>
+	<slider id="eq.slider.pan" x="143" y="0" w="81" h="26" action="PAN" thumb="thumb.volpan.slider.n" hoverthumb="thumb.volpan.slider.h" downthumb="thumb.volpan.slider.d" cursor="cur.normal" tooltip="Panning Bar"/>
 </groupdef>
 
 <groupdef id="eq.shade.titlebar.center">
@@ -156,11 +156,11 @@
 <layout id="normaleq" background="component.basetexture" w="550" h="242" minimum_w="550" maximum_w="550" desktopalpha="0" linkwidth="shade" appbar="top|bottom">
 	<Wasabi:StandardFrame:NoStatus x="0" y="0" w="0" h="242" relatw="1"/>
 	
-  <layer id="resize.disabler.top" x="10" y="0" w="-20" h="10" relatw="1" image="none" move="1" cursor="cur.move"/>
-  <layer id="resize.disabler.top.left" x="0" y="0" w="12" h="53" image="none" regionop="1" rectrgn="1" cursor="cur.posbar"/>
-  <layer id="resize.disabler.top.right" x="-10" relatx="1" y="0" w="10" h="53" image="none" regionop="1" rectrgn="1" cursor="cur.posbar"/>
-  <layer id="resize.disabler.bottom.left" x="0" y="190" w="10" h="53" image="none" regionop="1" rectrgn="1" cursor="cur.posbar"/>
-  <layer id="resize.disabler.bottom.right" x="-10" relatx="1" y="190" w="19" h="53" image="none" regionop="1" rectrgn="1" cursor="cur.posbar"/>
+  <layer id="resize.disabler.top" x="10" y="0" w="-20" h="10" relatw="1" image="none" move="1" cursor="ccur.normal"/>
+  <layer id="resize.disabler.top.left" x="0" y="0" w="12" h="53" image="none" regionop="1" rectrgn="1" cursor="cur.normal"/>
+  <layer id="resize.disabler.top.right" x="-10" relatx="1" y="0" w="10" h="53" image="none" regionop="1" rectrgn="1" cursor="cur.normal"/>
+  <layer id="resize.disabler.bottom.left" x="0" y="190" w="10" h="53" image="none" regionop="1" rectrgn="1" cursor="cur.normal"/>
+  <layer id="resize.disabler.bottom.right" x="-10" relatx="1" y="190" w="19" h="53" image="none" regionop="1" rectrgn="1" cursor="cur.normal"/>
   <layer id="resize.disabler.bottom" x="10" y="237" w="-20" h="7" relatw="1" image="none" cursor="cur.normal"/>
   <layer id="resize.disabler.left" x="0" y="30" w="10" h="242" image="none" cursor="cur.normal"/>
   <layer id="resize.disabler.right" x="-10" y="30" w="10" h="242" relatx="1" image="none" cursor="cur.normal"/>

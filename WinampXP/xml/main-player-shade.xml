@@ -62,10 +62,10 @@
 	<grid id="seek.bg" x="-238" y="0" h="30" w="50" relatx="1" left="shade.seek.bg.left" middle="shade.seek.bg.middle" right="shade.seek.bg.right" move="0" alpha="255" tooltip="Seeking Bar" cursor="cur.normal"/>
 
 	<slider id="player.slider.seek.shadow" action="SEEK" x="-240" y="2" w="55" h="29" relatx="1" orientation="horizontal" thumb="shade.seek.slider.shadow" downthumb="shade.seek.slider.shadow" alpha="250"/>	
-	<slider id="player.slider.seek" action="SEEK" x="-240" y="2" w="55" h="29" relatx="1" orientation="horizontal" thumb="shade.seek.slider.n" downthumb="shade.seek.slider.d" tooltip="Seeking Bar" alpha="255" cursor="cur.posbar"/>
-	<slider id="player.slider.seek.ghost" action="SEEK" x="-240" y="2" w="55" h="29" relatx="1" orientation="horizontal" thumb="shade.seek.slider.n" downthumb="shade.seek.slider.d" tooltip="Seeking Bar" alpha="255" cursor="cur.posbar"/>
+	<slider id="player.slider.seek" action="SEEK" x="-240" y="2" w="55" h="29" relatx="1" orientation="horizontal" thumb="shade.seek.slider.n" downthumb="shade.seek.slider.d" tooltip="Seeking Bar" alpha="255" cursor="cur.normal"/>
+	<slider id="player.slider.seek.ghost" action="SEEK" x="-240" y="2" w="55" h="29" relatx="1" orientation="horizontal" thumb="shade.seek.slider.n" downthumb="shade.seek.slider.d" tooltip="Seeking Bar" alpha="255" cursor="cur.normal"/>
 
-	<layer id="player.resizer.mid" x="-4" y="0" w="4" h="35" image="shade.resizer" relatx="1" move="0" resize="right" alpha="255" tooltip="Adjust Horizontal Size" rectrgn="1" cursor="cur.posbar"/>
+	<layer id="player.resizer.mid" x="-4" y="0" w="4" h="35" image="shade.resizer" relatx="1" move="0" resize="right" alpha="255" tooltip="Adjust Horizontal Size" rectrgn="1" cursor="cur.normal"/>
 	
 	<!-- active -->
 	<button x="-73" y="1" relatx="1" image="shade.button.minimize.n" cursor="cur.close" activealpha="255" inactivealpha="0"/>
@@ -109,6 +109,7 @@
 
 	<text id="player.display.actioninfo.shadow" x="-1" y="7" w="0" h="20" relatw="1" font="trebuc" move="1" dblclickaction="SWITCH;normal"  fontsize="17" align="left" color="titlebar.text.shadow" bold="1" activealpha="255" inactiveAlpha="0" cursor="cur.normal"/>
 	<text id="player.display.actioninfo" x="-2" y="6" w="0" h="20" relatw="1" font="trebuc" move="1" dblclickaction="SWITCH;normal"  fontsize="17" align="left" color="titlebar.text" bold="1" activealpha="255" inactiveAlpha="0" cursor="cur.normal"/>
+	<text id="player.display.actioninfo.inactive" x="-2" y="6" w="0" h="20" relatw="1" font="trebuc" move="1" dblclickaction="SWITCH;normal"  fontsize="17" align="left" color="titlebar.text.inactive" bold="1" activealpha="0" inactiveAlpha="255" cursor="cur.normal"/>
 
   <!--script file="scripts\visualizer.maki" param="shade.vis;player.vis.trigger;hide.for.vic"/-->
   <!--script file="..\WinampXP\scripts\pauseblink.maki"/-->

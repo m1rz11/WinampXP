@@ -9,7 +9,7 @@ Global Container containerEq;
 Global Layout layoutEqNormal, layoutEqShade, layoutMainNormal, layoutMainShade;
 Global Layout layoutPLNormal, layoutPLShade;
 Global GuiObject textNormalSongInfo, textShadeSongInfo, textShadeSongInfoShadow, textShadeSongInfoInactive;
-Global Text textNormalActionInfo, textShadeActionInfo, textShadeActionInfoShadow;
+Global Text textNormalActionInfo, textShadeActionInfo, textShadeActionInfoShadow, textShadeActionInfoInactive;
 Global Timer timerSongTicker;
 Global Boolean boolReleaseSongTicker;
 Global Boolean boolSongTicker;
@@ -36,10 +36,12 @@ initGlobal() {
 	textShadeSongInfoInactive = layoutMainShade.findObject("shade.display.songname.inactive");
 	textShadeActionInfo = layoutMainShade.findObject("player.display.actioninfo");
 	textShadeActionInfoShadow = layoutMainShade.findObject("player.display.actioninfo.shadow");
+	textShadeActionInfoInactive = layoutMainShade.findObject("player.display.actioninfo.inactive");
 
 	textNormalActionInfo.hide();
 	textShadeActionInfo.hide();
 	textShadeActionInfoShadow.hide();
+	textShadeActionInfoInactive.hide();
 	
 	timerSongTicker = new Timer;
 	timerSongTicker.setDelay(1000);
@@ -58,6 +60,7 @@ timerSongTicker.onTimer() {
 		textNormalActionInfo.hide();
 		textShadeActionInfo.hide();
 		textShadeActionInfoShadow.hide();
+		textShadeActionInfoInactive.hide();
 		
 		textNormalSongInfo.show();
 		textShadeSongInfo.show();
@@ -81,8 +84,10 @@ showActionInfo(String strValue) {
 	textShadeSongInfoInactive.hide();
 	textShadeActionInfo.show();
 	textShadeActionInfoShadow.show();
+	textShadeActionInfoInactive.show();
 	textShadeActionInfo.setText(strValue);
 	textShadeActionInfoShadow.setText(strValue);
+	textShadeActionInfoInactive.setText(strValue);
 }
 
 setSongTicker() {
