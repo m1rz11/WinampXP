@@ -21,10 +21,10 @@
 	<Wasabi:Standardframe:NoStatus x="0" y="0" w="421" h="354" content="skin.about.group" />
   <!--sendparams target="titlebar.title.bg.group" w="170"/-->
 	
-  <layer id="resize.disabler" x="0" y="35" w="15" h="0" relath="1" image="none" cursor="cur.normal"/>
-  <layer id="resize.disabler" x="395" y="35" w="15" h="0" relath="1" image="none" cursor="cur.normal"/>
-  <layer id="resize.disabler" x="0" y="35" w="0" h="15" relatw="1" image="none" cursor="cur.normal"/>
-  <layer id="resize.disabler" x="0" y="365" w="0" h="16" relatw="1" image="none" cursor="cur.normal"/>
+  <layer id="resize.disabler" x="-2" y="-2" w="15" h="0" relath="1" image="none" cursor="cur.normal"/>
+  <layer id="resize.disabler" x="415" y="-2" w="15" h="0" relath="1" image="none" cursor="cur.normal"/>
+  <layer id="resize.disabler" x="-2" y="-2" w="0" h="15" relatw="1" image="none" cursor="cur.normal"/>
+  <layer id="resize.disabler" x="-2" y="348" w="0" h="16" relatw="1" image="none" cursor="cur.normal"/>
 </layout>
 
 </container>
