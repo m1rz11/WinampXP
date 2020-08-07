@@ -1,4 +1,4 @@
-<gammaset id="Windows XP">
+<gammaset id="Default">
 	<gammagroup id="plastic" value="0, 0, 0" gray="0" boost="0"/>
 	<gammagroup id="display" value="0, 0, 0" gray="0" boost="0"/>
 	<gammagroup id="goldbuttons" value="0, 0, 0" gray="0" boost="0"/>

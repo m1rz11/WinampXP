@@ -14,7 +14,7 @@
 </groupdef>
 
 
-<container id="about" name="About the skin" default_visible="0">
+<container id="about" name="About WinampXP" default_visible="0">
 
 
 <layout id="normal" minimum_w="421" minimum_h="354" h="354" w="421" maximum_w="421" maximum_h="354">
