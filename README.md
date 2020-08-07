@@ -1,5 +1,6 @@
-# WinampXP
-Winamp modern skin based on the looks of Windows XP that aims for accuracy.
+![Logo](https://i.imgur.com/Bcz5Iaf.png)
+
+A Winamp modern skin based on the looks of Windows XP that aims for accuracy.
 
 Grab the latest release [Here](https://github.com/mirzi1/WinampXP/releases)
 
@@ -12,7 +13,6 @@ Victhor, the original creator of [Winamp Classic Modern](https://www.deviantart.
 [Godron "The1" Freeman](https://github.com/The1Freeman), the man behind [Winamp 2000 SP4](https://github.com/The1Freeman/Winamp2000SP4) for giving me a huge head start with development, and implementing many more cool features, like a WMP style visualizer.
 
 ### TODO:
-Version 1.1 is on the horizon, including huge changes to the overall layout of the skin. I'm currently ironing out any remaining bugs before release.
 
 I might consider making alternative themes in the future:
 - Royale theme
