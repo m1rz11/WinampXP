@@ -32,7 +32,7 @@
 	<color id="wasabi.list.column.frame.top" value="255,255,255" gammagroup="display-sui"/> <!-- listview header frame top color -->
 	<color id="wasabi.list.column.frame.middle" value="172,168,153" gammagroup="display-sui"/> <!-- listview header frame middle color -->
 	<color id="wasabi.list.column.frame.bottom" value="113,111,100" gammagroup="display-sui"/> <!-- listview header frame bottom color -->
-	<color id="wasabi.list.column.empty" value="238,234,216" gammagroup="display-sui"/>  <!-- listview header empty color (beyond the columns -->
+	<color id="wasabi.list.column.empty" value="222,221,225" gammagroup="display-sui"/>  <!-- listview header empty color (beyond the columns -->
 
 
 	<color id="wasabi.window.text" value="0,0,0" gammagroup="window-text"/> <!--text color within windows -->
