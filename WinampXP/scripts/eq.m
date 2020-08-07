@@ -15,7 +15,7 @@ Global Container containerPL;
 Global Container containerEq;
 Global Layout layoutEqNormal, layoutEqShade, layoutMainNormal, layoutMainShade;
 Global GuiObject textNormalSongInfo, textShadeSongInfo, textShadeSongInfoShadow, textShadeSongInfoInactive;
-Global Text textNormalActionInfo, textShadeActionInfo;
+Global Text textNormalActionInfo, textShadeActionInfo, textShadeActionInfoShadow, textShadeActionInfoInactive;
 Global Group ShadeGroupMain, ShadeGroupDisplay, EqNormalGroup, EQShadeGroup, EQShadeTitlebarCenter, EQShadeVolBalance;
 
 Global Button btnEQp12, btnEQ0, btnEQm12, shadeMainMenuIcon;
@@ -52,6 +52,8 @@ System.onScriptLoaded() {
   textShadeSongInfoShadow = ShadeGroupDisplay.findObject("shade.display.songname.shadow");
   textShadeSongInfoInactive = ShadeGroupDisplay.findObject("shade.display.songname.inactive");
 	textShadeActionInfo = ShadeGroupDisplay.findObject("player.display.actioninfo");	
+  textShadeActionInfoShadow = ShadeGroupDisplay.findObject("player.display.actioninfo.shadow");
+  textShadeActionInfoInactive = ShadeGroupDisplay.findObject("player.display.actioninfo.inactive");
 	
   containerEq = System.getContainer("equalizer");
   layoutEqNormal = containerEq.getLayout("normaleq");
@@ -98,6 +100,8 @@ System.onScriptLoaded() {
 
 	textNormalActionInfo.hide();
 	textShadeActionInfo.hide();
+  textShadeActionInfoShadow.hide();
+  textShadeActionInfoInactive.hide();
 	  
   timerSongTicker = new Timer;
 	timerSongTicker.setDelay(1000);
@@ -326,6 +330,8 @@ timerSongTicker.onTimer() {
 	if (boolReleaseSongTicker) {
 		textNormalActionInfo.hide();
 		textShadeActionInfo.hide();
+    textShadeActionInfoShadow.hide();
+    textShadeActionInfoInactive.hide();
 
 		textNormalSongInfo.show();
 		textShadeSongInfo.show();
@@ -349,6 +355,10 @@ showActionInfo(String strValue) {
   textShadeSongInfoInactive.hide();
 	textShadeActionInfo.show();
 	textShadeActionInfo.setText(strValue);
+  textShadeActionInfoShadow.show();
+	textShadeActionInfoShadow.setText(strValue);
+  textShadeActionInfoInactive.show();
+	textShadeActionInfoInactive.setText(strValue);
 }
 
 setSongTicker() {
