@@ -5,6 +5,7 @@
 #include "global.m"
 #include "mainplayer.m"
 #include "shadeplayer.m"
+#include "seek_slider.m"
 #include "songticker.m"
 
 
@@ -13,6 +14,7 @@ System.onScriptLoaded() {
 	initMainPlayer();
 	initShadePlayer();
 	init_Songticker();
+	initSeekSlider();
 }
 
 System.onScriptUnloading() {
