@@ -65,7 +65,7 @@
 	<slider id="player.slider.seek" action="SEEK" x="-240" y="2" w="55" h="29" relatx="1" orientation="horizontal" thumb="shade.seek.slider.n" hoverthumb="shade.seek.slider.h" downthumb="shade.seek.slider.d" tooltip="Seeking Bar" alpha="255" cursor="cur.normal"/>
 	<!--slider id="player.slider.seek.ghost" action="SEEK" x="-240" y="2" w="55" h="29" relatx="1" orientation="horizontal" thumb="shade.seek.slider.n" downthumb="shade.seek.slider.d" tooltip="Seeking Bar" alpha="255" cursor="cur.normal"/-->
 
-	<layer id="player.resizer.mid" x="-4" y="0" w="4" h="35" image="shade.resizer" relatx="1" move="0" resize="right" alpha="255" tooltip="Adjust Horizontal Size" rectrgn="1" cursor="cur.normal"/>
+	<layer id="player.resizer.mid" x="-4" y="0" w="4" h="35" image="shade.resizer" relatx="1" move="0" resize="right" alpha="255" tooltip="Adjust Horizontal Size" rectrgn="1" cursor="cur.posbar"/>
 	
 	<!-- active -->
 	<button x="-73" y="1" relatx="1" image="shade.button.minimize.n" cursor="cur.close" activealpha="255" inactivealpha="0"/>
