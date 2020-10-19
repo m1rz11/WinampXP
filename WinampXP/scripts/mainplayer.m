@@ -23,7 +23,7 @@ Global ToggleButton OAIDUBtnA;
 Global AnimatedLayer VolumeAnim, MainVolumeAnim;
 Global AnimatedLayer anlBalance, MainanlBalance;
 Global Button OAIDUBtnI, OAIDUBtnD, OAIDUBtnU, AboutBtn;
-Global GuiObject DisplayTime, DisplayTimeShade, OAIDUBtnO/*, SongtickerObj*/;
+Global GuiObject DisplayTime, OAIDUBtnO;
 Global GuiObject SonginfoFrequencyBG, SonginfoFrequencyDISPLAY, SonginfoBitrateBG, SonginfoBitrateDISPLAY, ButtonClose;
 Global Layer EqButton, PLButton, SonginfoMono, SonginfoStereo, SonginfoBitrateLabel, SonginfoFrequencyLabel;
 Global togglebutton RepeatLight, ShuffleLight;
@@ -96,7 +96,7 @@ initMainPlayer() {
 	
 	MainGroupShade = layoutMainShade.getObject("player.shade.group.main");
 	DisplayGroupShade = MainGroupShade.getObject("player.shade.group.display");
-  DisplayTimeShade = DisplayGroupShade.getObject("shade.time");
+  //DisplayTimeShade = DisplayGroupShade.getObject("shade.time");
 
 	WinampTxtShade = MainGroupShade.getObject("winamp.txt");
   
@@ -158,13 +158,13 @@ initMainPlayer() {
   if (timemodestring == 1)
   {
     DisplayTime.setXmlParam("display", "TIMEELAPSED");
-    DisplayTimeShade.setXmlParam("display", "TIMEELAPSED");
+    //DisplayTimeShade.setXmlParam("display", "TIMEELAPSED");
     timemodestring = 1;
   }
   else if (timemodestring == 2)
   {
     DisplayTime.setXmlParam("display", "TIMEREMAINING");
-    DisplayTimeShade.setXmlParam("display", "TIMEREMAINING");
+    //DisplayTimeShade.setXmlParam("display", "TIMEREMAINING");
     timemodestring = 2;
   }
 
@@ -675,13 +675,13 @@ DisplayTime.onLeftButtonUp (int x, int y)
   if (DisplayTime.getXmlParam("display") == "TIMEELAPSED")
   {
     DisplayTime.setXmlParam("display", "TIMEREMAINING");
-    DisplayTimeShade.setXmlParam("display", "TIMEREMAINING");
+    //DisplayTimeShade.setXmlParam("display", "TIMEREMAINING");
     timemodestring = 1;
   }
   else if (DisplayTime.getXmlParam("display") == "TIMEREMAINING")
   {
     DisplayTime.setXmlParam("display", "TIMEELAPSED");
-    DisplayTimeShade.setXmlParam("display", "TIMEELAPSED");
+    //DisplayTimeShade.setXmlParam("display", "TIMEELAPSED");
     timemodestring = 2;
   }
   
@@ -711,14 +711,14 @@ DisplayTime.onRightButtonUp (int x, int y)
   if (result == 1)
 	{
     DisplayTime.setXmlParam("display", "TIMEELAPSED");
-    DisplayTimeShade.setXmlParam("display", "TIMEELAPSED");
+    //DisplayTimeShade.setXmlParam("display", "TIMEELAPSED");
     timemodestring = 1;
     setPrivateInt(getSkinName(), "timemodestring", timemodestring);
 	}
   else if (result == 2)
 	{
     DisplayTime.setXmlParam("display", "TIMEREMAINING");
-    DisplayTimeShade.setXmlParam("display", "TIMEREMAINING");
+    //DisplayTimeShade.setXmlParam("display", "TIMEREMAINING");
     timemodestring = 2;
     setPrivateInt(getSkinName(), "timemodestring", timemodestring);
 	}
