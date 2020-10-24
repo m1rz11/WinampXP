@@ -1,4 +1,4 @@
-WinampXP v1.1
+WinampXP v1.1.1
 A Winamp modern skin based on the looks of Windows XP that aims for accuracy.
 
 -----------------------------------------------------------------------------------
@@ -19,6 +19,8 @@ for this project.
 Godron "The1" Freeman, the man behind Winamp 2000 SP4 for giving me a huge head
 start with development, and implementing many more cool features, like a
 WMP style visualizer.
+
+Version 1.1.1 contains multiple bug fixes from the previous release.
 
 -----------------------------------------------------------------------------------
 
