@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<WinampAbstractionLayer version="1.35">
+	<skininfo>
+		<version>1.1</version>
+		<name>Nullsoft Winamp XP - Zune</name>
+		<comment>A Modern Skin in the style of the Windows XP Zune theme based on that Modern Skin in the style of Windows XP based on Winamp Classic Modern</comment>
+		<author>thatotherunnamedauthor// mirzi // Gordon Freeman // Victhor</author>
+		<screenshot>screenshot.png</screenshot>
+		<wacupscreenshot>wacupscreenshot.png</wacupscreenshot>
+	</skininfo>
+
+	<accelerators section="general">
+		<accelerator bind="Ctrl+W" action="HOTKEY_SHADETOGGLE"/>
+		<accelerator bind="Ctrl+Q" action="HOTKEY_CONTS"/>
+		<accelerator bind="Ctrl+W" action="HOTKEY_SHADETOGGLEPL"/>
+	</accelerators>
+	
+	<accelerators section="shade">
+		<accelerator bind="Ctrl+W" action="HOTKEY_SHADETOGGLE"/>
+	</accelerators>
+	
+	<accelerators section="normaleq">
+		<accelerator bind="Ctrl+W" action="HOTKEY_SHADETOGGLEEQ"/>
+	</accelerators>
+	
+	<include file="xml/elements.xml"/>
+	<elements>
+	<include file="xml/elements-colors.xml"/>
+	</elements>
+	<include file="../WinampXP/xml/system.xml"/>
+  	<include file="xml/standardframe.xml"/>
+  	<include file="../WinampXP/xml/titlebar.xml"/>
+	<include file="../WinampXP/xml/main-player.xml"/>
+	<include file="../WinampXP/xml/albumart.xml"/>
+	<include file="../WinampXP/xml/equalizer.xml"/>
+	<include file="../WinampXP/xml/playlist-editor.xml"/>
+	<include file="../WinampXP/xml/media-library.xml"/>
+	<include file="../WinampXP/xml/video.xml"/>
+	<include file="../WinampXP/xml/visualization.xml"/>
+	<include file="../WinampXP/xml/about.xml"/>
+	<include file="../WinampXP/xml/color-themes.xml"/>
+	<include file="../WinampXP/xml/window-overrides.xml"/>
+	<include file="../WinampXP/xml/winampvis.xml"/>
+	
+	<scripts>
+		<script id="script.system" file="../WinampXP/scripts/system.maki"></script>
+		<script file="../WinampXP/scripts/visualizer.maki"/>
+	</scripts>
+
+	
+</WinampAbstractionLayer>
