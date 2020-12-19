@@ -478,6 +478,48 @@ refreshVisSettings ()
 
 			visualizer.setXmlParam("fps", "30");
 		}
+		else if(v_color == 12){
+			//zune orange
+			visualizer.setXmlParam("alpha","255");
+			
+			visualizerwmp.setXmlParam("alpha","0");
+			visualizerwmp.setXmlParam("mode","0");
+			visualizerwmps1.setXmlParam("alpha","0");
+			visualizerwmps1.setXmlParam("mode","0");
+			visualizerwmps2.setXmlParam("alpha","0");
+			visualizerwmps2.setXmlParam("mode","0");
+			visualizerwmps3.setXmlParam("alpha","0");
+			visualizerwmps3.setXmlParam("mode","0");
+			
+			setColorBandsGradient(127,59,20,5,3,1);
+
+			visualizer.setXmlParam("colorbandpeak", "231,121,49");
+			setColorOscOdd("127,59,20");
+			setColorOscEven("214,101,33");
+
+			visualizer.setXmlParam("fps", "30");
+		}
+		else if(v_color == 13){
+			//zune dark
+			visualizer.setXmlParam("alpha","255");
+			
+			visualizerwmp.setXmlParam("alpha","0");
+			visualizerwmp.setXmlParam("mode","0");
+			visualizerwmps1.setXmlParam("alpha","0");
+			visualizerwmps1.setXmlParam("mode","0");
+			visualizerwmps2.setXmlParam("alpha","0");
+			visualizerwmps2.setXmlParam("mode","0");
+			visualizerwmps3.setXmlParam("alpha","0");
+			visualizerwmps3.setXmlParam("mode","0");
+			
+			setColorBandsGradient(38,38,38,4,4,4);
+			
+			visualizer.setXmlParam("colorbandpeak", "231,121,49");
+			setColorOscOdd("38,38,38");
+			setColorOscEven("109,109,109");
+
+			visualizer.setXmlParam("fps", "30");
+		}
 	setVis (currentMode);
 	darkDisplay(dark_display);
 }
@@ -519,7 +561,9 @@ Trigger.onRightButtonUp (int x, int y)
 	waxpmenu.addCommand("Olive Green (Gradient)", 510, v_color == 10, 0);
 	waxpmenu.addCommand("Silver", 508, v_color == 8, 0);
 	waxpmenu.addCommand("Silver (Gradient)", 511, v_color == 11, 0);
-	colmenu.addCommand("Winamp/WACUP", 502, v_color == 2, 0);
+	waxpmenu.addCommand("Zune Orange", 512, v_color == 12, 0);
+	waxpmenu.addCommand("Zune Dark", 513, v_color == 13, 0);
+	colmenu.addCommand("Winamp/WACUP", 513, v_color == 2, 0);
 	colmenu.addSubMenu(waxpmenu, "WinampXP");
 	colmenu.addSubMenu(wmpmenu, "Windows Media Player");
 	wmpmenu.addCommand("Bars", 503, v_color == 3, 0);
@@ -667,7 +711,7 @@ ProcessMenuResult (int a)
     OAIDUBtnUE3.Leftclick ();
   }
 
-	else if (a >= 500 && a <= 511)
+	else if (a >= 500 && a <= 513)
 	{
 		v_color = a - 500;
 		if(v_color == 0 || v_color == 1){
@@ -941,6 +985,48 @@ ProcessMenuResult (int a)
 			visualizer.setXmlParam("colorbandpeak", "252,252,252");
 			setColorOscOdd("165,164,190");
 			setColorOscEven("252,252,252");
+
+			visualizer.setXmlParam("fps", "30");
+		}
+		else if(v_color == 12){
+			//zune orange
+			visualizer.setXmlParam("alpha","255");
+			
+			visualizerwmp.setXmlParam("alpha","0");
+			visualizerwmp.setXmlParam("mode","0");
+			visualizerwmps1.setXmlParam("alpha","0");
+			visualizerwmps1.setXmlParam("mode","0");
+			visualizerwmps2.setXmlParam("alpha","0");
+			visualizerwmps2.setXmlParam("mode","0");
+			visualizerwmps3.setXmlParam("alpha","0");
+			visualizerwmps3.setXmlParam("mode","0");
+			
+			setColorBandsGradient(127,59,20,5,3,1);
+
+			visualizer.setXmlParam("colorbandpeak", "231,121,49");
+			setColorOscOdd("127,59,20");
+			setColorOscEven("214,101,33");
+
+			visualizer.setXmlParam("fps", "30");
+		}
+		else if(v_color == 13){
+			//zune dark
+			visualizer.setXmlParam("alpha","255");
+			
+			visualizerwmp.setXmlParam("alpha","0");
+			visualizerwmp.setXmlParam("mode","0");
+			visualizerwmps1.setXmlParam("alpha","0");
+			visualizerwmps1.setXmlParam("mode","0");
+			visualizerwmps2.setXmlParam("alpha","0");
+			visualizerwmps2.setXmlParam("mode","0");
+			visualizerwmps3.setXmlParam("alpha","0");
+			visualizerwmps3.setXmlParam("mode","0");
+			
+			setColorBandsGradient(38,38,38,4,4,4);
+			
+			visualizer.setXmlParam("colorbandpeak", "231,121,49");
+			setColorOscOdd("38,38,38");
+			setColorOscEven("109,109,109");
 
 			visualizer.setXmlParam("fps", "30");
 		}
