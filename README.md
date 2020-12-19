@@ -20,5 +20,4 @@ I might consider making alternative themes in the future:
 - Royale theme
 - Royale Noir theme
 - Embedded theme
-- Zune theme
 - Whistler theme
