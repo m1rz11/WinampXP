@@ -12,6 +12,8 @@ Victhor, the original creator of [Winamp Classic Modern](https://www.deviantart.
 
 [0x5066](https://github.com/0x5066), the man behind [Winamp 2000 SP4](https://github.com/0x5066/Winamp2000SP4) for giving me a huge head start with development, and implementing many more cool features, like a WMP style visualizer.
 
+[Teil](https://github.com/teil-aidcx), for making the Zune theme a reality.
+
 ### TODO:
 
 I might consider making alternative themes in the future:
