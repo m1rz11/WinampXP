@@ -1197,7 +1197,8 @@ rgbTimer.onTimer(){
 }
 
 rgbBandTimer1.onTimer(){
-	visualizer.setXmlParam("ColorBand1", ""+integerToString(r1)+","+integerToString(g1)+","+integerToString(b1)+"");
+	visualizer.setXmlParam("ColorBand1", integerToString(r1)+","+integerToString(g1)+","+integerToString(b1));
+	visualizer.setXmlParam("colorosc1", integerToString(r1)+","+integerToString(g1)+","+integerToString(b1));
 	visualizer.setXmlParam("colorbandpeak", visualizer.getXmlParam("ColorBand15"));
 
 	//TDText.setXmlParam("text",""+integerToString(r1)+","+integerToString(g1)+","+integerToString(b1));
@@ -1224,18 +1225,22 @@ rgbBandTimer1.onTimer(){
 
 rgbBandTimer2.onTimer(){
 	visualizer.setXmlParam("ColorBand2", visualizer.getXmlParam("ColorBand1"));
+	visualizer.setXmlParam("colorosc2", visualizer.getXmlParam("colorosc1"));
 }
 
 rgbBandTimer3.onTimer(){
 	visualizer.setXmlParam("ColorBand3", visualizer.getXmlParam("ColorBand2"));
+	visualizer.setXmlParam("colorosc3", visualizer.getXmlParam("colorosc2"));
 }
 
 rgbBandTimer4.onTimer(){
 	visualizer.setXmlParam("ColorBand4", visualizer.getXmlParam("ColorBand3"));
+	visualizer.setXmlParam("colorosc4", visualizer.getXmlParam("colorosc3"));
 }
 
 rgbBandTimer5.onTimer(){
 	visualizer.setXmlParam("ColorBand5", visualizer.getXmlParam("ColorBand4"));
+	visualizer.setXmlParam("colorosc5", visualizer.getXmlParam("colorosc4"));
 }
 
 rgbBandTimer6.onTimer(){
