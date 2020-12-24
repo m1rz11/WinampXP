@@ -1039,7 +1039,9 @@ ProcessMenuResult (int a)
 setColorBands(String rgb, int start, int end)
 {
 	for(int i=start; i<=end; i++){
-		visualizer.setXmlParam("ColorBand"+integerToString(i)+"", rgb);
+		while(visualizer.getXmlParam("ColorBand"+integerToString(i)) != rgb){
+			visualizer.setXmlParam("ColorBand"+integerToString(i)+"", rgb);
+		}
 	}
 }
 
@@ -1047,7 +1049,9 @@ setColorBands(String rgb, int start, int end)
 setColorBandsOdd(String rgb)
 {
 	for(int i=1; i<=15; i=i+2){
-		visualizer.setXmlParam("ColorBand"+integerToString(i)+"", rgb);
+		while(visualizer.getXmlParam("ColorBand"+integerToString(i)) != rgb){
+			visualizer.setXmlParam("ColorBand"+integerToString(i)+"", rgb);
+		}
 	}
 }
 
@@ -1055,7 +1059,9 @@ setColorBandsOdd(String rgb)
 setColorBandsEven(String rgb)
 {
 	for(int i=2; i<=16; i=i+2){
-		visualizer.setXmlParam("ColorBand"+integerToString(i)+"", rgb);
+		while(visualizer.getXmlParam("ColorBand"+integerToString(i)) != rgb){
+			visualizer.setXmlParam("ColorBand"+integerToString(i)+"", rgb);
+		}
 	}
 }
 
@@ -1063,18 +1069,34 @@ setColorBandsEven(String rgb)
 setColorBandsGradient(int r, int g, int b, int stepr, int stepg, int stepb)
 {
 	String grad = integerToString(r) +","+ integerToString(g) +","+ integerToString(b);
+
+	//debug stuff 1
+	//String executed_loops = "Loops executed (should be 1 to 16):\n";
+
 	for(int i=1; i<=16; i++){
-		visualizer.setXmlParam("ColorBand"+integerToString(i)+"", grad);
+		//wacup pls
+		while(visualizer.getXmlParam("ColorBand"+integerToString(i)) != grad){
+			visualizer.setXmlParam("ColorBand"+integerToString(i)+"", grad);
+		}
+
+		//debug stuff 2
+		//executed_loops += "Executed loop " +integerToString(i)+ ", grad = " +grad+ "\n";
+
 		r=r+stepr; g=g+stepg; b=b+stepb;
 		grad = integerToString(r) +","+ integerToString(g) +","+ integerToString(b);
 	}
+
+	//debug stuff 3
+	//messagebox(""+executed_loops, "debug message", 1, "");
 }
 
 //sets every colorosc to a color
 setColorosc(String rgb)
 {
 	for(int i=1; i<=5; i++){
-		visualizer.setXmlParam("colorosc"+integerToString(i)+"", rgb);
+		while(visualizer.getXmlParam("colorosc"+integerToString(i)) != rgb){
+			visualizer.setXmlParam("colorosc"+integerToString(i)+"", rgb);
+		}
 	}
 }
 
@@ -1082,7 +1104,9 @@ setColorosc(String rgb)
 setColoroscRange(String rgb, int start, int end)
 {
 	for(int i=start; i<=end; i++){
-		visualizer.setXmlParam("colorosc"+integerToString(i)+"", rgb);
+		while(visualizer.getXmlParam("colorosc"+integerToString(i)) != rgb){
+			visualizer.setXmlParam("colorosc"+integerToString(i)+"", rgb);
+		}
 	}
 }
 
@@ -1090,7 +1114,9 @@ setColoroscRange(String rgb, int start, int end)
 setColoroscOdd(String rgb)
 {
 	for(int i=1; i<=5; i=i+2){
-		visualizer.setXmlParam("colorosc"+integerToString(i)+"", rgb);
+		while(visualizer.getXmlParam("colorosc"+integerToString(i)) != rgb){
+			visualizer.setXmlParam("colorosc"+integerToString(i)+"", rgb);
+		}
 	}
 }
 
@@ -1098,7 +1124,9 @@ setColoroscOdd(String rgb)
 setColoroscEven(String rgb)
 {
 	for(int i=2; i<=4; i=i+2){
-		visualizer.setXmlParam("colorosc"+integerToString(i)+"", rgb);
+		while(visualizer.getXmlParam("colorosc"+integerToString(i)) != rgb){
+			visualizer.setXmlParam("colorosc"+integerToString(i)+"", rgb);
+		}
 	}
 }
 
