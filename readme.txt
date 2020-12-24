@@ -26,10 +26,5 @@ Version 1.1.1 contains multiple bug fixes from the previous release.
 Version 1.1.2 includes a new "Zune" theme by Teil.
 
 -----------------------------------------------------------------------------------
-KNOWN BUGS:
-- Visualizer might appear broken on some WACUP betas, this can be fixed by changing
-  vis style.
-
------------------------------------------------------------------------------------
 Maki sources are included, latest preview version can be found on the GitHub page:
 https://github.com/mirzi1/WinampXP

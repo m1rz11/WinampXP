@@ -563,7 +563,7 @@ Trigger.onRightButtonUp (int x, int y)
 	waxpmenu.addCommand("Silver (Gradient)", 511, v_color == 11, 0);
 	waxpmenu.addCommand("Zune Orange", 512, v_color == 12, 0);
 	waxpmenu.addCommand("Zune Dark", 513, v_color == 13, 0);
-	colmenu.addCommand("Winamp/WACUP", 513, v_color == 2, 0);
+	colmenu.addCommand("Winamp/WACUP", 502, v_color == 2, 0);
 	colmenu.addSubMenu(waxpmenu, "WinampXP");
 	colmenu.addSubMenu(wmpmenu, "Windows Media Player");
 	wmpmenu.addCommand("Bars", 503, v_color == 3, 0);
