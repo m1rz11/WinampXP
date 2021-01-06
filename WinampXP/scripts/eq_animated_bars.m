@@ -49,13 +49,15 @@ System.onScriptLoaded() {
   butReset  = ScriptGroup.findObject("EQ_0");
   butSetMin = ScriptGroup.findObject("EQ_m12");
 
+  for (int i=0; i<=10; i++){
+    if(System.getEqBand(i) == -3)setEqBand(i,0);
+  }
+
   Load=1;
   for (int i=0; i<=10; i++) updateSlider(i,0);
   Load=0;
 
-  for (int i=1; i<=10; i++){
-    if(System.getEqBand(i) == -3)updateSlider(i,0);
-  }
+  //messagebox(integerToString(System.getEqBand(0))+","+integerToString(System.getEqBand(1))+","+integerToString(System.getEqBand(2)) , "debug message", 1, "");
 }
 
 updateSlider(int number, int value) {
