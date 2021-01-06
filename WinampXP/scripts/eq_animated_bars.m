@@ -6,7 +6,7 @@
 //
 //----------------------------------------------------------------------
 
-#include "std.mi"
+#include "lib/std.mi"
 
 Function updateSlider(int number, int value);
 
@@ -52,6 +52,10 @@ System.onScriptLoaded() {
   Load=1;
   for (int i=0; i<=10; i++) updateSlider(i,0);
   Load=0;
+
+  for (int i=1; i<=10; i++){
+    if(System.getEqBand(i) == -3)updateSlider(i,0);
+  }
 }
 
 updateSlider(int number, int value) {
