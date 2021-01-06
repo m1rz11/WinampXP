@@ -2,10 +2,10 @@
 
 <WinampAbstractionLayer version="1.35">
 	<skininfo>
-		<version>1.1</version>
+		<version>1.2</version>
 		<name>Nullsoft Winamp XP - Zune</name>
 		<comment>A Modern Skin in the style of the Windows XP Zune theme based on that Modern Skin in the style of Windows XP based on Winamp Classic Modern</comment>
-		<author>thatotherunnamedauthor// mirzi // Gordon Freeman // Victhor</author>
+		<author>mirzi // Gordon Freeman // Victhor // Teil</author>
 		<screenshot>screenshot.png</screenshot>
 		<wacupscreenshot>wacupscreenshot.png</wacupscreenshot>
 	</skininfo>
@@ -24,12 +24,12 @@
 		<accelerator bind="Ctrl+W" action="HOTKEY_SHADETOGGLEEQ"/>
 	</accelerators>
 	
-	<include file="xml/elements.xml"/>
+	<include file="../WinampXP/xml/elements.xml"/>
 	<elements>
 	<include file="xml/elements-colors.xml"/>
 	</elements>
 	<include file="../WinampXP/xml/system.xml"/>
-  	<include file="xml/standardframe.xml"/>
+  	<include file="../WinampXP/xml/standardframe.xml"/>
   	<include file="../WinampXP/xml/titlebar.xml"/>
 	<include file="../WinampXP/xml/main-player.xml"/>
 	<include file="../WinampXP/xml/albumart.xml"/>
