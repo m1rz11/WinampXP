@@ -8,22 +8,20 @@ System.onScriptLoaded() {
   tipText = tipGroup.getObject("tooltip.text");
 
   tipGroup.setXmlParam("h", "17"); //Vic trick: Setting this via XML is ignored, but the script does the job! Yay!
-
 }
 
 // When text is changed, resize the group accordingly and make sure it's fully visible
 
 tipText.onTextChanged(String newtext) {
-   
   int x = getMousePosX();
-  int y = getMousePosY()-tipGroup.getHeight(); // move above mouse by default
+  int y = getMousePosY()+21;
 
   int vpleft = getViewportLeftFromPoint(x, y);
   int vptop = getViewportTopFromPoint(x, y);
   int vpright = vpleft+getViewportWidthFromPoint(x, y);
   int vpbottom = vptop+getViewportHeightFromPoint(x, y);
 
-  int w = getTextWidth()+2; // 1.2 to compensate for bold="1"
+  int w = getTextWidth()+1;
   int h = tipGroup.getHeight();
 
   if (x + w > vpright) x = vpright - w;

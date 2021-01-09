@@ -22,7 +22,7 @@
   <layer id="eq.separator2" x="501" y="171" w="1" h="35" image="eq.separator"/>
 
 	<togglebutton id="eq.button.presets.menu" action="MENU" param="PRESETS" x="408" y="103" w="1" h="1" image="none"/>
-	<button id="eq.button.presets.gfx" x="504" y="169" image="eq.normal.button.presets" hoverimage="eq.normal.button.presets.h" downimage="eq.normal.button.presets.d" rectrgn="1" cursor="cur.normal"/>
+	<button id="eq.button.presets.gfx" x="504" y="169" image="eq.normal.button.presets" hoverimage="eq.normal.button.presets.h" downimage="eq.normal.button.presets.d" rectrgn="1" tooltip="Presets" cursor="cur.normal"/>
   <script file="..\WinampXP\scripts\sc_mouseredir.maki" param="eq.button.presets.gfx;eq.button.presets.menu"/>
   <!-- I like to place the menu under the button -not the pointer- whenever I can -->
 

@@ -945,8 +945,8 @@ OAIDUBtnO.onLeftButtonDown(int x, int y)
 
 OAIDUBtnA.onLeftButtonDown(int x, int y)
 {	
-  if (OAIDUBtnA.getCurCfgVal() == 1) { showActionInfo("Disable Always-On-top"); }
-  else if (OAIDUBtnA.getCurCfgVal() == 0) { showActionInfo("Enable Always-On-top"); }
+  if (OAIDUBtnA.getCurCfgVal() == 1) { showActionInfo("Always-On-top: Disabled"); }
+  else if (OAIDUBtnA.getCurCfgVal() == 0) { showActionInfo("Always-On-top: Enabled"); }
 }
 
 OAIDUBtnI.onLeftButtonDown(int x, int y)
