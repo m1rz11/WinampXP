@@ -13,13 +13,16 @@ Function setColoroscRange (String rgb, int start, int end);									//set oscill
 Function setColoroscOdd (String rgb);														//set odd oscilloscope color					rgb value("0,255,127")
 Function setColoroscEven (String rgb);														//set even oscilloscope color					rgb value("0,255,127")
 
-Function darkDisplay(Boolean visible);
+Function darkDisplay(Boolean visible);														//changes visibility of dark display
+
+Function updateVisStyle();																	//replacement for how the vis colors were handled until now
+Function hideWMPVis();																		//hides wmp vis specific stuff
 
 Global Container containerMain;
 Global Container containerPL;
 Global Layout layoutPL, layoutMainNormal, layoutMainShade;
 Global Group NormalGroupMain, NormalGroupDisplay, ShadeGroupMain, ShadeGroupDisplay, TDSongTitleGroup;
-Global Vis visualizer, /*visualizershade, visualizerpl, */visualizerwmp, visualizerwmps1, visualizerwmps2, visualizerwmps3;
+Global Vis visualizer, visualizerwmp, visualizerwmps1, visualizerwmps2, visualizerwmps3;
 Global Layer wmpblackness;
 Global Button OAIDUBtnUE1, OAIDUBtnUE2, OAIDUBtnUE3;
 Global GuiObject DisplayTime;
@@ -57,79 +60,61 @@ Global int rgb_val;
 Global int nextTimer;
 Global int banddelay;
 
-//Global String prev2, prev3, prev4, prev5, prev6, prev7, prev8, prev9, prev10, prev11, prev12, prev13, prev14, prev15, prev16;
-
 System.onScriptLoaded()
 { 
-  containerMain = System.getContainer("main");
+  	containerMain = System.getContainer("main");
 	layoutMainNormal = containerMain.getLayout("normal");
 	NormalGroupMain = layoutMainNormal.findObject("player.normal.group.main");
 	NormalGroupDisplay = NormalGroupMain.findObject("player.normal.group.display");
 	TDSongTitleGroup = NormalGroupMain.findObject("player.timedisplay.songtitle");
 	OAIDUBtnUE1 = NormalGroupDisplay.findObject("OAIDU.buttons.U.menuentry1");
-  OAIDUBtnUE2 = NormalGroupDisplay.findObject("OAIDU.buttons.U.menuentry2");
-  OAIDUBtnUE3 = NormalGroupDisplay.findObject("OAIDU.buttons.U.menuentry3");
+  	OAIDUBtnUE2 = NormalGroupDisplay.findObject("OAIDU.buttons.U.menuentry2");
+  	OAIDUBtnUE3 = NormalGroupDisplay.findObject("OAIDU.buttons.U.menuentry3");
 
-  //more rgb junk
-  banddelay = 66;
+  	//more rgb junk
+  	banddelay = 66;
 
-  rgbTimer = new Timer;
-  rgbTimer.setDelay(10);
-  rgbBandTimer1 = new Timer;
-  rgbBandTimer1.setDelay(banddelay);
-  rgbBandTimer2 = new Timer;
-  rgbBandTimer2.setDelay(banddelay);
-  rgbBandTimer3 = new Timer;
-  rgbBandTimer3.setDelay(banddelay);
-  rgbBandTimer4 = new Timer;
-  rgbBandTimer4.setDelay(banddelay);
-  rgbBandTimer5 = new Timer;
-  rgbBandTimer5.setDelay(banddelay);
-  rgbBandTimer6 = new Timer;
-  rgbBandTimer6.setDelay(banddelay);
-  rgbBandTimer7 = new Timer;
-  rgbBandTimer7.setDelay(banddelay);
-  rgbBandTimer8 = new Timer;
-  rgbBandTimer8.setDelay(banddelay);
-  rgbBandTimer9 = new Timer;
-  rgbBandTimer9.setDelay(banddelay);
-  rgbBandTimer10 = new Timer;
-  rgbBandTimer10.setDelay(banddelay);
-  rgbBandTimer11 = new Timer;
-  rgbBandTimer11.setDelay(banddelay);
-  rgbBandTimer12 = new Timer;
-  rgbBandTimer12.setDelay(banddelay);
-  rgbBandTimer13 = new Timer;
-  rgbBandTimer13.setDelay(banddelay);
-  rgbBandTimer14 = new Timer;
-  rgbBandTimer14.setDelay(banddelay);
-  rgbBandTimer15 = new Timer;
-  rgbBandTimer15.setDelay(banddelay);
-  rgbBandTimer16 = new Timer;
-  rgbBandTimer16.setDelay(banddelay);
-  
-  r1 = 255;
-  g1 = 0;
-  b1 = 0;
+  	rgbTimer = new Timer;
+  	rgbTimer.setDelay(10);
+  	rgbBandTimer1 = new Timer;
+  	rgbBandTimer1.setDelay(banddelay);
+  	rgbBandTimer2 = new Timer;
+  	rgbBandTimer2.setDelay(banddelay);
+  	rgbBandTimer3 = new Timer;
+  	rgbBandTimer3.setDelay(banddelay);
+  	rgbBandTimer4 = new Timer;
+  	rgbBandTimer4.setDelay(banddelay);
+  	rgbBandTimer5 = new Timer;
+  	rgbBandTimer5.setDelay(banddelay);
+  	rgbBandTimer6 = new Timer;
+  	rgbBandTimer6.setDelay(banddelay);
+  	rgbBandTimer7 = new Timer;
+  	rgbBandTimer7.setDelay(banddelay);
+  	rgbBandTimer8 = new Timer;
+  	rgbBandTimer8.setDelay(banddelay);
+  	rgbBandTimer9 = new Timer;
+  	rgbBandTimer9.setDelay(banddelay);
+  	rgbBandTimer10 = new Timer;
+  	rgbBandTimer10.setDelay(banddelay);
+  	rgbBandTimer11 = new Timer;
+  	rgbBandTimer11.setDelay(banddelay);
+  	rgbBandTimer12 = new Timer;
+  	rgbBandTimer12.setDelay(banddelay);
+  	rgbBandTimer13 = new Timer;
+  	rgbBandTimer13.setDelay(banddelay);
+  	rgbBandTimer14 = new Timer;
+  	rgbBandTimer14.setDelay(banddelay);
+  	rgbBandTimer15 = new Timer;
+  	rgbBandTimer15.setDelay(banddelay);
+  	rgbBandTimer16 = new Timer;
+  	rgbBandTimer16.setDelay(banddelay);
+	
+  	r1 = 255;
+  	g1 = 0;
+  	b1 = 0;
 
-  //255 is divisible by 1, 3, 5, 15, 17, 51, or 85
-  rgb_val = 51;
-
-  //prev2 = "255, 0, 0";
-  //prev3 = "255, 0, 0";
-  //prev4 = "255, 0, 0";
-  //prev5 = "255, 0, 0";
-  //prev6 = "255, 0, 0";
-  //prev7 = "255, 0, 0";
-  //prev8 = "255, 0, 0";
-  //prev9 = "255, 0, 0";
-  //prev10 = "255, 0, 0";
-  //prev11 = "255, 0, 0";
-  //prev12 = "255, 0, 0";
-  //prev13 = "255, 0, 0";
-  //prev14 = "255, 0, 0";
-  //prev15 = "255, 0, 0";
-  //prev16 = "255, 0, 0";
+  	//255 is divisible by 1, 3, 5, 15, 17, 51, or 85
+  	rgb_val = 51;
 
 	visualizer = NormalGroupDisplay.findObject("player.vis");
 	
@@ -143,11 +128,9 @@ System.onScriptLoaded()
 	layoutMainShade = containerMain.getLayout("shade");
 	ShadeGroupMain = layoutMainShade.findObject("player.shade.group.main");
 	ShadeGroupDisplay = ShadeGroupMain.findObject("player.shade.group.display");
-	//visualizershade = ShadeGroupDisplay.findObject("shade.vis");
 		
   	containerPL = System.getContainer("PLEdit");
   	layoutPL = containerPL.getLayout("normalpl");
-	//visualizerpl = layoutPL.findObject("shade.vis");
 
 	Trigger = NormalGroupDisplay.findObject("player.vis.trigger");
 	TriggerBlocker = layoutPL.findObject("player.vis.blocker");
@@ -173,15 +156,7 @@ System.onScriptLoaded()
 	visualizerwmps3.setXmlParam("peaks", integerToString(show_peaks));
 	visualizerwmps3.setXmlParam("peakfalloff", integerToString(p_falloffspeed));
 	visualizerwmps3.setXmlParam("falloff", integerToString(a_falloffspeed));
-	/*
-	visualizershade.setXmlParam("peaks", integerToString(show_peaks));
-	visualizershade.setXmlParam("peakfalloff", integerToString(p_falloffspeed));
-	visualizershade.setXmlParam("falloff", integerToString(a_falloffspeed));
-	
-	visualizerpl.setXmlParam("peaks", integerToString(show_peaks));
-	visualizerpl.setXmlParam("peakfalloff", integerToString(p_falloffspeed));
-	visualizerpl.setXmlParam("falloff", integerToString(a_falloffspeed));
-	*/
+
 	//display stuff
 	DisplayTime = NormalGroupDisplay.getObject("display.time");
 	DisplayStatusIcons = NormalGroupDisplay.getObject("status");
@@ -204,15 +179,7 @@ System.onScriptLoaded()
 
 	refreshVisSettings ();
 }
-/*
-visualizerpl.onSetVisible(int on) {
-	if (on) refreshVisSettings ();
-}
 
-visualizershade.onSetVisible(int on) {
-	if (on) refreshVisSettings ();
-}
-*/
 refreshVisSettings ()
 {
 	currentMode = getPrivateInt(getSkinName(), "Visualizer Mode", 1);
@@ -242,390 +209,25 @@ refreshVisSettings ()
 	visualizerwmps3.setXmlParam("peaks", integerToString(show_peaks));
 	visualizerwmps3.setXmlParam("peakfalloff", integerToString(p_falloffspeed));
 	visualizerwmps3.setXmlParam("falloff", integerToString(a_falloffspeed));
-	/*
-	visualizershade.setXmlParam("peaks", integerToString(show_peaks));
-	visualizershade.setXmlParam("peakfalloff", integerToString(p_falloffspeed));
-	visualizershade.setXmlParam("falloff", integerToString(a_falloffspeed));	
 
-	visualizerpl.setXmlParam("peaks", integerToString(show_peaks));
-	visualizerpl.setXmlParam("peakfalloff", integerToString(p_falloffspeed));
-	visualizerpl.setXmlParam("falloff", integerToString(a_falloffspeed));
-	*/
 	if (a_coloring == 0)
 	{
 		visualizer.setXmlParam("coloring", "Normal");
-		//visualizershade.setXmlParam("coloring", "Normal");
-		//visualizerpl.setXmlParam("coloring", "Normal");
 	}
 	else if (a_coloring == 1)
 	{
 		visualizer.setXmlParam("coloring", "Normal");
-		//visualizershade.setXmlParam("coloring", "Normal");
-		//visualizerpl.setXmlParam("coloring", "Normal");
 	}
 	else if (a_coloring == 2)
 	{
 		visualizer.setXmlParam("coloring", "Fire");
-		//visualizershade.setXmlParam("coloring", "Fire");
-		//visualizerpl.setXmlParam("coloring", "Fire");
 	}
 	else if (a_coloring == 3)
 	{
 		visualizer.setXmlParam("coloring", "Line");
-		//visualizershade.setXmlParam("coloring", "Line");
-		//visualizerpl.setXmlParam("coloring", "Line");
 	}
-		rgbBandTimer1.stop();
-		rgbBandTimer2.stop();
-		rgbBandTimer3.stop();
-		rgbBandTimer4.stop();
-		rgbBandTimer5.stop();
-		rgbBandTimer6.stop();
-		rgbBandTimer7.stop();
-		rgbBandTimer8.stop();
-		rgbBandTimer9.stop();
-		rgbBandTimer10.stop();
-		rgbBandTimer11.stop();
-		rgbBandTimer12.stop();
-		rgbBandTimer13.stop();
-		rgbBandTimer14.stop();
-		rgbBandTimer15.stop();
-		rgbBandTimer16.stop();
-		rgbTimer.stop();
-		if(v_color == 0 || v_color == 1){
-			//luna
-			visualizer.setXmlParam("alpha","255");
-			
-			visualizerwmp.setXmlParam("alpha","0");
-			visualizerwmp.setXmlParam("mode","0");
-			visualizerwmps1.setXmlParam("alpha","0");
-			visualizerwmps1.setXmlParam("mode","0");
-			visualizerwmps2.setXmlParam("alpha","0");
-			visualizerwmps2.setXmlParam("mode","0");
-			visualizerwmps3.setXmlParam("alpha","0");
-			visualizerwmps3.setXmlParam("mode","0");
-			
-			visualizer.setXmlParam("colorallbands", "49,106,197");
-			visualizer.setXmlParam("colorbandpeak", "49,106,197");
-			setColorOsc("49,106,197");
 
-			visualizer.setXmlParam("fps", "30");
-		}
-		else if (v_color == 2)
-		{
-			//winamp color
-			visualizer.setXmlParam("alpha","255");
-			
-			visualizerwmp.setXmlParam("alpha","0");
-			visualizerwmp.setXmlParam("mode","0");
-			visualizerwmps1.setXmlParam("alpha","0");
-			visualizerwmps1.setXmlParam("mode","0");
-			visualizerwmps2.setXmlParam("alpha","0");
-			visualizerwmps2.setXmlParam("mode","0");
-			visualizerwmps3.setXmlParam("alpha","0");
-			visualizerwmps3.setXmlParam("mode","0");
-			
-			visualizer.setXmlParam("ColorBand1", "22,131,7");
-			visualizer.setXmlParam("ColorBand2", "39,147,0");
-			visualizer.setXmlParam("ColorBand3", "47,155,7");
-			visualizer.setXmlParam("ColorBand4", "55,180,15");
-			visualizer.setXmlParam("ColorBand5", "48,189,15");
-			visualizer.setXmlParam("ColorBand6", "39,205,15");
-			visualizer.setXmlParam("ColorBand7", "146,221,32");
-			visualizer.setXmlParam("ColorBand8", "187,221,40");
-			visualizer.setXmlParam("ColorBand9", "212,180,32");
-			visualizer.setXmlParam("ColorBand10", "220,164,23");
-			visualizer.setXmlParam("ColorBand11", "197,122,7");
-			visualizer.setXmlParam("ColorBand12", "213,114,0");
-			visualizer.setXmlParam("ColorBand13", "213,101,0");
-			visualizer.setXmlParam("ColorBand14", "213,89,0");
-			visualizer.setXmlParam("ColorBand15", "205,40,15");
-			visualizer.setXmlParam("ColorBand16", "238,48,15");
-			visualizer.setXmlParam("colorbandpeak", "150,150,150");
-			visualizer.setXmlParam("colorosc1", "255,255,255");
-			visualizer.setXmlParam("colorosc2", "214,214,222");
-			visualizer.setXmlParam("colorosc3", "181,189,189");
-			visualizer.setXmlParam("colorosc4", "160,170,175");
-			visualizer.setXmlParam("colorosc5", "148,156,165");
-			visualizer.setXmlParam("fps", "30");
-		}
-		else if (v_color == 3)		//bars
-		{
-			visualizerwmp.setXmlParam("mode", "1");
-			visualizerwmp.setXmlParam("alpha","255");
-			visualizerwmp.setXmlParam("falloff","2");
-			visualizerwmp.setXmlParam("peakfalloff","1");
-			visualizerwmps1.setXmlParam("alpha","0");
-			visualizerwmps2.setXmlParam("alpha","0");
-			visualizerwmps3.setXmlParam("alpha","0");
-			visualizer.setXmlParam("alpha","0");
-			visualizerwmp.setXmlParam("colorallbands", "0,176,32");
-			visualizerwmp.setXmlParam("colorbandpeak", "32,32,255");
-			visualizerwmp.setXmlParam("bandwidth","wide");
-
-			setColorosc("160,255,160");
-			visualizer.setXmlParam("fps", "24");
-		}
-		else if (v_color == 4)		//ocean mist
-		{
-			visualizer.setXmlParam("alpha","0");
-			
-			visualizerwmp.setXmlParam("alpha","255");
-			
-			visualizerwmps1.setXmlParam("alpha","128");
-			visualizerwmps2.setXmlParam("alpha","64");
-			visualizerwmps3.setXmlParam("alpha","32");
-			
-			visualizerwmps1.setXmlParam("falloff", "2");
-			visualizerwmps2.setXmlParam("falloff", "1");
-			visualizerwmps3.setXmlParam("falloff", "0");
-			
-			visualizerwmps1.setXmlParam("peakfalloff", "1");
-			visualizerwmps2.setXmlParam("peakfalloff", "0");
-			visualizerwmps3.setXmlParam("peakfalloff", "0");
-			
-			visualizerwmp.setXmlParam("colorallbands", "0,0,255");
-			visualizerwmp.setXmlParam("colorbandpeak", "255,255,255");
-			visualizerwmp.setXmlParam("bandwidth","thin");
-			visualizerwmp.setXmlParam("peakfalloff","1");
-			
-			visualizerwmp.setXmlParam("mode", "1");
-			
-			visualizerwmps1.setXmlParam("mode", "1");
-			visualizerwmps2.setXmlParam("mode", "1");
-			visualizerwmps3.setXmlParam("mode", "1");
-			
-			visualizerwmps1.setXmlParam("colorallbands", "0,0,255");
-			visualizerwmps1.setXmlParam("colorbandpeak", "255,255,255");
-			visualizerwmps2.setXmlParam("colorallbands", "0,0,255");
-			visualizerwmps2.setXmlParam("colorbandpeak", "255,255,255");
-			visualizerwmps3.setXmlParam("colorallbands", "0,0,255");
-			visualizerwmps3.setXmlParam("colorbandpeak", "255,255,255");
-
-			setColorosc("160,255,160");
-			visualizer.setXmlParam("fps", "25");
-		}
-		else if (v_color == 5)		//fire storm
-		{
-			visualizer.setXmlParam("alpha","0");
-			
-			visualizerwmp.setXmlParam("alpha","255");
-			
-			visualizerwmps1.setXmlParam("alpha","128");
-			visualizerwmps2.setXmlParam("alpha","64");
-			visualizerwmps3.setXmlParam("alpha","32");
-			
-			visualizerwmps1.setXmlParam("falloff", "2");
-			visualizerwmps2.setXmlParam("falloff", "1");
-			visualizerwmps3.setXmlParam("falloff", "0");
-			
-			visualizerwmps1.setXmlParam("peakfalloff", "1");
-			visualizerwmps2.setXmlParam("peakfalloff", "0");
-			visualizerwmps3.setXmlParam("peakfalloff", "0");
-			
-			visualizerwmp.setXmlParam("colorallbands", "255,165,0");
-			visualizerwmp.setXmlParam("colorbandpeak", "255,0,0");
-			visualizerwmp.setXmlParam("bandwidth","thin");
-			visualizerwmp.setXmlParam("peakfalloff","1");
-			
-			visualizerwmps1.setXmlParam("colorallbands", "255,165,0");
-			visualizerwmps1.setXmlParam("colorbandpeak", "255,0,0");
-			visualizerwmps2.setXmlParam("colorallbands", "255,165,0");
-			visualizerwmps2.setXmlParam("colorbandpeak", "255,0,0");
-			visualizerwmps3.setXmlParam("colorallbands", "255,165,0");
-			visualizerwmps3.setXmlParam("colorbandpeak", "255,0,0");
-			
-			visualizerwmp.setXmlParam("mode", "1");
-			
-			visualizerwmps1.setXmlParam("mode", "1");
-			visualizerwmps2.setXmlParam("mode", "1");
-			visualizerwmps3.setXmlParam("mode", "1");
-
-			setColorosc("160,255,160");
-			visualizer.setXmlParam("fps", "25");
-		}
-		else if (v_color == 6)		//scope
-		{
-			visualizer.setXmlParam("alpha","0");
-			visualizerwmp.setXmlParam("alpha","255");
-			visualizerwmps1.setXmlParam("alpha","0");
-			visualizerwmps1.setXmlParam("mode","0");
-			visualizerwmps2.setXmlParam("alpha","0");
-			visualizerwmps2.setXmlParam("mode","0");
-			visualizerwmps3.setXmlParam("alpha","0");
-			visualizerwmps3.setXmlParam("mode","0");
-			
-			visualizerwmp.setXmlParam("colorosc1","160,255,160");
-			visualizerwmp.setXmlParam("colorosc2","160,255,160");
-			visualizerwmp.setXmlParam("colorosc3","160,255,160");
-			visualizerwmp.setXmlParam("colorosc4","160,255,160");
-			visualizerwmp.setXmlParam("colorosc5","160,255,160");
-			
-			visualizerwmp.setXmlParam("mode", "2");
-
-			setColorosc("160,255,160");
-			visualizer.setXmlParam("fps", "24");
-		}
-		else if(v_color == 7){
-			//olive green
-			visualizer.setXmlParam("alpha","255");
-			
-			visualizerwmp.setXmlParam("alpha","0");
-			visualizerwmp.setXmlParam("mode","0");
-			visualizerwmps1.setXmlParam("alpha","0");
-			visualizerwmps1.setXmlParam("mode","0");
-			visualizerwmps2.setXmlParam("alpha","0");
-			visualizerwmps2.setXmlParam("mode","0");
-			visualizerwmps3.setXmlParam("alpha","0");
-			visualizerwmps3.setXmlParam("mode","0");
-			
-			visualizer.setXmlParam("colorallbands", "147,160,112");
-			visualizer.setXmlParam("colorbandpeak", "153,84,10");
-			setColorOsc("147,160,112");
-
-			visualizer.setXmlParam("fps", "30");
-		}
-		else if(v_color == 8){
-			//silver
-			visualizer.setXmlParam("alpha","255");
-			
-			visualizerwmp.setXmlParam("alpha","0");
-			visualizerwmp.setXmlParam("mode","0");
-			visualizerwmps1.setXmlParam("alpha","0");
-			visualizerwmps1.setXmlParam("mode","0");
-			visualizerwmps2.setXmlParam("alpha","0");
-			visualizerwmps2.setXmlParam("mode","0");
-			visualizerwmps3.setXmlParam("alpha","0");
-			visualizerwmps3.setXmlParam("mode","0");
-			
-			visualizer.setXmlParam("colorallbands", "178,180,191");
-			visualizer.setXmlParam("colorbandpeak", "178,180,191");
-			setColorOsc("178,180,191");
-
-			visualizer.setXmlParam("fps", "30");
-		}
-		else if(v_color == 9){
-			//luna - gradient
-			visualizer.setXmlParam("alpha","255");
-			
-			visualizerwmp.setXmlParam("alpha","0");
-			visualizerwmp.setXmlParam("mode","0");
-			visualizerwmps1.setXmlParam("alpha","0");
-			visualizerwmps1.setXmlParam("mode","0");
-			visualizerwmps2.setXmlParam("alpha","0");
-			visualizerwmps2.setXmlParam("mode","0");
-			visualizerwmps3.setXmlParam("alpha","0");
-			visualizerwmps3.setXmlParam("mode","0");
-
-			setColorBandsGradient(3,84,227,4,4,2);
-
-			visualizer.setXmlParam("colorbandpeak", "61,149,255");
-			setColorOscOdd("3,84,227");
-			setColorOscEven("61,149,255");
-
-			visualizer.setXmlParam("fps", "30");
-		}
-		else if(v_color == 10){
-			//olive green - gradient
-			visualizer.setXmlParam("alpha","255");
-			
-			visualizerwmp.setXmlParam("alpha","0");
-			visualizerwmp.setXmlParam("mode","0");
-			visualizerwmps1.setXmlParam("alpha","0");
-			visualizerwmps1.setXmlParam("mode","0");
-			visualizerwmps2.setXmlParam("alpha","0");
-			visualizerwmps2.setXmlParam("mode","0");
-			visualizerwmps3.setXmlParam("alpha","0");
-			visualizerwmps3.setXmlParam("mode","0");
-			
-			setColorBandsGradient(165,179,125,4,4,4);
-
-			visualizer.setXmlParam("colorbandpeak", "231,240,197");
-			setColorOscOdd("165,179,125");
-			setColorOscEven("231,240,197");
-
-			visualizer.setXmlParam("fps", "30");
-		}
-		else if(v_color == 11){
-			//silver - gradient
-			visualizer.setXmlParam("alpha","255");
-			
-			visualizerwmp.setXmlParam("alpha","0");
-			visualizerwmp.setXmlParam("mode","0");
-			visualizerwmps1.setXmlParam("alpha","0");
-			visualizerwmps1.setXmlParam("mode","0");
-			visualizerwmps2.setXmlParam("alpha","0");
-			visualizerwmps2.setXmlParam("mode","0");
-			visualizerwmps3.setXmlParam("alpha","0");
-			visualizerwmps3.setXmlParam("mode","0");
-			
-			setColorBandsGradient(165,164,190,6,6,4);
-
-			visualizer.setXmlParam("colorbandpeak", "252,252,252");
-			setColorOscOdd("165,164,190");
-			setColorOscEven("252,252,252");
-
-			visualizer.setXmlParam("fps", "30");
-		}
-		else if(v_color == 12){
-			//zune orange
-			visualizer.setXmlParam("alpha","255");
-			
-			visualizerwmp.setXmlParam("alpha","0");
-			visualizerwmp.setXmlParam("mode","0");
-			visualizerwmps1.setXmlParam("alpha","0");
-			visualizerwmps1.setXmlParam("mode","0");
-			visualizerwmps2.setXmlParam("alpha","0");
-			visualizerwmps2.setXmlParam("mode","0");
-			visualizerwmps3.setXmlParam("alpha","0");
-			visualizerwmps3.setXmlParam("mode","0");
-			
-			setColorBandsGradient(127,59,20,5,3,1);
-
-			visualizer.setXmlParam("colorbandpeak", "231,121,49");
-			setColorOscOdd("127,59,20");
-			setColorOscEven("214,101,33");
-
-			visualizer.setXmlParam("fps", "30");
-		}
-		else if(v_color == 13){
-			//zune dark
-			visualizer.setXmlParam("alpha","255");
-			
-			visualizerwmp.setXmlParam("alpha","0");
-			visualizerwmp.setXmlParam("mode","0");
-			visualizerwmps1.setXmlParam("alpha","0");
-			visualizerwmps1.setXmlParam("mode","0");
-			visualizerwmps2.setXmlParam("alpha","0");
-			visualizerwmps2.setXmlParam("mode","0");
-			visualizerwmps3.setXmlParam("alpha","0");
-			visualizerwmps3.setXmlParam("mode","0");
-			
-			setColorBandsGradient(38,38,38,4,4,4);
-			
-			visualizer.setXmlParam("colorbandpeak", "231,121,49");
-			setColorOscOdd("38,38,38");
-			setColorOscEven("109,109,109");
-
-			visualizer.setXmlParam("fps", "30");
-		}else if(v_color == 14){
-			//RGB
-			nextTimer = 1;
-			visualizer.setXmlParam("alpha","255");
-			
-			visualizerwmp.setXmlParam("alpha","0");
-			visualizerwmp.setXmlParam("mode","0");
-			visualizerwmps1.setXmlParam("alpha","0");
-			visualizerwmps1.setXmlParam("mode","0");
-			visualizerwmps2.setXmlParam("alpha","0");
-			visualizerwmps2.setXmlParam("mode","0");
-			visualizerwmps3.setXmlParam("alpha","0");
-			visualizerwmps3.setXmlParam("mode","0");
-
-			visualizer.setXmlParam("fps", "30");
-
-			rgbTimer.start();
-		}
+	updateVisStyle();
 	setVis (currentMode);
 	darkDisplay(dark_display);
 }
@@ -745,8 +347,6 @@ ProcessMenuResult (int a)
 	{
 		show_peaks = (show_peaks - 1) * (-1);
 		visualizer.setXmlParam("peaks", integerToString(show_peaks));
-		//visualizershade.setXmlParam("peaks", integerToString(show_peaks));
-		//visualizerpl.setXmlParam("peaks", integerToString(show_peaks));
 		setPrivateInt(getSkinName(), "Visualizer show Peaks", show_peaks);
 	}
 
@@ -761,8 +361,6 @@ ProcessMenuResult (int a)
 	{
 		p_falloffspeed = a - 200;
 		visualizer.setXmlParam("peakfalloff", integerToString(p_falloffspeed));
-		//visualizershade.setXmlParam("peakfalloff", integerToString(p_falloffspeed));
-		//visualizerpl.setXmlParam("peakfalloff", integerToString(p_falloffspeed));
 		setPrivateInt(getSkinName(), "Visualizer peaks falloff", p_falloffspeed);
 	}
 
@@ -770,8 +368,6 @@ ProcessMenuResult (int a)
 	{
 		a_falloffspeed = a - 300;
 		visualizer.setXmlParam("falloff", integerToString(a_falloffspeed));
-		//visualizershade.setXmlParam("falloff", integerToString(a_falloffspeed));
-		//visualizerpl.setXmlParam("falloff", integerToString(a_falloffspeed));
 		setPrivateInt(getSkinName(), "Visualizer analyzer falloff", a_falloffspeed);
 	}
 
@@ -781,26 +377,18 @@ ProcessMenuResult (int a)
 		if (a_coloring == 0)
 		{
 			visualizer.setXmlParam("coloring", "Normal");
-			//visualizershade.setXmlParam("coloring", "Normal");
-			//visualizerpl.setXmlParam("coloring", "Normal");
 		}
 		else if (a_coloring == 1)
 		{
 			visualizer.setXmlParam("coloring", "Normal");
-			//visualizershade.setXmlParam("coloring", "Normal");
-			//visualizerpl.setXmlParam("coloring", "Normal");
 		}
 		else if (a_coloring == 2)
 		{
 			visualizer.setXmlParam("coloring", "Fire");
-			//visualizershade.setXmlParam("coloring", "Fire");
-			//visualizerpl.setXmlParam("coloring", "Fire");
 		}
 		else if (a_coloring == 3)
 		{
 			visualizer.setXmlParam("coloring", "Line");
-			//visualizershade.setXmlParam("coloring", "Line");
-			//visualizerpl.setXmlParam("coloring", "Line");
 		}
 		setPrivateInt(getSkinName(), "Visualizer analyzer coloring", a_coloring);
 	}
@@ -821,358 +409,253 @@ ProcessMenuResult (int a)
 	else if (a >= 500 && a <= 514)
 	{
 		v_color = a - 500;
-		rgbBandTimer1.stop();
-		rgbBandTimer2.stop();
-		rgbBandTimer3.stop();
-		rgbBandTimer4.stop();
-		rgbBandTimer5.stop();
-		rgbBandTimer6.stop();
-		rgbBandTimer7.stop();
-		rgbBandTimer8.stop();
-		rgbBandTimer9.stop();
-		rgbBandTimer10.stop();
-		rgbBandTimer11.stop();
-		rgbBandTimer12.stop();
-		rgbBandTimer13.stop();
-		rgbBandTimer14.stop();
-		rgbBandTimer15.stop();
-		rgbBandTimer16.stop();
-		rgbTimer.stop();
-		if(v_color == 0 || v_color == 1){
-			//default blue color
-			visualizer.setXmlParam("alpha","255");
-			
-			visualizerwmp.setXmlParam("alpha","0");
-			visualizerwmp.setXmlParam("mode","0");
-			visualizerwmps1.setXmlParam("alpha","0");
-			visualizerwmps1.setXmlParam("mode","0");
-			visualizerwmps2.setXmlParam("alpha","0");
-			visualizerwmps2.setXmlParam("mode","0");
-			visualizerwmps3.setXmlParam("alpha","0");
-			visualizerwmps3.setXmlParam("mode","0");
-			
-			visualizer.setXmlParam("colorallbands", "49,106,197");
-			visualizer.setXmlParam("colorbandpeak", "49,106,197");
-			setColorOsc("49,106,197");
-			visualizer.setXmlParam("fps", "30");
-		}
-		else if (v_color == 2)
-		{
-			//winamp color
-			visualizer.setXmlParam("alpha","255");
-			
-			visualizerwmp.setXmlParam("alpha","0");
-			visualizerwmp.setXmlParam("mode","0");
-			visualizerwmps1.setXmlParam("alpha","0");
-			visualizerwmps1.setXmlParam("mode","0");
-			visualizerwmps2.setXmlParam("alpha","0");
-			visualizerwmps2.setXmlParam("mode","0");
-			visualizerwmps3.setXmlParam("alpha","0");
-			visualizerwmps3.setXmlParam("mode","0");
-			
-			visualizer.setXmlParam("ColorBand1", "22,131,7");
-			visualizer.setXmlParam("ColorBand2", "39,147,0");
-			visualizer.setXmlParam("ColorBand3", "47,155,7");
-			visualizer.setXmlParam("ColorBand4", "55,180,15");
-			visualizer.setXmlParam("ColorBand5", "48,189,15");
-			visualizer.setXmlParam("ColorBand6", "39,205,15");
-			visualizer.setXmlParam("ColorBand7", "146,221,32");
-			visualizer.setXmlParam("ColorBand8", "187,221,40");
-			visualizer.setXmlParam("ColorBand9", "212,180,32");
-			visualizer.setXmlParam("ColorBand10", "220,164,23");
-			visualizer.setXmlParam("ColorBand11", "197,122,7");
-			visualizer.setXmlParam("ColorBand12", "213,114,0");
-			visualizer.setXmlParam("ColorBand13", "213,101,0");
-			visualizer.setXmlParam("ColorBand14", "213,89,0");
-			visualizer.setXmlParam("ColorBand15", "205,40,15");
-			visualizer.setXmlParam("ColorBand16", "238,48,15");
-			visualizer.setXmlParam("colorbandpeak", "150,150,150");
-			visualizer.setXmlParam("colorosc1", "255,255,255");
-			visualizer.setXmlParam("colorosc2", "214,214,222");
-			visualizer.setXmlParam("colorosc3", "181,189,189");
-			visualizer.setXmlParam("colorosc4", "160,170,175");
-			visualizer.setXmlParam("colorosc5", "148,156,165");
-			visualizer.setXmlParam("fps", "30");
-		}
-		else if (v_color == 3)		//bars
-		{
-			visualizerwmp.setXmlParam("mode", "1");
-			visualizerwmp.setXmlParam("alpha","255");
-			visualizerwmp.setXmlParam("falloff","2");
-			visualizerwmp.setXmlParam("peakfalloff","1");
-			visualizerwmps1.setXmlParam("alpha","0");
-			visualizerwmps2.setXmlParam("alpha","0");
-			visualizerwmps3.setXmlParam("alpha","0");
-			visualizer.setXmlParam("alpha","0");
-			visualizerwmp.setXmlParam("colorallbands", "0,176,32");
-			visualizerwmp.setXmlParam("colorbandpeak", "32,32,255");
-			visualizerwmp.setXmlParam("bandwidth","wide");
-
-			setColorosc("160,255,160");
-			visualizer.setXmlParam("fps", "24");
-		}
-		else if (v_color == 4)		//ocean mist
-		{
-			visualizer.setXmlParam("alpha","0");
-			
-			visualizerwmp.setXmlParam("alpha","255");
-			
-			visualizerwmps1.setXmlParam("alpha","128");
-			visualizerwmps2.setXmlParam("alpha","64");
-			visualizerwmps3.setXmlParam("alpha","32");
-			
-			visualizerwmps1.setXmlParam("falloff", "2");
-			visualizerwmps2.setXmlParam("falloff", "1");
-			visualizerwmps3.setXmlParam("falloff", "0");
-			
-			visualizerwmps1.setXmlParam("peakfalloff", "1");
-			visualizerwmps2.setXmlParam("peakfalloff", "0");
-			visualizerwmps3.setXmlParam("peakfalloff", "0");
-			
-			visualizerwmp.setXmlParam("colorallbands", "0,0,255");
-			visualizerwmp.setXmlParam("colorbandpeak", "255,255,255");
-			visualizerwmp.setXmlParam("bandwidth","thin");
-			visualizerwmp.setXmlParam("peakfalloff","1");
-			
-			visualizerwmp.setXmlParam("mode", "1");
-			
-			visualizerwmps1.setXmlParam("mode", "1");
-			visualizerwmps2.setXmlParam("mode", "1");
-			visualizerwmps3.setXmlParam("mode", "1");
-			
-			visualizerwmps1.setXmlParam("colorallbands", "0,0,255");
-			visualizerwmps1.setXmlParam("colorbandpeak", "255,255,255");
-			visualizerwmps2.setXmlParam("colorallbands", "0,0,255");
-			visualizerwmps2.setXmlParam("colorbandpeak", "255,255,255");
-			visualizerwmps3.setXmlParam("colorallbands", "0,0,255");
-			visualizerwmps3.setXmlParam("colorbandpeak", "255,255,255");
-
-			setColorosc("160,255,160");
-			visualizer.setXmlParam("fps", "25");
-		}
-		else if (v_color == 5)		//fire storm
-		{
-			visualizer.setXmlParam("alpha","0");
-			
-			visualizerwmp.setXmlParam("alpha","255");
-			
-			visualizerwmps1.setXmlParam("alpha","128");
-			visualizerwmps2.setXmlParam("alpha","64");
-			visualizerwmps3.setXmlParam("alpha","32");
-			
-			visualizerwmps1.setXmlParam("falloff", "2");
-			visualizerwmps2.setXmlParam("falloff", "1");
-			visualizerwmps3.setXmlParam("falloff", "0");
-			
-			visualizerwmps1.setXmlParam("peakfalloff", "1");
-			visualizerwmps2.setXmlParam("peakfalloff", "0");
-			visualizerwmps3.setXmlParam("peakfalloff", "0");
-			
-			visualizerwmp.setXmlParam("colorallbands", "255,165,0");
-			visualizerwmp.setXmlParam("colorbandpeak", "255,0,0");
-			visualizerwmp.setXmlParam("bandwidth","thin");
-			visualizerwmp.setXmlParam("peakfalloff","1");
-			
-			visualizerwmps1.setXmlParam("colorallbands", "255,165,0");
-			visualizerwmps1.setXmlParam("colorbandpeak", "255,0,0");
-			visualizerwmps2.setXmlParam("colorallbands", "255,165,0");
-			visualizerwmps2.setXmlParam("colorbandpeak", "255,0,0");
-			visualizerwmps3.setXmlParam("colorallbands", "255,165,0");
-			visualizerwmps3.setXmlParam("colorbandpeak", "255,0,0");
-			
-			visualizerwmp.setXmlParam("mode", "1");
-			
-			visualizerwmps1.setXmlParam("mode", "1");
-			visualizerwmps2.setXmlParam("mode", "1");
-			visualizerwmps3.setXmlParam("mode", "1");
-
-			setColorosc("160,255,160");
-			visualizer.setXmlParam("fps", "25");
-		}
-		else if (v_color == 6)		//scope
-		{
-			visualizer.setXmlParam("alpha","0");
-			visualizerwmp.setXmlParam("alpha","255");
-			visualizerwmps1.setXmlParam("alpha","0");
-			visualizerwmps1.setXmlParam("mode","0");
-			visualizerwmps2.setXmlParam("alpha","0");
-			visualizerwmps2.setXmlParam("mode","0");
-			visualizerwmps3.setXmlParam("alpha","0");
-			visualizerwmps3.setXmlParam("mode","0");
-			
-			visualizerwmp.setXmlParam("colorosc1","160,255,160");
-			visualizerwmp.setXmlParam("colorosc2","160,255,160");
-			visualizerwmp.setXmlParam("colorosc3","160,255,160");
-			visualizerwmp.setXmlParam("colorosc4","160,255,160");
-			visualizerwmp.setXmlParam("colorosc5","160,255,160");
-			
-			visualizerwmp.setXmlParam("mode", "2");
-
-			setColorosc("160,255,160");
-			visualizer.setXmlParam("fps", "24");
-		}
-		else if(v_color == 7){
-			//olive green
-			visualizer.setXmlParam("alpha","255");
-			
-			visualizerwmp.setXmlParam("alpha","0");
-			visualizerwmp.setXmlParam("mode","0");
-			visualizerwmps1.setXmlParam("alpha","0");
-			visualizerwmps1.setXmlParam("mode","0");
-			visualizerwmps2.setXmlParam("alpha","0");
-			visualizerwmps2.setXmlParam("mode","0");
-			visualizerwmps3.setXmlParam("alpha","0");
-			visualizerwmps3.setXmlParam("mode","0");
-			
-			visualizer.setXmlParam("colorallbands", "147,160,112");
-			visualizer.setXmlParam("colorbandpeak", "153,84,10");
-			setColorOsc("147,160,112");
-
-			visualizer.setXmlParam("fps", "30");
-		}
-		else if(v_color == 8){
-			//silver
-			visualizer.setXmlParam("alpha","255");
-			
-			visualizerwmp.setXmlParam("alpha","0");
-			visualizerwmp.setXmlParam("mode","0");
-			visualizerwmps1.setXmlParam("alpha","0");
-			visualizerwmps1.setXmlParam("mode","0");
-			visualizerwmps2.setXmlParam("alpha","0");
-			visualizerwmps2.setXmlParam("mode","0");
-			visualizerwmps3.setXmlParam("alpha","0");
-			visualizerwmps3.setXmlParam("mode","0");
-			
-			visualizer.setXmlParam("colorallbands", "178,180,191");
-			visualizer.setXmlParam("colorbandpeak", "178,180,191");
-			setColorOsc("178,180,191");
-
-			visualizer.setXmlParam("fps", "30");
-		}
-		else if(v_color == 9){
-			//luna - gradient
-			visualizer.setXmlParam("alpha","255");
-			
-			visualizerwmp.setXmlParam("alpha","0");
-			visualizerwmp.setXmlParam("mode","0");
-			visualizerwmps1.setXmlParam("alpha","0");
-			visualizerwmps1.setXmlParam("mode","0");
-			visualizerwmps2.setXmlParam("alpha","0");
-			visualizerwmps2.setXmlParam("mode","0");
-			visualizerwmps3.setXmlParam("alpha","0");
-			visualizerwmps3.setXmlParam("mode","0");
-
-			setColorBandsGradient(3,84,227,4,4,2);
-
-			visualizer.setXmlParam("colorbandpeak", "61,149,255");
-			setColorOscOdd("3,84,227");
-			setColorOscEven("61,149,255");
-
-			visualizer.setXmlParam("fps", "30");
-		}
-		else if(v_color == 10){
-			//olive green - gradient
-			visualizer.setXmlParam("alpha","255");
-			
-			visualizerwmp.setXmlParam("alpha","0");
-			visualizerwmp.setXmlParam("mode","0");
-			visualizerwmps1.setXmlParam("alpha","0");
-			visualizerwmps1.setXmlParam("mode","0");
-			visualizerwmps2.setXmlParam("alpha","0");
-			visualizerwmps2.setXmlParam("mode","0");
-			visualizerwmps3.setXmlParam("alpha","0");
-			visualizerwmps3.setXmlParam("mode","0");
-			
-			setColorBandsGradient(165,179,125,4,4,4);
-
-			visualizer.setXmlParam("colorbandpeak", "231,240,197");
-			setColorOscOdd("165,179,125");
-			setColorOscEven("231,240,197");
-
-			visualizer.setXmlParam("fps", "30");
-		}
-		else if(v_color == 11){
-			//silver - gradient
-			visualizer.setXmlParam("alpha","255");
-			
-			visualizerwmp.setXmlParam("alpha","0");
-			visualizerwmp.setXmlParam("mode","0");
-			visualizerwmps1.setXmlParam("alpha","0");
-			visualizerwmps1.setXmlParam("mode","0");
-			visualizerwmps2.setXmlParam("alpha","0");
-			visualizerwmps2.setXmlParam("mode","0");
-			visualizerwmps3.setXmlParam("alpha","0");
-			visualizerwmps3.setXmlParam("mode","0");
-			
-			setColorBandsGradient(165,164,190,6,6,4);
-
-			visualizer.setXmlParam("colorbandpeak", "252,252,252");
-			setColorOscOdd("165,164,190");
-			setColorOscEven("252,252,252");
-
-			visualizer.setXmlParam("fps", "30");
-		}
-		else if(v_color == 12){
-			//zune orange
-			visualizer.setXmlParam("alpha","255");
-			
-			visualizerwmp.setXmlParam("alpha","0");
-			visualizerwmp.setXmlParam("mode","0");
-			visualizerwmps1.setXmlParam("alpha","0");
-			visualizerwmps1.setXmlParam("mode","0");
-			visualizerwmps2.setXmlParam("alpha","0");
-			visualizerwmps2.setXmlParam("mode","0");
-			visualizerwmps3.setXmlParam("alpha","0");
-			visualizerwmps3.setXmlParam("mode","0");
-			
-			setColorBandsGradient(127,59,20,5,3,1);
-
-			visualizer.setXmlParam("colorbandpeak", "231,121,49");
-			setColorOscOdd("127,59,20");
-			setColorOscEven("214,101,33");
-
-			visualizer.setXmlParam("fps", "30");
-		}
-		else if(v_color == 13){
-			//zune dark
-			visualizer.setXmlParam("alpha","255");
-			
-			visualizerwmp.setXmlParam("alpha","0");
-			visualizerwmp.setXmlParam("mode","0");
-			visualizerwmps1.setXmlParam("alpha","0");
-			visualizerwmps1.setXmlParam("mode","0");
-			visualizerwmps2.setXmlParam("alpha","0");
-			visualizerwmps2.setXmlParam("mode","0");
-			visualizerwmps3.setXmlParam("alpha","0");
-			visualizerwmps3.setXmlParam("mode","0");
-			
-			setColorBandsGradient(38,38,38,4,4,4);
-			
-			visualizer.setXmlParam("colorbandpeak", "231,121,49");
-			setColorOscOdd("38,38,38");
-			setColorOscEven("109,109,109");
-
-			visualizer.setXmlParam("fps", "30");
-		}else if(v_color == 14){
-			//RGB
-			nextTimer = 1;
-			visualizer.setXmlParam("alpha","255");
-			
-			visualizerwmp.setXmlParam("alpha","0");
-			visualizerwmp.setXmlParam("mode","0");
-			visualizerwmps1.setXmlParam("alpha","0");
-			visualizerwmps1.setXmlParam("mode","0");
-			visualizerwmps2.setXmlParam("alpha","0");
-			visualizerwmps2.setXmlParam("mode","0");
-			visualizerwmps3.setXmlParam("alpha","0");
-			visualizerwmps3.setXmlParam("mode","0");
-
-			visualizer.setXmlParam("fps", "30");
-
-			rgbTimer.start();
-		}
+		updateVisStyle();
 		setPrivateInt(getSkinName(), "Visualizer Color themes", v_color);
 	}
+}
+
+updateVisStyle(){
+	rgbBandTimer1.stop();
+	rgbBandTimer2.stop();
+	rgbBandTimer3.stop();
+	rgbBandTimer4.stop();
+	rgbBandTimer5.stop();
+	rgbBandTimer6.stop();
+	rgbBandTimer7.stop();
+	rgbBandTimer8.stop();
+	rgbBandTimer9.stop();
+	rgbBandTimer10.stop();
+	rgbBandTimer11.stop();
+	rgbBandTimer12.stop();
+	rgbBandTimer13.stop();
+	rgbBandTimer14.stop();
+	rgbBandTimer15.stop();
+	rgbBandTimer16.stop();
+	rgbTimer.stop();
+
+	visualizer.setXmlParam("fps", "30");
+	hideWMPVis();
+
+	if(v_color == 0 || v_color == 1){
+		//luna - default
+		visualizer.setXmlParam("alpha","255");		
+		visualizer.setXmlParam("colorallbands", "49,106,197");
+		visualizer.setXmlParam("colorbandpeak", "49,106,197");
+		setColorOsc("49,106,197");
+	}
+	else if (v_color == 2){
+		//winamp color
+		visualizer.setXmlParam("alpha","255");
+		visualizer.setXmlParam("ColorBand1", "22,131,7");
+		visualizer.setXmlParam("ColorBand2", "39,147,0");
+		visualizer.setXmlParam("ColorBand3", "47,155,7");
+		visualizer.setXmlParam("ColorBand4", "55,180,15");
+		visualizer.setXmlParam("ColorBand5", "48,189,15");
+		visualizer.setXmlParam("ColorBand6", "39,205,15");
+		visualizer.setXmlParam("ColorBand7", "146,221,32");
+		visualizer.setXmlParam("ColorBand8", "187,221,40");
+		visualizer.setXmlParam("ColorBand9", "212,180,32");
+		visualizer.setXmlParam("ColorBand10", "220,164,23");
+		visualizer.setXmlParam("ColorBand11", "197,122,7");
+		visualizer.setXmlParam("ColorBand12", "213,114,0");
+		visualizer.setXmlParam("ColorBand13", "213,101,0");
+		visualizer.setXmlParam("ColorBand14", "213,89,0");
+		visualizer.setXmlParam("ColorBand15", "205,40,15");
+		visualizer.setXmlParam("ColorBand16", "238,48,15");
+		visualizer.setXmlParam("colorbandpeak", "150,150,150");
+		visualizer.setXmlParam("colorosc1", "255,255,255");
+		visualizer.setXmlParam("colorosc2", "214,214,222");
+		visualizer.setXmlParam("colorosc3", "181,189,189");
+		visualizer.setXmlParam("colorosc4", "160,170,175");
+		visualizer.setXmlParam("colorosc5", "148,156,165");
+	}
+	else if (v_color == 3){
+		//bars
+		visualizerwmp.setXmlParam("mode", "1");
+		visualizerwmp.setXmlParam("alpha","255");
+		visualizerwmp.setXmlParam("falloff","2");
+		visualizerwmp.setXmlParam("peakfalloff","1");
+		visualizerwmps1.setXmlParam("alpha","0");
+		visualizerwmps2.setXmlParam("alpha","0");
+		visualizerwmps3.setXmlParam("alpha","0");
+		visualizer.setXmlParam("alpha","0");
+		visualizerwmp.setXmlParam("colorallbands", "0,176,32");
+		visualizerwmp.setXmlParam("colorbandpeak", "32,32,255");
+		visualizerwmp.setXmlParam("bandwidth","wide");
+
+		setColorosc("160,255,160");
+		visualizer.setXmlParam("fps", "24");
+	}
+	else if (v_color == 4){
+		//ocean mist
+		visualizer.setXmlParam("alpha","0");
+		
+		visualizerwmp.setXmlParam("alpha","255");
+		
+		visualizerwmps1.setXmlParam("alpha","128");
+		visualizerwmps2.setXmlParam("alpha","64");
+		visualizerwmps3.setXmlParam("alpha","32");
+		
+		visualizerwmps1.setXmlParam("falloff", "2");
+		visualizerwmps2.setXmlParam("falloff", "1");
+		visualizerwmps3.setXmlParam("falloff", "0");
+		
+		visualizerwmps1.setXmlParam("peakfalloff", "1");
+		visualizerwmps2.setXmlParam("peakfalloff", "0");
+		visualizerwmps3.setXmlParam("peakfalloff", "0");
+		
+		visualizerwmp.setXmlParam("colorallbands", "0,0,255");
+		visualizerwmp.setXmlParam("colorbandpeak", "255,255,255");
+		visualizerwmp.setXmlParam("bandwidth","thin");
+		visualizerwmp.setXmlParam("peakfalloff","1");
+		
+		visualizerwmp.setXmlParam("mode", "1");
+		
+		visualizerwmps1.setXmlParam("mode", "1");
+		visualizerwmps2.setXmlParam("mode", "1");
+		visualizerwmps3.setXmlParam("mode", "1");
+		
+		visualizerwmps1.setXmlParam("colorallbands", "0,0,255");
+		visualizerwmps1.setXmlParam("colorbandpeak", "255,255,255");
+		visualizerwmps2.setXmlParam("colorallbands", "0,0,255");
+		visualizerwmps2.setXmlParam("colorbandpeak", "255,255,255");
+		visualizerwmps3.setXmlParam("colorallbands", "0,0,255");
+		visualizerwmps3.setXmlParam("colorbandpeak", "255,255,255");
+
+		setColorosc("160,255,160");
+		visualizer.setXmlParam("fps", "25");
+	}
+	else if (v_color == 5){
+		//fire storm
+		visualizer.setXmlParam("alpha","0");
+		
+		visualizerwmp.setXmlParam("alpha","255");
+		
+		visualizerwmps1.setXmlParam("alpha","128");
+		visualizerwmps2.setXmlParam("alpha","64");
+		visualizerwmps3.setXmlParam("alpha","32");
+		
+		visualizerwmps1.setXmlParam("falloff", "2");
+		visualizerwmps2.setXmlParam("falloff", "1");
+		visualizerwmps3.setXmlParam("falloff", "0");
+		
+		visualizerwmps1.setXmlParam("peakfalloff", "1");
+		visualizerwmps2.setXmlParam("peakfalloff", "0");
+		visualizerwmps3.setXmlParam("peakfalloff", "0");
+		
+		visualizerwmp.setXmlParam("colorallbands", "255,165,0");
+		visualizerwmp.setXmlParam("colorbandpeak", "255,0,0");
+		visualizerwmp.setXmlParam("bandwidth","thin");
+		visualizerwmp.setXmlParam("peakfalloff","1");
+		
+		visualizerwmps1.setXmlParam("colorallbands", "255,165,0");
+		visualizerwmps1.setXmlParam("colorbandpeak", "255,0,0");
+		visualizerwmps2.setXmlParam("colorallbands", "255,165,0");
+		visualizerwmps2.setXmlParam("colorbandpeak", "255,0,0");
+		visualizerwmps3.setXmlParam("colorallbands", "255,165,0");
+		visualizerwmps3.setXmlParam("colorbandpeak", "255,0,0");
+		
+		visualizerwmp.setXmlParam("mode", "1");
+		
+		visualizerwmps1.setXmlParam("mode", "1");
+		visualizerwmps2.setXmlParam("mode", "1");
+		visualizerwmps3.setXmlParam("mode", "1");
+
+		setColorosc("160,255,160");
+		visualizer.setXmlParam("fps", "25");
+	}
+	else if (v_color == 6){
+		//scope
+		visualizer.setXmlParam("alpha","0");
+		visualizerwmp.setXmlParam("alpha","255");
+		visualizerwmps1.setXmlParam("alpha","0");
+		visualizerwmps1.setXmlParam("mode","0");
+		visualizerwmps2.setXmlParam("alpha","0");
+		visualizerwmps2.setXmlParam("mode","0");
+		visualizerwmps3.setXmlParam("alpha","0");
+		visualizerwmps3.setXmlParam("mode","0");
+		
+		visualizerwmp.setXmlParam("colorosc1","160,255,160");
+		visualizerwmp.setXmlParam("colorosc2","160,255,160");
+		visualizerwmp.setXmlParam("colorosc3","160,255,160");
+		visualizerwmp.setXmlParam("colorosc4","160,255,160");
+		visualizerwmp.setXmlParam("colorosc5","160,255,160");
+		
+		visualizerwmp.setXmlParam("mode", "2");
+
+		setColorosc("160,255,160");
+		visualizer.setXmlParam("fps", "24");
+	}
+	else if(v_color == 7){
+		//olive green
+		visualizer.setXmlParam("alpha","255");
+		visualizer.setXmlParam("colorallbands", "147,160,112");
+		visualizer.setXmlParam("colorbandpeak", "153,84,10");
+		setColorOsc("147,160,112");
+	}
+	else if(v_color == 8){
+		//silver
+		visualizer.setXmlParam("alpha","255");
+		visualizer.setXmlParam("colorallbands", "178,180,191");
+		visualizer.setXmlParam("colorbandpeak", "178,180,191");
+		setColorOsc("178,180,191");
+	}
+	else if(v_color == 9){
+		//luna - gradient
+		visualizer.setXmlParam("alpha","255");
+		setColorBandsGradient(3,84,227,4,4,2);
+		visualizer.setXmlParam("colorbandpeak", "61,149,255");
+		setColorOscOdd("3,84,227");
+		setColorOscEven("61,149,255");
+	}
+	else if(v_color == 10){
+		//olive green - gradient
+		visualizer.setXmlParam("alpha","255");
+		setColorBandsGradient(165,179,125,4,4,4);
+		visualizer.setXmlParam("colorbandpeak", "231,240,197");
+		setColorOscOdd("165,179,125");
+		setColorOscEven("231,240,197");
+	}
+	else if(v_color == 11){
+		//silver - gradient
+		visualizer.setXmlParam("alpha","255");
+		setColorBandsGradient(165,164,190,6,6,4);
+		visualizer.setXmlParam("colorbandpeak", "252,252,252");
+		setColorOscOdd("165,164,190");
+		setColorOscEven("252,252,252");
+	}
+	else if(v_color == 12){
+		//zune orange
+		visualizer.setXmlParam("alpha","255");
+		setColorBandsGradient(127,59,20,5,3,1);
+		visualizer.setXmlParam("colorbandpeak", "231,121,49");
+		setColorOscOdd("127,59,20");
+		setColorOscEven("214,101,33");
+	}
+	else if(v_color == 13){
+		//zune dark
+		visualizer.setXmlParam("alpha","255");
+		setColorBandsGradient(38,38,38,4,4,4);
+		visualizer.setXmlParam("colorbandpeak", "231,121,49");
+		setColorOscOdd("38,38,38");
+		setColorOscEven("109,109,109");
+	}else if(v_color == 14){
+		//RGB
+		nextTimer = 1;
+		visualizer.setXmlParam("alpha","255");
+		rgbTimer.start();
+	}
+}
+
+hideWMPVis(){
+	visualizerwmp.setXmlParam("alpha","0");
+	visualizerwmp.setXmlParam("mode","0");
+	visualizerwmps1.setXmlParam("alpha","0");
+	visualizerwmps1.setXmlParam("mode","0");
+	visualizerwmps2.setXmlParam("alpha","0");
+	visualizerwmps2.setXmlParam("mode","0");
+	visualizerwmps3.setXmlParam("alpha","0");
+	visualizerwmps3.setXmlParam("mode","0");
 }
 
 rgbTimer.onTimer(){
@@ -1452,58 +935,36 @@ setVis (int mode)
 	{
 		HideForVic.show();
 		visualizer.setMode(0);
-		//visualizershade.setMode(0);
-		//visualizerpl.setMode(0);
 	}
 	else if (mode == 1)
 	{
 		visualizer.setXmlParam("bandwidth", "wide");
-		//visualizershade.setXmlParam("bandwidth", "wide");
-		//visualizerpl.setXmlParam("bandwidth", "wide");
 		HideForVic.show();
 		visualizer.setMode(1);
-		//visualizershade.setMode(1);
-		//visualizerpl.setMode(1);
 	}
 	else if (mode == 2)
 	{
 		visualizer.setXmlParam("bandwidth", "thin");
-		//visualizershade.setXmlParam("bandwidth", "thin");
-		//visualizerpl.setXmlParam("bandwidth", "thin");
 		HideForVic.show();
 		visualizer.setMode(1);
-		//visualizershade.setMode(1);
-		//visualizerpl.setMode(1);
 	}
 	else if (mode == 3)
 	{
 		visualizer.setXmlParam("oscstyle", "solid");
-		//visualizershade.setXmlParam("oscstyle", "solid");
-		//visualizerpl.setXmlParam("oscstyle", "solid");
 		HideForVic.hide();
 		visualizer.setMode(2);
-		//visualizershade.setMode(2);
-		//visualizerpl.setMode(2);
 	}
 	else if (mode == 4)
 	{
 		visualizer.setXmlParam("oscstyle", "dots");
-		//visualizershade.setXmlParam("oscstyle", "dots");
-		//visualizerpl.setXmlParam("oscstyle", "dots");
 		HideForVic.hide();
 		visualizer.setMode(2);
-		//visualizershade.setMode(2);
-		//visualizerpl.setMode(2);
 	}
 	else if (mode == 5)
 	{
 		visualizer.setXmlParam("oscstyle", "lines");
-		//visualizershade.setXmlParam("oscstyle", "lines");
-		//visualizerpl.setXmlParam("oscstyle", "lines");
 		HideForVic.hide();
 		visualizer.setMode(2);
-		//visualizershade.setMode(2);
-		//visualizerpl.setMode(2);
 	}
 	currentMode = mode;
 }
