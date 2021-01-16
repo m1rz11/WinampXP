@@ -6,7 +6,7 @@ Function int getChannels (); // returning 1 for mono, 2 for stereo, more for mul
 Function initMainPlayer();
 Function unloadMainPlayer();
 Function volumeUpdateTicker(Int intVolume, Text textSongTicker, Text textVolumeTicker);
-Function setVolumeAnim(int volValue);
+//Function setVolumeAnim(int volValue);
 
 Class ToggleButton RepeatShuffleHandler;
 
@@ -20,8 +20,8 @@ Global Slider Balance;
 
 Global Button EqLight, PLLight, OAIDUMenuD, OAIDUBtnUE1, OAIDUBtnUE2, OAIDUBtnUE3, StopBtn, WinampIcon;
 Global ToggleButton OAIDUBtnA;
-Global AnimatedLayer VolumeAnim, MainVolumeAnim;
-Global AnimatedLayer anlBalance, MainanlBalance;
+//Global AnimatedLayer VolumeAnim, MainVolumeAnim;
+//Global AnimatedLayer anlBalance, MainanlBalance;
 Global Button OAIDUBtnI, OAIDUBtnD, OAIDUBtnU, AboutBtn;
 Global GuiObject DisplayTime, OAIDUBtnO;
 Global GuiObject SonginfoFrequencyBG, SonginfoFrequencyDISPLAY, SonginfoBitrateBG, SonginfoBitrateDISPLAY, ButtonClose;
@@ -114,7 +114,7 @@ initMainPlayer() {
 	EqButton = MainGroup.getObject("player.button.eq");
 	EqLight = MainGroup.getObject("player.button.eq.light");
 
-	anlBalance = MainGroup.getObject("main.balance.anim");
+	//anlBalance = MainGroup.getObject("main.balance.anim");
 	EqBalance = MainGroup.getObject("eq.slider.pan");
 
 	PLButton = MainGroup.getObject("player.button.pl");
@@ -126,7 +126,7 @@ initMainPlayer() {
   RepeatBtn = MainGroup.getObject("button.repeat");
 	RepeatLight = MainGroup.getObject("repeat.light");
 	
-  MainVolumeAnim = MainGroup.getObject("main.volume.anim");
+  //MainVolumeAnim = MainGroup.getObject("main.volume.anim");
 
 	StopBtn = MainGroup.getObject("button.stop");
 
@@ -137,9 +137,9 @@ initMainPlayer() {
   // EQ shade mode stuff, it's here to avoid strange bugs
 	EqShadeGroup = layoutEqShade.getObject("equalizer.shade.group");
 	EqShadeVolbalance = EqShadeGroup.getObject("eq.shade.volbalance");
-  MainanlBalance = EqShadeVolbalance.getObject("balance.anim");
+  //MainanlBalance = EqShadeVolbalance.getObject("balance.anim");
 	Balance = EqShadeVolbalance.getObject("eq.slider.pan");
-	VolumeAnim = EqShadeVolbalance.getObject("volume.anim");
+	//VolumeAnim = EqShadeVolbalance.getObject("volume.anim");
 	
   // EQ shade mode stuff, it's here to avoid strange bugs
 
@@ -241,16 +241,16 @@ initMainPlayer() {
     //iswacup = 0;
   }
 
-  setVolumeAnim(System.getVolume());
+  //setVolumeAnim(System.getVolume());
 
-  int v = EqBalance.GetPosition();
+  //int v = EqBalance.GetPosition();
   
-	if (v==127) anlBalance.gotoFrame(15); MainanlBalance.gotoFrame(15);
-	if (v<127) v = (27-(v/127)*27); 
-	if (v>127) v = ((v-127)/127)*27;
+	//if (v==127) anlBalance.gotoFrame(15); MainanlBalance.gotoFrame(15);
+	//if (v<127) v = (27-(v/127)*27); 
+	//if (v>127) v = ((v-127)/127)*27;
 	
-  anlBalance.gotoFrame(v);
-  MainanlBalance.gotoFrame(v);  
+  //anlBalance.gotoFrame(v);
+  //MainanlBalance.gotoFrame(v);  
 }
 
 unloadMainPlayer() {
@@ -892,7 +892,7 @@ SonginfoBitrate.onTextChanged (String newtxt)
 }
 
 System.onVolumeChanged(Int intVolume) {
-  setVolumeAnim(intVolume);
+  //setVolumeAnim(intVolume);
   showActionInfo("Volume: " + System.integerToString(intVolume / 255 * 100) + "%");
 }
 
@@ -906,14 +906,14 @@ EqBalance.onSetPosition(int newpos)
 
   showActionInfo(t);
 
-  int v = newpos;
+  //int v = newpos;
   
-	if (newpos==127) anlBalance.gotoFrame(15); MainanlBalance.gotoFrame(15);
-	if (newpos<127) v = (27-(newpos/127)*27); 
-	if (newpos>127) v = ((newpos-127)/127)*27;
+	//if (newpos==127) anlBalance.gotoFrame(15); MainanlBalance.gotoFrame(15);
+	//if (newpos<127) v = (27-(newpos/127)*27); 
+	//if (newpos>127) v = ((newpos-127)/127)*27;
 	
-  anlBalance.gotoFrame(v);
-  MainanlBalance.gotoFrame(v);
+  //anlBalance.gotoFrame(v);
+  //MainanlBalance.gotoFrame(v);
 }
 
 
@@ -927,14 +927,14 @@ Balance.onSetPosition(int newpos)
 
   showActionInfo(t);
 
-  int v = newpos;
+  //int v = newpos;
   
-	if (newpos==127) anlBalance.gotoFrame(15); MainanlBalance.gotoFrame(15);
-	if (newpos<127) v = (27-(newpos/127)*27); 
-	if (newpos>127) v = ((newpos-127)/127)*27;
+	//if (newpos==127) anlBalance.gotoFrame(15); MainanlBalance.gotoFrame(15);
+	//if (newpos<127) v = (27-(newpos/127)*27); 
+	//if (newpos>127) v = ((newpos-127)/127)*27;
 	
-  anlBalance.gotoFrame(v);
-  MainanlBalance.gotoFrame(v);
+  //anlBalance.gotoFrame(v);
+  //MainanlBalance.gotoFrame(v);
 }
 
 
@@ -976,6 +976,7 @@ OAIDUBtnU.onLeftButtonDown(int x, int y)
 
 
 //sets the Animation to correct frame
+/*
 setVolumeAnim(int Value) {
 	int f = (Value * (VolumeAnim.getLength()-1)) / 255;
     if (Value > 0) {
@@ -991,3 +992,4 @@ setVolumeAnim(int Value) {
 		MainVolumeAnim.gotoFrame(0);
 	}
 }
+*/
