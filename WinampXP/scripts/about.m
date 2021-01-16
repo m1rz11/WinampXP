@@ -5,7 +5,7 @@ Author:		Victhor
 #include "lib/std.mi"
 
 Global Group scriptGroup;
-Global Button link1,link2,link3,link4;
+Global Button link1,link2,link3,link4,link5;
 
 
 System.onScriptLoaded ()
@@ -15,6 +15,7 @@ System.onScriptLoaded ()
   link2 = scriptGroup.findObject("link2");
   link3 = scriptGroup.findObject("link3");
   link4 = scriptGroup.findObject("link4");
+  link5 = scriptGroup.findObject("link5");
 }
 
 
@@ -26,18 +27,24 @@ link1.onLeftClick()
 
 link2.onLeftClick()
 {
-	System.navigateUrlBrowser("http://mirzi.6f.sk/");
+	System.navigateUrlBrowser("https://github.com/mirzi1");
 	complete;
 }
 
 link3.onLeftClick()
 {
-	System.navigateUrlBrowser("https://github.com/The1Freeman");
+	System.navigateUrlBrowser("https://github.com/0x5066");
 	complete;
 }
 
 link4.onLeftClick()
 {
 	System.navigateUrlBrowser("https://github.com/mirzi1/WinampXP");
+	complete;
+}
+
+link5.onLeftClick()
+{
+	System.navigateUrlBrowser("https://github.com/teil-aidcx");
 	complete;
 }

@@ -1,6 +1,6 @@
 ![Logo](https://i.imgur.com/u415TZD.png)
 
-A Winamp modern skin based on the looks of Windows XP that aims for accuracy.
+Accurate Windows XP styled skin based on Winamp Classic Modern
 
 Grab the latest release [Here](https://github.com/mirzi1/WinampXP/releases)
 
@@ -10,7 +10,7 @@ Special thanks:
 
 Victhor, the original creator of [Winamp Classic Modern](https://www.deviantart.com/victhor/art/Winamp-Classic-Modern-by-Victhor-805797724), which is the foundation for this project.
 
-[0x5066](https://github.com/0x5066), the man behind [Winamp 2000 SP4](https://github.com/0x5066/Winamp2000SP4) for giving me a huge head start with development, and implementing many more cool features, like a WMP style visualizer.
+[Eris Lund (0x5066)](https://github.com/0x5066), the man behind [Winamp 2000 SP4](https://github.com/0x5066/Winamp2000SP4) for giving me a huge head start with development, and implementing many more cool features, like a WMP style visualizer.
 
 [Teil](https://github.com/teil-aidcx), for making the Zune theme a reality.
 

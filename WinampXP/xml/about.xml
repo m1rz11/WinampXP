@@ -7,8 +7,9 @@
   <layer id="main.about" image="main.about" w="413" h="322" cursor="cur.normal"/>
   <button id="link1" x="140" y="154" w="114" h="13" image="links.normal" cursor="IDC_HAND" rectrgn="1"/>
   <button id="link2" x="96" y="171" w="23" h="13" image="links.normal" cursor="IDC_HAND" rectrgn="1"/>
-  <button id="link3" x="201" y="171" w="118" h="13" image="links.normal"  cursor="IDC_HAND" rectrgn="1"/>
+  <button id="link3" x="201" y="169" w="91" h="13" image="links.normal"  cursor="IDC_HAND" rectrgn="1"/>
   <button id="link4" x="52" y="248" w="111" h="13" image="links.normal"  cursor="IDC_HAND" rectrgn="1"/>
+  <button id="link5" x="128" y="202" w="16" h="13" image="links.normal"  cursor="IDC_HAND" rectrgn="1"/>
   <button id="window.button.close" action="CLOSE" x="330" y="290" image="okbutton.normal" hoverimage="okbutton.hover" downimage="okbutton.down" alpha="255" cursor="cur.close"/>
 	<script file="../WinampXP/scripts/about.maki"/>
 </groupdef>
