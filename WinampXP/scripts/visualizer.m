@@ -17,6 +17,8 @@ Function darkDisplay(Boolean visible);														//changes visibility of dark
 
 Function updateVisStyle();																	//replacement for how the vis colors were handled until now
 Function hideWMPVis();																		//hides wmp vis specific stuff
+Function setVisFramerate(int fps);															//changes framerate for all vis objects
+Function processVFPS();																		//converts values to a fps value
 
 Global Container containerMain;
 Global Container containerPL;
@@ -38,8 +40,9 @@ Global PopUpMenu stylemenu;
 Global PopUpMenu colmenu;
 Global PopUpMenu wmpmenu;
 Global PopUpMenu waxpmenu;
+Global PopUpMenu fpsmenu;
 
-Global Int currentMode, a_falloffspeed, p_falloffspeed, a_coloring, v_color;
+Global Int currentMode, a_falloffspeed, p_falloffspeed, a_coloring, v_color, v_fps;
 Global Boolean show_peaks, dark_display;
 Global layer Trigger, HideForVic, TriggerBlocker, TriggerBlockerShade;
 
@@ -173,11 +176,7 @@ System.onScriptLoaded()
 	OAIDUd = NormalGroupDisplay.getObject("OAIDU.buttons.D");
 	OAIDUu = NormalGroupDisplay.getObject("OAIDU.buttons.U");
 
-	darkDisplay(dark_display);
-
-	
-
-	refreshVisSettings ();
+	refreshVisSettings();
 }
 
 refreshVisSettings ()
@@ -189,6 +188,7 @@ refreshVisSettings ()
 	p_falloffspeed = getPrivateInt(getSkinName(), "Visualizer peaks falloff", 2);
 	a_coloring = getPrivateInt(getSkinName(), "Visualizer analyzer coloring", 0);
 	v_color = getPrivateInt(getSkinName(), "Visualizer Color themes", 2);
+	v_fps = getPrivateInt(getSkinName(), "Vis Framerate", 2);
 
 	visualizer.setXmlParam("peaks", integerToString(show_peaks));
 	visualizer.setXmlParam("peakfalloff", integerToString(p_falloffspeed));
@@ -227,6 +227,7 @@ refreshVisSettings ()
 		visualizer.setXmlParam("coloring", "Line");
 	}
 
+	processVFPS();
 	updateVisStyle();
 	setVis (currentMode);
 	darkDisplay(dark_display);
@@ -257,28 +258,11 @@ Trigger.onRightButtonUp (int x, int y)
 	stylemenu = new PopUpMenu;
 	colmenu = new PopUpMenu;
 	waxpmenu = new PopUpMenu;
-	wmpmenu= new PopUpMenu;
+	wmpmenu = new PopUpMenu;
+	fpsmenu = new PopUpMenu;
 
 	visMenu.addCommand("Presets:", 999, 0, 1);
 	visMenu.addCommand("No Visualization", 100, currentMode == 0, 0);
-	
-	visMenu.addSubMenu(colmenu, "Visualizer Style");
-	waxpmenu.addCommand("Luna", 500, v_color == 0, 0);
-	waxpmenu.addCommand("Luna (Gradient)", 509, v_color == 9, 0);
-	waxpmenu.addCommand("Olive Green", 507, v_color == 7, 0);
-	waxpmenu.addCommand("Olive Green (Gradient)", 510, v_color == 10, 0);
-	waxpmenu.addCommand("Silver", 508, v_color == 8, 0);
-	waxpmenu.addCommand("Silver (Gradient)", 511, v_color == 11, 0);
-	waxpmenu.addCommand("Zune Orange", 512, v_color == 12, 0);
-	waxpmenu.addCommand("Zune Dark", 513, v_color == 13, 0);
-	colmenu.addCommand("Winamp/WACUP", 502, v_color == 2, 0);
-	colmenu.addCommand("RGB", 514, v_color == 14, 0);
-	colmenu.addSubMenu(waxpmenu, "WinampXP");
-	colmenu.addSubMenu(wmpmenu, "Windows Media Player");
-	wmpmenu.addCommand("Bars", 503, v_color == 3, 0);
-	wmpmenu.addCommand("Ocean Mist", 504, v_color == 4, 0);
-	wmpmenu.addCommand("Fire Storm", 505, v_color == 5, 0);
-	wmpmenu.addCommand("Scope", 506, v_color == 6, 0);
 	
 	specmenu.addCommand("Thick Bands", 1, currentMode == 1, 0);
 	specmenu.addCommand("Thin Bands", 2, currentMode == 2, 0);
@@ -299,6 +283,24 @@ Trigger.onRightButtonUp (int x, int y)
 	pksmenu.addCommand("Moderate", 202, p_falloffspeed == 2, 0);
 	pksmenu.addCommand("Fast", 203, p_falloffspeed == 3, 0);
 	pksmenu.addCommand("Faster", 204, p_falloffspeed == 4, 0);
+
+	visMenu.addSubMenu(colmenu, "Analyzer Style");
+	waxpmenu.addCommand("Luna", 500, v_color == 0, 0);
+	waxpmenu.addCommand("Luna (Gradient)", 509, v_color == 9, 0);
+	waxpmenu.addCommand("Olive Green", 507, v_color == 7, 0);
+	waxpmenu.addCommand("Olive Green (Gradient)", 510, v_color == 10, 0);
+	waxpmenu.addCommand("Silver", 508, v_color == 8, 0);
+	waxpmenu.addCommand("Silver (Gradient)", 511, v_color == 11, 0);
+	waxpmenu.addCommand("Zune Orange", 512, v_color == 12, 0);
+	waxpmenu.addCommand("Zune Dark", 513, v_color == 13, 0);
+	colmenu.addCommand("Winamp/WACUP", 502, v_color == 2, 0);
+	colmenu.addCommand("RGB", 514, v_color == 14, 0);
+	colmenu.addSubMenu(waxpmenu, "WinampXP");
+	colmenu.addSubMenu(wmpmenu, "Windows Media Player");
+	wmpmenu.addCommand("Bars", 503, v_color == 3, 0);
+	wmpmenu.addCommand("Ocean Mist", 504, v_color == 4, 0);
+	wmpmenu.addCommand("Fire Storm", 505, v_color == 5, 0);
+	wmpmenu.addCommand("Scope", 506, v_color == 6, 0);
 	
 	visMenu.addSubMenu(pksmenu, "Peak Falloff Speed");
 	anamenu.addCommand("Slower", 300, a_falloffspeed == 0, 0);
@@ -313,6 +315,18 @@ Trigger.onRightButtonUp (int x, int y)
 	stylemenu.addCommand("Line", 403, a_coloring == 3, 0);
 	
 	visMenu.addSubMenu(stylemenu, "Analyzer Coloring");
+
+	visMenu.addSubMenu(fpsmenu, "Framerate");
+	fpsmenu.addCommand("15 FPS", 407, v_fps == 0, 0);
+	fpsmenu.addCommand("24 FPS", 408, v_fps == 1, 0);
+	fpsmenu.addCommand("30 FPS", 409, v_fps == 2, 0);
+	fpsmenu.addCommand("60 FPS", 410, v_fps == 3, 0);
+	fpsmenu.addCommand("75 FPS", 411, v_fps == 4, 0);
+	fpsmenu.addCommand("120 FPS", 412, v_fps == 5, 0);
+	fpsmenu.addCommand("144 FPS", 413, v_fps == 6, 0);
+	fpsmenu.addCommand("240 FPS", 414, v_fps == 7, 0);
+	fpsmenu.addCommand("360 FPS", 415, v_fps == 8, 0);
+
 	
 	visMenu.addSeparator();
 	
@@ -392,19 +406,26 @@ ProcessMenuResult (int a)
 		}
 		setPrivateInt(getSkinName(), "Visualizer analyzer coloring", a_coloring);
 	}
-		
-  else if (a == 404)
-  {
-    OAIDUBtnUE1.Leftclick ();
-  }
-  else if (a == 405)
-  {
-    OAIDUBtnUE2.Leftclick ();
-  }
-  else if (a == 406)
-  {
-    OAIDUBtnUE3.Leftclick ();
-  }
+
+	else if (a >= 403 && a <= 406)
+	{
+		if (a == 404){
+		  OAIDUBtnUE1.Leftclick ();
+		}
+		else if (a == 405){
+		  OAIDUBtnUE2.Leftclick ();
+		}
+		else if (a == 406){
+		  OAIDUBtnUE3.Leftclick ();
+		}
+	}
+
+	else if (a >= 407 && a <= 415)
+	{
+		v_fps = a - 407;
+		processVFPS();
+		setPrivateInt(getSkinName(), "Vis Framerate", v_fps);
+	}
 
 	else if (a >= 500 && a <= 514)
 	{
@@ -433,7 +454,6 @@ updateVisStyle(){
 	rgbBandTimer16.stop();
 	rgbTimer.stop();
 
-	visualizer.setXmlParam("fps", "30");
 	hideWMPVis();
 
 	if(v_color == 0 || v_color == 1){
@@ -484,7 +504,6 @@ updateVisStyle(){
 		visualizerwmp.setXmlParam("bandwidth","wide");
 
 		setColorosc("160,255,160");
-		visualizer.setXmlParam("fps", "24");
 	}
 	else if (v_color == 4){
 		//ocean mist
@@ -523,7 +542,6 @@ updateVisStyle(){
 		visualizerwmps3.setXmlParam("colorbandpeak", "255,255,255");
 
 		setColorosc("160,255,160");
-		visualizer.setXmlParam("fps", "25");
 	}
 	else if (v_color == 5){
 		//fire storm
@@ -562,7 +580,6 @@ updateVisStyle(){
 		visualizerwmps3.setXmlParam("mode", "1");
 
 		setColorosc("160,255,160");
-		visualizer.setXmlParam("fps", "25");
 	}
 	else if (v_color == 6){
 		//scope
@@ -584,7 +601,6 @@ updateVisStyle(){
 		visualizerwmp.setXmlParam("mode", "2");
 
 		setColorosc("160,255,160");
-		visualizer.setXmlParam("fps", "24");
 	}
 	else if(v_color == 7){
 		//olive green
@@ -656,6 +672,44 @@ hideWMPVis(){
 	visualizerwmps2.setXmlParam("mode","0");
 	visualizerwmps3.setXmlParam("alpha","0");
 	visualizerwmps3.setXmlParam("mode","0");
+}
+
+processVFPS(){
+	if (v_fps == 0){
+		setVisFramerate(15);
+	}
+	else if (v_fps == 1){
+		setVisFramerate(24);
+	}
+	else if (v_fps == 2){
+		setVisFramerate(30);
+	}
+	else if (v_fps == 3){
+		setVisFramerate(60);
+	}
+	else if (v_fps == 4){
+		setVisFramerate(75);
+	}
+	else if (v_fps == 5){
+		setVisFramerate(120);
+	}
+	else if (v_fps == 6){
+		setVisFramerate(144);
+	}
+	else if (v_fps == 7){
+		setVisFramerate(240);
+	}
+	else if (v_fps == 8){
+		setVisFramerate(360);
+	}
+}
+
+setVisFramerate(int fps){
+	visualizer.setXmlParam("fps", integerToString(fps));
+	visualizerwmp.setXmlParam("fps", integerToString(fps));
+	visualizerwmps1.setXmlParam("fps", integerToString(fps));
+	visualizerwmps2.setXmlParam("fps", integerToString(fps));
+	visualizerwmps3.setXmlParam("fps", integerToString(fps));
 }
 
 rgbTimer.onTimer(){
