@@ -278,18 +278,6 @@ Trigger.onRightButtonUp (int x, int y)
 
 	visMenu.addCommand("Dark Display", 103, dark_display == 2, 0);
 	visMenu.addCommand("Show Peaks", 101, show_peaks == 1, 0);
-	pksmenu.addCommand("Slower", 200, p_falloffspeed == 0, 0);
-	pksmenu.addCommand("Slow", 201, p_falloffspeed == 1, 0);
-	pksmenu.addCommand("Moderate", 202, p_falloffspeed == 2, 0);
-	pksmenu.addCommand("Fast", 203, p_falloffspeed == 3, 0);
-	pksmenu.addCommand("Faster", 204, p_falloffspeed == 4, 0);
-
-	visMenu.addSubMenu(pksmenu, "Peak Falloff Speed");
-	anamenu.addCommand("Slower", 300, a_falloffspeed == 0, 0);
-	anamenu.addCommand("Slow", 301, a_falloffspeed == 1, 0);
-	anamenu.addCommand("Moderate", 302, a_falloffspeed == 2, 0);
-	anamenu.addCommand("Fast", 303, a_falloffspeed == 3, 0);
-	anamenu.addCommand("Faster", 304, a_falloffspeed == 4, 0);
 
 	visMenu.addSubMenu(colmenu, "Analyzer Style");
 	waxpmenu.addCommand("Luna", 500, v_color == 0, 0);
@@ -309,12 +297,24 @@ Trigger.onRightButtonUp (int x, int y)
 	wmpmenu.addCommand("Fire Storm", 505, v_color == 5, 0);
 	wmpmenu.addCommand("Scope", 506, v_color == 6, 0);
 	
-	visMenu.addSubMenu(anamenu, "Analyzer Falloff Speed");
+	visMenu.addSubMenu(stylemenu, "Analyzer Coloring");
 	stylemenu.addCommand("Normal", 400, a_coloring == 0, 0);
 	stylemenu.addCommand("Fire", 402, a_coloring == 2, 0);
 	stylemenu.addCommand("Line", 403, a_coloring == 3, 0);
-	
-	visMenu.addSubMenu(stylemenu, "Analyzer Coloring");
+
+	visMenu.addSubMenu(anamenu, "Analyzer Falloff Speed");
+	anamenu.addCommand("Slower", 300, a_falloffspeed == 0, 0);
+	anamenu.addCommand("Slow", 301, a_falloffspeed == 1, 0);
+	anamenu.addCommand("Moderate", 302, a_falloffspeed == 2, 0);
+	anamenu.addCommand("Fast", 303, a_falloffspeed == 3, 0);
+	anamenu.addCommand("Faster", 304, a_falloffspeed == 4, 0);
+
+	visMenu.addSubMenu(pksmenu, "Peak Falloff Speed");
+	pksmenu.addCommand("Slower", 200, p_falloffspeed == 0, 0);
+	pksmenu.addCommand("Slow", 201, p_falloffspeed == 1, 0);
+	pksmenu.addCommand("Moderate", 202, p_falloffspeed == 2, 0);
+	pksmenu.addCommand("Fast", 203, p_falloffspeed == 3, 0);
+	pksmenu.addCommand("Faster", 204, p_falloffspeed == 4, 0);
 
 	visMenu.addSubMenu(fpsmenu, "Framerate");
 	fpsmenu.addCommand("15 FPS", 407, v_fps == 0, 0);

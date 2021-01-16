@@ -25,7 +25,7 @@ Teil, for making the Zune theme a reality.
 Version 1.1 has redesigned eq, pl and shade windows, plus many bug fixes
 Version 1.1.1 contains multiple bug fixes from the previous release.
 Version 1.1.2 includes a new "Zune" theme by Teil.
-Version 1.2 has many bug fixes and optimizations, a new RGB visualizer, and more visualizer options
+Version 1.2 small bug fixes, winamp 5.8 specific fixes a new RGB visualizer, and more visualizer options
 
 -----------------------------------------------------------------------------------
 Maki sources are included, latest preview version can be found on the GitHub page:
