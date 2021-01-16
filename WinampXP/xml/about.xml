@@ -2,7 +2,7 @@
 	<bitmap id="main.about" file="../WinampXP/images/background-main-about.png" w="413" h="322"/>
 </elements>
 
-<groupdef id="skin.about.group" x="0" y="0" w="421" h="354" rectrgn="1">
+<groupdef id="skin.about.group" background="wasabi.frame.basetexture" x="0" y="0" w="421" h="354" rectrgn="1">
   <!--rect id="main.abouts" x="0" y="0" h="321" w="380" color="0,0,150" filled="1"/-->
   <layer id="main.about" image="main.about" w="413" h="322" cursor="cur.normal"/>
   <button id="link1" x="140" y="154" w="114" h="13" image="links.normal" cursor="IDC_HAND" rectrgn="1"/>
