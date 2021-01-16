@@ -284,6 +284,13 @@ Trigger.onRightButtonUp (int x, int y)
 	pksmenu.addCommand("Fast", 203, p_falloffspeed == 3, 0);
 	pksmenu.addCommand("Faster", 204, p_falloffspeed == 4, 0);
 
+	visMenu.addSubMenu(pksmenu, "Peak Falloff Speed");
+	anamenu.addCommand("Slower", 300, a_falloffspeed == 0, 0);
+	anamenu.addCommand("Slow", 301, a_falloffspeed == 1, 0);
+	anamenu.addCommand("Moderate", 302, a_falloffspeed == 2, 0);
+	anamenu.addCommand("Fast", 303, a_falloffspeed == 3, 0);
+	anamenu.addCommand("Faster", 304, a_falloffspeed == 4, 0);
+
 	visMenu.addSubMenu(colmenu, "Analyzer Style");
 	waxpmenu.addCommand("Luna", 500, v_color == 0, 0);
 	waxpmenu.addCommand("Luna (Gradient)", 509, v_color == 9, 0);
@@ -301,13 +308,6 @@ Trigger.onRightButtonUp (int x, int y)
 	wmpmenu.addCommand("Ocean Mist", 504, v_color == 4, 0);
 	wmpmenu.addCommand("Fire Storm", 505, v_color == 5, 0);
 	wmpmenu.addCommand("Scope", 506, v_color == 6, 0);
-	
-	visMenu.addSubMenu(pksmenu, "Peak Falloff Speed");
-	anamenu.addCommand("Slower", 300, a_falloffspeed == 0, 0);
-	anamenu.addCommand("Slow", 301, a_falloffspeed == 1, 0);
-	anamenu.addCommand("Moderate", 302, a_falloffspeed == 2, 0);
-	anamenu.addCommand("Fast", 303, a_falloffspeed == 3, 0);
-	anamenu.addCommand("Faster", 304, a_falloffspeed == 4, 0);
 	
 	visMenu.addSubMenu(anamenu, "Analyzer Falloff Speed");
 	stylemenu.addCommand("Normal", 400, a_coloring == 0, 0);
