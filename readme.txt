@@ -1,14 +1,13 @@
 WinampXP v1.2
 Accurate Windows XP styled skin based on Winamp Classic Modern
 
------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------
 INSTALLATION:
 
 To install, simply extract the folders to your Winamp skin directory.
-Olive Green, Silver and Zune themes share code from the base WinampXP skin, so they
-won't work on their own.
+Themed versions share code from the base WinampXP skin, so they won't work on their own.
 
------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------
 Made by mirzi - https://github.com/mirzi1/
 
 Special thanks:
@@ -22,11 +21,15 @@ WMP style visualizer.
 
 Teil, for making the Zune theme a reality.
 
-Version 1.1 has redesigned eq, pl and shade windows, plus many bug fixes
-Version 1.1.1 contains multiple bug fixes from the previous release.
-Version 1.1.2 includes a new "Zune" theme by Teil.
-Version 1.2 small bug fixes, winamp 5.8 specific fixes a new RGB visualizer, and more visualizer options
+Version 1.1 has redesigned eq, pl and shade windows, olive green and silver themes, plus many bug fixes
 
------------------------------------------------------------------------------------
+Version 1.1.1 contains multiple bug fixes from the previous release
+
+Version 1.1.2 includes a new "Zune" theme by Teil
+
+Version 1.2 introduces a new "GOLD 2016" theme inspired by an infamous middle eastern bootleg, 
+	    Winamp 5.8 specific fixes, and a new RGB visualizer
+
+-----------------------------------------------------------------------------------------------------
 Maki sources are included, latest preview version can be found on the GitHub page:
 https://github.com/mirzi1/WinampXP

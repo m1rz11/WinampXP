@@ -288,6 +288,7 @@ Trigger.onRightButtonUp (int x, int y)
 	waxpmenu.addCommand("Silver (Gradient)", 511, v_color == 11, 0);
 	waxpmenu.addCommand("Zune Orange", 512, v_color == 12, 0);
 	waxpmenu.addCommand("Zune Dark", 513, v_color == 13, 0);
+	waxpmenu.addCommand("GOLD 2016", 515, v_color == 15, 0);
 	colmenu.addCommand("Winamp/WACUP", 502, v_color == 2, 0);
 	colmenu.addCommand("RGB", 514, v_color == 14, 0);
 	colmenu.addSubMenu(waxpmenu, "WinampXP");
@@ -427,7 +428,7 @@ ProcessMenuResult (int a)
 		setPrivateInt(getSkinName(), "Vis Framerate", v_fps);
 	}
 
-	else if (a >= 500 && a <= 514)
+	else if (a >= 500 && a <= 515)
 	{
 		v_color = a - 500;
 		updateVisStyle();
@@ -455,17 +456,16 @@ updateVisStyle(){
 	rgbTimer.stop();
 
 	hideWMPVis();
+	visualizer.setXmlParam("alpha","255");
 
 	if(v_color == 0 || v_color == 1){
-		//luna - default
-		visualizer.setXmlParam("alpha","255");		
+		//luna - default	
 		visualizer.setXmlParam("colorallbands", "49,106,197");
 		visualizer.setXmlParam("colorbandpeak", "49,106,197");
 		setColorOsc("49,106,197");
 	}
 	else if (v_color == 2){
 		//winamp color
-		visualizer.setXmlParam("alpha","255");
 		visualizer.setXmlParam("ColorBand1", "22,131,7");
 		visualizer.setXmlParam("ColorBand2", "39,147,0");
 		visualizer.setXmlParam("ColorBand3", "47,155,7");
@@ -604,21 +604,18 @@ updateVisStyle(){
 	}
 	else if(v_color == 7){
 		//olive green
-		visualizer.setXmlParam("alpha","255");
 		visualizer.setXmlParam("colorallbands", "147,160,112");
 		visualizer.setXmlParam("colorbandpeak", "153,84,10");
 		setColorOsc("147,160,112");
 	}
 	else if(v_color == 8){
 		//silver
-		visualizer.setXmlParam("alpha","255");
 		visualizer.setXmlParam("colorallbands", "178,180,191");
 		visualizer.setXmlParam("colorbandpeak", "178,180,191");
 		setColorOsc("178,180,191");
 	}
 	else if(v_color == 9){
 		//luna - gradient
-		visualizer.setXmlParam("alpha","255");
 		setColorBandsGradient(3,84,227,4,4,2);
 		visualizer.setXmlParam("colorbandpeak", "61,149,255");
 		setColorOscOdd("3,84,227");
@@ -626,7 +623,6 @@ updateVisStyle(){
 	}
 	else if(v_color == 10){
 		//olive green - gradient
-		visualizer.setXmlParam("alpha","255");
 		setColorBandsGradient(165,179,125,4,4,4);
 		visualizer.setXmlParam("colorbandpeak", "231,240,197");
 		setColorOscOdd("165,179,125");
@@ -634,7 +630,6 @@ updateVisStyle(){
 	}
 	else if(v_color == 11){
 		//silver - gradient
-		visualizer.setXmlParam("alpha","255");
 		setColorBandsGradient(165,164,190,6,6,4);
 		visualizer.setXmlParam("colorbandpeak", "252,252,252");
 		setColorOscOdd("165,164,190");
@@ -642,7 +637,6 @@ updateVisStyle(){
 	}
 	else if(v_color == 12){
 		//zune orange
-		visualizer.setXmlParam("alpha","255");
 		setColorBandsGradient(127,59,20,5,3,1);
 		visualizer.setXmlParam("colorbandpeak", "231,121,49");
 		setColorOscOdd("127,59,20");
@@ -650,7 +644,6 @@ updateVisStyle(){
 	}
 	else if(v_color == 13){
 		//zune dark
-		visualizer.setXmlParam("alpha","255");
 		setColorBandsGradient(38,38,38,4,4,4);
 		visualizer.setXmlParam("colorbandpeak", "231,121,49");
 		setColorOscOdd("38,38,38");
@@ -658,8 +651,13 @@ updateVisStyle(){
 	}else if(v_color == 14){
 		//RGB
 		nextTimer = 1;
-		visualizer.setXmlParam("alpha","255");
 		rgbTimer.start();
+	}else if(v_color == 15){
+		//gold 2016 shitpost
+		setColorBandsGradient(116,36,36,-3,-2,-2);
+		visualizer.setXmlParam("colorbandpeak", "0,0,0");
+		setColorOscOdd("116,36,36");
+		setColorOscEven("72,8,8");
 	}
 }
 

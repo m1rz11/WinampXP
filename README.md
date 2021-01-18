@@ -4,7 +4,7 @@ Accurate Windows XP styled skin based on Winamp Classic Modern
 
 Grab the latest release [Here](https://github.com/mirzi1/WinampXP/releases)
 
-![Screenshot](https://i.imgur.com/2sSAwLV.png)
+![Screenshot](https://i.imgur.com/j49D7DK.png)
 
 Special thanks:
 
