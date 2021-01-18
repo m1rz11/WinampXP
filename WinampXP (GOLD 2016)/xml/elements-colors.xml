@@ -29,9 +29,9 @@
 	<color id="wasabi.list.column.background" value="wasabi.window.background" gammagroup="display-sui"/> <!-- listview header background color -->
 	<color id="wasabi.list.column.text" value="0,0,0" gammagroup="window-text"/> <!-- listview header text color -->
   <color id="studio.list.column.separator" value="wasabi.window.background"/>
-	<color id="wasabi.list.column.frame.top" value="255,255,255" gammagroup="display-sui"/> <!-- listview header frame top color -->
-	<color id="wasabi.list.column.frame.middle" value="172,168,153" gammagroup="display-sui"/> <!-- listview header frame middle color -->
-	<color id="wasabi.list.column.frame.bottom" value="113,111,100" gammagroup="display-sui"/> <!-- listview header frame bottom color -->
+	<color id="wasabi.list.column.frame.top" value="243,216,175" gammagroup="display-sui"/> <!-- listview header frame top color -->
+	<color id="wasabi.list.column.frame.middle" value="188,124,29" gammagroup="display-sui"/> <!-- listview header frame middle color -->
+	<color id="wasabi.list.column.frame.bottom" value="0,0,0" gammagroup="display-sui"/> <!-- listview header frame bottom color -->
 	<color id="wasabi.list.column.empty" value="231,177,97" gammagroup="display-sui"/>  <!-- listview header empty color (beyond the columns -->
 
 
