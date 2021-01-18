@@ -519,8 +519,8 @@ updateVisStyle(){
 		visualizerwmps2.setXmlParam("falloff", "1");
 		visualizerwmps3.setXmlParam("falloff", "0");
 		
-		visualizerwmps1.setXmlParam("peakfalloff", "1");
-		visualizerwmps2.setXmlParam("peakfalloff", "0");
+		visualizerwmps1.setXmlParam("peakfalloff", "2");
+		visualizerwmps2.setXmlParam("peakfalloff", "1");
 		visualizerwmps3.setXmlParam("peakfalloff", "0");
 		
 		visualizerwmp.setXmlParam("colorallbands", "0,0,255");
@@ -557,8 +557,8 @@ updateVisStyle(){
 		visualizerwmps2.setXmlParam("falloff", "1");
 		visualizerwmps3.setXmlParam("falloff", "0");
 		
-		visualizerwmps1.setXmlParam("peakfalloff", "1");
-		visualizerwmps2.setXmlParam("peakfalloff", "0");
+		visualizerwmps1.setXmlParam("peakfalloff", "2");
+		visualizerwmps2.setXmlParam("peakfalloff", "1");
 		visualizerwmps3.setXmlParam("peakfalloff", "0");
 		
 		visualizerwmp.setXmlParam("colorallbands", "255,165,0");
