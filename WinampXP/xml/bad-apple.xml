@@ -1,0 +1,17 @@
+<groupdef id="badapple.group" x="0" y="0" w="500" h="500" relatw="1" relath="1">
+
+	<text id="badapple_text" x="0" y="0" text="███░‏‍░░" relatw="1" relath="1" fontsize="8"
+    color="0,0,0" antialias="1" ghost="1"/>
+
+	<script file="scripts\badapple.maki"/>
+
+</groupdef>
+
+<container id="badapple" name="Bad Apple" default_visible="0">
+
+	<layout id="normal" minimum_w="500" minimum_h="500" h="500" w="500" appbar="top|bottom|left|right">
+		<Wasabi:Standardframe:NoStatus x="0" y="0" w="0" h="0" relatw="1" relath="1" content="badapple.group" />
+		<sendparams target="wasabi.frame.layout.base.bg" alpha="0"/>
+	</layout>
+	
+</container>
