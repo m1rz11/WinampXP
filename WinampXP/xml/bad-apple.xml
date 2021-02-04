@@ -1,7 +1,7 @@
 <groupdef id="badapple.group" x="0" y="0" w="500" h="500" relatw="1" relath="1">
 
-	<text id="badapple_text" x="0" y="0" text="███░‏‍░░" relatw="1" relath="1" fontsize="8"
-    color="0,0,0" antialias="1" ghost="1"/>
+	<text id="badapple_text" x="0" y="0" text="" w="1000" h="1000" fontsize="8"
+    align="left" valign="top" color="0,0,0" antialias="1" ghost="1"/>
 
 	<script file="scripts\badapple.maki"/>
 
