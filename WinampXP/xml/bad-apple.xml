@@ -2,7 +2,7 @@
 
 	<rect x="0" y="0" h="485" w="460" color="0,0,0" filled="1"/>
 
-	<text id="badapple_text" x="0" y="0" text="" h="485" w="460" fontsize="12"
+	<text id="badapple_text" x="0" y="0" text="" h="485" w="460" fontsize="16"
     align="left" bold="1" valign="top" font="cour" color="255,255,255" antialias="0" ghost="1"/>
 
 	<!--vis id="badapple.vis" x="388" y="4" w="36" h="8" cursor="cur.normal" gammagroup="visualizers"/-->
