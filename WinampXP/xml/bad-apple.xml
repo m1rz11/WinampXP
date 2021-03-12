@@ -10,7 +10,7 @@
 	<!--button id="button.play" x="427" y="2" w="12" h="12" image="status.icon.play.dark" alpha="255" tooltip="Play Animation" rectrgn="1" cursor="cur.normal"/>
 	<button id="button.stop" x="439" y="2" w="12" h="12" image="status.icon.stop.dark" alpha="255" tooltip="Stop Animation" rectrgn="1" cursor="cur.normal"/-->
 
-	<script file="scripts\badapple.maki"/>
+	<script file="../WinampXP/scripts/badapple.maki"/>
 
 </groupdef>
 
