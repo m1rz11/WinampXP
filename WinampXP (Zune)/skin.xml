@@ -42,7 +42,8 @@
 	<include file="../WinampXP/xml/color-themes.xml"/>
 	<include file="../WinampXP/xml/window-overrides.xml"/>
 	<include file="../WinampXP/xml/winampvis.xml"/>
-	
+	<include file="../WinampXP/xml/bad-apple.xml"/>
+
 	<scripts>
 		<script id="script.system" file="../WinampXP/scripts/system.maki"></script>
 		<script file="../WinampXP/scripts/visualizer.maki"/>
