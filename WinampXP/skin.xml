@@ -42,7 +42,8 @@
 	<include file="xml/color-themes.xml"/>
 	<include file="xml/window-overrides.xml"/>
 	<include file="xml/winampvis.xml"/>
-	<include file="xml/bad-apple.xml"/>
+	<!--include file="xml/bad-apple.xml"/>
+	<include file="xml/playground.xml"/-->
 	
 	<scripts>
 		<script id="script.system" file="scripts/system.maki"></script>
