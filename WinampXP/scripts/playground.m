@@ -74,10 +74,6 @@ mainTimer.onTimer(){
   }
   */
 
-  //get height for first bar
-  GuiObject layer1 = objList.enumItem(0);
-  
-
   //we skip the first one for obvious reasons
   //we go in reverse to avoid all the bars setting to the same value
   for(int i = num_bars-1; i >= 1; i--){
@@ -92,6 +88,8 @@ mainTimer.onTimer(){
     l.setXmlParam("h", height_previous);
   }
 
+  //set height for first bar
+  GuiObject layer1 = objList.enumItem(0);
   String height = integerToString(System.getLeftVuMeter());
   layer1.setXmlParam("h", height);
 }
