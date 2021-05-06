@@ -2,6 +2,9 @@
 
 	<rect x="0" y="0" h="485" w="460" color="0,0,0" filled="1"/>
 
+	<text id="position" x="0" y="0" w="460" text="" fontsize="16"
+    align="left" bold="1" valign="top" font="cour" color="255,255,255" antialias="0" ghost="1"/>
+
 	<!--text id="badapple_text" x="0" y="0" text="" h="485" w="460" fontsize="16"
     align="left" bold="1" valign="top" font="cour" color="255,255,255" antialias="0" ghost="1"/-->
 
@@ -9,6 +12,12 @@
 
 	<!--button id="button.play" x="427" y="2" w="12" h="12" image="status.icon.play.dark" alpha="255" tooltip="Play Animation" rectrgn="1" cursor="cur.normal"/>
 	<button id="button.stop" x="439" y="2" w="12" h="12" image="status.icon.stop.dark" alpha="255" tooltip="Stop Animation" rectrgn="1" cursor="cur.normal"/-->
+
+	<layer id="counter.10minutes" x="202" y="250" image="tapecounter.numbers"/>
+	<layer id="counter.1minutes" x="251" y="250" image="tapecounter.numbers"/>
+
+	<layer id="counter.10seconds" x="300" y="250" image="tapecounter.numbers"/>
+	<layer id="counter.1seconds" x="349" y="250" image="tapecounter.numbers"/>
 
 	<script file="../WinampXP/scripts/playground.maki"/>
 

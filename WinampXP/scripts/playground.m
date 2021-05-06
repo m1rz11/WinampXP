@@ -1,7 +1,11 @@
 #include "lib/std.mi"
 
 Global List objList;
-Global Timer mainTimer;
+Global Timer mainTimer, tapeTimer;
+
+Global layer counterSec1, counterSec10, counterMin1, counterMin10;
+
+Global Text posText;
 
 //Global int grav;
 //Global int num_balls;
@@ -12,15 +16,24 @@ System.onScriptLoaded() {
   //xml stuff
   Group scriptgroup = getScriptGroup();
 
+  posText = scriptgroup.getObject("position");
+
+  counterSec1 = scriptgroup.getObject("counter.1seconds");
+  counterSec10 = scriptgroup.getObject("counter.10seconds");
+  counterMin1 = scriptgroup.getObject("counter.1minutes");
+  counterMin10 = scriptgroup.getObject("counter.10minutes");
+
   //create new list
   objList = new List;
   mainTimer = new Timer;
+  tapeTimer = new Timer;
 
   //grav = 1;
   //num_balls = 25;
-  num_bars = 20;
+  num_bars = 10;
 
   mainTimer.setDelay(33);
+  tapeTimer.setDelay(33);
   
   //fill up the list
   for(int i = 0; i < num_bars; i++){
@@ -37,6 +50,9 @@ System.onScriptLoaded() {
 
     objList.addItem(l);
   }
+
+  //tape counter
+
 
   //balls
   /*
@@ -56,6 +72,15 @@ System.onScriptLoaded() {
 
   //it would be wiser to stop the timer when the song is paused
   mainTimer.start();
+  tapeTimer.start();
+}
+
+tapeTimer.onTimer(){
+  String sec1posStr = System.strright( integerToString(System.getPosition()), 4 );
+  int sec1pos = ((stringToInteger(sec1posStr)/100) * 3.2)-70;
+  counterSec1.setXmlParam("y", integerToString(sec1pos));
+
+  posText.setXmlParam("text", integerToString(sec1pos) +", "+integerToString(System.getPosition()));
 }
 
 mainTimer.onTimer(){
