@@ -579,9 +579,5 @@
   <bitmap id="window.shade.button.close.h" file="images/player-main.png" x="524" y="44" w="21" h="21" gammagroup="goldbuttons"/>
   <bitmap id="window.shade.button.close.d" file="images/player-main.png" x="524" y="66" w="21" h="21" gammagroup="goldbuttons"/>
 
-  <!-- playground -->
-
-  <bitmap id="tapecounter.numbers" file="..\WinampXP\images\playground\counter_numbers.png" x="0" y="0" w="48" h="352"/>
-
 	<include file="elements-system.xml"/>
 </elements>
